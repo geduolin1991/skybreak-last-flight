@@ -46,8 +46,8 @@
   </div>
   <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="fullscreen">全屏 ⛶</button></div>
  </main>
- <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑浏览器试玩 · v1.5.0</span></footer>
- <script src="Build/Web.loader.js"></script>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑浏览器试玩 · v1.6.0</span></footer>
+ <script src="Build/v1.6.0/Web.loader.js"></script>
  <script>
   const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
   const director='SKYBREAK · Game Director';let active=false,instance=null;
@@ -61,13 +61,13 @@
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&active&&instance)instance.SendMessage(director,'WebFocusLost');});
   createUnityInstance(canvas,{
    arguments:[],
-   dataUrl:'Build/Web.data.unityweb',
-   frameworkUrl:'Build/Web.framework.js.unityweb',
-   codeUrl:'Build/Web.wasm.unityweb',
+   dataUrl:'Build/v1.6.0/Web.data.unityweb',
+   frameworkUrl:'Build/v1.6.0/Web.framework.js.unityweb',
+   codeUrl:'Build/v1.6.0/Web.wasm.unityweb',
    streamingAssetsUrl:'StreamingAssets',
    companyName:"Skybreak Studio",
    productName:"SKYBREAK",
-   productVersion:"1.5.0",
+   productVersion:"1.6.0",
    autoSyncPersistentDataPath:true,
    devicePixelRatio:Math.min(window.devicePixelRatio||1,1.5),
    showBanner:(message,type)=>{if(type==='error')fail(message);else console.warn(message);}

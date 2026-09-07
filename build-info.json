@@ -1,11 +1,13 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.5.0-web",
+  "version": "1.6.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "1050036af71ded6d76a097f37f502e2d48878da5",
-  "built_at_utc": "2026-09-07T11:10:06.466199+00:00",
-  "build_identity": "2173299d516f00ae74c9294837530aa837134bf804c328c6b6498bfb86b00660",
-  "voice_clips": 76,
+  "source_revision": "11dd030adc03c58775054e7d88fa298ee0faa2ef",
+  "built_at_utc": "2026-09-07T23:40:38.306374+00:00",
+  "build_identity": "4dbadc36dfbd72caa8e044d76d08694bd710769895c684fab0209faa570066bb",
+  "voice_clips": 98,
+  "specializations": 9,
+  "runtime_checks": 166,
   "assets": [
     {
       "path": ".nojekyll",
@@ -13,24 +15,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "Build/Web.data.unityweb",
-      "bytes": 48912880,
-      "sha256": "c3e88d3fa465213247ccca34d3f0fe1e7e702a1b1236d3d229cb43164330ac54"
+      "path": "Build/v1.6.0/Web.data.unityweb",
+      "bytes": 56974642,
+      "sha256": "2b0db23077ea9cdf3e20786f190b6106e14ebbc4e6afd2beaaab6e9d310f4d67"
     },
     {
-      "path": "Build/Web.framework.js.unityweb",
+      "path": "Build/v1.6.0/Web.framework.js.unityweb",
       "bytes": 73721,
-      "sha256": "c1164f9f02aafe5fed6f9513ce56c152faabe2be82fb425d134c9fa8069751b4"
+      "sha256": "4f0c798bc806612f3999803e98397e5599c38b00a7f4ebf9c7dc7c28e60fdc12"
     },
     {
-      "path": "Build/Web.loader.js",
+      "path": "Build/v1.6.0/Web.loader.js",
       "bytes": 48779,
-      "sha256": "bd592975597fa969497c32fb90ac44a8845bb992deee7c7afb4fb8e8413b4d3a"
+      "sha256": "d314a5c5af5fca87a75c6a046939504da5d43b8e1df80cdb45fd0be2579a0867"
     },
     {
-      "path": "Build/Web.wasm.unityweb",
-      "bytes": 5671767,
-      "sha256": "8be313f36a1a02804ae29827410d7c367d0f7049b3bfa9d72f9037767a12c0b0"
+      "path": "Build/v1.6.0/Web.wasm.unityweb",
+      "bytes": 5700684,
+      "sha256": "3f1cce36d9e4856b3a6c254716e837522015484c3817a0f8aac15fe79a84d1c4"
     },
     {
       "path": "cover.png",
@@ -39,8 +41,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 8426,
-      "sha256": "76dd11af834a71921669c857f46b952d0c888de962c1cada9a63cc06ba067f4f"
+      "bytes": 8454,
+      "sha256": "840cb2d628efc7478e400361437898e8a842f86d3b2a1b0a945d0539d81d1a35"
     }
   ]
 }
