@@ -45,8 +45,8 @@ public partial class SkyGame {
   if(Combo>0&&Combo%8==0){Sound("Combo",.5f);Toast("连锁击破  ×"+multiplier,1.3f);}
  }
  void RenderEnemyFeedback(Hostile e){
-  float flash=Mathf.Clamp01(e.flash/.095f);e.go.transform.position=e.pos+(e.owner!=null?Vector3.up*1.45f:Vector3.zero)+new Vector3(Mathf.Sin(e.age*100)*e.recoil,0,-e.recoil*.65f);
-  e.go.transform.rotation=Quaternion.Euler(-e.recoil*9,180,Mathf.Cos(e.age*1.4f)*5+Mathf.Sin(e.age*80)*e.recoil*18);
+  float flash=Mathf.Clamp01(e.flash/.095f);e.go.transform.position=e.pos+e.visualOffset+(e.owner!=null?Vector3.up*1.45f:Vector3.zero)+new Vector3(Mathf.Sin(e.age*100)*e.recoil,0,-e.recoil*.65f);
+  e.go.transform.rotation=Quaternion.Euler(-e.recoil*9,180,e.kind==9?0:Mathf.Cos(e.age*1.4f)*5+Mathf.Sin(e.age*80)*e.recoil*18);
   for(int i=0;i<e.renderers.Length;i++){var renderer=e.renderers[i];if(!renderer)continue;block.Clear();if(flash>0){Color original=e.baseColors[i];block.SetColor("_Color",Color.Lerp(original,new Color(1,.71f,.36f),flash*.8f));block.SetColor("_EmissionColor",new Color(1.6f,.8f,.3f)*flash*(e.boss?.65f:1));}renderer.SetPropertyBlock(block);}
  }
  Color[] RendererColors(Renderer[] renderers){var colors=new Color[renderers.Length];for(int i=0;i<colors.Length;i++){var mat=renderers[i].sharedMaterial;colors[i]=mat?mat.color:Color.white;if(mat&&!mat.IsKeywordEnabled("_EMISSION")){mat.EnableKeyword("_EMISSION");mat.SetColor("_EmissionColor",Color.black);}}return colors;}

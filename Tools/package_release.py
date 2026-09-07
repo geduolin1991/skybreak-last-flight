@@ -33,7 +33,7 @@ for kind in ['runtime','campaign']:
 assert (root/'Build/QA/PortraitMotion/portrait-build-identity.txt').read_text().strip()==identity, 'Portrait capture belongs to a different build.'
 assert 'Succeeded' in (root/'Build/build-report.txt').read_text()
 qa=(root/'Build/QA/runtime-results.txt').read_text()
-assert 'FAIL' not in qa and qa.count('PASS ')>=104
+assert 'FAIL' not in qa and qa.count('PASS ')>=166
 assert 'PASS Natural campaign reaches ending: Victory' in (root/'Build/QA/campaign-results.txt').read_text()
 
 for ship in [1,2]:
@@ -53,7 +53,7 @@ with tempfile.TemporaryDirectory(prefix='skybreak-package-') as tmp:
     for name in ['README_开始试玩.md','开始游戏.command']:
         shutil.copy2(root/name,staging/name)
     shutil.copytree(root/'Docs',staging/'Docs')
-    shutil.copytree(root/'Build/QA',staging/'Build/QA')
+    shutil.copytree(root/'Build/QA',staging/'Build/QA',ignore=shutil.ignore_patterns('Frames'))
     shutil.copytree(root/'Build/AudioPreview',staging/'Build/AudioPreview')
     shutil.copy2(root/'Build/build-report.txt',staging/'Build/build-report.txt')
     shutil.copy2(root/'Build/build-identity.txt',staging/'Build/build-identity.txt')

@@ -24,21 +24,10 @@ public partial class SkyGame {
   int section=CurrentEncounterSection;
   if(section==encounterSection)return;
   encounterSection=section;
-  if(section==1) {
-   pilotSpeaker=(Ship+1)%3;RadioName=PilotNames[pilotSpeaker]+" / 航线引导";
-   RadioText=new[]{"船队就在下方。清理它们前面的空域，我来照看侧翼。",
-    "他们开始交叉锁定了。瞄准线停住后再转向，别急着交炸弹。",
-    "这些是以前的维护船坞……跟着环形航标走，巡逻机正在换班。"}[Stage];dialogClock=7;
-  } else if(section==3) {
-   pilotSpeaker=Stage==2?2:Ship;RadioName=PilotNames[pilotSpeaker]+" / 小队通讯";
-   RadioText=Stage==0?(sideObjectiveComplete?"撤离信号已连通。再向前一步，就是他们的明天。":"船队还在等待回音。先打穿要塞，我们仍有机会。"):
-    Stage==1?(sideObjectiveComplete?"电网回来了！看，下方的灯正在重新亮起。":"干扰还没解除。把剩下的能量留给制空平台。"):
-    sideObjectiveComplete?"密钥完整。我会让天环记起，它曾经想保护的人。":"密钥受损，但我的声音还在。让我亲口告诉它。";
-   dialogClock=7;
-  }
+
  }
 
- void SpawnChapterWave(int wave) {
+ void SpawnClassicChapterWave(int wave) {
   int stage=Mathf.Clamp(Stage,0,2),type=chapterWaves[stage][wave%chapterWaves[stage].Length];
   float offset=Mathf.Sin(wave*2.7f)*4.5f;
   if(type==0||type==5) {
@@ -99,12 +88,8 @@ public partial class SkyGame {
   if(State!=FlightState.Playing||stageBanner>0||warningClock>1.7f)return;
   Panel(1352,440,222,145);
   Label("当前目标",1370,456,188,24,13,muted);
-  Label(missionOrders[Stage][CurrentEncounterSection],1370,490,188,48,19,paper);
-  string detail=CurrentEncounterSection==2?(sideObjectiveComplete?"支援链路已恢复":"可选 · 截获指挥机"):
-   CurrentEncounterSection==4?"注意阶段转换与激光预警":"航线 "+Mathf.Min(100,Mathf.FloorToInt(StageTime/115*100))+"%";
-  bool eliteActive=eliteTarget!=null&&Enemies.Contains(eliteTarget);
-  if(eliteSent&&CurrentEncounterSection<4)
-   detail=sideObjectiveComplete?"支援链路已恢复":eliteActive?"支线交战中 · 优先压制":"支线已错失 · 继续前进";
+  Label(Boss!=null?"击破防护节点与核心":Stage==0?"拦截袭船轰炸机":Stage==1?(sideObjectiveComplete?"保护撤离车队":"摧毁三座干扰塔"):World.UplinkComplete?"掩护接驳船进港":World.UplinkActive?"掩护识别密钥上传":"解除三个封锁接点",1370,490,188,48,19,paper);
+  string detail=MissionStatus;bool eliteActive=eliteTarget!=null&&Enemies.Contains(eliteTarget);
   Label(detail,1370,551,188,26,12,sideObjectiveComplete?accent:muted);
   if(eliteActive)Bar(1370,578,186,eliteTarget.hp/eliteTarget.maxHp,Art.Orange,3);
  }

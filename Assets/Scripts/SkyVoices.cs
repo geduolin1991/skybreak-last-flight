@@ -12,14 +12,15 @@ public partial class SkyGame {
  readonly Dictionary<string,AudioClip> voiceClips=new Dictionary<string,AudioClip>();
  readonly Dictionary<string,int> voiceVariants=new Dictionary<string,int>();
  readonly Dictionary<string,float> voiceCooldowns=new Dictionary<string,float>();
- class VoiceRequest {public SkyVoiceEntry entry;public int priority;public float ready,expires;}
+ class VoiceRequest {public SkyVoiceEntry entry;public int priority;public float ready,expires;public System.Func<bool> valid;}
  readonly List<VoiceRequest> voiceQueue=new List<VoiceRequest>();
+ System.Func<bool> voiceContextCheck;
  float voiceEnvelope,voiceFade=-1,voiceStartedAt;bool voicePaused,voiceSawState;
  int voiceLastShip=-1;string voiceLastRadio="";FlightState voiceLastState;
  bool voiceCanPlay;
  public string VoiceActiveId=>voiceCurrent!=null?voiceCurrent.id:"";
  public bool VoicePlaying=>voiceAudio&&voiceAudio.isPlaying&&voiceCurrent!=null;
- public float VoicePlaybackTime=>voiceAudio?voiceAudio.time:0;
+ public float VoicePlaybackTime=>voiceAudio&&voiceAudio.clip?voiceAudio.time:0;
  bool VoiceRadioActive=>VoicePlaying&&voiceCurrent.category=="story";
 
  void SetupVoices(){
@@ -32,8 +33,8 @@ public partial class SkyGame {
  }
  void SaveVoiceSettings(){PlayerPrefs.SetInt("voiceEnabled",VoiceEnabled?1:0);PlayerPrefs.SetFloat("voiceVolume",VoiceVolume);}
  public void ActivateVoices(){voiceCanPlay=true;voiceLastShip=-1;}
- void ClearVoices(){voiceQueue.Clear();if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;voicePaused=false;}
- void FinishVoice(){if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;}
+ void ClearVoices(){voiceQueue.Clear();if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;voicePaused=false;voiceContextCheck=null;}
+ void FinishVoice(){voiceContextCheck=null;if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;}
  void SyncVoicePause(){if(!voiceAudio)return;if(State==FlightState.Paused){voiceAudio.Pause();voicePaused=true;}else if(voicePaused){voiceAudio.UnPause();voicePaused=false;}}
  AudioClip VoiceClip(SkyVoiceEntry entry){
   if(!voiceClips.TryGetValue(entry.id,out var clip)){clip=Resources.Load<AudioClip>(entry.clip);voiceClips[entry.id]=clip;if(clip)clip.LoadAudioData();}
@@ -95,14 +96,14 @@ public partial class SkyGame {
     if(voicePaused){voiceAudio.UnPause();voicePaused=false;}
     if(voiceFade>=0){voiceFade-=dt;if(voiceFade<=0)FinishVoice();}
     if(voiceCurrent!=null&&!voiceAudio.isPlaying&&Time.unscaledTime-voiceStartedAt>.2f)FinishVoice();
-    float now=Time.unscaledTime;voiceQueue.RemoveAll(r=>r.expires<now);
+    float now=Time.unscaledTime;voiceQueue.RemoveAll(r=>r.expires<now||(r.valid!=null&&!r.valid()));if(voiceCurrent!=null&&voiceContextCheck!=null&&!voiceContextCheck())FinishVoice();
     if(voiceCurrent==null){
      VoiceRequest next=null;foreach(var request in voiceQueue)if(request.ready<=now&&(next==null||request.priority>next.priority))next=request;
      if(next!=null){
       var clip=VoiceClip(next.entry);
       if(!clip)voiceQueue.Remove(next);
       else if(clip.loadState==AudioDataLoadState.Loaded){
-       voiceQueue.Remove(next);voiceCurrent=next.entry;voicePriority=next.priority;voiceStartedAt=now;voiceFade=-1;
+       voiceQueue.Remove(next);voiceContextCheck=next.valid;voiceCurrent=next.entry;voicePriority=next.priority;voiceStartedAt=now;voiceFade=-1;
        voiceAudio.clip=clip;voiceAudio.pitch=1;voiceAudio.time=0;voiceAudio.Play();
       }
      }

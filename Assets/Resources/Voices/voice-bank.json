@@ -1,7 +1,5 @@
 {
-  "version": "1.5.0",
-  "language": "zh-CN",
-  "synthetic": true,
+  "version": "1.6.0",
   "clips": [
     {
       "id": "select_0_0",
@@ -26,22 +24,6 @@
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/launch_0_0"
-    },
-    {
-      "id": "skill_0_0",
-      "pilot": 0,
-      "text": "苍蓝协奏，掩护交给我！",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_0_0"
-    },
-    {
-      "id": "skill_0_1",
-      "pilot": 0,
-      "text": "侧翼清空，一起上！",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_0_1"
     },
     {
       "id": "bomb_0_0",
@@ -94,7 +76,7 @@
     {
       "id": "victory_0_0",
       "pilot": 0,
-      "text": "听见了吗？他们在说，欢迎回家。",
+      "text": "封锁解除了！检查队形，我们回家。",
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/victory_0_0"
@@ -138,22 +120,6 @@
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/launch_1_0"
-    },
-    {
-      "id": "skill_1_0",
-      "pilot": 1,
-      "text": "绯焰舰装，齐射！",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_1_0"
-    },
-    {
-      "id": "skill_1_1",
-      "pilot": 1,
-      "text": "让我来，加点火力！",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_1_1"
     },
     {
       "id": "bomb_1_0",
@@ -206,7 +172,7 @@
     {
       "id": "victory_1_0",
       "pilot": 1,
-      "text": "干得漂亮。回家吧，该听听海的声音了。",
+      "text": "哈，打穿了！收队吧，大家。",
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/victory_1_0"
@@ -250,22 +216,6 @@
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/launch_2_0"
-    },
-    {
-      "id": "skill_2_0",
-      "pilot": 2,
-      "text": "时间，停下来。",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_2_0"
-    },
-    {
-      "id": "skill_2_1",
-      "pilot": 2,
-      "text": "给我们，留一点时间。",
-      "category": "bark",
-      "match": "",
-      "clip": "Voices/Clips/skill_2_1"
     },
     {
       "id": "bomb_2_0",
@@ -318,7 +268,7 @@
     {
       "id": "victory_2_0",
       "pilot": 2,
-      "text": "把选择天空的权利，还给他们。我们做到了。",
+      "text": "攻击指令已终止。我们，做到了。",
       "category": "bark",
       "match": "",
       "clip": "Voices/Clips/victory_2_0"
@@ -342,7 +292,7 @@
     {
       "id": "briefing_0_0",
       "pilot": 0,
-      "text": "海面下是最后一支撤离船队。跟紧我，我们替他们打开航线。",
+      "text": "下方三艘救援船，都是我们要带回家的人。拦住俯冲轰炸机，别让炸弹落到船上！",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_0_0"
@@ -350,7 +300,7 @@
     {
       "id": "briefing_0_1",
       "pilot": 0,
-      "text": "这场雷暴不是天气。干扰塔困住了整座城市。我们去把灯重新点亮。",
+      "text": "三座干扰塔切断了城市供电。逐座击破，让街灯和撤离车队重新动起来！",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_0_1"
@@ -358,7 +308,7 @@
     {
       "id": "briefing_0_2",
       "pilot": 0,
-      "text": "天环把所有人类信号都判成了威胁。带着大家的声音，飞进它的心脏。",
+      "text": "先解除三个封锁接点，再掩护雪璃上传识别码。八秒，我们替她争取。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_0_2"
@@ -366,7 +316,7 @@
     {
       "id": "briefing_1_0",
       "pilot": 1,
-      "text": "船队还在等我们。嗯，引擎状态不错。来吧，把前面的封锁轰开。",
+      "text": "三艘船，七百多口人。嗯，这回可得把前面的轰炸机，清得干干净净。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_1_0"
@@ -374,7 +324,7 @@
     {
       "id": "briefing_1_1",
       "pilot": 1,
-      "text": "看到那些熄灭的街灯了吗？干扰塔就是罪魁祸首。走，给这座城重新通上电。",
+      "text": "看见那三座干扰塔没？拆掉它们。等灯亮了，公交车才能把人送出去。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_1_1"
@@ -382,7 +332,7 @@
     {
       "id": "briefing_1_2",
       "pilot": 1,
-      "text": "轨道上的大家伙，还真是不肯让路啊。那就用我们的方式，敲开它的大门。",
+      "text": "船坞被封死了。拆开三个接点，给雪璃留八秒。剩下的火力，我来扛。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_1_2"
@@ -390,7 +340,7 @@
     {
       "id": "briefing_2_0",
       "pilot": 2,
-      "text": "撤离船队已抵达近海。前方存在封锁。我们打开航线，带他们回家。",
+      "text": "三艘民用船已进入航线。敌人的俯冲机，会攻击船队。请优先拦截。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_2_0"
@@ -398,7 +348,7 @@
     {
       "id": "briefing_2_1",
       "pilot": 2,
-      "text": "雷暴来自轨道干扰。找到城市的供电节点，或许还能救下被困的人。",
+      "text": "三座干扰塔仍在运行。摧毁一座，对应街区就能恢复供电。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_2_1"
@@ -406,210 +356,434 @@
     {
       "id": "briefing_2_2",
       "pilot": 2,
-      "text": "天环曾经想保护我们。现在，它忘了自由是什么。让我亲口告诉它。",
+      "text": "那座船坞……我曾在那里工作。解除三个封锁接点，我需要八秒，重新接通它。",
       "category": "briefing",
       "match": "",
       "clip": "Voices/Clips/briefing_2_2"
     },
     {
-      "id": "story_coast_escort",
+      "id": "world_intro_0",
       "pilot": 0,
-      "text": "船队就在下方。清理它们前面的空域，我来照看侧翼。",
+      "text": "看到下方三艘白色救援船了。全队，守住这条航线！",
       "category": "story",
-      "match": "船队就在下方。清理它们前面的空域，我来照看侧翼。",
-      "clip": "Voices/Clips/story_coast_escort"
+      "match": "",
+      "clip": "Voices/Clips/world_intro_0"
     },
     {
-      "id": "story_city_crossfire",
+      "id": "world_intro_1",
       "pilot": 1,
-      "text": "他们开始交叉锁定了。瞄准线停住后再转向，别急着交炸弹。",
+      "text": "干扰塔出现了。三座，分开拆！别让下面的人，再摸黑等了。",
       "category": "story",
-      "match": "他们开始交叉锁定了。瞄准线停住后再转向，别急着交炸弹。",
-      "clip": "Voices/Clips/story_city_crossfire"
+      "match": "",
+      "clip": "Voices/Clips/world_intro_1"
     },
     {
-      "id": "story_orbit_docks",
+      "id": "world_intro_2",
       "pilot": 2,
-      "text": "这些是以前的维护船坞……跟着环形航标走，巡逻机正在换班。",
+      "text": "就是这座船坞。红色接点还在封锁，先击破它们！",
       "category": "story",
-      "match": "这些是以前的维护船坞……跟着环形航标走，巡逻机正在换班。",
-      "clip": "Voices/Clips/story_orbit_docks"
+      "match": "",
+      "clip": "Voices/Clips/world_intro_2"
     },
     {
-      "id": "story_coast_lights",
-      "pilot": 1,
-      "text": "船队开始移动了。每一盏灯，都是一个等着回家的人。",
-      "category": "story",
-      "match": "船队开始移动了。每一盏灯，都是一个等着回家的人。",
-      "clip": "Voices/Clips/story_coast_lights"
-    },
-    {
-      "id": "story_city_childhood",
+      "id": "convoy_bomber",
       "pilot": 0,
-      "text": "小时候，我以为城市的灯永远不会熄灭……所以这次一定要赢。",
+      "text": "俯冲机正冲向船队！拦住它！",
       "category": "story",
-      "match": "小时候，我以为城市的灯永远不会熄灭……所以这次一定要赢。",
-      "clip": "Voices/Clips/story_city_childhood"
+      "match": "",
+      "clip": "Voices/Clips/convoy_bomber"
     },
     {
-      "id": "story_orbit_stars",
-      "pilot": 2,
-      "text": "天环听得到我。我知道它还记得，我们曾一起看过星星。",
+      "id": "convoy_bomb_lock",
+      "pilot": 1,
+      "text": "它在瞄准船！赶紧打掉，别让它投弹！",
       "category": "story",
-      "match": "天环听得到我。我知道它还记得，我们曾一起看过星星。",
-      "clip": "Voices/Clips/story_orbit_stars"
+      "match": "",
+      "clip": "Voices/Clips/convoy_bomb_lock"
     },
     {
-      "id": "story_coast_supply",
-      "pilot": 2,
-      "text": "补给运输机正在穿越防线。击落它，回收武装和修复模块。",
-      "category": "story",
-      "match": "补给运输机正在穿越防线。击落它，回收武装和修复模块。",
-      "clip": "Voices/Clips/story_coast_supply"
-    },
-    {
-      "id": "story_city_lasers",
+      "id": "convoy_intercept",
       "pilot": 0,
-      "text": "小心道路上方的瞄准线。先离开标记，再反击。",
+      "text": "拦下了！继续守住船队。",
       "category": "story",
-      "match": "小心道路上方的瞄准线。先离开标记，再反击。",
-      "clip": "Voices/Clips/story_city_lasers"
+      "match": "",
+      "clip": "Voices/Clips/convoy_intercept"
     },
     {
-      "id": "story_orbit_graze",
-      "pilot": 1,
-      "text": "擦过弹幕可以储存超载能量。核心即将暴露。",
-      "category": "story",
-      "match": "擦过弹幕可以储存超载能量。核心即将暴露。",
-      "clip": "Voices/Clips/story_orbit_graze"
-    },
-    {
-      "id": "story_coast_elite",
-      "pilot": 1,
-      "text": "前方是干扰指挥机！击落它，我就能把撤离信号送出去。",
-      "category": "story",
-      "match": "前方是干扰指挥机！击落它，我就能把撤离信号送出去。",
-      "clip": "Voices/Clips/story_coast_elite"
-    },
-    {
-      "id": "story_city_elite",
-      "pilot": 1,
-      "text": "城市的供电钥匙就在那台重装机里。别让它跑了！",
-      "category": "story",
-      "match": "城市的供电钥匙就在那台重装机里。别让它跑了！",
-      "clip": "Voices/Clips/story_city_elite"
-    },
-    {
-      "id": "story_orbit_elite",
-      "pilot": 2,
-      "text": "它正在覆盖人类识别码。帮我争取一次重新连接的机会。",
-      "category": "story",
-      "match": "它正在覆盖人类识别码。帮我争取一次重新连接的机会。",
-      "clip": "Voices/Clips/story_orbit_elite"
-    },
-    {
-      "id": "story_coast_safe",
+      "id": "convoy_hit",
       "pilot": 0,
-      "text": "撤离信号已连通。再向前一步，就是他们的明天。",
+      "text": "救援船中弹！盯住下一个炸弹！",
       "category": "story",
-      "match": "撤离信号已连通。再向前一步，就是他们的明天。",
-      "clip": "Voices/Clips/story_coast_safe"
+      "match": "",
+      "clip": "Voices/Clips/convoy_hit"
     },
     {
-      "id": "story_coast_missed",
+      "id": "convoy_disabled",
       "pilot": 0,
-      "text": "船队还在等待回音。先打穿要塞，我们仍有机会。",
+      "text": "有一艘失去动力了……掩护剩下的船！",
       "category": "story",
-      "match": "船队还在等待回音。先打穿要塞，我们仍有机会。",
-      "clip": "Voices/Clips/story_coast_missed"
+      "match": "",
+      "clip": "Voices/Clips/convoy_disabled"
     },
     {
-      "id": "story_city_safe",
+      "id": "coast_clear_all",
       "pilot": 1,
-      "text": "电网回来了！看，下方的灯正在重新亮起。",
+      "text": "要塞哑火了！三艘船都还在，正在驶出封锁线！",
       "category": "story",
-      "match": "电网回来了！看，下方的灯正在重新亮起。",
-      "clip": "Voices/Clips/story_city_safe"
+      "match": "",
+      "clip": "Voices/Clips/coast_clear_all"
     },
     {
-      "id": "story_city_missed",
-      "pilot": 1,
-      "text": "干扰还没解除。把剩下的能量留给制空平台。",
-      "category": "story",
-      "match": "干扰还没解除。把剩下的能量留给制空平台。",
-      "clip": "Voices/Clips/story_city_missed"
-    },
-    {
-      "id": "story_orbit_safe",
-      "pilot": 2,
-      "text": "密钥完整。我会让天环记起，它曾经想保护的人。",
-      "category": "story",
-      "match": "密钥完整。我会让天环记起，它曾经想保护的人。",
-      "clip": "Voices/Clips/story_orbit_safe"
-    },
-    {
-      "id": "story_orbit_missed",
-      "pilot": 2,
-      "text": "密钥受损，但我的声音还在。让我亲口告诉它。",
-      "category": "story",
-      "match": "密钥受损，但我的声音还在。让我亲口告诉它。",
-      "clip": "Voices/Clips/story_orbit_missed"
-    },
-    {
-      "id": "story_coast_clear",
+      "id": "coast_clear_some",
       "pilot": 0,
-      "text": "要塞沉默了。撤离船队已通过防线，我们前往城市。",
+      "text": "要塞击破！还能航行的船，立刻撤离。救援队，请接应失去动力的船。",
       "category": "story",
-      "match": "要塞沉默了。撤离船队已通过防线，我们前往城市。",
-      "clip": "Voices/Clips/story_coast_clear"
+      "match": "",
+      "clip": "Voices/Clips/coast_clear_some"
     },
     {
-      "id": "story_city_clear",
+      "id": "coast_clear_lost",
+      "pilot": 0,
+      "text": "要塞击破……可是，船队失去动力了。通知后方，立刻派救援！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/coast_clear_lost"
+    },
+    {
+      "id": "city_grid_1",
       "pilot": 1,
-      "text": "雷暴正在消散。最后一个指令源在轨道上——准备爬升。",
+      "text": "第一座拆掉了！看，那个街区亮了。",
       "category": "story",
-      "match": "雷暴正在消散。最后一个指令源在轨道上——准备爬升。",
-      "clip": "Voices/Clips/story_city_clear"
+      "match": "",
+      "clip": "Voices/Clips/city_grid_1"
     },
     {
-      "id": "story_orbit_clear",
-      "pilot": 2,
-      "text": "收到人类识别码。天环停止攻击……我们把天空还给了所有人。",
+      "id": "city_grid_2",
+      "pilot": 0,
+      "text": "又一个街区恢复供电！撤离车辆开始移动了。",
       "category": "story",
-      "match": "收到人类识别码。天环停止攻击……我们把天空还给了所有人。",
-      "clip": "Voices/Clips/story_orbit_clear"
+      "match": "",
+      "clip": "Voices/Clips/city_grid_2"
     },
     {
-      "id": "story_rescue_complete",
+      "id": "city_grid_3",
       "pilot": 1,
-      "text": "漂亮！信号恢复了。你的侧翼交给我。",
+      "text": "三座全部熄火！哈，整条路的灯都回来了！",
       "category": "story",
-      "match": "漂亮！信号恢复了。你的侧翼交给我。",
-      "clip": "Voices/Clips/story_rescue_complete"
+      "match": "",
+      "clip": "Voices/Clips/city_grid_3"
     },
     {
-      "id": "story_boss_0",
-      "pilot": 2,
-      "text": "利维坦进入航线。先拆掉炮台，等核心暴露再集中火力。",
+      "id": "city_clear_power",
+      "pilot": 0,
+      "text": "制空平台击破！电网稳定，撤离车队可以继续走了。",
       "category": "story",
-      "match": "利维坦 · 海上要塞已进入航线。注意核心暴露与激光预警。",
-      "clip": "Voices/Clips/story_boss_0"
+      "match": "",
+      "clip": "Voices/Clips/city_clear_power"
     },
     {
-      "id": "story_boss_1",
-      "pilot": 2,
-      "text": "暴风眼接近。留意激光预警，别停在瞄准线上。",
+      "id": "city_clear_partial",
+      "pilot": 1,
+      "text": "平台打下来了。但还有街区没电，地面队伍，继续抢修！",
       "category": "story",
-      "match": "暴风眼 · 制空平台已进入航线。注意核心暴露与激光预警。",
-      "clip": "Voices/Clips/story_boss_1"
+      "match": "",
+      "clip": "Voices/Clips/city_clear_partial"
     },
     {
-      "id": "story_boss_2",
+      "id": "orbit_node_1",
       "pilot": 2,
-      "text": "炽天使已苏醒。摧毁护盾节点，我们就能碰到它的核心。",
+      "text": "第一条封锁解除。船坞，回应我。",
       "category": "story",
-      "match": "炽天使 · 天环核心已进入航线。注意核心暴露与激光预警。",
-      "clip": "Voices/Clips/story_boss_2"
+      "match": "",
+      "clip": "Voices/Clips/orbit_node_1"
+    },
+    {
+      "id": "orbit_node_2",
+      "pilot": 0,
+      "text": "第二个接点击破！雪璃，我们还在你身边。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/orbit_node_2"
+    },
+    {
+      "id": "orbit_node_3",
+      "pilot": 2,
+      "text": "接点全部解除！正在上传，掩护我的侧翼！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/orbit_node_3"
+    },
+    {
+      "id": "orbit_connected",
+      "pilot": 2,
+      "text": "接通了……它认出我们了！接驳船，可以进港。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/orbit_connected"
+    },
+    {
+      "id": "orbit_clear_link",
+      "pilot": 2,
+      "text": "核心停止攻击。识别码已经生效。欢迎回家。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/orbit_clear_link"
+    },
+    {
+      "id": "orbit_clear_partial",
+      "pilot": 2,
+      "text": "攻击停止了。识别链路还没接通……让地面队伍继续上传。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/orbit_clear_partial"
+    },
+    {
+      "id": "support_beacon",
+      "pilot": 0,
+      "text": "支援信标投下来了！接住它，我们就能并肩作战。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_beacon"
+    },
+    {
+      "id": "ward_contact",
+      "pilot": 2,
+      "text": "紫色护盾由圆环机维持。先打掉发生器！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/ward_contact"
+    },
+    {
+      "id": "rail_lock",
+      "pilot": 2,
+      "text": "轨道炮锁定了！现在横移！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/rail_lock"
+    },
+    {
+      "id": "carrier_launch",
+      "pilot": 1,
+      "text": "那艘母机还在放小飞机。直接拆母机！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/carrier_launch"
+    },
+    {
+      "id": "elite_arrive",
+      "pilot": 1,
+      "text": "重装指挥机！打掉它，能拿到一批补给。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/elite_arrive"
+    },
+    {
+      "id": "elite_down",
+      "pilot": 0,
+      "text": "指挥机击破，补给释放！需要修复的，靠过来。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/elite_down"
+    },
+    {
+      "id": "core_exposed",
+      "pilot": 2,
+      "text": "防护节点全部击破！核心暴露，现在集中火力！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/core_exposed"
+    },
+    {
+      "id": "boss_warning_0",
+      "pilot": 0,
+      "text": "利维坦进入航线！先拆它的炮塔，再打核心！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/boss_warning_0"
+    },
+    {
+      "id": "boss_warning_1",
+      "pilot": 1,
+      "text": "暴风眼来了。看准激光预警，别被两边夹住！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/boss_warning_1"
+    },
+    {
+      "id": "boss_warning_2",
+      "pilot": 2,
+      "text": "炽天使接近。它的节点还在供能，先切断它们！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/boss_warning_2"
+    },
+    {
+      "id": "support_enter_0",
+      "pilot": 0,
+      "text": "苍隼到位！导弹跟着我，清理侧翼！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_enter_0"
+    },
+    {
+      "id": "support_exit_0",
+      "pilot": 0,
+      "text": "支援时间到，我先脱离。保持航线！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_exit_0"
+    },
+    {
+      "id": "support_extend_0",
+      "pilot": 0,
+      "text": "收到新信标！继续保持双机支援！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_extend_0"
+    },
+    {
+      "id": "route_up_0",
+      "pilot": 0,
+      "text": "武装同步了！新一阶专精，可以用了！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/route_up_0"
+    },
+    {
+      "id": "support_enter_1",
+      "pilot": 1,
+      "text": "蝠鲼到位。嗯，给你带了点重火力。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_enter_1"
+    },
+    {
+      "id": "support_exit_1",
+      "pilot": 1,
+      "text": "弹药见底，我回去补充。下一轮，接着陪你。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_exit_1"
+    },
+    {
+      "id": "support_extend_1",
+      "pilot": 1,
+      "text": "补给接上了。哈，这下还能多打一轮！",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_extend_1"
+    },
+    {
+      "id": "route_up_1",
+      "pilot": 1,
+      "text": "改装生效！让它们试试这份火力。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/route_up_1"
+    },
+    {
+      "id": "support_enter_2",
+      "pilot": 2,
+      "text": "银针就位。轨道炮，替你打开一条直线。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_enter_2"
+    },
+    {
+      "id": "support_exit_2",
+      "pilot": 2,
+      "text": "协同窗口结束。银针脱离，通讯保持。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_exit_2"
+    },
+    {
+      "id": "support_extend_2",
+      "pilot": 2,
+      "text": "支援信标确认。协同时间已延长。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/support_extend_2"
+    },
+    {
+      "id": "route_up_2",
+      "pilot": 2,
+      "text": "专精参数更新。下一轮，我会更准。",
+      "category": "story",
+      "match": "",
+      "clip": "Voices/Clips/route_up_2"
+    },
+    {
+      "id": "route_skill_0_0",
+      "pilot": 0,
+      "text": "锁定目标！蜂群，齐射！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_0_0"
+    },
+    {
+      "id": "route_skill_0_1",
+      "pilot": 0,
+      "text": "队友，跟上！展开护航！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_0_1"
+    },
+    {
+      "id": "route_skill_0_2",
+      "pilot": 0,
+      "text": "抓紧了！疾风，突进！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_0_2"
+    },
+    {
+      "id": "route_skill_1_0",
+      "pilot": 1,
+      "text": "前方五点！熔炉轰击！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_1_0"
+    },
+    {
+      "id": "route_skill_1_1",
+      "pilot": 1,
+      "text": "别硬扛，进防壁！装甲，修复！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_1_1"
+    },
+    {
+      "id": "route_skill_1_2",
+      "pilot": 1,
+      "text": "解除限流！哈，火力全开！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_1_2"
+    },
+    {
+      "id": "route_skill_2_0",
+      "pilot": 2,
+      "text": "你已在射线上。终点，校准！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_2_0"
+    },
+    {
+      "id": "route_skill_2_1",
+      "pilot": 2,
+      "text": "给我们……留下时间。零时，展开！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_2_1"
+    },
+    {
+      "id": "route_skill_2_2",
+      "pilot": 2,
+      "text": "坐标锁定。相位，跃迁！",
+      "category": "bark",
+      "match": "",
+      "clip": "Voices/Clips/route_skill_2_2"
     }
   ]
 }

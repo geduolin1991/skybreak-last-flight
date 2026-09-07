@@ -11,7 +11,7 @@ namespace Skybreak {public partial class SkyGame {
   bossOrder=Stage==0?"拆除左右炮台，击穿海上要塞":Stage==1?"摧毁两座涡轮，关闭风暴护盾":"破坏三枚轨道节点，暴露天环核心";
  }
  void ClearBossEncounter(){bossMechanisms=null;if(coreShield)Destroy(coreShield.gameObject);bossTell=0;bossShots=0;bossOrder="";}
- void BossModuleDestroyed(Hostile e){if(e.owner==null||e.owner!=Boss)return;Shockwave(e.pos,Art.Orange,5,.6f);Toast("武装破坏 · 火力压制减弱",2);if(BossModuleCount==0){Boss.coreExpose=8;bossOrder="护盾崩溃 · 核心易伤 8 秒";Sound("BossBreak",.45f);CancelBullets(false);shake=.7f;Shockwave(Boss.pos,Art.Cyan,10,.75f);}}
+ void BossModuleDestroyed(Hostile e){if(e.owner==null||e.owner!=Boss)return;Shockwave(e.pos,Art.Orange,5,.6f);Toast("武装破坏 · 火力压制减弱",2);if(BossModuleCount==0){Boss.coreExpose=8;MissionSay("core_exposed",95,()=>Boss!=null&&Boss.coreExpose>0,false);bossOrder="护盾崩溃 · 核心易伤 8 秒";Sound("BossBreak",.45f);CancelBullets(false);shake=.7f;Shockwave(Boss.pos,Art.Cyan,10,.75f);}}
  void TickBossModule(Hostile e,float dt){if(e.owner==null||!e.owner.go||e.owner.hp<=0){Destroy(e.go);Enemies.Remove(e);return;}Vector3 offset=e.mountOffset;
   if(Stage==2)offset=Quaternion.Euler(0,Mathf.Sin(e.age*.35f)*28,0)*offset;
   e.pos=e.owner.pos+offset;UpdateWeaponTell(e);if(e.fire<=0&&e.pos.z<12){EnemyAttack(e);FinishWeaponTell(e);e.fire=(Stage==1?1.65f:2.3f)/(Difficulty==2?1.15f:1);}RenderEnemyFeedback(e);

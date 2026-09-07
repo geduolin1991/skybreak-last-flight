@@ -13,13 +13,7 @@ public partial class SkyWorld {
 
  void AddChapterLandmark(Transform sector,int index) {
   string model=null;Vector3 position=Vector3.zero;float size=1;
-  if(Stage==0&&index%5==1) {
-   model="EvacCarrier";position=new Vector3(index<5?-6.5f:6.5f,-2.75f,0);size=.55f;
-  } else if(Stage==1&&index%3==1) {
-   model="StormRelay";position=new Vector3(index%2==0?-10.8f:10.8f,-2.15f,1);size=.55f;
-  } else if(Stage==2&&index%5==2) {
-   model="OrbitalGate";position=new Vector3(0,-7,0);size=1.2f;
-  }
+  if(Stage==2&&index%5==2){model="OrbitalGate";position=new Vector3(0,-9,0);size=1.25f;}
   if(model==null)return;
   var landmark=Art.Model(model,sector);landmark.transform.localPosition=position;
   landmark.transform.localScale=Vector3.one*size;
@@ -71,6 +65,7 @@ public partial class SkyWorld {
    part.AddComponent<MeshFilter>().sharedMesh=mesh;
    var renderer=part.AddComponent<MeshRenderer>();renderer.sharedMaterial=entry.Key;
    renderer.receiveShadows=true;renderer.shadowCastingMode=ShadowCastingMode.On;
+   if(Stage==1&&entry.Key.name.Contains("Ion_Cyan")){int sectorIndex=0;int.TryParse(sector.name.Replace("Scenery sector ",""),out sectorIndex);districtWindows[(sectorIndex/3)%3].Add(renderer);}
   }
   foreach(var renderer in sources) {
    renderer.enabled=false;
@@ -85,7 +80,7 @@ public partial class SkyWorld {
   mist=null;if(Stage==2)return;
   var shader=Shader.Find("Skybreak/Atmosphere");if(!shader)return;
   mist=owned.Keep(new Material(shader));
-  mist.SetColor("_Tint",Stage==0?new Color(.26f,.49f,.54f,.12f):new Color(.24f,.28f,.45f,.10f));
+  mist.SetColor("_Tint",Stage==0?new Color(.26f,.49f,.54f,.025f):new Color(.24f,.28f,.45f,.018f));
   var layer=Art.Primitive(terrain,"Low sea mist",new Vector3(0,-1.85f,20),
    new Vector3(15,1,26),mist,PrimitiveType.Plane);
   layer.GetComponent<Renderer>().shadowCastingMode=ShadowCastingMode.Off;

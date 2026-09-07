@@ -21,4 +21,6 @@ subprocess.run([args.unity, "-batchmode", "-nographics", "-quit", "-projectPath"
                 "-buildTarget", "WebGL", "-executeMethod", "SkyWebBuild.Build", "-logFile", str(log)], check=True)
 output = workspace / "Build" / "Web"
 assert (output / "index.html").is_file(), "Unity did not produce a web player"
+from version_web_assets import version_assets
+version_assets(output)
 print(f"Browser build: {output}\nBuild log: {log}")

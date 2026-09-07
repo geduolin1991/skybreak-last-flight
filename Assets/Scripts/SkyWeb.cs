@@ -6,7 +6,7 @@ namespace Skybreak {
 public partial class SkyGame {
  [DllImport("__Internal")] static extern void SkyWebReport(string json);
  [System.Serializable] class WebSnapshot {
-  public string state,music;public int ship,weapon,stage,hull,bombs,kills,enemies,bullets;
+  public string mission,supportingPilots,routeName;public int missionNodes,convoySurvivors,wingmen,route,routeTier;public float convoyIntegrity,supportSeconds;public string state,music;public int ship,weapon,stage,hull,bombs,kills,enemies,bullets;
   public float stageTime,fps,musicTime,bossHp;public bool musicPlaying,nova;public string voiceId;public bool voicePlaying,voiceEnabled;public float voiceTime,voiceGain,musicGain;
  }
  // The HTML start button supplies the user gesture needed by browser audio.
@@ -19,6 +19,7 @@ public partial class SkyGame {
  // Read-only diagnostics used to verify the same public browser build.
  public void WebStatus() {
   SkyWebReport(JsonUtility.ToJson(new WebSnapshot {
+   mission=MissionStatus,missionNodes=MissionNodes,convoySurvivors=ConvoySurvivors,convoyIntegrity=ConvoyIntegrity,wingmen=WingmanCount,supportingPilots=SupportingPilots,supportSeconds=SupportRemaining,route=CurrentRoute,routeTier=RouteTier,routeName=RouteName,
    state=State.ToString(),ship=Ship,weapon=WeaponMode,stage=Stage,hull=Hull,bombs=Bombs,
    kills=Kills,enemies=Enemies.Count,bullets=Bullets.Count,stageTime=StageTime,fps=smoothedFps,
    music=music&&music.clip?music.clip.name:"",musicTime=music?music.time:0,

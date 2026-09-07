@@ -1,0 +1,985 @@
+{
+  "clips": [
+    {
+      "id": "select_0_0",
+      "expected": "我是苍凛。准备就绪，随时可以起飞。",
+      "recognized": "我是苍林，准备就绪，随时可以起飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.519791666666667,
+      "peak": 0.62225341796875,
+      "rms": 0.11759289798782302,
+      "sha256": "26433f834c452bff01c86d03b2a3ccdcb14f95b47f3f17af6e92cfed08f1e80d"
+    },
+    {
+      "id": "select_0_1",
+      "expected": "准备好了吗？这次，也一起回来。",
+      "recognized": "准备好了吗？这次也一起回来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.521166666666667,
+      "peak": 0.707305908203125,
+      "rms": 0.114662932665502,
+      "sha256": "cc1669136c30a49cc7c62426d022ed94c130e3abfc7ef85dcd711634f2b04054"
+    },
+    {
+      "id": "launch_0_0",
+      "expected": "跟紧我，出发！",
+      "recognized": "跟紧我，出发。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.255,
+      "peak": 0.7344970703125,
+      "rms": 0.1152353713020817,
+      "sha256": "8875a0c9be5d3011d7bf38a7dba0534f19c68565fb8110b3d1b911ab3f8dbd35"
+    },
+    {
+      "id": "bomb_0_0",
+      "expected": "裂空，展开！",
+      "recognized": "裂空展开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.04,
+      "peak": 0.497955322265625,
+      "rms": 0.11242067843933366,
+      "sha256": "23d99f8aa444fa3b31c2bd077af6abe73a10b4abbee442218b11486e44e4e6a1"
+    },
+    {
+      "id": "bomb_0_1",
+      "expected": "这条路，由我打开！",
+      "recognized": "这条路由我打开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.495,
+      "peak": 0.555267333984375,
+      "rms": 0.11464709147369077,
+      "sha256": "4d2f7f0312f2f7183135d34a3b0be0ca90b1295ca37b6d6e128b96934c63b0b3"
+    },
+    {
+      "id": "overdrive_0_0",
+      "expected": "天翼展开，全力突破！",
+      "recognized": "天意展开，全力突破。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.675,
+      "peak": 0.57794189453125,
+      "rms": 0.1181296393218619,
+      "sha256": "b60fb8810d9213bd16bd47f9538316bfa99fecc247a53f12368dc9ea1b907fc2"
+    },
+    {
+      "id": "hurt_0_0",
+      "expected": "没事，我还能飞。",
+      "recognized": "没事，我还能飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.635,
+      "peak": 0.637603759765625,
+      "rms": 0.10748674024265693,
+      "sha256": "5a014fcb5a6f5dcacf4d4a2cdc9dd5bacafe20d44f4ebbd6ef2067ad14027383"
+    },
+    {
+      "id": "hurt_0_1",
+      "expected": "擦到了，继续前进。",
+      "recognized": "擦到了，继续前进。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.435,
+      "peak": 0.5794677734375,
+      "rms": 0.12064179933771835,
+      "sha256": "ac8716839fa3d771cdd2b60dde1bb4b6abe74cc6d6e9f601ea0ade8388a32a3b"
+    },
+    {
+      "id": "danger_0_0",
+      "expected": "装甲告急。稳住，先避开弹幕！",
+      "recognized": "装甲告急！稳住，先避开弹幕。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.8,
+      "peak": 0.715362548828125,
+      "rms": 0.12331224266118608,
+      "sha256": "82967525693fdce869c3f9a3159dfefc6f273f2bbe40c6950bf65350a006a947"
+    },
+    {
+      "id": "victory_0_0",
+      "expected": "封锁解除了！检查队形，我们回家。",
+      "recognized": "封锁解除了，检查队形，我们回家。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.72,
+      "peak": 0.71221923828125,
+      "rms": 0.1177418625403701,
+      "sha256": "672a54b1ea2413f5ab65b5fd7ceee7172580f12699465c63118fd20e4ee36d83"
+    },
+    {
+      "id": "defeat_0_0",
+      "expected": "别放弃。我们还会一起起飞。",
+      "recognized": "别放弃，我们还会一起起飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.2222916666666666,
+      "peak": 0.765045166015625,
+      "rms": 0.11830521987950375,
+      "sha256": "743825e767e9974beacdac5d2871dfd309c9e90c87aa8753e82bd5cb83461b5e"
+    },
+    {
+      "id": "profile_0_0",
+      "expected": "我是苍凛。约好了，一起看见明天的天空。",
+      "recognized": "我是苍林，约好了，一起看见明天的天空。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.4159166666666665,
+      "peak": 0.7508544921875,
+      "rms": 0.12976704612451262,
+      "sha256": "eaebe3431f748d7f4b720461a0d62cb742863b66f93740569256e1e21fc7a1b8"
+    },
+    {
+      "id": "select_1_0",
+      "expected": "我在这儿。放心，火力管够。",
+      "recognized": "我在这儿，放心，火力管够。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.295,
+      "peak": 0.7847900390625,
+      "rms": 0.10736897316293348,
+      "sha256": "6ae5ba6ea0697bb8bc379b064542bfe349d9b50a6ce02e44326a537834441279"
+    },
+    {
+      "id": "select_1_1",
+      "expected": "选我呀？嗯，有眼光。",
+      "recognized": "选我呀！嗯，有眼光。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.535,
+      "peak": 0.65411376953125,
+      "rms": 0.11856304766964312,
+      "sha256": "2f8b98cb65b7c4050ccefa06c57c4f127f6c775de59bc63caa3c64d06ef041df"
+    },
+    {
+      "id": "launch_1_0",
+      "expected": "坐稳了，开工！",
+      "recognized": "坐稳了，开工。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.455,
+      "peak": 0.794219970703125,
+      "rms": 0.11802494015173515,
+      "sha256": "227b3d097f2e48811cad12d2054da1da3b200cfad6027187b7df5e704f29e046"
+    },
+    {
+      "id": "bomb_1_0",
+      "expected": "退后，大家伙来了！",
+      "recognized": "退后！大家伙来了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.795,
+      "peak": 0.702880859375,
+      "rms": 0.10985647668941963,
+      "sha256": "da42ead4db935f8eab3b5cabf73aad080bba0eaa5b76d89b1025c033ca80154b"
+    },
+    {
+      "id": "bomb_1_1",
+      "expected": "这一发，送你们的！",
+      "recognized": "这一发送你们的。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.695,
+      "peak": 0.793548583984375,
+      "rms": 0.11358749155222131,
+      "sha256": "1158ea743f75ed9b77fb067a320cfaafdf0e3ba27d42a9a58e7cec7ce27ea073"
+    },
+    {
+      "id": "overdrive_1_0",
+      "expected": "引擎全开！这才叫痛快！",
+      "recognized": "引擎全开，这才叫痛快。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.615,
+      "peak": 0.669921875,
+      "rms": 0.11348299057404519,
+      "sha256": "4b7702d08c1be3fe46772bb4ee05aadb98111f4e13e6a2a6e1ebb27d56db2aa8"
+    },
+    {
+      "id": "hurt_1_0",
+      "expected": "啧，刮花我的机翼了。",
+      "recognized": "则刮花我的记忆了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.135,
+      "peak": 0.562042236328125,
+      "rms": 0.11478204419673557,
+      "sha256": "1c2b850131b0662925f976c0b2c922a5fe5c32bbd4b7c3cb0db217adb3a8e32c"
+    },
+    {
+      "id": "hurt_1_1",
+      "expected": "小伤。待会儿再修。",
+      "recognized": "小伤，待会儿再修。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.095,
+      "peak": 0.7608642578125,
+      "rms": 0.09944216985655342,
+      "sha256": "89114baf9c82361426fdd763e581df2d0004eac118ca46fe3922228670037850"
+    },
+    {
+      "id": "danger_1_0",
+      "expected": "装甲快撑不住了。先躲，别硬扛！",
+      "recognized": "装甲快撑不住了，先躲，别硬扛。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.835,
+      "peak": 0.788726806640625,
+      "rms": 0.12120766854778256,
+      "sha256": "6984fb3704d6fff12d4c673c4bb6acd527c63bc68c40e3499f6183b84e9dd9a3"
+    },
+    {
+      "id": "victory_1_0",
+      "expected": "哈，打穿了！收队吧，大家。",
+      "recognized": "哈，打穿了，收队吧，大家。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.695,
+      "peak": 0.77471923828125,
+      "rms": 0.09507158904306401,
+      "sha256": "ed0f28b955e7bdc156068f9436ff8d5bde910c92b161c6b1b0f5d19268e182be"
+    },
+    {
+      "id": "defeat_1_0",
+      "expected": "人没事就好。修好了，我们再来。",
+      "recognized": "人没事就好。修好了，我们再来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.975,
+      "peak": 0.788421630859375,
+      "rms": 0.11343286028297873,
+      "sha256": "2090078be8300aaa62f8f9e9867a9f23f278e5ddda2037c02a3cc9d1b0ca4d9b"
+    },
+    {
+      "id": "profile_1_0",
+      "expected": "别急嘛。先听听引擎的声音。有我在，火力管够。",
+      "recognized": "别急嘛，先听听引擎的声音。有我在，火力管够。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.375,
+      "peak": 0.792510986328125,
+      "rms": 0.13222522430560468,
+      "sha256": "6f91a53e1e872efc290348161b43452f7a526a3b7597191e73d015d757e23333"
+    },
+    {
+      "id": "select_2_0",
+      "expected": "雪璃，航线已确认。",
+      "recognized": "雪梨，航线已确认。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.627625,
+      "peak": 0.762542724609375,
+      "rms": 0.10769482582096054,
+      "sha256": "2d22a5a44ff534adcf877f4632230e97f0a42f323790903d238d89592311d715"
+    },
+    {
+      "id": "select_2_1",
+      "expected": "你的信号，我收到了。",
+      "recognized": "你的信号，我收到了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.3885833333333335,
+      "peak": 0.716461181640625,
+      "rms": 0.10888142974603948,
+      "sha256": "f3db784aab8fc57121b27cfc32cfc49a3a8530a5d4e3400b04035944e934cb2f"
+    },
+    {
+      "id": "launch_2_0",
+      "expected": "航线清晰。我们走。",
+      "recognized": "航线清晰，我们走。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.627625,
+      "peak": 0.79400634765625,
+      "rms": 0.10535786524202827,
+      "sha256": "fb91b6f33f3dc671b852af663cc7127700885ec826659fabb8538d761954b958"
+    },
+    {
+      "id": "bomb_2_0",
+      "expected": "清除阻碍。裂空，释放。",
+      "recognized": "清除阻碍，裂空，释放。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.344875,
+      "peak": 0.79437255859375,
+      "rms": 0.13376000499763988,
+      "sha256": "4425a1c621981bbdb566bcd8bfe7fefdc4826cbb3a6637756da041d63f3e40d8"
+    },
+    {
+      "id": "bomb_2_1",
+      "expected": "现在，打开航路！",
+      "recognized": "现在打开航路。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.627625,
+      "peak": 0.781982421875,
+      "rms": 0.08741829593104185,
+      "sha256": "c8a7a708e11017b2e07da76d77418a8458e8c97a5998d5a7da59fbfade74eb2f"
+    },
+    {
+      "id": "overdrive_2_0",
+      "expected": "解除限制，重写航线！",
+      "recognized": "解除限制，重写航线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.3089166666666667,
+      "peak": 0.77593994140625,
+      "rms": 0.11419979466669813,
+      "sha256": "e30bd4685cf52bd0f7faf51f747932690b274e2e4ca3926544c6dc22f64f5112"
+    },
+    {
+      "id": "hurt_2_0",
+      "expected": "损伤可控，不用担心。",
+      "recognized": "损伤可控，不用担心。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.5479583333333333,
+      "peak": 0.680572509765625,
+      "rms": 0.10703030362254883,
+      "sha256": "0d8a3142483f2d529f1fcdd653a516e831266e696eae1f7000ded0aa6c399ad4"
+    },
+    {
+      "id": "hurt_2_1",
+      "expected": "我还在。继续。",
+      "recognized": "我还在，继续。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.5479583333333333,
+      "peak": 0.792999267578125,
+      "rms": 0.07386685242417147,
+      "sha256": "7491d1e427e366852de2e1f65cf024236adb453544dac042f3fd4d0b6dea72f0"
+    },
+    {
+      "id": "danger_2_0",
+      "expected": "警告，装甲临界。先保持距离。",
+      "recognized": "警告：装甲临界，先保持距离。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.982625,
+      "peak": 0.794342041015625,
+      "rms": 0.1316546189484078,
+      "sha256": "554e2b140f743ef4262c750deacbb73d3add9456bc175b5f49aed9ee306f2479"
+    },
+    {
+      "id": "victory_2_0",
+      "expected": "攻击指令已终止。我们，做到了。",
+      "recognized": "攻击指令已终止。我们做到了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.4091666666666667,
+      "peak": 0.792694091796875,
+      "rms": 0.1342881359738786,
+      "sha256": "38c7a45a90440daca5ff1062480c6f424a41733d7086b274b30397dd685489c4"
+    },
+    {
+      "id": "defeat_2_0",
+      "expected": "如果计算里没有希望，就重新计算。",
+      "recognized": "如果计算里没有希望，就重新计算。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.6474583333333332,
+      "peak": 0.79437255859375,
+      "rms": 0.14051746678299304,
+      "sha256": "89d3225f9e1710020d87f734647dfc05e1b68bbb45632890e1b39545759c5ac3"
+    },
+    {
+      "id": "profile_2_0",
+      "expected": "我是雪璃。如果计算里没有希望，就重新计算。",
+      "recognized": "我是雪梨。如果计算里没有希望，就重新计算。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.521541666666667,
+      "peak": 0.792449951171875,
+      "rms": 0.13635111281858464,
+      "sha256": "764e08ab927207c60f744b0a4ca0f14e8775784189e0778cc8cf78ec23d44d1f"
+    },
+    {
+      "id": "briefing_0_0",
+      "expected": "下方三艘救援船，都是我们要带回家的人。拦住俯冲轰炸机，别让炸弹落到船上！",
+      "recognized": "下方三艘救援船，都是我们要带回家的人。拦住俯冲轰炸机，别让炸弹落到船上。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.24,
+      "peak": 0.783233642578125,
+      "rms": 0.11374050631356986,
+      "sha256": "f6ed8ec3ac756611babc719a0df391a32bfc784ace900fc81a3d2573bd1aa1de"
+    },
+    {
+      "id": "briefing_0_1",
+      "expected": "三座干扰塔切断了城市供电。逐座击破，让街灯和撤离车队重新动起来！",
+      "recognized": "三座干扰塔切断了城市供电，逐座击破，让街灯和撤离车队重新动起来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.0,
+      "peak": 0.737518310546875,
+      "rms": 0.11805180920508053,
+      "sha256": "a72420fdae33f0e10068c8133cef417ca28a6ac58541255937710876ed343189"
+    },
+    {
+      "id": "briefing_0_2",
+      "expected": "先解除三个封锁接点，再掩护雪璃上传识别码。八秒，我们替她争取。",
+      "recognized": "先解除三个封锁节点，再掩护雪梨上传十编码。八秒，我们替他争取。",
+      "syllable_error_rate": 0.037,
+      "seconds": 5.195,
+      "peak": 0.730987548828125,
+      "rms": 0.1193594332247907,
+      "sha256": "55d8fa0e5cdc4f273921feed550a760b8c106164b4e21e338e7725cd351713c9"
+    },
+    {
+      "id": "briefing_1_0",
+      "expected": "三艘船，七百多口人。嗯，这回可得把前面的轰炸机，清得干干净净。",
+      "recognized": "三艘船，七百多口人。嗯，这回可得把前面的轰炸机清得干干净净。",
+      "syllable_error_rate": 0.0,
+      "seconds": 7.095,
+      "peak": 0.794891357421875,
+      "rms": 0.12929845291901038,
+      "sha256": "72fa27c370dab3fbad17e4691c64b2919ef552769cb5a3ba3101f57a9ea898eb"
+    },
+    {
+      "id": "briefing_1_1",
+      "expected": "看见那三座干扰塔没？拆掉它们。等灯亮了，公交车才能把人送出去。",
+      "recognized": "看见那三座干扰塔没？拆掉他们。等灯亮了，公交车才能把人送出去。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.195,
+      "peak": 0.775177001953125,
+      "rms": 0.12001409211863963,
+      "sha256": "ade3522f4f4ace65acbd04cd60c9ef7aa0a31e5690346ac4dc6257be88a8b3b5"
+    },
+    {
+      "id": "briefing_1_2",
+      "expected": "船坞被封死了。拆开三个接点，给雪璃留八秒。剩下的火力，我来扛。",
+      "recognized": "船屋被封死了，拆开三个接点，给雪梨留八秒，剩下的火力我来扛。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.195,
+      "peak": 0.793609619140625,
+      "rms": 0.11943289131616197,
+      "sha256": "1d456e41a4ad3c4309d2ddb0725bac0fe9e79d5b168d45bdd5997f99b5406b49"
+    },
+    {
+      "id": "briefing_2_0",
+      "expected": "三艘民用船已进入航线。敌人的俯冲机，会攻击船队。请优先拦截。",
+      "recognized": "三艘民用船已经入航线，敌人的俯冲机会攻击船队，请优先拦截。",
+      "syllable_error_rate": 0.0385,
+      "seconds": 6.430375,
+      "peak": 0.73968505859375,
+      "rms": 0.12633898232482532,
+      "sha256": "1633945752ee6413818669dc262904af7c65e73828f53981b31015a0d5500f9f"
+    },
+    {
+      "id": "briefing_2_1",
+      "expected": "三座干扰塔仍在运行。摧毁一座，对应街区就能恢复供电。",
+      "recognized": "三座干扰塔仍在运行，摧毁一座，对应街区就能恢复供电。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.497833333333333,
+      "peak": 0.792816162109375,
+      "rms": 0.1297759259070416,
+      "sha256": "827eef29b73d31d4de71a307caacbb6587779d0355a49a67051daf33c75edbbd"
+    },
+    {
+      "id": "briefing_2_2",
+      "expected": "那座船坞……我曾在那里工作。解除三个封锁接点，我需要八秒，重新接通它。",
+      "recognized": "那座船坞，我曾在那里工作。解除三个封锁节点，我需要八秒重新接通它。",
+      "syllable_error_rate": 0.0,
+      "seconds": 7.572375,
+      "peak": 0.793975830078125,
+      "rms": 0.1203916741502371,
+      "sha256": "1614ae7a6026366285afd3607a9137eb0b226eb16d78c1baaf2c7deff4f50e30"
+    },
+    {
+      "id": "world_intro_0",
+      "expected": "看到下方三艘白色救援船了。全队，守住这条航线！",
+      "recognized": "看到下方三艘白色救援船了，全队守住这条航线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.115,
+      "peak": 0.716156005859375,
+      "rms": 0.12176506039697785,
+      "sha256": "9421ab2a25e61a3abb49338c39676cd0700b84234e815b4e8d54a9a5f77b6aee"
+    },
+    {
+      "id": "world_intro_1",
+      "expected": "干扰塔出现了。三座，分开拆！别让下面的人，再摸黑等了。",
+      "recognized": "干扰塔出现了，三座分开拆，别让下面的人再摸黑等了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.855,
+      "peak": 0.78851318359375,
+      "rms": 0.12251667366974389,
+      "sha256": "e6004ae14d947527f2b2beb12f887864ebf249caba29b320cb3e30329531cb51"
+    },
+    {
+      "id": "world_intro_2",
+      "expected": "就是这座船坞。红色接点还在封锁，先击破它们！",
+      "recognized": "就是这座船屋，红色节点还在封锁，先击破他们。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.019291666666667,
+      "peak": 0.782623291015625,
+      "rms": 0.1220065166848762,
+      "sha256": "1df2de0c897757743ab9506e8c806560db028eb67527ae8a1674578a22779903"
+    },
+    {
+      "id": "convoy_bomber",
+      "expected": "俯冲机正冲向船队！拦住它！",
+      "recognized": "俯冲机正冲向船队，拦住他。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.3219166666666666,
+      "peak": 0.79534912109375,
+      "rms": 0.10948259918125477,
+      "sha256": "59d90044f6a9fdc4bface6f9a141cdacbd986d1db70bf100fbfe5532c72dd711"
+    },
+    {
+      "id": "convoy_bomb_lock",
+      "expected": "它在瞄准船！赶紧打掉，别让它投弹！",
+      "recognized": "他在瞄准船，赶紧打掉，别让他投弹。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.455,
+      "peak": 0.792877197265625,
+      "rms": 0.1256778592096349,
+      "sha256": "ddd504e787df44321c2ca5875e593f1fca24a86f15ccc7da79438a7f2de46b34"
+    },
+    {
+      "id": "convoy_intercept",
+      "expected": "拦下了！继续守住船队。",
+      "recognized": "拦下了，继续守住船队。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.08,
+      "peak": 0.7352294921875,
+      "rms": 0.11000499907914668,
+      "sha256": "7fb27faf5afd79c374f5cce71fdca5e2cf9d6b09d7738c5f8bb0729173799287"
+    },
+    {
+      "id": "convoy_hit",
+      "expected": "救援船中弹！盯住下一个炸弹！",
+      "recognized": "救援船中弹，盯住下一个炸弹。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.595,
+      "peak": 0.608184814453125,
+      "rms": 0.11144143288878519,
+      "sha256": "6e035c8179aab4ad36f88ab15832a7a89f09a2cafdb5c22596fecb947c4a0d06"
+    },
+    {
+      "id": "convoy_disabled",
+      "expected": "有一艘失去动力了……掩护剩下的船！",
+      "recognized": "有一艘失去动力了，掩护剩下的船。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.275,
+      "peak": 0.617919921875,
+      "rms": 0.11984832658003634,
+      "sha256": "208a48343e096f9dec856d85959d6be4caffb96efcd6b671fe0b4911298a0f31"
+    },
+    {
+      "id": "coast_clear_all",
+      "expected": "要塞哑火了！三艘船都还在，正在驶出封锁线！",
+      "recognized": "要塞哑火了，三艘船都还在，正在驶出封锁线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.455,
+      "peak": 0.791534423828125,
+      "rms": 0.12350791993404546,
+      "sha256": "a253a308315d7868fb330df99c1e946350943f6c818ac592e4a3fe0ab20c1d9d"
+    },
+    {
+      "id": "coast_clear_some",
+      "expected": "要塞击破！还能航行的船，立刻撤离。救援队，请接应失去动力的船。",
+      "recognized": "要塞击破，还能航行的船立刻撤离。救援队，请接应失去动力的船。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.955,
+      "peak": 0.75921630859375,
+      "rms": 0.11499542878629586,
+      "sha256": "544f9b1f0bcc4d8a8f2ef26f239506c75f8a5e409bb2f537fd49b06bab14c65b"
+    },
+    {
+      "id": "coast_clear_lost",
+      "expected": "要塞击破……可是，船队失去动力了。通知后方，立刻派救援！",
+      "recognized": "要塞击破，可是船队失去动力了。通知后方，立刻派救援。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.930916666666667,
+      "peak": 0.73516845703125,
+      "rms": 0.12408331557891374,
+      "sha256": "1b1dbd9715061f9f09c49ffd918f8ad5de958bb6539aa446a2c02daa3e010567"
+    },
+    {
+      "id": "city_grid_1",
+      "expected": "第一座拆掉了！看，那个街区亮了。",
+      "recognized": "第一座拆掉了，看那个街区亮了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.1603333333333334,
+      "peak": 0.79180908203125,
+      "rms": 0.12040212797796511,
+      "sha256": "1e47ad2f05df44084b91550cda75a0224382029be505efb561712b5bcbf8dbff"
+    },
+    {
+      "id": "city_grid_2",
+      "expected": "又一个街区恢复供电！撤离车辆开始移动了。",
+      "recognized": "又一个街区恢复供电，撤离车辆开始移动了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.2,
+      "peak": 0.706878662109375,
+      "rms": 0.12310308730418604,
+      "sha256": "d0d14d09d9ef807ee40fced23724076dca52f03cd13a6d12d132e8a5553d7d3a"
+    },
+    {
+      "id": "city_grid_3",
+      "expected": "三座全部熄火！哈，整条路的灯都回来了！",
+      "recognized": "三座全部熄火。哼，整条路的灯都回来了。",
+      "syllable_error_rate": 0.0625,
+      "seconds": 3.875,
+      "peak": 0.793426513671875,
+      "rms": 0.12885316681250802,
+      "sha256": "c9e4bc6258a0061304c293746a2bcf6890e48b988dd94585abba0d02b8d340cb"
+    },
+    {
+      "id": "city_clear_power",
+      "expected": "制空平台击破！电网稳定，撤离车队可以继续走了。",
+      "recognized": "智控平台击破，电网稳定，撤离车队可以继续走了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.7162083333333333,
+      "peak": 0.748565673828125,
+      "rms": 0.12523585407938242,
+      "sha256": "45313b271ec329af60eb3d783b0b6eb33b4ffbcd030bc5ccbf50fcbd37a0083e"
+    },
+    {
+      "id": "city_clear_partial",
+      "expected": "平台打下来了。但还有街区没电，地面队伍，继续抢修！",
+      "recognized": "平台打下来了，但还有街区没电，地面队伍继续抢修。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.114416666666667,
+      "peak": 0.78759765625,
+      "rms": 0.11651089283413518,
+      "sha256": "c893dbac22cf2b144e53b79ebc2110102bd1f4e6cd537a9da93238afc97666eb"
+    },
+    {
+      "id": "orbit_node_1",
+      "expected": "第一条封锁解除。船坞，回应我。",
+      "recognized": "第一条封锁解除，船务回应我。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.584,
+      "peak": 0.791717529296875,
+      "rms": 0.1435640257935797,
+      "sha256": "e28a0875c2798fa29cd8e5a17442d0b50cbcb03a4157183d2ab34365ad54d9f1"
+    },
+    {
+      "id": "orbit_node_2",
+      "expected": "第二个接点击破！雪璃，我们还在你身边。",
+      "recognized": "第二个接点击破，雪梨，我们还在你身边。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.495,
+      "peak": 0.697021484375,
+      "rms": 0.11859475142253462,
+      "sha256": "24c281ca071c48278eaa32226aec662b7bb4f46da3404a0663e255cbef73bdae"
+    },
+    {
+      "id": "orbit_node_3",
+      "expected": "接点全部解除！正在上传，掩护我的侧翼！",
+      "recognized": "节点全部解除，正在上传，掩护我的侧翼。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.142083333333333,
+      "peak": 0.793731689453125,
+      "rms": 0.1347933562531929,
+      "sha256": "7f7fa3f362078a3622b65425f3537375c92dc45504e2151a0a74d177e685f354"
+    },
+    {
+      "id": "orbit_connected",
+      "expected": "接通了……它认出我们了！接驳船，可以进港。",
+      "recognized": "接通了，他认出我们了。接驳船可以进港。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.540791666666666,
+      "peak": 0.79345703125,
+      "rms": 0.14136700795783014,
+      "sha256": "c3b66472e35230a5d98f4bca3545c3fb7aacce55d222fd444baf4a84c06b90e6"
+    },
+    {
+      "id": "orbit_clear_link",
+      "expected": "核心停止攻击。识别码已经生效。欢迎回家。",
+      "recognized": "核心停止攻击，识别码已经生效。欢迎回家。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.540791666666666,
+      "peak": 0.7923583984375,
+      "rms": 0.13374680770970476,
+      "sha256": "feecef08c2d51f76a0629e2d80cee59712cb526918fe076db541fe0727a40364"
+    },
+    {
+      "id": "orbit_clear_partial",
+      "expected": "攻击停止了。识别链路还没接通……让地面队伍继续上传。",
+      "recognized": "攻击停止了，识别链路还没接通，让地面队伍继续上传。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.396166666666667,
+      "peak": 0.79327392578125,
+      "rms": 0.12981323414880033,
+      "sha256": "a634b32a2829c42e92dd1d5fddcf2a00d269924231a1a2771458a312bb4c2406"
+    },
+    {
+      "id": "support_beacon",
+      "expected": "支援信标投下来了！接住它，我们就能并肩作战。",
+      "recognized": "支援信标投下来了，接住它，我们就能并肩作战。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.6,
+      "peak": 0.701629638671875,
+      "rms": 0.12355577310289043,
+      "sha256": "5fc4b41b6ca268f506dcdffbc2effdeffc9edf81824ab49ad9a087193de6fa0d"
+    },
+    {
+      "id": "ward_contact",
+      "expected": "紫色护盾由圆环机维持。先打掉发生器！",
+      "recognized": "紫色护盾由圆环机维持。先打掉发生器。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.461041666666667,
+      "peak": 0.71087646484375,
+      "rms": 0.13081961773513257,
+      "sha256": "112ab1b5b051a6815b3fe7f2bedd6a1e93216a8911dac1349ef49c6c157d6319"
+    },
+    {
+      "id": "rail_lock",
+      "expected": "轨道炮锁定了！现在横移！",
+      "recognized": "轨道炮锁定了。现在横移。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.946375,
+      "peak": 0.791107177734375,
+      "rms": 0.11198399670119973,
+      "sha256": "34ade9bf8a1509c6ff7f50fbca08641cbc3d5f4367ab7ef1a9168478166a79ec"
+    },
+    {
+      "id": "carrier_launch",
+      "expected": "那艘母机还在放小飞机。直接拆母机！",
+      "recognized": "那艘母机还在放小飞机，直接拆母机。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.499,
+      "peak": 0.793182373046875,
+      "rms": 0.126943158096933,
+      "sha256": "8e11d2013aebe22e62b0155b3261b2c031cf955721d3be5020ffd7addf71e762"
+    },
+    {
+      "id": "elite_arrive",
+      "expected": "重装指挥机！打掉它，能拿到一批补给。",
+      "recognized": "重装指挥机，打掉他，能拿到一批补给。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.695,
+      "peak": 0.78448486328125,
+      "rms": 0.12363691946601027,
+      "sha256": "470ccc27ad0e6940a3cd0830c596739dfd8496768705ab654634b1c5bc0faff5"
+    },
+    {
+      "id": "elite_down",
+      "expected": "指挥机击破，补给释放！需要修复的，靠过来。",
+      "recognized": "指挥机击破，补给释放。需要修复的靠过来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.7344583333333334,
+      "peak": 0.713775634765625,
+      "rms": 0.1250235380650195,
+      "sha256": "c70cf775f979891833a09d94b2b8db0f0d6c816d4bf821ac175bc1a3efc6a94d"
+    },
+    {
+      "id": "core_exposed",
+      "expected": "防护节点全部击破！核心暴露，现在集中火力！",
+      "recognized": "防护节点全部击破，核心暴露。现在集中火力。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.442041666666666,
+      "peak": 0.791473388671875,
+      "rms": 0.12856261512066128,
+      "sha256": "672a2946dc2e3c4ca8a41c32c36c5e414d6e12235f81c0a5bbdcae23bb8ce66f"
+    },
+    {
+      "id": "boss_warning_0",
+      "expected": "利维坦进入航线！先拆它的炮塔，再打核心！",
+      "recognized": "利维坦进入航线，先拆他的炮塔，再打核心。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.52,
+      "peak": 0.669036865234375,
+      "rms": 0.11618902492889537,
+      "sha256": "c73f693049d3ab53889568d3c14bae90eb9dcc0a19851bca413a53bdcb5ea558"
+    },
+    {
+      "id": "boss_warning_1",
+      "expected": "暴风眼来了。看准激光预警，别被两边夹住！",
+      "recognized": "暴风眼来了，看准激光预警，别被两边夹住。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.81825,
+      "peak": 0.78863525390625,
+      "rms": 0.13563572286554218,
+      "sha256": "f097848de560bc9b0e8070898ca7c5a02256383ff3c6636d160d984466bba661"
+    },
+    {
+      "id": "boss_warning_2",
+      "expected": "炽天使接近。它的节点还在供能，先切断它们！",
+      "recognized": "智天使接近，他的节点还在供能，先切断他们。",
+      "syllable_error_rate": 0.0556,
+      "seconds": 4.919041666666667,
+      "peak": 0.79217529296875,
+      "rms": 0.12501246740656138,
+      "sha256": "855ff62a1ef04e0609e9fec23e5f55d871865958a77c0c6213475806e3ba9978"
+    },
+    {
+      "id": "support_enter_0",
+      "expected": "苍隼到位！导弹跟着我，清理侧翼！",
+      "recognized": "操损到位，导弹跟着我清理侧翼。",
+      "syllable_error_rate": 0.0769,
+      "seconds": 3.015,
+      "peak": 0.626739501953125,
+      "rms": 0.12112280568238173,
+      "sha256": "e8a0f6ec33bf82e0c47955f3d36bd74006491852aaf230db536f975d49ece0dc"
+    },
+    {
+      "id": "support_exit_0",
+      "expected": "支援时间到，我先脱离。保持航线！",
+      "recognized": "支援时间到，我先脱离，保持航线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.575,
+      "peak": 0.68463134765625,
+      "rms": 0.11831243696122827,
+      "sha256": "cf81d44f130956a72bbe6c4002239bb86c0711011f39f5e75590eb130ef29a29"
+    },
+    {
+      "id": "support_extend_0",
+      "expected": "收到新信标！继续保持双机支援！",
+      "recognized": "收到新信标，继续保持双击支援。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.3419166666666666,
+      "peak": 0.627288818359375,
+      "rms": 0.12101891090246833,
+      "sha256": "54333dbb91f98f61075c4df2f309f5be50e0af524865864adad4bc7d59a54414"
+    },
+    {
+      "id": "route_up_0",
+      "expected": "武装同步了！新一阶专精，可以用了！",
+      "recognized": "武装同步了，新一阶专精可以用了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.895,
+      "peak": 0.738494873046875,
+      "rms": 0.12039976059625833,
+      "sha256": "9b0998e306cc0a55ef5816a4d4030f5dddd7c2eefb2e16918777700693f895a0"
+    },
+    {
+      "id": "support_enter_1",
+      "expected": "蝠鲼到位。嗯，给你带了点重火力。",
+      "recognized": "福分到位。嗯，给你带了点重火力。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.235,
+      "peak": 0.714599609375,
+      "rms": 0.1277397596361719,
+      "sha256": "b56b04b8ffb3bf579ee36455335d543da1a9dfaa28235a42bc069ae97e81955d"
+    },
+    {
+      "id": "support_exit_1",
+      "expected": "弹药见底，我回去补充。下一轮，接着陪你。",
+      "recognized": "弹药见底，我回去补充。下一轮接着陪你。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.795,
+      "peak": 0.78375244140625,
+      "rms": 0.12268032211452992,
+      "sha256": "01b8cd21b8f648ed5a7577e34f46ef444b2b06bbc992e03682f854223e84bcef"
+    },
+    {
+      "id": "support_extend_1",
+      "expected": "补给接上了。哈，这下还能多打一轮！",
+      "recognized": "补给接上了，哈，这下还能多打一轮。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.559,
+      "peak": 0.79449462890625,
+      "rms": 0.13280404656544292,
+      "sha256": "f46deb33205f32a658256a7ef632f4e0777b088e11465d6f05430f487b148299"
+    },
+    {
+      "id": "route_up_1",
+      "expected": "改装生效！让它们试试这份火力。",
+      "recognized": "改装生效，让他们试试这份火力。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.855,
+      "peak": 0.79168701171875,
+      "rms": 0.10696490172566982,
+      "sha256": "1cbcaaf49bddfb52db6cfd1c65af5941412dd734e67e3e74e700cacfab34ff19"
+    },
+    {
+      "id": "support_enter_2",
+      "expected": "银针就位。轨道炮，替你打开一条直线。",
+      "recognized": "银针就位，轨道炮，替你打开一条直线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.062375,
+      "peak": 0.785064697265625,
+      "rms": 0.1502078725157269,
+      "sha256": "f73c07b13b66f245a90eaaa8ae70e0398e8e074e55f8ae808411fc50923b8013"
+    },
+    {
+      "id": "support_exit_2",
+      "expected": "协同窗口结束。银针脱离，通讯保持。",
+      "recognized": "协同窗口结束，银针脱离，通讯保持。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.381291666666667,
+      "peak": 0.79437255859375,
+      "rms": 0.13336574732111808,
+      "sha256": "a68263bf5e1407a2e1a983add192855370897d7051f49c807a35292a9e650e94"
+    },
+    {
+      "id": "support_extend_2",
+      "expected": "支援信标确认。协同时间已延长。",
+      "recognized": "支援信标确认，协同时间已延长。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.2651666666666666,
+      "peak": 0.74908447265625,
+      "rms": 0.13314797301044234,
+      "sha256": "74e6958316ff13db7a4ccf7af51f79097b0b4304f4867e3be0d647727b15082e"
+    },
+    {
+      "id": "route_up_2",
+      "expected": "专精参数更新。下一轮，我会更准。",
+      "recognized": "专精参数更新，下一轮我会更准。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.823166666666667,
+      "peak": 0.79595947265625,
+      "rms": 0.13121259348129513,
+      "sha256": "2348ed5929f8beb7e1a8c275494097aefea75cd1e56d71f4828328daa09a4afd"
+    },
+    {
+      "id": "route_skill_0_0",
+      "expected": "锁定目标！蜂群，齐射！",
+      "recognized": "锁定目标：蜂群，齐声。",
+      "syllable_error_rate": 0.125,
+      "seconds": 2.4,
+      "peak": 0.60504150390625,
+      "rms": 0.11365954254841357,
+      "sha256": "bdd965502c5142c58465db7a2d2a075a069e22858158d8431bea252c30478224"
+    },
+    {
+      "id": "route_skill_0_1",
+      "expected": "队友，跟上！展开护航！",
+      "recognized": "队友，跟上，展开护航。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.16,
+      "peak": 0.6695556640625,
+      "rms": 0.12019059634271144,
+      "sha256": "b6a3a811084cbf93a463a64be0ad2420dd6af811e94086dc29da9635d529858e"
+    },
+    {
+      "id": "route_skill_0_2",
+      "expected": "抓紧了！疾风，突进！",
+      "recognized": "抓紧啦！疾风突进。",
+      "syllable_error_rate": 0.1429,
+      "seconds": 2.4,
+      "peak": 0.70123291015625,
+      "rms": 0.10397490094931006,
+      "sha256": "24d9605c04decfafa55b644bd194797ecbe7ddd0afccd782a84848f8f60926bf"
+    },
+    {
+      "id": "route_skill_1_0",
+      "expected": "前方五点！熔炉轰击！",
+      "recognized": "前方五点，熔炉轰击。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.435,
+      "peak": 0.61431884765625,
+      "rms": 0.1183661656882836,
+      "sha256": "e6bfe6c308f6286007f20ec6f3a8ed7891e6cd9449824201eb2a927c29adea43"
+    },
+    {
+      "id": "route_skill_1_1",
+      "expected": "别硬扛，进防壁！装甲，修复！",
+      "recognized": "别硬扛，进防壁装甲修复。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.435,
+      "peak": 0.793731689453125,
+      "rms": 0.12910287534025403,
+      "sha256": "2becc8455ebc6f95053cdf4e88c8c474dcc296f7600663984f65c80097b1da2b"
+    },
+    {
+      "id": "route_skill_1_2",
+      "expected": "解除限流！哈，火力全开！",
+      "recognized": "解除限流，哈，火力全开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.915,
+      "peak": 0.78961181640625,
+      "rms": 0.09074916386940012,
+      "sha256": "03cd718be574c5436ac1d9d0e9b6ca4721befc5edda74a09c478d2485a22cb78"
+    },
+    {
+      "id": "route_skill_2_0",
+      "expected": "你已在射线上。终点，校准！",
+      "recognized": "你已在射线上终点校准。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.344875,
+      "peak": 0.794769287109375,
+      "rms": 0.1373606410482797,
+      "sha256": "ae378051867771bedefd6a2ef0bc4faeea96720d117dce4ae4832961ea8d98ab"
+    },
+    {
+      "id": "route_skill_2_1",
+      "expected": "给我们……留下时间。零时，展开！",
+      "recognized": "给我们留下时间、灵识，展开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.584,
+      "peak": 0.792938232421875,
+      "rms": 0.13025481002173778,
+      "sha256": "41e7263b535730444ecbcd364b5a1709ef8f44673efa48b783e3c2a59d977166"
+    },
+    {
+      "id": "route_skill_2_2",
+      "expected": "坐标锁定。相位，跃迁！",
+      "recognized": "坐标锁定，相位跃迁。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.1854583333333335,
+      "peak": 0.793060302734375,
+      "rms": 0.13333028257073257,
+      "sha256": "88cedf613f31e9a0429d05c5b7f9d0e0ae6d7bb323431c61c5cba440916015ae"
+    }
+  ],
+  "note": "Independent ASR and signal checks; not a human naturalness evaluation."
+}
