@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="裂空：最后航线。驾驶三种特色战机，突破弹幕与机械要塞。无需安装，浏览器直接试玩。">
+ <meta name="theme-color" content="#07121c">
+ <title>裂空：最后航线 · 在线试玩</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307121c'/%3E%3Cpath d='M50 10 90 82 50 65 10 82Z' fill='%2378ebff'/%3E%3C/svg%3E">
+ <style>
+  :root{color-scheme:dark;font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;background:#07121c;color:#eaf8ff}
+  *{box-sizing:border-box}body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 0,#173442,transparent 65%),#07121c}
+  a{color:#98edf5;text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}
+  header,footer{width:min(1480px,96vw);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  header{height:64px}.brand{font-weight:800;letter-spacing:.16em}.brand small{font-size:10px;color:#75a6b8;letter-spacing:.24em;margin-left:16px}
+  nav{display:flex;gap:22px;font-size:13px}main{width:min(1480px,96vw,calc((100svh - 142px)*16/9));margin:0 auto}
+  #stage{position:relative;aspect-ratio:16/9;background:#02080e;border:1px solid #294450;box-shadow:0 22px 90px #0009;overflow:hidden}
+  #stage:fullscreen{width:100vw;height:100vh;border:0;display:grid;place-items:center;aspect-ratio:auto}
+  canvas{display:block;width:100%;height:100%;outline:none;object-fit:contain}#stage:fullscreen canvas{width:min(100vw,calc(100vh * 16 / 9));height:min(100vh,calc(100vw * 9 / 16))}
+  #cover{position:absolute;inset:0;display:flex;align-items:center;padding:7%;background:linear-gradient(90deg,#051019f5 0%,#051019c7 48%,#05101950),url('cover.png') center/cover}
+  #cover[hidden]{display:none}.intro{max-width:590px}.eyebrow{font-size:11px;letter-spacing:.27em;color:#79eafa;margin:0 0 20px}
+  h1{font-size:clamp(32px,5vw,78px);line-height:1.05;letter-spacing:.08em;margin:0 0 16px}h1 small{display:block;font-size:.28em;letter-spacing:.32em;font-weight:500;margin-top:18px}
+  .copy{color:#b2cbd5;line-height:1.9;font-size:clamp(12px,1.2vw,16px);margin:24px 0}.load{max-width:390px}
+  #progress{height:3px;background:#35505c;margin:22px 0 12px;overflow:hidden}#bar{height:100%;width:0;background:#7af4ff;box-shadow:0 0 14px #7af4ff;transition:width .2s}
+  #status{font-size:12px;color:#a3c5d2;min-height:20px}#start{background:#84edfa;color:#071b25;font-weight:750;border:0;padding:17px 30px;min-width:224px;box-shadow:0 0 30px #70eafa18}
+  #start:disabled{cursor:wait;background:#294957;color:#9eb6c1}#start:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid white;outline-offset:4px}
+  #retry{margin-left:12px;color:#91edfa;background:none;border:1px solid #47727e;padding:12px}.small{font-size:11px;color:#8eb0c0;line-height:1.8}
+  .toolbar{display:flex;align-items:center;justify-content:space-between;padding:13px 0;color:#94b6c6;gap:12px;font-size:12px}.keys{display:flex;flex-wrap:wrap;gap:7px 16px}kbd{font:inherit;color:#eaf9ff;border:1px solid #3a5664;background:#142733;padding:2px 5px;border-radius:3px}
+  #fullscreen{border:1px solid #385765;color:#c6edf4;background:#142733;padding:8px 14px;white-space:nowrap}footer{font-size:11px;color:#7195a5;padding-bottom:15px;line-height:1.8}#mobile{color:#ffd5a0;max-width:450px}
+  @media(max-width:760px){header{height:54px}.brand small{display:none}nav{gap:12px;font-size:11px}main{width:96vw}.copy{margin:14px 0}.eyebrow{margin-bottom:10px}h1{font-size:34px}h1 small{margin-top:10px}#cover{padding:5%}#start{padding:12px 18px;min-width:170px}#progress{margin-top:10px}.toolbar{align-items:flex-start}.keys{line-height:1.8;gap:4px 12px}footer{align-items:flex-start;flex-direction:column;gap:4px}.intro{max-width:85%}.small{font-size:10px}}
+ </style>
+</head>
+<body>
+ <header><a class="brand" href="./">SKYBREAK<small>THE LAST FLIGHT</small></a><nav><a href="https://github.com/geduolin1991/skybreak-last-flight/releases/latest">下载 Mac 版</a><a href="https://github.com/geduolin1991/skybreak-last-flight">项目主页 ↗</a></nav></header>
+ <main>
+  <div id="stage">
+   <canvas id="unity-canvas" width="1600" height="900" tabindex="0" aria-label="裂空游戏画面，使用键盘操纵战机"></canvas>
+   <div id="cover"><div class="intro">
+    <p class="eyebrow">3D ARCADE SHOOTER · WEB EDITION</p>
+    <h1>裂空<small>最 后 航 线</small></h1>
+    <p class="copy">三架战机，最后一支撤离船队。<br>穿越风暴与弹幕，把天空还给所有人。</p>
+    <div class="load"><button id="start" disabled>正在准备航线…</button><button id="retry" hidden>重新加载</button><div id="progress"><div id="bar"></div></div><div id="status" role="status" aria-live="polite">正在连接飞行系统…</div></div>
+    <p class="small">无需安装 · 首次打开需加载游戏资源 · 开启声音体验完整配乐</p>
+    <p id="mobile" class="small" hidden>这款游戏使用键盘操作，请在配有键盘的电脑上试玩。</p>
+   </div></div>
+  </div>
+  <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="fullscreen">全屏 ⛶</button></div>
+ </main>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑浏览器试玩 · v1.4.0</span></footer>
+ <script src="Build/Web.loader.js"></script>
+ <script>
+  const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
+  const director='SKYBREAK · Game Director';let active=false,instance=null;
+  document.getElementById('mobile').hidden=!(/Android|iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1));
+  function fail(message){console.error(message);cover.hidden=false;status.textContent='加载未完成，请刷新重试，或下载 Mac 版。';start.textContent='加载未完成';start.disabled=true;document.getElementById('retry').hidden=false;}
+  document.getElementById('retry').onclick=()=>location.reload();
+  start.onclick=()=>{if(!instance)return;active=true;cover.hidden=true;canvas.focus();instance.SendMessage(director,'WebActivate');};
+  document.getElementById('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.getElementById('stage').requestFullscreen();if(active)canvas.focus();}catch(e){status.textContent='当前浏览器不支持全屏，请使用窗口模式。';}};
+  canvas.addEventListener('pointerdown',()=>canvas.focus());
+  canvas.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','Tab'].includes(e.code))e.preventDefault();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&active&&instance)instance.SendMessage(director,'WebFocusLost');});
+  createUnityInstance(canvas,{
+   arguments:[],
+   dataUrl:'Build/Web.data.unityweb',
+   frameworkUrl:'Build/Web.framework.js.unityweb',
+   codeUrl:'Build/Web.wasm.unityweb',
+   streamingAssetsUrl:'StreamingAssets',
+   companyName:"Skybreak Studio",
+   productName:"SKYBREAK",
+   productVersion:"1.4.0",
+   autoSyncPersistentDataPath:true,
+   devicePixelRatio:Math.min(window.devicePixelRatio||1,1.5),
+   showBanner:(message,type)=>{if(type==='error')fail(message);else console.warn(message);}
+  },progress=>{bar.style.width=Math.round(progress*100)+'%';status.textContent=progress<.9?'正在加载游戏资源 · '+Math.round(progress*100)+'%':'正在启动引擎与音效，请稍候…';})
+  .then(game=>{instance=game;window.skybreakInstance=game;start.disabled=false;start.textContent='进入驾驶舱　→';status.textContent='航线已就绪 · 点击开始并启用声音';bar.style.width='100%';})
+  .catch(fail);
+ </script>
+</body>
+</html>

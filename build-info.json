@@ -1,0 +1,45 @@
+{
+  "game": "SKYBREAK / 裂空：最后航线",
+  "version": "1.4.0-web",
+  "unity": "6000.6.0f1",
+  "source_revision": "e68caa1363b3a8878f84431e21ed4b6d776bfc7f",
+  "built_at_utc": "2026-09-07T09:33:06.716841+00:00",
+  "build_identity": "be01e8b4300701c007745d33ba695be2192c54d9a1ea46ae83d30174fb4b6dd6",
+  "assets": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Build/Web.data.unityweb",
+      "bytes": 42163674,
+      "sha256": "902d9003f897aeceb5798ccbe9b21db78bfefc9cd522ab638b65e7cc59250be1"
+    },
+    {
+      "path": "Build/Web.framework.js.unityweb",
+      "bytes": 73721,
+      "sha256": "a2e83c2add4511f0cca9cc0f082c32f46e1393f679e19e62e84983972ba94f8f"
+    },
+    {
+      "path": "Build/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "0a87e6417a0d864b89c94271bda19a132ccb2663243ed1c80bf239e25fe92da1"
+    },
+    {
+      "path": "Build/Web.wasm.unityweb",
+      "bytes": 5663974,
+      "sha256": "06664543c20999766dc84f3dbad527d4b89fef644ff41c6ca973c1946c506a7a"
+    },
+    {
+      "path": "cover.png",
+      "bytes": 1317440,
+      "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8426,
+      "sha256": "8e127cec9948b1f3796b8a34854b05d98a6bbec3ff8d4f24ca06d98dce3ee802"
+    }
+  ]
+}
