@@ -16,6 +16,8 @@
 
 试玩不需要安装 Unity 或 Blender。当前提供的是 **Mac 下载版**，尚未发布浏览器在线游玩版或 Windows 版。GitHub 的绿色 Code → Download ZIP 是源码，不是已编译的游戏。
 
+本试玩包尚未经过 Apple 公证。如果首次打开提示“无法验证开发者”，请先确认来自本仓库；确认信任后，可按 [Apple 的说明](https://support.apple.com/en-ie/102445)，在系统设置 → 隐私与安全中选择“仍要打开”，仅为这个应用授权。下载页提供 SHA-256 校验值。
+
 ## 1.4 的战斗与画面
 
 ![裂空炸弹的等离子冲击波](Docs/Media/nova-wavefront.png)
