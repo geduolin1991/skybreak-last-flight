@@ -18,7 +18,7 @@ public partial class SkyGame {
  if(State==FlightState.Hangar)DrawHangar();else {DrawHUD();if(State==FlightState.Briefing)DrawBriefing();else if(State==FlightState.Paused)DrawPause();else if(State==FlightState.Upgrade)DrawUpgrade();else if(State==FlightState.Victory||State==FlightState.Defeat)DrawResult();}
  if(showFps)Label(Mathf.RoundToInt(smoothedFps)+" FPS",1430,874,130,25,13,muted,TextAnchor.UpperRight);GUI.matrix=Matrix4x4.identity;GUI.enabled=true;
  }
- void DrawHangar(){GUI.DrawTexture(new Rect(0,0,1140,900),gradient);Rect(0,0,1600,58,new Color(.003f,.007f,.012f,.82f));Label("SKYBREAK    /    FLIGHT DIVISION 07",48,19,650,28,14,accent);Label("LAST FLIGHT / ANIME EDITION",1090,19,340,28,13,muted,TextAnchor.UpperRight);if(Button("退出",1452,12,108,35))Application.Quit();
+ void DrawHangar(){GUI.DrawTexture(new Rect(0,0,1140,900),gradient);Rect(0,0,1600,58,new Color(.003f,.007f,.012f,.82f));Label("SKYBREAK    /    FLIGHT DIVISION 07",48,19,650,28,14,accent);Label("LAST FLIGHT / ANIME EDITION",1090,19,340,28,13,muted,TextAnchor.UpperRight);if(Application.platform!=RuntimePlatform.WebGLPlayer&&Button("退出",1452,12,108,35))Application.Quit();
  if(menuPage==4){DrawDossier();return;}if(menuPage==5){DrawWorkshop();return;}if(menuPage==1){DrawSettings();return;}if(menuPage==2){DrawGuide();return;}if(menuPage==3){DrawChapters();return;}
  Portrait(Ship,536,66,548,822);SmallTag("ORIGINAL 3D SHOOT 'EM UP",72,103,231,accent);Label("裂 空",62,144,680,120,94,paper);Label("SKYBREAK",72,270,700,72,49,paper);Line(75,356,58,accent);Label("最 后 航 线",152,342,480,40,24,accent);
  Label(PilotMottos[Ship],76,408,453,87,22,paper);Label(PilotNames[Ship]+"  /  "+PilotAges[Ship],77,508,463,29,16,accent);Label("驾驶员技 · "+SkillNames[Ship]+"    [Q]",77,550,450,29,16,muted);
