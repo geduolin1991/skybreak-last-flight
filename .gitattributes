@@ -1,0 +1,13 @@
+# Preserve authored and imported file bytes, including Unity build provenance.
+* -text
+*.png binary
+*.jpg binary
+*.webp binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
+*.fbx binary
+*.blend binary
+*.otf binary
+*.ttf binary
+*.pdf binary

@@ -1,0 +1,54 @@
+using UnityEngine;
+using UnityEngine.Rendering;
+using System.Collections.Generic;
+namespace Skybreak {
+public static class Art {
+ public static Color Cyan=new Color(.05f,.85f,1f), Orange=new Color(1,.23f,.045f), Violet=new Color(.6f,.2f,1);
+ static Dictionary<string,Material> mats=new Dictionary<string,Material>();
+ public static Material Mat(string name,Color c,bool glow=false,float metal=.35f){
+  if(mats.ContainsKey(name))return mats[name];
+  Material m=new Material(Shader.Find("Standard"));m.name=name;m.color=c;m.SetFloat("_Metallic",metal);m.SetFloat("_Glossiness",metal<.4f?.27f:.52f);
+  if(glow){m.EnableKeyword("_EMISSION");m.SetColor("_EmissionColor",c*2.6f);}m.enableInstancing=true;mats[name]=m;return m;
+ }
+ public static GameObject Box(Transform parent,string name,Vector3 pos,Vector3 scale,Material m){return Primitive(parent,name,pos,scale,m,PrimitiveType.Cube);}
+ public static GameObject Primitive(Transform parent,string name,Vector3 pos,Vector3 scale,Material m,PrimitiveType t){var o=GameObject.CreatePrimitive(t);o.name=name;o.transform.SetParent(parent,false);o.transform.localPosition=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=m;if(Application.isPlaying)Object.Destroy(o.GetComponent<Collider>());else Object.DestroyImmediate(o.GetComponent<Collider>());return o;}
+ public static GameObject Model(string name,Transform parent){var p=Resources.Load<GameObject>("Models/"+name);GameObject o=new GameObject(name);o.transform.SetParent(parent,false);if(p){var mesh=Object.Instantiate(p,o.transform);mesh.transform.localRotation=Quaternion.Euler(0,180,0);}return o;}
+ public static LineRenderer Line(Transform parent,string name,Vector3[] pts,Color c,float width,bool loop=false){var o=new GameObject(name);o.transform.SetParent(parent,false);var l=o.AddComponent<LineRenderer>();l.useWorldSpace=false;l.positionCount=pts.Length;l.SetPositions(pts);l.startWidth=l.endWidth=width;l.loop=loop;l.sharedMaterial=GlowMat(c);l.shadowCastingMode=ShadowCastingMode.Off;return l;}
+ public static Material GlowMat(Color c){string key="glow_"+c; if(mats.TryGetValue(key,out var m))return m;m=new Material(Shader.Find("Skybreak/Projectile"));m.color=c;m.enableInstancing=true;mats[key]=m;return m;}
+ public static LineRenderer Ring(Transform parent,float radius,Color c,float width,int segments=64){Vector3[] p=new Vector3[segments];for(int i=0;i<segments;i++){float a=i*Mathf.PI*2/segments;p[i]=new Vector3(Mathf.Cos(a)*radius,0,Mathf.Sin(a)*radius);}return Line(parent,"Field",p,c,width,true);}
+ 
+ static Texture2D glowTexture;
+ public static Texture2D GlowTexture(){if(glowTexture)return glowTexture;glowTexture=new Texture2D(32,32,TextureFormat.RGBA32,false);for(int y=0;y<32;y++)for(int x=0;x<32;x++){float r=Vector2.Distance(new Vector2(x,y),new Vector2(15.5f,15.5f))/15.5f;float a=Mathf.Pow(Mathf.Clamp01(1-r),2);glowTexture.SetPixel(x,y,new Color(1,1,1,a));}glowTexture.Apply();return glowTexture;}
+ public static ParticleSystem Exhaust(Transform parent,Vector3 pos,Color c,float size=1){var go=new GameObject("Ion exhaust");go.transform.SetParent(parent,false);go.transform.localPosition=pos;go.transform.localRotation=Quaternion.Euler(0,180,0);var ps=go.AddComponent<ParticleSystem>();var main=ps.main;main.startLifetime=.25f;main.startSpeed=7*size;main.startSize=.23f*size;main.startColor=c;main.maxParticles=120;main.simulationSpace=ParticleSystemSimulationSpace.World;var emission=ps.emission;emission.rateOverTime=60;var shape=ps.shape;shape.shapeType=ParticleSystemShapeType.Cone;shape.angle=6;shape.radius=.07f*size;var sol=ps.sizeOverLifetime;sol.enabled=true;sol.size=new ParticleSystem.MinMaxCurve(1,AnimationCurve.Linear(0,1,1,0));var col=ps.colorOverLifetime;col.enabled=true;var g=new Gradient();g.SetKeys(new[]{new GradientColorKey(c,0),new GradientColorKey(c,.7f)},new[]{new GradientAlphaKey(.8f,0),new GradientAlphaKey(0,1)});col.color=g;var r=ps.GetComponent<ParticleSystemRenderer>();r.sharedMaterial=go.AddComponent<SkyOwnedResources>().Keep(new Material(Shader.Find("Skybreak/GlowSprite")));r.sharedMaterial.SetColor("_Color",c);r.sharedMaterial.mainTexture=GlowTexture();r.sharedMaterial.renderQueue=3000;return ps;}
+}
+public partial class SkyWorld:MonoBehaviour {
+ public int Stage; public float Speed=8;public bool Scrolling=true; public Camera Cam;public Transform Showcase;
+ SkyOwnedResources owned;List<Transform> chunks=new List<Transform>();Transform terrain;Material ocean;Light sun;float motion;float tint;
+ public void Build(Camera camera){Cam=camera;sun=new GameObject("Sun · rim lighting").AddComponent<Light>();sun.type=LightType.Directional;sun.color=new Color(.65f,.84f,1);sun.intensity=1.35f;sun.transform.rotation=Quaternion.Euler(48,-35,0);sun.shadows=LightShadows.Soft;
+ var fill=new GameObject("Warm bounce").AddComponent<Light>();fill.type=LightType.Directional;fill.color=new Color(1,.43f,.22f);fill.intensity=.45f;fill.transform.rotation=Quaternion.Euler(22,145,0);
+ RenderSettings.ambientMode=AmbientMode.Trilight;RenderSettings.ambientSkyColor=new Color(.15f,.23f,.32f);RenderSettings.ambientEquatorColor=new Color(.065f,.1f,.15f);RenderSettings.ambientGroundColor=new Color(.035f,.07f,.1f);RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.009f;SetStage(0);
+ }
+ public void SetStage(int stage){landmarkMaterials.Clear();var randomState=Random.state;Stage=stage;SectorRenderersBefore=SectorRenderersAfter=0;missionProgress=0;signalRecovered=false;foreach(var t in chunks)if(t)Destroy(t.gameObject);chunks.Clear();if(terrain)Destroy(terrain.gameObject);terrain=new GameObject("Environment · "+stage).transform;terrain.SetParent(transform);owned=terrain.gameObject.AddComponent<SkyOwnedResources>();motion=0;
+ Cam.backgroundColor=stage==2?new Color(.008f,.014f,.038f):new Color(.08f,.18f,.24f);RenderSettings.fogColor=Cam.backgroundColor;sun.color=stage==1?new Color(.57f,.64f,1):new Color(.65f,.84f,1);
+ if(stage==1)CreateRain();if(stage<2){var water=Art.Primitive(terrain,"Animated ocean",new Vector3(0,-3,20),new Vector3(18,1,30),Art.Mat("sea",Color.blue),PrimitiveType.Plane);ocean=owned.Keep(new Material(Shader.Find("Skybreak/Ocean")));ocean.SetColor("_Deep",stage==0?new Color(.018f,.12f,.17f):new Color(.015f,.035f,.075f));ocean.SetColor("_Shallow",stage==0?new Color(.06f,.35f,.39f):new Color(.045f,.1f,.18f));water.GetComponent<Renderer>().sharedMaterial=ocean;
+ }else{CreateStars();var p=Art.Primitive(terrain,"Blue planet",new Vector3(-22,-31,49),Vector3.one*61,Art.Mat("planet",new Color(.015f,.14f,.26f)),PrimitiveType.Sphere);p.GetComponent<Renderer>().sharedMaterial=owned.Keep(new Material(Shader.Find("Skybreak/Planet")));p.transform.rotation=Quaternion.Euler(0,0,20);var halo=Art.Ring(terrain,31,Art.Cyan*.4f,.4f,180);halo.transform.position=p.transform.position+new Vector3(0,-3,0);}
+ Random.InitState(120+stage);
+ for(int i=0;i<10;i++){var t=new GameObject("Scenery sector "+i).transform;t.SetParent(terrain);t.position=new Vector3(0,0,-35+i*14);chunks.Add(t);if(stage==0)Harbor(t,i);else if(stage==1)City(t,i);else Orbit(t,i);AddChapterLandmark(t,i);CombineSector(t);}CreateLowMist();Random.state=randomState;
+ }
+ void PlaceScenery(Transform parent,string model,Vector3 position,float scale){var o=Art.Model(model,parent);o.transform.localPosition=position;o.transform.localScale=Vector3.one*scale;foreach(var renderer in o.GetComponentsInChildren<MeshRenderer>()){var src=renderer.sharedMaterials;for(int i=0;i<src.Length;i++){var m=src[i];if(!m||!m.IsKeywordEnabled("_EMISSION"))continue;if(!landmarkMaterials.TryGetValue(m,out var toned)){toned=owned.Keep(new Material(m));toned.name="Scenery finish / "+m.name;toned.SetColor("_EmissionColor",m.GetColor("_EmissionColor")*(Stage==1?.2f:.38f));toned.SetFloat("_Glossiness",.34f);landmarkMaterials[m]=toned;}src[i]=toned;}renderer.sharedMaterials=src;}}
+ void Harbor(Transform t,int i){for(int side=-1;side<=1;side+=2)PlaceScenery(t,i%3==2?"BasaltIsland":"HarborPort",new Vector3(side*(i%3==2?19:18),i%3==2?-3:-2.3f,0),i%3==2?1.4f:1.02f);}
+
+ void CreateRain(){var go=new GameObject("Storm rain");go.transform.SetParent(terrain,false);go.transform.localPosition=new Vector3(0,16,0);go.transform.localRotation=Quaternion.Euler(103,0,-12);var ps=go.AddComponent<ParticleSystem>();var main=ps.main;main.startLifetime=1.15f;main.startSpeed=38;main.startSize=.032f;main.startColor=new Color(.28f,.52f,.65f,.3f);main.maxParticles=1000;var emission=ps.emission;emission.rateOverTime=650;var shape=ps.shape;shape.shapeType=ParticleSystemShapeType.Box;shape.scale=new Vector3(50,44,1);var r=ps.GetComponent<ParticleSystemRenderer>();r.renderMode=ParticleSystemRenderMode.Stretch;r.lengthScale=24;r.velocityScale=.015f;r.sharedMaterial=go.AddComponent<SkyOwnedResources>().Keep(new Material(Shader.Find("Skybreak/GlowSprite")));r.sharedMaterial.mainTexture=Art.GlowTexture();}
+ void City(Transform t,int index){for(int side=-1;side<=1;side+=2)PlaceScenery(t,"StormCity",new Vector3(side*(18+(index%3)*1.1f),-2.7f,0),.9f+(index%3)*.12f);}
+ void Orbit(Transform t,int index){for(int side=-1;side<=1;side+=2)PlaceScenery(t,"OrbitHabitat",new Vector3(side*(18+(index%2)), -4,0),.95f);}
+ void CreateStars(){var m=Art.Mat("stars",new Color(.45f,.65f,.9f),true);Random.InitState(90);for(int i=0;i<180;i++){float s=Random.Range(.035f,.13f);Art.Primitive(terrain,"Star",new Vector3(Random.Range(-95,95),Random.Range(-30,-20),Random.Range(-50,180)),Vector3.one*s,m,PrimitiveType.Quad).transform.rotation=Quaternion.Euler(90,0,0);}}
+ void Update(){float dt=Time.deltaTime;if(!Scrolling)return;motion+=dt*Speed;UpdateChapterAtmosphere(dt);if(ocean)ocean.SetFloat("_Travel",motion);foreach(var t in chunks){t.position+=Vector3.back*dt*Speed;if(t.position.z<-45)t.position+=Vector3.forward*140;}}
+}
+[ExecuteAlways]
+public class SkyPost:MonoBehaviour {
+ public Material Effect; public float Intensity=.7f;public float Flash,Damage;public Vector4 Ripple;
+ void OnRenderImage(RenderTexture src,RenderTexture dst){if(!Effect){var s=Shader.Find("Skybreak/Finish");if(s)Effect=new Material(s);else{Graphics.Blit(src,dst);return;}}
+ var a=RenderTexture.GetTemporary(Mathf.Max(1,src.width/4),Mathf.Max(1,src.height/4),0,RenderTextureFormat.DefaultHDR);var b=RenderTexture.GetTemporary(a.width,a.height,0,RenderTextureFormat.DefaultHDR);Graphics.Blit(src,a,Effect,0);for(int i=0;i<3;i++){Effect.SetVector("_Blur",new Vector4(1f/a.width,0,0,0));Graphics.Blit(a,b,Effect,1);Effect.SetVector("_Blur",new Vector4(0,1f/a.height,0,0));Graphics.Blit(b,a,Effect,1);}Effect.SetTexture("_Bloom",a);Effect.SetFloat("_Intensity",Intensity);Effect.SetFloat("_Flash",Flash);Effect.SetFloat("_Damage",Damage);Effect.SetVector("_Ripple",Ripple);Graphics.Blit(src,dst,Effect,2);RenderTexture.ReleaseTemporary(a);RenderTexture.ReleaseTemporary(b);}
+ void OnDestroy(){if(Effect)DestroyImmediate(Effect);}
+}
+}

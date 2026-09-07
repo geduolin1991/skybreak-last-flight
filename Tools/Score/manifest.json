@@ -1,0 +1,44 @@
+[
+  {
+    "name": "MusicSea",
+    "bpm": 148,
+    "bars": 64,
+    "seconds": 103.78378378378379
+  },
+  {
+    "name": "MusicSeaIntensity",
+    "bpm": 148,
+    "bars": 64,
+    "seconds": 103.78378378378379
+  },
+  {
+    "name": "MusicCity",
+    "bpm": 158,
+    "bars": 64,
+    "seconds": 97.21518987341773
+  },
+  {
+    "name": "MusicCityIntensity",
+    "bpm": 158,
+    "bars": 64,
+    "seconds": 97.21518987341773
+  },
+  {
+    "name": "MusicOrbit",
+    "bpm": 140,
+    "bars": 64,
+    "seconds": 109.71428571428571
+  },
+  {
+    "name": "MusicOrbitIntensity",
+    "bpm": 140,
+    "bars": 64,
+    "seconds": 109.71428571428571
+  },
+  {
+    "name": "MusicHangar",
+    "bpm": 88,
+    "bars": 32,
+    "seconds": 87.27272727272727
+  }
+]

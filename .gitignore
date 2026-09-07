@@ -1,0 +1,27 @@
+# This repository contains only the SKYBREAK Unity project.
+# Root allowlist keeps local builds, backups, caches and release archives out.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/README_开始试玩.md
+!/开始游戏.command
+!/在Unity中打开.command
+!/Assets/
+!/Packages/
+!/ProjectSettings/
+!/Tools/
+!/Docs/
+
+**/__pycache__/
+*.py[cod]
+*.blend[0-9]
+*.csproj
+*.sln
+.DS_Store
+.env
+.env.*
+*.p12
+*.pfx
+*.mobileprovision
+/Tools/extend_game.py
