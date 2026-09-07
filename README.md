@@ -2,19 +2,19 @@
 
 原创日式科幻 3D 飞行射击游戏。三位成年驾驶员、三架特色战机、六种武装模式、机甲超载与三章机械首领战。
 
-**当前版本：1.4.0 · 浏览器在线试玩 / macOS 离线单人。**
+**当前版本：1.5.0 · 三位驾驶员中文配音 · 浏览器在线试玩 / macOS 离线单人。**
 
 ## 直接在线试玩
 
 ### [▶ 点击进入《裂空》驾驶舱](https://geduolin1991.github.io/skybreak-last-flight/)
 
-电脑浏览器打开链接，等待约 49 MB 的首次资源加载，再点击「进入驾驶舱」。不需要安装 Unity；推荐使用最新版 Chrome 或 Edge，并配备键盘。进度保存在当前浏览器。
+电脑浏览器打开链接，等待约 56 MB 的首次资源加载，再点击「进入驾驶舱」启用声音。不需要安装 Unity；推荐使用最新版 Chrome 或 Edge，并配备键盘。进度保存在当前浏览器。
 
-网页版本保留三架战机、六种武装、三章关卡、驾驶员成长和机械首领战。移动设备尚未提供触屏操作。
+网页版本保留三架战机、六种武装、三章关卡、驾驶员成长和机械首领战。1.5 新增 76 句中文配音：苍凛清亮温柔，绯音低柔慵懒，雪璃清冷知性。进入「驾驶员档案」试听，或在「系统设置 → 声音与配音」调整音量。声音为原创合成声线；[配音说明](Docs/驾驶员配音1.5.md)包含制作与验证范围。移动设备尚未提供触屏操作。
 
 ## 下载试玩
 
-### [下载 Mac 试玩包（约 176 MB）](https://github.com/geduolin1991/skybreak-last-flight/releases/latest/download/SKYBREAK-macOS.zip)
+### [下载 Mac 试玩包](https://github.com/geduolin1991/skybreak-last-flight/releases/latest/download/SKYBREAK-macOS.zip)
 
 [版本下载页](https://github.com/geduolin1991/skybreak-last-flight/releases/latest) · [Unity 源码压缩包](https://github.com/geduolin1991/skybreak-last-flight/releases/latest/download/SKYBREAK-Unity-Source.zip)
 
@@ -70,6 +70,6 @@
 
 ## 验证与许可说明
 
-1.4 原生构建成功，104 项机制检查通过；三架战机分别以新兵难度、零研发的自动控制器完成三章并达成全部救援。该结果不等于所有难度和设备的长期真人平衡验收。详情见[验证记录](Docs/验证记录.md)和[1.4 更新说明](Docs/爆炸与首领更新1.4.md)。
+1.5 原生构建成功，104 项机制检查通过；三架战机分别以新兵难度、零研发的自动控制器完成三章并达成全部救援。配音资源与浏览器音频验证见 [1.5 验证记录](Docs/配音验证1.5.md)。该结果不等于所有难度和设备的长期真人平衡验收。详情见[验证记录](Docs/验证记录.md)和[1.4 更新说明](Docs/爆炸与首领更新1.4.md)。
 
 本仓库公开供查看与试玩；公开不代表所有内容采用同一种开源许可证。项目资产来源和第三方许可见[资产与许可](Docs/资产与许可.md)，嵌入包另保留其许可证。

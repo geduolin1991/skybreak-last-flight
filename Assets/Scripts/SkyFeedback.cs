@@ -9,14 +9,14 @@ public partial class SkyGame {
  class ScorePop {public Vector3 pos;public string text;public float age,max;public bool heavy;}
  class DeathCloud {public Vector3 pos;public int bursts;public float clock,size;}
  AudioClip Clip(string name){if(!audioCache.TryGetValue(name,out var c)){c=Resources.Load<AudioClip>("Audio/"+name);audioCache[name]=c;}return c;}
- void SetupFeedback(){impactAudio=gameObject.AddComponent<AudioSource>();impactAudio.spatialBlend=0;impactAudio.priority=50;musicIntensity=gameObject.AddComponent<AudioSource>();musicIntensity.loop=true;musicIntensity.spatialBlend=0;musicIntensity.priority=100;AudioSettings.OnAudioConfigurationChanged+=RestoreSoundtrack;}
+ void SetupFeedback(){impactAudio=gameObject.AddComponent<AudioSource>();impactAudio.spatialBlend=0;impactAudio.priority=50;musicIntensity=gameObject.AddComponent<AudioSource>();musicIntensity.loop=true;musicIntensity.spatialBlend=0;musicIntensity.priority=100;SetupVoices();AudioSettings.OnAudioConfigurationChanged+=RestoreSoundtrack;}
  void RestoreSoundtrack(bool changed){if(!music||!music.clip)return;int sample=music.timeSamples;music.Stop();music.timeSamples=Mathf.Clamp(sample,0,music.clip.samples-1);double when=AudioSettings.dspTime+.12;music.PlayScheduled(when);if(musicIntensity&&musicIntensity.clip){musicIntensity.Stop();musicIntensity.timeSamples=Mathf.Clamp(sample,0,musicIntensity.clip.samples-1);musicIntensity.PlayScheduled(when);}}
  void OnDestroy(){if(projectileRim)Destroy(projectileRim);AudioSettings.OnAudioConfigurationChanged-=RestoreSoundtrack;foreach(var font in sizedFonts.Values)if(font){if(font.material)Destroy(font.material);Destroy(font);}sizedFonts.Clear();}
  void MixSoundtrack(float dt){
   if(!music)return;float target=State==FlightState.Playing?(Overdrive>0?1:Boss!=null?.75f:eliteTarget!=null&&Enemies.Contains(eliteTarget)?.5f:CurrentEncounterSection==3?.48f:CurrentEncounterSection==1?.14f:.06f):0;
   if(State==FlightState.Playing&&Boss==null&&Overdrive<=0&&Combo>=16)target=Mathf.Min(.7f,target+.12f);
   musicBlend=Mathf.MoveTowards(musicBlend,target,dt*(target>musicBlend?1.7f:.65f));audioDuck=Mathf.Max(0,audioDuck-dt*2.8f);
-  float pause=State==FlightState.Paused?.48f:1;float volume=MusicEnabled?MasterVolume*pause*(1-audioDuck*.45f):0;
+  float pause=State==FlightState.Paused?.48f:1;float volume=MusicEnabled?MasterVolume*pause*(1-audioDuck*.45f)*(1-voiceEnvelope*.46f):0;
   music.volume=volume*.72f;if(musicIntensity)musicIntensity.volume=volume*musicBlend*.36f;
  }
  void ResetFeedback(){reactorWasReady=false;scorePops.Clear();deathClouds.Clear();weaponKick=hurtEdge=impactGate=killGate=audioDuck=0;bossHpTrail=1;if(Post){Post.Damage=0;Post.Flash=0;}}

@@ -1,0 +1,10 @@
+mlx-audio==0.5.1
+mlx==0.32.2
+mlx-metal==0.32.2
+numpy==2.5.3
+scipy==1.18.1
+soundfile==0.14.0
+transformers==5.16.1
+huggingface_hub==1.30.0
+imageio-ffmpeg==0.6.0
+pypinyin==0.55.0

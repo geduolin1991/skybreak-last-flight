@@ -1,0 +1,1230 @@
+{
+  "version": "1.5.0",
+  "type": "original synthetic Mandarin pilot dialogue",
+  "clips": 76,
+  "seconds": 270.206,
+  "peak_max": 0.803497314453125,
+  "asr_threshold": 0.15,
+  "above_threshold": 0,
+  "asr_limit": "Pinyin syllable edit distance without tone; not human listening or acting approval.",
+  "generation": [
+    {
+      "id": "select_0_0",
+      "seed": 3708764343,
+      "seconds": 3.6141666666666667,
+      "source": "original designed reference",
+      "sha256": "2dcbf528e94e02962c7d227f97971431c46ac3124aa02fd2d8b74a3c44eb1ea9"
+    },
+    {
+      "id": "select_0_1",
+      "seed": 225653242,
+      "seconds": 4.041166666666666,
+      "source": "original designed reference",
+      "sha256": "4ce95b1ce773eccea969494fd308f259e52a4c52bc4852514ea757ab2d1f413a"
+    },
+    {
+      "id": "launch_0_0",
+      "seed": 225653242,
+      "seconds": 1.9826666666666666,
+      "source": "original designed reference",
+      "sha256": "cf834ae97f9a9482bbe200c85965ed2f98678b1fc3d3b8c3b62dfdb3c471a025"
+    },
+    {
+      "id": "skill_0_0",
+      "seed": 225653242,
+      "seconds": 2.8589583333333333,
+      "source": "original designed reference",
+      "sha256": "6b220f1c435f67f3fb32c187d7f3ddb39f3cc8bbfcc3554d09b5859c9f6880f2"
+    },
+    {
+      "id": "skill_0_1",
+      "seed": 650530331,
+      "seconds": 2.58025,
+      "source": "original designed reference",
+      "sha256": "00f39d2bb94dedd766df395f6c0a2d34fafffd241c7929b913d973f8da8fc99a"
+    },
+    {
+      "id": "bomb_0_0",
+      "seed": 650530331,
+      "seconds": 1.4634166666666666,
+      "source": "original designed reference",
+      "sha256": "08db954ea74cd06d1c61f15188bd5bc3bd4b7344b6515380b62bc50ae8140f8d"
+    },
+    {
+      "id": "bomb_0_1",
+      "seed": 650530331,
+      "seconds": 1.881625,
+      "source": "original designed reference",
+      "sha256": "a117717f24a85d803e1862aa05236b0cc8bf518d93d69569a82db8f2d2fd3796"
+    },
+    {
+      "id": "overdrive_0_0",
+      "seed": 650530331,
+      "seconds": 2.30025,
+      "source": "original designed reference",
+      "sha256": "b9228ae43ed20a0787c802af3afc7b79cdde7f7f107ff9107bdbb56fd0d9862c"
+    },
+    {
+      "id": "hurt_0_0",
+      "seed": 956360143,
+      "seconds": 1.9423333333333332,
+      "source": "original designed reference",
+      "sha256": "0e75c445daa95debae4fe7e91e195d22f1ffa4f9349228ba0f064d2796d07b9f"
+    },
+    {
+      "id": "hurt_0_1",
+      "seed": 956360143,
+      "seconds": 2.3609166666666668,
+      "source": "original designed reference",
+      "sha256": "82624696c7537da6c1ee0558ba093ef8a18f343d45da7607c417a8067e8aef1e"
+    },
+    {
+      "id": "danger_0_0",
+      "seed": 956360143,
+      "seconds": 3.7555833333333335,
+      "source": "original designed reference",
+      "sha256": "0befb5101965e358eab28ea6780933286e5e6f783db72b25356d66d0b66d7992"
+    },
+    {
+      "id": "victory_0_0",
+      "seed": 956360143,
+      "seconds": 3.5552916666666667,
+      "source": "original designed reference",
+      "sha256": "41fdf0be4dbe7eba4532e017c7298e294c4e8de45b7b3f0f8088c17a80cc9151"
+    },
+    {
+      "id": "defeat_0_0",
+      "seed": 3255551770,
+      "seconds": 3.167875,
+      "source": "original designed reference",
+      "sha256": "2bd3d5f4d5ae4f6884a16b7111783d4ea07142d0bf149d70befc847b9ea1c646"
+    },
+    {
+      "id": "profile_0_0",
+      "seed": 3255551770,
+      "seconds": 4.756166666666667,
+      "source": "original designed reference",
+      "sha256": "99ad5fa59b48bb921c532639af0b22d903df65cba95f11d0202477f8c04ee2c7"
+    },
+    {
+      "id": "briefing_0_0",
+      "seed": 3255551770,
+      "seconds": 5.309375,
+      "source": "original designed reference",
+      "sha256": "64d56b245039a1a4e1525c0fce0c87462d13ca4e24e7a5c53414b5e7f5def069"
+    },
+    {
+      "id": "briefing_0_1",
+      "seed": 3255551770,
+      "seconds": 6.346708333333333,
+      "source": "original designed reference",
+      "sha256": "9b8bb94498ad201f60cb7b1f789a4cbc0fdef4beec1e49fefaea1efd2d5331d6"
+    },
+    {
+      "id": "briefing_0_2",
+      "seed": 912306,
+      "seconds": 5.868,
+      "source": "original designed reference",
+      "sha256": "f694828fdd2681bc5ac234f3100a1db5d55f53d28a9b0ec0565ab1fb3fc71f2a"
+    },
+    {
+      "id": "story_coast_escort",
+      "seed": 912306,
+      "seconds": 5.031291666666666,
+      "source": "original designed reference",
+      "sha256": "2910a97925e24ddc233b9208f3d4e0cd5074c68778fc33205cd2b15b432aa723"
+    },
+    {
+      "id": "story_city_childhood",
+      "seed": 912306,
+      "seconds": 5.489833333333333,
+      "source": "original designed reference",
+      "sha256": "449aca491a4d959441b22466b952aef071d954b5581bc7e189271f9d11245866"
+    },
+    {
+      "id": "story_city_lasers",
+      "seed": 912306,
+      "seconds": 4.473083333333333,
+      "source": "original designed reference",
+      "sha256": "907dbeba28a08a2f61edf9e5e67cbe56396eb041196c978e9181c0aaccef0f03"
+    },
+    {
+      "id": "story_coast_safe",
+      "seed": 3406915829,
+      "seconds": 4.991041666666667,
+      "source": "original designed reference",
+      "sha256": "41858d3eef15de6218cd8be49dafc669900c9d77d91f992b72b8ff5fda65cdd2"
+    },
+    {
+      "id": "story_coast_missed",
+      "seed": 3406915829,
+      "seconds": 4.033375,
+      "source": "original designed reference",
+      "sha256": "88a508667ccf6116b17c8b0eba1cc54f643ce4406e357cb31bfb44d1d2fdc179"
+    },
+    {
+      "id": "story_coast_clear",
+      "seed": 3406915829,
+      "seconds": 4.971541666666667,
+      "source": "original designed reference",
+      "sha256": "04c146619e02b4bc1413a9342c77d12717a2f5651a0f07d32486e93c2dc3c4ea"
+    },
+    {
+      "id": "select_1_0",
+      "seed": 631461584,
+      "seconds": 2.675,
+      "source": "original designed reference",
+      "sha256": "5c670d73ccf28a845918fee86fea21c57fc0144d9642a15a73e45934864c973f"
+    },
+    {
+      "id": "select_1_1",
+      "seed": 3750262211,
+      "seconds": 2.595,
+      "source": "original designed reference",
+      "sha256": "1d1b4bda81789e9f057d257609e05fa6c2742f636014fe1a11537093e534c600"
+    },
+    {
+      "id": "launch_1_0",
+      "seed": 3750262211,
+      "seconds": 1.375,
+      "source": "original designed reference",
+      "sha256": "c73872a297340619cd17ffac4201b0a85da98c6eaa0226314e497e063e8e6f7d"
+    },
+    {
+      "id": "skill_1_0",
+      "seed": 3750262211,
+      "seconds": 1.615,
+      "source": "original designed reference",
+      "sha256": "9319fc231aaa80163db1d1c37a82e7f4c74ac8a1ef66d03be2b7ce818cc1dbb4"
+    },
+    {
+      "id": "skill_1_1",
+      "seed": 2104940341,
+      "seconds": 1.735,
+      "source": "original designed reference",
+      "sha256": "61abd829d42566b16dd8b1be41296b22d4463aeaf0e98fffdd15419ed356e2fd"
+    },
+    {
+      "id": "bomb_1_0",
+      "seed": 2104940341,
+      "seconds": 1.735,
+      "source": "original designed reference",
+      "sha256": "9e7681fbc32b5f11e4f0deb0ad3b8b3b5b37e2074d99c5735502ca4d0bcfe654"
+    },
+    {
+      "id": "bomb_1_1",
+      "seed": 2104940341,
+      "seconds": 1.795,
+      "source": "original designed reference",
+      "sha256": "5de627d6a3780e939138fa3e4bc74e79482df052ff57340e384abb84f3fb4152"
+    },
+    {
+      "id": "overdrive_1_0",
+      "seed": 2104940341,
+      "seconds": 2.455,
+      "source": "original designed reference",
+      "sha256": "d387ff67d7670983e9a28c2b4eb2106ca2680447c1cc9571f1117d4e5a9cd801"
+    },
+    {
+      "id": "hurt_1_0",
+      "seed": 2131922164,
+      "seconds": 2.015,
+      "source": "original designed reference",
+      "sha256": "1cf217a9f8ddda516a814b8d8de5653a52a490643aabd61e71a14313c03b9a09"
+    },
+    {
+      "id": "hurt_1_1",
+      "seed": 2131922164,
+      "seconds": 1.735,
+      "source": "original designed reference",
+      "sha256": "8094de1eb45dd498e42198347a878b33654cf76f4005b244332f152993f8fbeb"
+    },
+    {
+      "id": "danger_1_0",
+      "seed": 2131922164,
+      "seconds": 2.995,
+      "source": "original designed reference",
+      "sha256": "174d661ce9b8cc604f6d72351755999f0b35ec0556aa609e3f06d8ea30d6424d"
+    },
+    {
+      "id": "victory_1_0",
+      "seed": 2131922164,
+      "seconds": 3.775,
+      "source": "original designed reference",
+      "sha256": "3356986091de7916f4b029f7fe5bccfc9f88f642ace343b0459cab6428e77d38"
+    },
+    {
+      "id": "defeat_1_0",
+      "seed": 1145668649,
+      "seconds": 2.895,
+      "source": "original designed reference",
+      "sha256": "f7acd88555a3fa42dae42ca5ecfd23e0b3408f3c389d0ff3d929cc56587eea0c"
+    },
+    {
+      "id": "profile_1_0",
+      "seed": 631461584,
+      "seconds": 4.775,
+      "source": "original designed reference",
+      "sha256": "c47163d59152f9ab8dd2d79b80d31ddf0d740a135e9284f4d9038ae877506311"
+    },
+    {
+      "id": "briefing_1_0",
+      "seed": 1145668649,
+      "seconds": 6.735,
+      "source": "original designed reference",
+      "sha256": "86970d18df7a34873638fad2de9eeb4a1c4ef2839685847f25a95695deb6522c"
+    },
+    {
+      "id": "briefing_1_1",
+      "seed": 1145668649,
+      "seconds": 7.015,
+      "source": "original designed reference",
+      "sha256": "f9c5cb4d9753aae2211282ffad507014f4638cad6e93029c1ee133e370f89d74"
+    },
+    {
+      "id": "briefing_1_2",
+      "seed": 3427122796,
+      "seconds": 6.395,
+      "source": "original designed reference",
+      "sha256": "b45b62b6743eec53f187327309d2e25486f3ccbe852f90eef5f2d60dffe9f0fc"
+    },
+    {
+      "id": "story_city_crossfire",
+      "seed": 3427122796,
+      "seconds": 5.172791666666667,
+      "source": "original designed reference",
+      "sha256": "10fd119dc87fa68bcdb16f36c933ed0bfc76c573695ba62139b154d5e351ed4d"
+    },
+    {
+      "id": "story_coast_lights",
+      "seed": 3427122796,
+      "seconds": 4.375,
+      "source": "original designed reference",
+      "sha256": "66cfeb578b03e420a3c1ec9a781a582e00d662d32aa6ebafb29a6dc2d36d2a1c"
+    },
+    {
+      "id": "story_orbit_graze",
+      "seed": 3427122796,
+      "seconds": 3.836708333333333,
+      "source": "original designed reference",
+      "sha256": "9ba667af1094d85e2db7287754ef87b10868b3b3275751e671d55d6d478e5d0c"
+    },
+    {
+      "id": "story_coast_elite",
+      "seed": 1571255188,
+      "seconds": 4.335,
+      "source": "original designed reference",
+      "sha256": "25bc64cd1ce2c2d8e1832b5b29ac882ca96d2efad0e9988ed7baadb87c3f8349"
+    },
+    {
+      "id": "story_city_elite",
+      "seed": 1571255188,
+      "seconds": 4.095,
+      "source": "original designed reference",
+      "sha256": "b4831fbac394c4db29709f014a0e9ded80e4365c50f620e5a2e072b11a2a7a9d"
+    },
+    {
+      "id": "story_city_safe",
+      "seed": 1571255188,
+      "seconds": 3.955,
+      "source": "original designed reference",
+      "sha256": "b781a8fa443963bf977e86b78b6e652d5ebdc830f38c0b1b5e02b2c3cfcdbe59"
+    },
+    {
+      "id": "story_city_missed",
+      "seed": 1571255188,
+      "seconds": 3.775,
+      "source": "original designed reference",
+      "sha256": "fb577e1d4db17153bc7a211eac75667811cffd473655b2554550bd3e260520c4"
+    },
+    {
+      "id": "story_city_clear",
+      "seed": 2475715472,
+      "seconds": 4.715,
+      "source": "original designed reference",
+      "sha256": "17f5252df2c24e7f16a7ee263b834f4fa44feeaead8fa535f5e678d02b0dedd1"
+    },
+    {
+      "id": "story_rescue_complete",
+      "seed": 2475715472,
+      "seconds": 3.555,
+      "source": "original designed reference",
+      "sha256": "762d3c5e9da46062663754d921a075da81584ddb83502eb4edb0e8afbc722d3c"
+    },
+    {
+      "id": "select_2_0",
+      "seed": 1889398375,
+      "seconds": 2.155,
+      "source": "original designed reference",
+      "sha256": "902d3fb4526eea6104c3e0cf4f7edbc3b1d2b645ef909d193b553e652e13fa31"
+    },
+    {
+      "id": "select_2_1",
+      "seed": 1889398375,
+      "seconds": 1.615,
+      "source": "original designed reference",
+      "sha256": "a69b5827b7c30b51c36b4a4f9e280c7c83086bd436e2576bf7fceb4368ab464b"
+    },
+    {
+      "id": "launch_2_0",
+      "seed": 1889398375,
+      "seconds": 1.735,
+      "source": "original designed reference",
+      "sha256": "b8ac90ceb281786464c4e1a1761d33153b1442b0f879b232874969c6f2fb589e"
+    },
+    {
+      "id": "skill_2_0",
+      "seed": 306155023,
+      "seconds": 1.455,
+      "source": "original designed reference",
+      "sha256": "1acf3d512194eba8c6db8904cecc57450a6be32a8a3edf5c63009dbcbc20949d"
+    },
+    {
+      "id": "skill_2_1",
+      "seed": 1575186329,
+      "seconds": 1.695,
+      "source": "original designed reference",
+      "sha256": "b2255274e33ca8683dbb157e7394af001940550bd7424fadf11491b04c28b048"
+    },
+    {
+      "id": "bomb_2_0",
+      "seed": 1575186329,
+      "seconds": 2.495,
+      "source": "original designed reference",
+      "sha256": "fdf9c930c1fa31621f0e6a1565ba0835a2e69dc59d3817f39564d2e3eb337637"
+    },
+    {
+      "id": "bomb_2_1",
+      "seed": 1575186329,
+      "seconds": 1.595,
+      "source": "original designed reference",
+      "sha256": "a2f7e60d854a87d7c82508dc54c9fbd8d3249a681abc86263f92c4cf9bcf5bca"
+    },
+    {
+      "id": "overdrive_2_0",
+      "seed": 1575186329,
+      "seconds": 1.855,
+      "source": "original designed reference",
+      "sha256": "67f918f0265e6031917994eb58e7a134ed016563763f2fe689a54af577a2a02e"
+    },
+    {
+      "id": "hurt_2_0",
+      "seed": 4210064900,
+      "seconds": 1.715,
+      "source": "original designed reference",
+      "sha256": "25f1d8d87f03c5b491ec5e2148d3db5b28e64c9b7416989f626b849510264d97"
+    },
+    {
+      "id": "hurt_2_1",
+      "seed": 4210064900,
+      "seconds": 1.315,
+      "source": "original designed reference",
+      "sha256": "632e85c7705b31f872348558128e38987eb8fcf340cc63f7ec57796672a9e97e"
+    },
+    {
+      "id": "danger_2_0",
+      "seed": 4210064900,
+      "seconds": 2.915,
+      "source": "original designed reference",
+      "sha256": "7b3906bc251a756151e2748a9917cabcfe923a2a200a3ff4354747d01d0b78b7"
+    },
+    {
+      "id": "victory_2_0",
+      "seed": 4210064900,
+      "seconds": 3.535,
+      "source": "original designed reference",
+      "sha256": "f7127ed74f2fadd64e186533f627be13b93dcfef17f7aaaf564f7643ac6d3dee"
+    },
+    {
+      "id": "defeat_2_0",
+      "seed": 1689749156,
+      "seconds": 2.420541666666667,
+      "source": "original designed reference",
+      "sha256": "eea2f5adc685ef49611ef21ae4c49af7216cf38665077f484da8118268caf5c5"
+    },
+    {
+      "id": "profile_2_0",
+      "seed": 1689749156,
+      "seconds": 3.5359583333333333,
+      "source": "original designed reference",
+      "sha256": "93e6d273ab9da3f7024f5f11ed6b2a29536f29b1667e393bd0be5f49d31d9aa8"
+    },
+    {
+      "id": "briefing_2_0",
+      "seed": 1689749156,
+      "seconds": 6.055,
+      "source": "original designed reference",
+      "sha256": "48b1ca911129fbd46946a7f02ab7b9b9d6df9bd0dd771aa6d2fafe98eed1cbf7"
+    },
+    {
+      "id": "briefing_2_1",
+      "seed": 1689749156,
+      "seconds": 5.315,
+      "source": "original designed reference",
+      "sha256": "d3407b0df8a252c0067f0d0ac3297eb41cceb3ab1bbda621f866382710d75201"
+    },
+    {
+      "id": "briefing_2_2",
+      "seed": 1092189555,
+      "seconds": 5.815,
+      "source": "original designed reference",
+      "sha256": "5852d43c591287d503061891be87562b86a9ab1affdff2414ab6ce44ac0a7c8b"
+    },
+    {
+      "id": "story_orbit_docks",
+      "seed": 1092189555,
+      "seconds": 4.671458333333334,
+      "source": "original designed reference",
+      "sha256": "dbf9e5c10e759009f9b548e025aa7e112587a965a819dc718affce8f52c853ae"
+    },
+    {
+      "id": "story_orbit_stars",
+      "seed": 1092189555,
+      "seconds": 4.532958333333333,
+      "source": "original designed reference",
+      "sha256": "84c1b4efd35921f02fe12cdfccb35344a217aad2be7b0e82492820c35d35569f"
+    },
+    {
+      "id": "story_coast_supply",
+      "seed": 1092189555,
+      "seconds": 4.572708333333333,
+      "source": "original designed reference",
+      "sha256": "be66afda8c2c7892bf2b379c977c33c5da3a7d9aa8614cdc3e8690daa5fa7c92"
+    },
+    {
+      "id": "story_orbit_elite",
+      "seed": 3055370610,
+      "seconds": 4.335,
+      "source": "original designed reference",
+      "sha256": "5c0bd723d6b2f4202aa7fe37a28c4a41483777f23393995de4969d310d92485e"
+    },
+    {
+      "id": "story_orbit_safe",
+      "seed": 3055370610,
+      "seconds": 3.895375,
+      "source": "original designed reference",
+      "sha256": "fb32d31dd8f8006930b0a6aeb19bc2905a1c10bd119170e06595bbe822ced918"
+    },
+    {
+      "id": "story_orbit_missed",
+      "seed": 3055370610,
+      "seconds": 3.775,
+      "source": "original designed reference",
+      "sha256": "aa69b4f45a4716008fb67682ff2539a9ac2992932f61d367e0ae863e3144cd02"
+    },
+    {
+      "id": "story_orbit_clear",
+      "seed": 3055370610,
+      "seconds": 5.435,
+      "source": "original designed reference",
+      "sha256": "13c651034503a0752ee78ea4e8f5d4772f49e29ed7cdec35bc1035f9e331be04"
+    },
+    {
+      "id": "story_boss_0",
+      "seed": 4006353115,
+      "seconds": 4.094291666666667,
+      "source": "original designed reference",
+      "sha256": "c0e7cb1332548d50f74fa8edfee7e3ff9c4a9fcce55af65cf667c277e7f0ef6a"
+    },
+    {
+      "id": "story_boss_1",
+      "seed": 4006353115,
+      "seconds": 4.1135,
+      "source": "original designed reference",
+      "sha256": "84d46e479d3a735be187a4e260e36b1a16f981dc2824c2277eaec805250d25a6"
+    },
+    {
+      "id": "story_boss_2",
+      "seed": 4006353115,
+      "seconds": 4.655,
+      "source": "original designed reference",
+      "sha256": "da91dac896b7c225cf4fce70c7f608e332f06dd38bfa283098ac93dbf9425d15"
+    }
+  ],
+  "transcription": [
+    {
+      "id": "select_0_0",
+      "expected": "我是苍凛。准备就绪，随时可以起飞。",
+      "recognized": "我是苍廪，准备就绪，随时可以起飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.6141666666666667,
+      "peak": 0.6737060546875,
+      "rms": 0.13238769622549534
+    },
+    {
+      "id": "select_0_1",
+      "expected": "准备好了吗？这次，也一起回来。",
+      "recognized": "准备好了吗？这次也一起回来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.041166666666666,
+      "peak": 0.803497314453125,
+      "rms": 0.1439639500457447
+    },
+    {
+      "id": "launch_0_0",
+      "expected": "跟紧我，出发！",
+      "recognized": "跟紧我，出发。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.9826666666666666,
+      "peak": 0.6435546875,
+      "rms": 0.1109656986059895
+    },
+    {
+      "id": "skill_0_0",
+      "expected": "苍蓝协奏，掩护交给我！",
+      "recognized": "苍蓝协奏，掩护交给我。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.8589583333333333,
+      "peak": 0.612701416015625,
+      "rms": 0.11610182009752135
+    },
+    {
+      "id": "skill_0_1",
+      "expected": "侧翼清空，一起上！",
+      "recognized": "侧翼清空，一起上。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.58025,
+      "peak": 0.52593994140625,
+      "rms": 0.10927382440179463
+    },
+    {
+      "id": "bomb_0_0",
+      "expected": "裂空，展开！",
+      "recognized": "裂空展开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.4634166666666666,
+      "peak": 0.772674560546875,
+      "rms": 0.13091283435359316
+    },
+    {
+      "id": "bomb_0_1",
+      "expected": "这条路，由我打开！",
+      "recognized": "这条路由我打开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.881625,
+      "peak": 0.5841064453125,
+      "rms": 0.11563531348703408
+    },
+    {
+      "id": "overdrive_0_0",
+      "expected": "天翼展开，全力突破！",
+      "recognized": "天意展开，全力突破。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.30025,
+      "peak": 0.65283203125,
+      "rms": 0.12323722454384578
+    },
+    {
+      "id": "hurt_0_0",
+      "expected": "没事，我还能飞。",
+      "recognized": "没事，我还能飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.9423333333333332,
+      "peak": 0.650146484375,
+      "rms": 0.11200874623834252
+    },
+    {
+      "id": "hurt_0_1",
+      "expected": "擦到了，继续前进。",
+      "recognized": "擦到了，继续前进。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.3609166666666668,
+      "peak": 0.787933349609375,
+      "rms": 0.10064720070968117
+    },
+    {
+      "id": "danger_0_0",
+      "expected": "装甲告急。稳住，先避开弹幕！",
+      "recognized": "装甲告急，稳住，先避开弹幕。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.7555833333333335,
+      "peak": 0.79302978515625,
+      "rms": 0.15259207250176196
+    },
+    {
+      "id": "victory_0_0",
+      "expected": "听见了吗？他们在说，欢迎回家。",
+      "recognized": "听见了吗？他们在说：“欢迎回家。”",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.5552916666666667,
+      "peak": 0.765472412109375,
+      "rms": 0.14187759296396674
+    },
+    {
+      "id": "defeat_0_0",
+      "expected": "别放弃。我们还会一起起飞。",
+      "recognized": "别放弃，我们还会一起起飞。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.167875,
+      "peak": 0.793243408203125,
+      "rms": 0.12723600474006966
+    },
+    {
+      "id": "profile_0_0",
+      "expected": "我是苍凛。约好了，一起看见明天的天空。",
+      "recognized": "我是苍林，约好了，一起看见明天的天空。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.756166666666667,
+      "peak": 0.792205810546875,
+      "rms": 0.14760323961584662
+    },
+    {
+      "id": "select_1_0",
+      "expected": "我在这儿。放心，火力管够。",
+      "recognized": "我在这儿，放心，火力管够。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.675,
+      "peak": 0.79034423828125,
+      "rms": 0.1102802936348959
+    },
+    {
+      "id": "select_1_1",
+      "expected": "选我呀？嗯，有眼光。",
+      "recognized": "选我呀！嗯，有眼光。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.595,
+      "peak": 0.63555908203125,
+      "rms": 0.11158191054794123
+    },
+    {
+      "id": "launch_1_0",
+      "expected": "坐稳了，开工！",
+      "recognized": "坐稳了，开工。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.375,
+      "peak": 0.72210693359375,
+      "rms": 0.1259224369350497
+    },
+    {
+      "id": "skill_1_0",
+      "expected": "绯焰舰装，齐射！",
+      "recognized": "飞燕见庄，骑射。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.615,
+      "peak": 0.5247802734375,
+      "rms": 0.12570662689778708
+    },
+    {
+      "id": "skill_1_1",
+      "expected": "让我来，加点火力！",
+      "recognized": "让我来，加点火力。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.735,
+      "peak": 0.709991455078125,
+      "rms": 0.12095066223774474
+    },
+    {
+      "id": "bomb_1_0",
+      "expected": "退后，大家伙来了！",
+      "recognized": "退后！大家伙来了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.735,
+      "peak": 0.688995361328125,
+      "rms": 0.11688250094253788
+    },
+    {
+      "id": "bomb_1_1",
+      "expected": "这一发，送你们的！",
+      "recognized": "这一发，送你们的。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.795,
+      "peak": 0.664093017578125,
+      "rms": 0.11845833232942107
+    },
+    {
+      "id": "overdrive_1_0",
+      "expected": "引擎全开！这才叫痛快！",
+      "recognized": "引擎全开，这才叫痛快。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.455,
+      "peak": 0.728057861328125,
+      "rms": 0.12650640487205278
+    },
+    {
+      "id": "hurt_1_0",
+      "expected": "啧，刮花我的机翼了。",
+      "recognized": "则刮花我的记忆了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.015,
+      "peak": 0.79449462890625,
+      "rms": 0.10835358278022085
+    },
+    {
+      "id": "hurt_1_1",
+      "expected": "小伤。待会儿再修。",
+      "recognized": "小伤，待会儿再修。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.735,
+      "peak": 0.744659423828125,
+      "rms": 0.12150526659516825
+    },
+    {
+      "id": "danger_1_0",
+      "expected": "装甲快撑不住了。先躲，别硬扛！",
+      "recognized": "装甲快撑不住了，先躲，别硬扛。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.995,
+      "peak": 0.677337646484375,
+      "rms": 0.12364660340264778
+    },
+    {
+      "id": "victory_1_0",
+      "expected": "干得漂亮。回家吧，该听听海的声音了。",
+      "recognized": "干得漂亮，回家吧。该听听海的声音了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.775,
+      "peak": 0.794036865234375,
+      "rms": 0.134963239927301
+    },
+    {
+      "id": "defeat_1_0",
+      "expected": "人没事就好。修好了，我们再来。",
+      "recognized": "人没事就好。修好了，我们再来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.895,
+      "peak": 0.742279052734375,
+      "rms": 0.1251303715677418
+    },
+    {
+      "id": "profile_1_0",
+      "expected": "别急嘛。先听听引擎的声音。有我在，火力管够。",
+      "recognized": "别急嘛，先听听引擎的声音。有我在，火力管够。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.775,
+      "peak": 0.7938232421875,
+      "rms": 0.1344688076262923
+    },
+    {
+      "id": "select_2_0",
+      "expected": "雪璃，航线已确认。",
+      "recognized": "雪梨，航线已确认。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.155,
+      "peak": 0.792755126953125,
+      "rms": 0.0993089115276877
+    },
+    {
+      "id": "select_2_1",
+      "expected": "你的信号，我收到了。",
+      "recognized": "你的信号，我收到了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.615,
+      "peak": 0.69970703125,
+      "rms": 0.12974730256795713
+    },
+    {
+      "id": "launch_2_0",
+      "expected": "航线清晰。我们走。",
+      "recognized": "航线清晰，我们走。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.735,
+      "peak": 0.792388916015625,
+      "rms": 0.095573222516338
+    },
+    {
+      "id": "skill_2_0",
+      "expected": "时间，停下来。",
+      "recognized": "时间，停下来。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.455,
+      "peak": 0.657928466796875,
+      "rms": 0.1152797759543704
+    },
+    {
+      "id": "skill_2_1",
+      "expected": "给我们，留一点时间。",
+      "recognized": "给我们留一点时间。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.695,
+      "peak": 0.6717529296875,
+      "rms": 0.12721304305600842
+    },
+    {
+      "id": "bomb_2_0",
+      "expected": "清除阻碍。裂空，释放。",
+      "recognized": "清除阻碍，裂空，释放。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.495,
+      "peak": 0.7938232421875,
+      "rms": 0.11990640637456094
+    },
+    {
+      "id": "bomb_2_1",
+      "expected": "现在，打开航路！",
+      "recognized": "现在打开航路。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.595,
+      "peak": 0.792510986328125,
+      "rms": 0.09151430456961741
+    },
+    {
+      "id": "overdrive_2_0",
+      "expected": "解除限制，重写航线！",
+      "recognized": "解除限制，重写航线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.855,
+      "peak": 0.77972412109375,
+      "rms": 0.09983484440547243
+    },
+    {
+      "id": "hurt_2_0",
+      "expected": "损伤可控，不用担心。",
+      "recognized": "损伤可控，不用担心。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.715,
+      "peak": 0.74847412109375,
+      "rms": 0.1300346323370548
+    },
+    {
+      "id": "hurt_2_1",
+      "expected": "我还在。继续。",
+      "recognized": "我还在继续。",
+      "syllable_error_rate": 0.0,
+      "seconds": 1.315,
+      "peak": 0.79205322265625,
+      "rms": 0.10690600137143456
+    },
+    {
+      "id": "danger_2_0",
+      "expected": "警告，装甲临界。先保持距离。",
+      "recognized": "警告：装甲临界，先保持距离。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.915,
+      "peak": 0.7921142578125,
+      "rms": 0.09763413510400712
+    },
+    {
+      "id": "victory_2_0",
+      "expected": "把选择天空的权利，还给他们。我们做到了。",
+      "recognized": "把选择天空的权利还给他们，我们做到了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.535,
+      "peak": 0.79498291015625,
+      "rms": 0.12454808754041974
+    },
+    {
+      "id": "defeat_2_0",
+      "expected": "如果计算里没有希望，就重新计算。",
+      "recognized": "如果计算里没有希望，就重新计算。",
+      "syllable_error_rate": 0.0,
+      "seconds": 2.420541666666667,
+      "peak": 0.7908935546875,
+      "rms": 0.12234099374634569
+    },
+    {
+      "id": "profile_2_0",
+      "expected": "我是雪璃。如果计算里没有希望，就重新计算。",
+      "recognized": "我是雪梨。如果计算里没有希望，就重新计算。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.5359583333333333,
+      "peak": 0.794219970703125,
+      "rms": 0.13426462256909966
+    },
+    {
+      "id": "briefing_0_0",
+      "expected": "海面下是最后一支撤离船队。跟紧我，我们替他们打开航线。",
+      "recognized": "海面下是最后一支撤离船队，跟紧我，我们替他们打开航线。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.309375,
+      "peak": 0.65325927734375,
+      "rms": 0.12714634947371456
+    },
+    {
+      "id": "briefing_0_1",
+      "expected": "这场雷暴不是天气。干扰塔困住了整座城市。我们去把灯重新点亮。",
+      "recognized": "这场雷暴不是天气，干扰塔困住了整座城市。我们去把灯重新点亮。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.346708333333333,
+      "peak": 0.79266357421875,
+      "rms": 0.12578241838838983
+    },
+    {
+      "id": "briefing_0_2",
+      "expected": "天环把所有人类信号都判成了威胁。带着大家的声音，飞进它的心脏。",
+      "recognized": "天环把所有人类信号都判成了威胁，带着大家的声音飞进他的心脏。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.868,
+      "peak": 0.777435302734375,
+      "rms": 0.13276744064413745
+    },
+    {
+      "id": "briefing_1_0",
+      "expected": "船队还在等我们。嗯，引擎状态不错。来吧，把前面的封锁轰开。",
+      "recognized": "船队还在等我们。嗯，引擎状态不错，来吧，把前面的封锁轰开。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.735,
+      "peak": 0.794677734375,
+      "rms": 0.12096277391540598
+    },
+    {
+      "id": "briefing_1_1",
+      "expected": "看到那些熄灭的街灯了吗？干扰塔就是罪魁祸首。走，给这座城重新通上电。",
+      "recognized": "看到那些熄灭的街灯了吗？干扰塔就是罪魁祸首。走，给这座城重新通上电。",
+      "syllable_error_rate": 0.0,
+      "seconds": 7.015,
+      "peak": 0.792877197265625,
+      "rms": 0.12163856200830667
+    },
+    {
+      "id": "briefing_1_2",
+      "expected": "轨道上的大家伙，还真是不肯让路啊。那就用我们的方式，敲开它的大门。",
+      "recognized": "轨道上的大家伙还真是不肯让路啊。那就用我们的方式敲开他的大门。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.395,
+      "peak": 0.68133544921875,
+      "rms": 0.11937306822043602
+    },
+    {
+      "id": "briefing_2_0",
+      "expected": "撤离船队已抵达近海。前方存在封锁。我们打开航线，带他们回家。",
+      "recognized": "撤离船队已抵达近海，前方存在封锁。我们打开航线，带他们回家。",
+      "syllable_error_rate": 0.0,
+      "seconds": 6.055,
+      "peak": 0.79254150390625,
+      "rms": 0.11343722988165623
+    },
+    {
+      "id": "briefing_2_1",
+      "expected": "雷暴来自轨道干扰。找到城市的供电节点，或许还能救下被困的人。",
+      "recognized": "雷暴来自轨道干扰，找到城市的供电节点，或许还能救下被困的人。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.315,
+      "peak": 0.793060302734375,
+      "rms": 0.11904637663028456
+    },
+    {
+      "id": "briefing_2_2",
+      "expected": "天环曾经想保护我们。现在，它忘了自由是什么。让我亲口告诉它。",
+      "recognized": "天环曾经想保护我们，现在他忘了自由是什么。让我亲口告诉他。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.815,
+      "peak": 0.794708251953125,
+      "rms": 0.12251286591911602
+    },
+    {
+      "id": "story_coast_escort",
+      "expected": "船队就在下方。清理它们前面的空域，我来照看侧翼。",
+      "recognized": "船队就在下方，清理他们前面的空域。我来照看侧翼。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.031291666666666,
+      "peak": 0.764129638671875,
+      "rms": 0.13019627633685493
+    },
+    {
+      "id": "story_city_crossfire",
+      "expected": "他们开始交叉锁定了。瞄准线停住后再转向，别急着交炸弹。",
+      "recognized": "他们开始交叉锁定了，瞄准线停住后再转向，别急着交炸弹。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.172791666666667,
+      "peak": 0.64501953125,
+      "rms": 0.12339496502969487
+    },
+    {
+      "id": "story_orbit_docks",
+      "expected": "这些是以前的维护船坞……跟着环形航标走，巡逻机正在换班。",
+      "recognized": "这些是以前的维护船坞，跟着环形航标走。巡逻机正在换班。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.671458333333334,
+      "peak": 0.78485107421875,
+      "rms": 0.13396919840478372
+    },
+    {
+      "id": "story_coast_lights",
+      "expected": "船队开始移动了。每一盏灯，都是一个等着回家的人。",
+      "recognized": "船队开始移动了。每一盏灯都是一个等着回家的人。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.375,
+      "peak": 0.71240234375,
+      "rms": 0.13199230617480281
+    },
+    {
+      "id": "story_city_childhood",
+      "expected": "小时候，我以为城市的灯永远不会熄灭……所以这次一定要赢。",
+      "recognized": "小时候，我以为城市的灯永远不会熄灭，所以这次一定要赢。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.489833333333333,
+      "peak": 0.635955810546875,
+      "rms": 0.12178377882005943
+    },
+    {
+      "id": "story_orbit_stars",
+      "expected": "天环听得到我。我知道它还记得，我们曾一起看过星星。",
+      "recognized": "天环听得到我，我知道他还记得我们曾一起看过星星。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.532958333333333,
+      "peak": 0.794403076171875,
+      "rms": 0.13746971054093587
+    },
+    {
+      "id": "story_coast_supply",
+      "expected": "补给运输机正在穿越防线。击落它，回收武装和修复模块。",
+      "recognized": "补给运输机正在穿越防线，击落它，回收武装和修复模块。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.572708333333333,
+      "peak": 0.78900146484375,
+      "rms": 0.13616185617867946
+    },
+    {
+      "id": "story_city_lasers",
+      "expected": "小心道路上方的瞄准线。先离开标记，再反击。",
+      "recognized": "小心，道路上方的瞄准线。先离开标记，再反击。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.473083333333333,
+      "peak": 0.758941650390625,
+      "rms": 0.12677994962629788
+    },
+    {
+      "id": "story_orbit_graze",
+      "expected": "擦过弹幕可以储存超载能量。核心即将暴露。",
+      "recognized": "擦过弹幕可以储存超载能量，核心即将暴露。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.836708333333333,
+      "peak": 0.708038330078125,
+      "rms": 0.1373201247009674
+    },
+    {
+      "id": "story_coast_elite",
+      "expected": "前方是干扰指挥机！击落它，我就能把撤离信号送出去。",
+      "recognized": "前方是干扰指挥机，击落它，我就能把撤离信号送出去。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.335,
+      "peak": 0.772308349609375,
+      "rms": 0.1295260340842035
+    },
+    {
+      "id": "story_city_elite",
+      "expected": "城市的供电钥匙就在那台重装机里。别让它跑了！",
+      "recognized": "城市的宫殿钥匙就在那台重装机里。别让它跑了。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.095,
+      "peak": 0.668304443359375,
+      "rms": 0.12659098213962997
+    },
+    {
+      "id": "story_orbit_elite",
+      "expected": "它正在覆盖人类识别码。帮我争取一次重新连接的机会。",
+      "recognized": "他正在覆盖人类识别码，帮我争取一次重新连接的机会。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.335,
+      "peak": 0.79473876953125,
+      "rms": 0.13030279415388943
+    },
+    {
+      "id": "story_coast_safe",
+      "expected": "撤离信号已连通。再向前一步，就是他们的明天。",
+      "recognized": "撤离信号已连通。再向前一步，就是他们的明天。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.991041666666667,
+      "peak": 0.639373779296875,
+      "rms": 0.1255639260055743
+    },
+    {
+      "id": "story_coast_missed",
+      "expected": "船队还在等待回音。先打穿要塞，我们仍有机会。",
+      "recognized": "船队还在等待回音。先打穿要塞，我们仍有机会。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.033375,
+      "peak": 0.724639892578125,
+      "rms": 0.13643211969227764
+    },
+    {
+      "id": "story_city_safe",
+      "expected": "电网回来了！看，下方的灯正在重新亮起。",
+      "recognized": "电网回来了，看下方的灯正在重新亮起。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.955,
+      "peak": 0.689208984375,
+      "rms": 0.13093746952318233
+    },
+    {
+      "id": "story_city_missed",
+      "expected": "干扰还没解除。把剩下的能量留给制空平台。",
+      "recognized": "干扰还没解除，把剩下的能量留给智空平台。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.775,
+      "peak": 0.790191650390625,
+      "rms": 0.12622600162545744
+    },
+    {
+      "id": "story_orbit_safe",
+      "expected": "密钥完整。我会让天环记起，它曾经想保护的人。",
+      "recognized": "密钥完整，我会让天环记起他曾经想保护的人。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.895375,
+      "peak": 0.74945068359375,
+      "rms": 0.14249195732570247
+    },
+    {
+      "id": "story_orbit_missed",
+      "expected": "密钥受损，但我的声音还在。让我亲口告诉它。",
+      "recognized": "密钥受损，但我的声音还在。让我亲口告诉他。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.775,
+      "peak": 0.793609619140625,
+      "rms": 0.12961748678149754
+    },
+    {
+      "id": "story_coast_clear",
+      "expected": "要塞沉默了。撤离船队已通过防线，我们前往城市。",
+      "recognized": "要塞沉默了。撤离船队已通过防线，我们前往城市。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.971541666666667,
+      "peak": 0.625701904296875,
+      "rms": 0.124667923238271
+    },
+    {
+      "id": "story_city_clear",
+      "expected": "雷暴正在消散。最后一个指令源在轨道上——准备爬升。",
+      "recognized": "雷暴正在消散，最后一个指令员在轨道上准备爬升。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.715,
+      "peak": 0.741607666015625,
+      "rms": 0.12118216807410322
+    },
+    {
+      "id": "story_orbit_clear",
+      "expected": "收到人类识别码。天环停止攻击……我们把天空还给了所有人。",
+      "recognized": "收到人类识别码。天环停止攻击，我们把天空还给了所有人。",
+      "syllable_error_rate": 0.0,
+      "seconds": 5.435,
+      "peak": 0.795989990234375,
+      "rms": 0.1194984042801898
+    },
+    {
+      "id": "story_rescue_complete",
+      "expected": "漂亮！信号恢复了。你的侧翼交给我。",
+      "recognized": "漂亮，信号恢复了。你的侧翼交给我。",
+      "syllable_error_rate": 0.0,
+      "seconds": 3.555,
+      "peak": 0.765655517578125,
+      "rms": 0.13462175947320795
+    },
+    {
+      "id": "story_boss_0",
+      "expected": "利维坦进入航线。先拆掉炮台，等核心暴露再集中火力。",
+      "recognized": "利维坦进入航线，先拆掉炮台，等核心暴露再集中火力。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.094291666666667,
+      "peak": 0.7647705078125,
+      "rms": 0.13641627766794134
+    },
+    {
+      "id": "story_boss_1",
+      "expected": "暴风眼接近。留意激光预警，别停在瞄准线上。",
+      "recognized": "暴风眼接近，留意激光预警，别停在瞄准线上。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.1135,
+      "peak": 0.792572021484375,
+      "rms": 0.13809376540673957
+    },
+    {
+      "id": "story_boss_2",
+      "expected": "炽天使已苏醒。摧毁护盾节点，我们就能碰到它的核心。",
+      "recognized": "炽天使已苏醒，摧毁护盾节点，我们就能碰到他的核心。",
+      "syllable_error_rate": 0.0,
+      "seconds": 4.655,
+      "peak": 0.79156494140625,
+      "rms": 0.1384181515923345
+    }
+  ]
+}
