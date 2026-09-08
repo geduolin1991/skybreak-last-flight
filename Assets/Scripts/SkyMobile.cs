@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Skybreak {
 public partial class SkyGame {
  public bool MobileMode {get;private set;}
- float desktopShadowDistance;int desktopShadowCascades;
+ float desktopShadowDistance;int desktopShadowCascades,desktopVSync,desktopFrameRate;
  bool mobileFocus;Vector2 mobileMove;float mobileInputAt;Rect mobilePortraitRect;string mobilePage="home";
  [Serializable] class MobileInput {public float x,y;}
  [Serializable] class MobilePortraitBounds {public float x,y,w,h;}
@@ -16,11 +16,13 @@ public partial class SkyGame {
   public float[] convoy; public MobileChoice[] routes,upgrades,research;
  }
  public void WebMobileMode(string mode){
-  bool next=mode=="1";if(next&&!MobileMode){desktopShadowDistance=QualitySettings.shadowDistance;desktopShadowCascades=QualitySettings.shadowCascades;}
-  if(!next&&MobileMode){QualitySettings.shadowDistance=desktopShadowDistance;QualitySettings.shadowCascades=desktopShadowCascades;}
+  bool next=mode=="1";if(next&&!MobileMode){desktopShadowDistance=QualitySettings.shadowDistance;desktopShadowCascades=QualitySettings.shadowCascades;desktopVSync=QualitySettings.vSyncCount;desktopFrameRate=Application.targetFrameRate;}
+  if(!next&&MobileMode){QualitySettings.shadowDistance=desktopShadowDistance;QualitySettings.shadowCascades=desktopShadowCascades;QualitySettings.vSyncCount=desktopVSync;Application.targetFrameRate=desktopFrameRate;}
   MobileMode=next;ResetMobileInput();mobileFocus=false;
   if(Post)Post.MobileQuality=MobileMode;
-  if(MobileMode){Application.targetFrameRate=60;QualitySettings.shadowDistance=35;QualitySettings.shadowCascades=0;}
+  // The sea and city sit roughly 48 units from the camera. The old 35-unit
+  // cutoff removed their shadows completely, even in the normal mobile view.
+  if(MobileMode){QualitySettings.vSyncCount=0;Application.targetFrameRate=60;QualitySettings.shadowDistance=65;QualitySettings.shadowCascades=2;}
  }
  public void WebMobileMove(string json){
   if(!MobileMode||State!=FlightState.Playing){ResetMobileInput();return;}
@@ -83,6 +85,7 @@ public partial class SkyGame {
   return s;
  }
  void DrawMobilePresentation(){
+  if(Event.current.type!=EventType.Repaint)return;
   GUI.matrix=Matrix4x4.identity;
   // Camera letterboxing does not clear the gutters. Erase previous portrait pixels there.
   float scale=Mathf.Min(Screen.width/1600f,Screen.height/900f),ox=(Screen.width-1600*scale)/2,oy=(Screen.height-900*scale)/2;
@@ -90,8 +93,8 @@ public partial class SkyGame {
   if(oy>0){Rect(0,0,Screen.width,oy,new Color(.027f,.071f,.11f));Rect(0,Screen.height-oy,Screen.width,oy,new Color(.027f,.071f,.11f));}
   Rect r=new Rect(mobilePortraitRect.x*Screen.width,mobilePortraitRect.y*Screen.height,mobilePortraitRect.width*Screen.width,mobilePortraitRect.height*Screen.height);
   if(r.width<=0||r.height<=0)return;
-  if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory)Portrait(Ship,r.x,r.y,r.width,r.height);
-  else if(State==FlightState.Playing){MobileRadio(out int speaker,out string name,out string line,out int expression);if(!string.IsNullOrEmpty(line)){if(speaker>=3)DrawCommanderPortrait(speaker,r.x,r.y,r.width,r.height,expression);else Portrait(speaker,r.x,r.y,r.width,r.height,true,false);}}
+  if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Ship,r.x,r.y,r.width,r.height);}
+  else if(State==FlightState.Playing){MobileRadio(out int speaker,out string name,out string line,out int expression);if(!string.IsNullOrEmpty(line)){if(speaker>=3)DrawCommanderPortrait(speaker,r.x,r.y,r.width,r.height,expression);else {r=SkyPortraitRig.FitRect(r,(2f/3)*.62f/.28f);Portrait(speaker,r.x,r.y,r.width,r.height,true,false);}}}
   GUI.enabled=true;
  }
 }

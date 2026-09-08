@@ -2,7 +2,9 @@ using System;using System.Collections;using UnityEngine;
 namespace Skybreak {
 public partial class SkyGame {
  IEnumerator VerifyMobile18(Action<bool,string> check){
+  foreach(var size in new[]{new Vector2(304,312),new Vector2(336,288),new Vector2(180,400)}){var bounds=new Rect(12,18,size.x,size.y);var fit=SkyPortraitRig.FitRect(bounds,2f/3);check(Mathf.Abs(fit.width/fit.height-2f/3)<.0001f&&fit.xMin>=bounds.xMin&&fit.yMin>=bounds.yMin&&fit.xMax<=bounds.xMax+.001f&&fit.yMax<=bounds.yMax+.001f,"Mobile portrait preserves aspect inside "+size);}
   bool oldAuto=AutoFire;int oldShip=Ship;WebMobileMode("1");check(MobileMode&&Post.MobileQuality,"Touch mode selects lightweight rendering");
+  check(QualitySettings.vSyncCount==0&&Application.targetFrameRate==60,"Mobile frame budget is not overridden by high-refresh vSync");
   SetupHangar();WebMobileAction("ship:2");WebMobileAction("route:1");check(Ship==2&&CurrentRoute==1,"Touch hangar selects airframe and specialization");
   WebMobileAction("route:invalid");check(CurrentRoute==1,"Invalid touch option cannot change selection");
   WebMobileAction("chapter:9");check(State==FlightState.Hangar,"Touch training rejects unavailable chapter");

@@ -3,6 +3,10 @@ using UnityEngine;
 namespace Skybreak {
 // Analytic, unscaled motion is independent of GUI repaint counts and frame rate.
 public static class SkyPortraitRig {
+ public static Rect FitRect(Rect bounds,float aspect) {
+  float width=Mathf.Min(bounds.width,bounds.height*aspect),height=width/aspect;
+  return new Rect(bounds.center.x-width*.5f,bounds.center.y-height*.5f,width,height);
+ }
  struct Profile {
   public Vector4 eyes,pivot,left,right;
   public float tempo,sway,softness;

@@ -8,7 +8,7 @@ using UnityEngine;
 // Run in an isolated project copy: this changes only the copy's platform settings.
 public static class SkyWebBuild {
  public static void Build() {
-  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.9.0";SkyVoiceBuildChecks.Check();
+  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.9.1";SkyVoiceBuildChecks.Check();
   PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Gzip;
   PlayerSettings.WebGL.decompressionFallback=true;
   PlayerSettings.WebGL.dataCaching=true;
@@ -27,6 +27,13 @@ public static class SkyWebBuild {
   QualitySettings.antiAliasing=2;
   QualitySettings.vSyncCount=1;
   QualitySettings.shadowResolution=ShadowResolution.Medium;
+  // Mobile portraits shrink to a fraction of the source image. Mip levels
+  // prevent animated hair, armor seams and alpha edges from crawling.
+  foreach(string path in Directory.GetFiles("Assets/Resources/Pilots","*.png")) {
+   var importer=(TextureImporter)AssetImporter.GetAtPath(path);
+   if(importer.mipmapEnabled&&importer.filterMode==FilterMode.Trilinear)continue;
+   importer.mipmapEnabled=true;importer.filterMode=FilterMode.Trilinear;importer.SaveAndReimport();
+  }
   // Web audio does not support streaming; keep compressed clips until playback.
   foreach(string path in Directory.GetFiles("Assets/Resources/Audio","*.wav")) {
    var importer=(AudioImporter)AssetImporter.GetAtPath(path);

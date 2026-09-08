@@ -48,7 +48,11 @@ public partial class SkyWorld:MonoBehaviour {
 public class SkyPost:MonoBehaviour {
  public bool MobileQuality;public Material Effect; public float Exposure=1.05f;public float Intensity=.7f;public float Flash,Damage;public Vector4 Ripple;
  void OnRenderImage(RenderTexture src,RenderTexture dst){if(!Effect){var s=Shader.Find("Skybreak/Finish");if(s)Effect=new Material(s);else{Graphics.Blit(src,dst);return;}}
- var a=RenderTexture.GetTemporary(Mathf.Max(1,src.width/4),Mathf.Max(1,src.height/4),0,RenderTextureFormat.DefaultHDR);var b=RenderTexture.GetTemporary(a.width,a.height,0,RenderTextureFormat.DefaultHDR);Graphics.Blit(src,a,Effect,0);for(int i=0;i<(MobileQuality?1:2);i++){Effect.SetVector("_Blur",new Vector4(1f/a.width,0,0,0));Graphics.Blit(a,b,Effect,1);Effect.SetVector("_Blur",new Vector4(0,1f/a.height,0,0));Graphics.Blit(b,a,Effect,1);}Effect.SetTexture("_Bloom",a);Effect.SetFloat("_Exposure",Exposure);Effect.SetFloat("_Intensity",Intensity);Effect.SetFloat("_Flash",Flash);Effect.SetFloat("_Damage",Damage);Effect.SetVector("_Ripple",Ripple);Graphics.Blit(src,dst,Effect,2);RenderTexture.ReleaseTemporary(a);RenderTexture.ReleaseTemporary(b);}
+ Effect.SetFloat("_MobileAA",MobileQuality?1:0);
+ var format=SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.DefaultHDR)?RenderTextureFormat.DefaultHDR:RenderTextureFormat.Default;
+ var a=RenderTexture.GetTemporary(Mathf.Max(1,src.width/4),Mathf.Max(1,src.height/4),0,format);var b=RenderTexture.GetTemporary(a.width,a.height,0,format);
+ a.filterMode=b.filterMode=FilterMode.Bilinear;a.wrapMode=b.wrapMode=TextureWrapMode.Clamp;
+ Graphics.Blit(src,a,Effect,0);for(int i=0;i<(MobileQuality?1:2);i++){Effect.SetVector("_Blur",new Vector4(1f/a.width,0,0,0));Graphics.Blit(a,b,Effect,1);Effect.SetVector("_Blur",new Vector4(0,1f/a.height,0,0));Graphics.Blit(b,a,Effect,1);}Effect.SetTexture("_Bloom",a);Effect.SetFloat("_Exposure",Exposure);Effect.SetFloat("_Intensity",Intensity);Effect.SetFloat("_Flash",Flash);Effect.SetFloat("_Damage",Damage);Effect.SetVector("_Ripple",Ripple);Graphics.Blit(src,dst,Effect,2);RenderTexture.ReleaseTemporary(a);RenderTexture.ReleaseTemporary(b);}
  void OnDestroy(){if(Effect)DestroyImmediate(Effect);}
 }
 }

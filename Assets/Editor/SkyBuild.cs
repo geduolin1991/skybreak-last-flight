@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using Skybreak;
 public class SkyModelImporter:AssetPostprocessor {
- void OnPreprocessTexture(){if(!assetPath.StartsWith("Assets/Resources/Pilots"))return;var t=(TextureImporter)assetImporter;t.mipmapEnabled=false;t.maxTextureSize=2048;t.textureCompression=TextureImporterCompression.CompressedHQ;t.wrapMode=TextureWrapMode.Clamp;t.sRGBTexture=true;t.alphaIsTransparency=true;}
+ void OnPreprocessTexture(){if(!assetPath.StartsWith("Assets/Resources/Pilots"))return;var t=(TextureImporter)assetImporter;bool web=EditorUserBuildSettings.activeBuildTarget==BuildTarget.WebGL;t.mipmapEnabled=web;t.filterMode=web?FilterMode.Trilinear:FilterMode.Bilinear;t.maxTextureSize=2048;t.textureCompression=TextureImporterCompression.CompressedHQ;t.wrapMode=TextureWrapMode.Clamp;t.sRGBTexture=true;t.alphaIsTransparency=true;}
  void OnPreprocessModel(){if(!assetPath.StartsWith("Assets/Art/Models/"))return;var m=(ModelImporter)assetImporter;m.importCameras=false;m.importLights=false;m.importAnimation=false;m.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;m.globalScale=1;m.meshCompression=ModelImporterMeshCompression.Off;}
  void OnPreprocessAudio(){if(!assetPath.StartsWith("Assets/Resources/Audio"))return;var a=(AudioImporter)assetImporter;var s=a.defaultSampleSettings;s.loadType=assetPath.Contains("Music")?AudioClipLoadType.Streaming:AudioClipLoadType.DecompressOnLoad;s.compressionFormat=AudioCompressionFormat.Vorbis;s.quality=.8f;s.preloadAudioData=true;a.defaultSampleSettings=s;}
 }
