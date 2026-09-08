@@ -55,6 +55,9 @@ public partial class SkyWorld {
   for(int i=0;i<orbitalLinks.Count;i++){float p=UplinkProgress;Color c=gridRestored[i]?new Color(.13f,.66f,.86f):new Color(.12f,.2f,.29f);if(UplinkActive)c*=.7f+p*.7f;orbitalLinks[i].startColor=orbitalLinks[i].endColor=c;orbitalLinks[i].startWidth=orbitalLinks[i].endWidth=UplinkComplete?.11f:.045f;}
  }
  void CreateGroundDetail(Transform t,int index){
+  if(Stage==0&&index%3==0)for(int side=-1;side<=1;side+=2)PlaceScenery(t,"CoastalBreakwater",new Vector3(side*12.9f,-2.85f,0),.6f);
+  if(Stage==1)PlaceScenery(t,"CivicPlaza",new Vector3((index%2==0?-1:1)*6.9f,-3.04f,4.4f),.72f);
+  if(Stage==2&&index%2==1)PlaceScenery(t,"OrbitalTruss",new Vector3((index%4==1?-1:1)*8.4f,-7,1),.72f);
   if(Stage==0){if(index%2==0){var b=Art.Model("EvacBus",t);b.transform.localPosition=new Vector3(14.1f,-1.7f,2);b.transform.localScale=Vector3.one*.35f;traffic.Add(b.transform);}return;}
   if(Stage==1){
    for(int side=-1;side<=1;side+=2){var o=Art.Model("CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
@@ -70,7 +73,7 @@ public partial class SkyWorld {
  }
  void TickGroundLife(float dt){
   if(groundSurface){groundSurface.SetFloat("_Travel",motion);groundSurface.SetVector("_Power",new Vector4(gridPower[0],gridPower[1],gridPower[2],0));}
-  for(int i=0;i<3;i++){gridPower[i]=Mathf.MoveTowards(gridPower[i],gridRestored[i]?1:0,dt*.35f);worldBlock.Clear();worldBlock.SetColor("_EmissionColor",new Color(.95f,.59f,.21f)*gridPower[i]*1.1f);worldBlock.SetColor("_Color",Color.Lerp(new Color(.028f,.075f,.10f),new Color(.68f,.42f,.14f),gridPower[i]));foreach(var renderer in districtWindows[i])if(renderer)renderer.SetPropertyBlock(worldBlock);}
+  for(int i=0;i<3;i++){gridPower[i]=Mathf.MoveTowards(gridPower[i],gridRestored[i]?1:0,dt*.35f);if(Mathf.Approximately(renderedGridPower[i],gridPower[i]))continue;renderedGridPower[i]=gridPower[i];worldBlock.Clear();worldBlock.SetColor("_EmissionColor",new Color(.95f,.59f,.21f)*gridPower[i]*1.1f);worldBlock.SetColor("_Color",Color.Lerp(new Color(.028f,.075f,.10f),new Color(.68f,.42f,.14f),gridPower[i]));foreach(var renderer in districtWindows[i])if(renderer)renderer.SetPropertyBlock(worldBlock);}
   for(int i=0;i<traffic.Count;i++){var t=traffic[i];if(!t)continue;float speed=Stage==0?1.2f:gridRestored[(i/6)%3]?2.4f:.2f;t.localPosition+=Vector3.forward*dt*speed*(t.localRotation.eulerAngles.y>90?-1:1);if(t.localPosition.z>7)t.localPosition+=Vector3.back*14;if(t.localPosition.z<-7)t.localPosition+=Vector3.forward*14;}
  }
 }

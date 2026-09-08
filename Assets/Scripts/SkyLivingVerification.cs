@@ -22,14 +22,16 @@ public partial class SkyGame {
   MissionBossDefeated();Vector3 before=first.station;World.TickLivingMission(.5f);
   check(sideObjectiveComplete&&rescueSignals==1&&first.station.z>before.z,"Surviving convoy physically departs after its route is cleared");
   ClearBattle();Stage=1;BeginStage();Launch();AutoFire=false;invuln=999;StageTime=4;TickMission(0);
-  check(missionTargets.Count==3&&World.PoweredDistricts==0,"City starts with three live jammers and an unpowered grid");
+  check(missionTargets.Count==1&&World.PoweredDistricts==0,"City reveals its first jammer while the other districts remain unpowered");
   var target=missionTargets[0];Vector3 visible=Cam.WorldToViewportPoint(target.pos+target.visualOffset);Vector3 collision=Cam.WorldToViewportPoint(target.pos);
   check(Vector2.Distance(new Vector2(visible.x,visible.y),new Vector2(collision.x,collision.y))<.002f,"Ground target art and air-plane shot collision align on screen");
   DamageEnemy(target,10000);check(missionNodes==1&&World.PoweredDistricts==1&&!sideObjectiveComplete,"First jammer powers exactly one district without faking mission completion");
+  StageTime=chapterBeats[Stage][1];TickMission(0);check(missionTargets.Count==1&&missionNodesSpawned==2,"Second city district opens after the first combat beat");
+  StageTime=chapterBeats[Stage][2];TickMission(0);check(missionTargets.Count==2&&missionNodesSpawned==3,"Final city jammer appears during the counterattack");
   foreach(var e in missionTargets.ToArray())DamageEnemy(e,10000);
   check(missionNodes==3&&World.PoweredDistricts==3&&sideObjectiveComplete,"All three city jammers must be destroyed to restore the full grid");
   stageBanner=dialogClock=toastClock=0;yield return new WaitForSeconds(2);ScreenCapture.CaptureScreenshot(Path.Combine(output,"16-city-power-restored.png"));yield return new WaitForSeconds(.3f);
-  ClearBattle();Stage=2;BeginStage();Launch();AutoFire=false;invuln=999;StageTime=4;TickMission(0);foreach(var e in missionTargets.ToArray())DamageEnemy(e,10000);
+  ClearBattle();Stage=2;BeginStage();Launch();AutoFire=false;invuln=999;StageTime=chapterBeats[Stage][2];TickMission(0);foreach(var e in missionTargets.ToArray())DamageEnemy(e,10000);
   check(World.UplinkActive&&!World.UplinkComplete&&!sideObjectiveComplete,"Opening orbital nodes starts a real upload instead of claiming instant success");
   TickMission(7.8f);check(!World.UplinkComplete,"Orbital upload requires its full protection window");TickMission(.21f);
   check(World.UplinkComplete&&sideObjectiveComplete&&World.Civilians[0].departed,"Completed upload connects the dock and releases its visible shuttles");

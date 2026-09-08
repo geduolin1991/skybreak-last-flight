@@ -42,6 +42,10 @@ public partial class SkyWorld {
   var groups=new Dictionary<Material,List<CombineInstance>>();
   var sources=new List<MeshRenderer>();
   foreach(var filter in sector.GetComponentsInChildren<MeshFilter>()) {
+   // Vehicles keep their transforms so restored power can move them. All
+   // static district geometry, pavement and crossings share the sector batch.
+   bool moving=false;foreach(var car in traffic)if(car&&(filter.transform==car||filter.transform.IsChildOf(car))){moving=true;break;}
+   if(moving)continue;
    var renderer=filter.GetComponent<MeshRenderer>();var mesh=filter.sharedMesh;
    if(!renderer||!renderer.enabled||!mesh||!mesh.isReadable)continue;
    var materials=renderer.sharedMaterials;
@@ -65,8 +69,9 @@ public partial class SkyWorld {
    part.AddComponent<MeshFilter>().sharedMesh=mesh;
    var renderer=part.AddComponent<MeshRenderer>();renderer.sharedMaterial=entry.Key;
    renderer.receiveShadows=true;renderer.shadowCastingMode=ShadowCastingMode.On;
-   if(Stage==1&&entry.Key.name.Contains("Ion_Cyan")){int sectorIndex=0;int.TryParse(sector.name.Replace("Scenery sector ",""),out sectorIndex);districtWindows[(sectorIndex/3)%3].Add(renderer);}
+   if(Stage==1&&(entry.Key.name.Contains("Ion_Cyan")||entry.Key.name.Contains("City_Window"))){int sectorIndex=0;int.TryParse(sector.name.Replace("Scenery sector ",""),out sectorIndex);districtWindows[(sectorIndex/3)%3].Add(renderer);}
   }
+  foreach(var district in districtWindows)district.RemoveAll(renderer=>sources.Contains(renderer as MeshRenderer));
   foreach(var renderer in sources) {
    renderer.enabled=false;
    if(renderer.transform.childCount==0)Destroy(renderer.gameObject);
@@ -87,8 +92,8 @@ public partial class SkyWorld {
   layer.GetComponent<Renderer>().receiveShadows=false;
  }
 
- public void SetMissionProgress(float seconds,bool rescued) {
-  missionProgress=Mathf.Clamp01(seconds/115);signalRecovered=rescued;
+ public void SetMissionProgress(float progress,bool rescued) {
+  missionProgress=Mathf.Clamp01(progress);signalRecovered=rescued;
  }
  void UpdateChapterAtmosphere(float dt) {
   if(mist)mist.SetFloat("_Travel",motion);

@@ -14,7 +14,7 @@ public partial class SkyGame {
    check(hitStop==0,"Enemy kind "+kind+" can be destroyed without slowing player movement");
    var recycled=SpawnEnemy(kind,new Vector3(2,1,6),0);check(recycled.go==go&&enemyVisualAllocations==before&&recycled.hp>0,"Enemy kind "+kind+" reuses its clean visual after destruction");ReleaseEnemyVisual(recycled);Enemies.Remove(recycled);
   }
-  ClearBattle();StageTime=30;AutoFire=false;spawnClock=999;invuln=999;missionStarted=missionResolved=true;
+  ClearBattle();StageTime=30;encounterSection=CurrentEncounterSection;eliteSent=true;AutoFire=false;spawnClock=999;invuln=999;missionStarted=missionResolved=true;
   yield return new WaitForSeconds(1.5f);int allocated=shockAllocations;peakKillCostMs=0;renderedSparkPeak=0;var frameMs=new List<float>();
   for(int wave=0;wave<60;wave++){
    for(int j=0;j<3;j++){var e=SpawnEnemy(new[]{0,1,4,5,6,7,8,10}[wave%8],new Vector3(-4+j*4,1,6),0);DamageEnemy(e,100000);}

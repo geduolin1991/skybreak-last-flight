@@ -13,10 +13,10 @@ public partial class SkyGame {
  void RestoreSoundtrack(bool changed){if(!music||!music.clip)return;int sample=music.timeSamples;music.Stop();music.timeSamples=Mathf.Clamp(sample,0,music.clip.samples-1);double when=AudioSettings.dspTime+.12;music.PlayScheduled(when);if(musicIntensity&&musicIntensity.clip){musicIntensity.Stop();musicIntensity.timeSamples=Mathf.Clamp(sample,0,musicIntensity.clip.samples-1);musicIntensity.PlayScheduled(when);}}
  void OnDestroy(){if(projectileRim)Destroy(projectileRim);AudioSettings.OnAudioConfigurationChanged-=RestoreSoundtrack;foreach(var font in sizedFonts.Values)if(font){if(font.material)Destroy(font.material);Destroy(font);}sizedFonts.Clear();}
  void MixSoundtrack(float dt){
-  if(!music)return;float target=State==FlightState.Playing?(Overdrive>0?1:Boss!=null?.75f:eliteTarget!=null&&Enemies.Contains(eliteTarget)?.5f:CurrentEncounterSection==3?.48f:CurrentEncounterSection==1?.14f:.06f):0;
-  if(State==FlightState.Playing&&Boss==null&&Overdrive<=0&&Combo>=16)target=Mathf.Min(.7f,target+.12f);
+  if(!music)return;float target=State==FlightState.Playing?(Overdrive>0?1:Boss!=null?(bossPhase==2?.96f:bossPhase==1?.81f:.64f):EncounterMusic):0;
+  if(State==FlightState.Playing&&Boss==null&&Overdrive<=0&&Combo>=16&&!EncounterRecovery&&CurrentEncounterSection<5)target=Mathf.Min(.7f,target+.12f);
   musicBlend=Mathf.MoveTowards(musicBlend,target,dt*(target>musicBlend?1.7f:.65f));audioDuck=Mathf.Max(0,audioDuck-dt*2.8f);
-  float pause=State==FlightState.Paused?.48f:1;float volume=MusicEnabled?MasterVolume*pause*(1-audioDuck*.45f)*(1-voiceEnvelope*.46f):0;
+  float pause=State==FlightState.Paused?.48f:State==FlightState.Playing&&CurrentEncounterSection==5&&Boss==null?.66f:1;float volume=MusicEnabled?MasterVolume*pause*(1-audioDuck*.45f)*(1-voiceEnvelope*.46f):0;
   music.volume=volume*.72f;if(musicIntensity)musicIntensity.volume=volume*musicBlend*.36f;
  }
  void ResetFeedback(){reactorWasReady=false;scorePops.Clear();deathClouds.Clear();weaponKick=hurtEdge=impactGate=killGate=audioDuck=0;bossHpTrail=1;if(Post){Post.Damage=0;Post.Flash=0;}}

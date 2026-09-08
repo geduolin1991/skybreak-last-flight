@@ -9,7 +9,7 @@ public partial class SkyGame {
  [Serializable] class MobilePortraitBounds {public float x,y,w,h;}
  [Serializable] public class MobileChoice {public string name,description,detail;public bool selected,enabled=true;public int index;}
  [Serializable] public class MobileSnapshot {
-  public string state,page,pilot,age,bio,motto,ship,shipDescription,skill,weapon,route,stage,boss,mission,radioName,radioText,voiceLanguage,voiceId,commanderEvent;
+  public string encounter,debrief;public float stageTime,bossArrival;public string state,page,pilot,age,bio,motto,ship,shipDescription,skill,weapon,route,stage,boss,mission,radioName,radioText,voiceLanguage,voiceId,commanderEvent;
   public int shipIndex,difficulty,hull,maxHull,bombs,score,highScore,combo,salvage,level,unlocked,stageIndex,routeTier,voiceReady,speaker,expression,kills,maxCombo,earnedSalvage;
   public float energy,overdrive,skillCooldown,bossHealth,progress,masterVolume,voiceVolume,moveX,moveY,playerX,playerZ;
   public bool mobile,focus,voiceEnabled,musicEnabled,shakeEnabled,voicePlaying,nova,portrait,radio,canSkill,canBomb,canOverdrive;
@@ -69,7 +69,7 @@ public partial class SkyGame {
  }
  public MobileSnapshot MobileStatus(){
   MobileRadio(out int speaker,out string name,out string line,out int expression);
-  var s=new MobileSnapshot{mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
+  var s=new MobileSnapshot{encounter=EncounterLabel,debrief=ChapterDebrief,stageTime=StageTime,bossArrival=BossArrivalTime,mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
    shipIndex=Ship,difficulty=Difficulty,hull=Hull,maxHull=MaxHull,bombs=Bombs,score=Score,highScore=HighScore,combo=Combo,salvage=salvage,level=PilotLevel(Ship),unlocked=Unlocked,stageIndex=Stage,routeTier=RouteTier,voiceReady=VoiceClipsReady,speaker=speaker,expression=expression,kills=Kills,maxCombo=MaxCombo,earnedSalvage=earnedSalvage,
    energy=Energy,overdrive=Overdrive,skillCooldown=SkillCooldown,bossHealth=Boss!=null?Boss.hp/Boss.maxHp:0,progress=Progress,masterVolume=MasterVolume,voiceVolume=VoiceVolume,moveX=MobileMovement.x,moveY=MobileMovement.y,playerX=PlayerPos.x,playerZ=PlayerPos.z,
    focus=mobileFocus,voiceEnabled=VoiceEnabled,musicEnabled=MusicEnabled,shakeEnabled=ShakeEnabled,voicePlaying=VoicePlaying,nova=NovaActive,portrait=State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory,
