@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 namespace Skybreak {
-[Serializable] public class SkyVoiceEntry {public string id,text,category,match,clip;public int pilot;}
+[Serializable] public class SkyVoiceEntry {public string id,text,en,ja,category,match,clip,clipEn,clipJa,emotion;public int pilot;}
 [Serializable] public class SkyVoiceBank {public string version,language;public bool synthetic;public SkyVoiceEntry[] clips;}
 public partial class SkyGame {
- public bool VoiceEnabled=true;public float VoiceVolume=.9f;
+ public bool VoiceEnabled=true;public float VoiceVolume=.9f;public int VoiceLanguage;
+ int voiceLoadEpoch;readonly HashSet<string> voiceLoading=new HashSet<string>();readonly HashSet<string> voiceFailed=new HashSet<string>();
+ public string VoiceLanguageCode=>VoiceLanguage==1?"en":VoiceLanguage==2?"ja":"zh";
+ public int VoiceClipsReady=>voiceClips.Count;
  AudioSource voiceAudio;SkyVoiceEntry voiceCurrent;int voicePriority;
  readonly Dictionary<string,SkyVoiceEntry> voiceById=new Dictionary<string,SkyVoiceEntry>();
  readonly Dictionary<string,SkyVoiceEntry> voiceByRadio=new Dictionary<string,SkyVoiceEntry>();
@@ -21,24 +24,47 @@ public partial class SkyGame {
  public string VoiceActiveId=>voiceCurrent!=null?voiceCurrent.id:"";
  public bool VoicePlaying=>voiceAudio&&voiceAudio.isPlaying&&voiceCurrent!=null;
  public float VoicePlaybackTime=>voiceAudio&&voiceAudio.clip?voiceAudio.time:0;
- bool VoiceRadioActive=>VoicePlaying&&voiceCurrent.category=="story";
+ bool VoiceRadioActive=>VoicePlaying&&(voiceCurrent.category=="story"||voiceCurrent.category=="boss");
 
  void SetupVoices(){
   voiceCanPlay=Application.platform!=RuntimePlatform.WebGLPlayer;
-  VoiceEnabled=PlayerPrefs.GetInt("voiceEnabled",1)==1;VoiceVolume=Mathf.Clamp01(PlayerPrefs.GetFloat("voiceVolume",.9f));
+  VoiceLanguage=Mathf.Clamp(PlayerPrefs.GetInt("voiceLanguage",0),0,2);VoiceEnabled=PlayerPrefs.GetInt("voiceEnabled",1)==1;VoiceVolume=Mathf.Clamp01(PlayerPrefs.GetFloat("voiceVolume",.9f));
   voiceAudio=gameObject.AddComponent<AudioSource>();voiceAudio.spatialBlend=0;voiceAudio.priority=12;voiceAudio.playOnAwake=false;voiceAudio.loop=false;
   var text=Resources.Load<TextAsset>("Voices/voice-bank");if(!text)return;
   var bank=JsonUtility.FromJson<SkyVoiceBank>(text.text);if(bank==null||bank.clips==null)return;
   foreach(var entry in bank.clips){voiceById[entry.id]=entry;if(!string.IsNullOrEmpty(entry.match))voiceByRadio[entry.match]=entry;}
+  StartCoroutine(WarmVoiceBank(voiceLoadEpoch));
  }
- void SaveVoiceSettings(){PlayerPrefs.SetInt("voiceEnabled",VoiceEnabled?1:0);PlayerPrefs.SetFloat("voiceVolume",VoiceVolume);}
+ void SaveVoiceSettings(){PlayerPrefs.SetInt("voiceLanguage",VoiceLanguage);PlayerPrefs.SetInt("voiceEnabled",VoiceEnabled?1:0);PlayerPrefs.SetFloat("voiceVolume",VoiceVolume);}
  public void ActivateVoices(){voiceCanPlay=true;voiceLastShip=-1;}
  void ClearVoices(){voiceQueue.Clear();if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;voicePaused=false;voiceContextCheck=null;}
  void FinishVoice(){voiceContextCheck=null;if(voiceAudio)voiceAudio.Stop();voiceCurrent=null;voiceFade=-1;}
  void SyncVoicePause(){if(!voiceAudio)return;if(State==FlightState.Paused){voiceAudio.Pause();voicePaused=true;}else if(voicePaused){voiceAudio.UnPause();voicePaused=false;}}
+ string VoiceKey(SkyVoiceEntry entry)=>VoiceLanguageCode+"/"+entry.id;
+ string VoicePath(SkyVoiceEntry entry)=>VoiceLanguage==1?entry.clipEn:VoiceLanguage==2?entry.clipJa:entry.clip;
+ public void SetVoiceLanguage(int language){
+  int next=Mathf.Clamp(language,0,2);if(next==VoiceLanguage)return;
+  ClearVoices();voiceLoadEpoch++;VoiceLanguage=next;voiceLastShip=-1;
+  foreach(var clip in voiceClips.Values)if(clip)Resources.UnloadAsset(clip);
+  voiceClips.Clear();voiceLoading.Clear();voiceFailed.Clear();voiceVariants.Clear();voiceCooldowns.Clear();
+  StartCoroutine(WarmVoiceBank(voiceLoadEpoch));SaveSettings();
+ }
+ System.Collections.IEnumerator WarmVoiceBank(int epoch){
+  foreach(var entry in voiceById.Values){if(epoch!=voiceLoadEpoch)yield break;yield return LoadVoiceClip(entry,epoch);}
+ }
+ System.Collections.IEnumerator LoadVoiceClip(SkyVoiceEntry entry,int epoch){
+  string key=VoiceKey(entry);if(voiceClips.ContainsKey(key)||!voiceLoading.Add(key))yield break;
+  string path=VoicePath(entry);var request=Resources.LoadAsync<AudioClip>(path);yield return request;
+  var clip=request.asset as AudioClip;
+  if(epoch!=voiceLoadEpoch){yield break;}
+  voiceLoading.Remove(key);
+  if(clip){voiceClips[key]=clip;if(clip.loadState==AudioDataLoadState.Unloaded)clip.LoadAudioData();}
+  else {voiceFailed.Add(key);Debug.LogWarning("Voice asset unavailable: "+key);}
+ }
  AudioClip VoiceClip(SkyVoiceEntry entry){
-  if(!voiceClips.TryGetValue(entry.id,out var clip)){clip=Resources.Load<AudioClip>(entry.clip);voiceClips[entry.id]=clip;if(clip)clip.LoadAudioData();}
-  return clip;
+  string key=VoiceKey(entry);if(voiceClips.TryGetValue(key,out var clip))return clip;
+  if(!voiceLoading.Contains(key)&&!voiceFailed.Contains(key))StartCoroutine(LoadVoiceClip(entry,voiceLoadEpoch));
+  return null;
  }
  void QueueVoice(SkyVoiceEntry entry,int priority,float delay=0,bool keep=false){
   if(entry==null||!VoiceEnabled||!voiceCanPlay||qaRunning)return;
@@ -101,7 +127,7 @@ public partial class SkyGame {
      VoiceRequest next=null;foreach(var request in voiceQueue)if(request.ready<=now&&(next==null||request.priority>next.priority))next=request;
      if(next!=null){
       var clip=VoiceClip(next.entry);
-      if(!clip)voiceQueue.Remove(next);
+      if(!clip){if(voiceFailed.Contains(VoiceKey(next.entry)))voiceQueue.Remove(next);}
       else if(clip.loadState==AudioDataLoadState.Loaded){
        voiceQueue.Remove(next);voiceContextCheck=next.valid;voiceCurrent=next.entry;voicePriority=next.priority;voiceStartedAt=now;voiceFade=-1;
        voiceAudio.clip=clip;voiceAudio.pitch=1;voiceAudio.time=0;voiceAudio.Play();
@@ -117,26 +143,30 @@ public partial class SkyGame {
   if(sfx)sfx.volume=Mathf.Lerp(1,.83f,voiceEnvelope);
  }
  void DrawVoiceCaption(){
-  if(!VoicePlaying||voiceCurrent.category=="story"||State==FlightState.Briefing||State==FlightState.Paused)return;
+  if(!VoicePlaying||voiceCurrent.category=="story"||(voiceCurrent.category=="boss"&&State!=FlightState.Hangar)||State==FlightState.Briefing||State==FlightState.Paused)return;
   bool hangar=State==FlightState.Hangar;if(hangar&&menuPage!=0&&menuPage!=4&&menuPage!=6)return;
   bool selector=hangar&&menuPage==0;float x=selector?474:478,y=selector?792:hangar?803:785,w=selector?526:644,h=selector?60:53;
   Panel(x,y,w,h);
-  Label(PilotNames[voiceCurrent.pilot]+"  ·  "+voiceCurrent.text,x+16,y+(selector?9:14),w-32,h-12,selector?16:17,paper,TextAnchor.UpperCenter);
+  Label(SpeakerName(voiceCurrent.pilot)+"  ·  "+voiceCurrent.text,x+16,y+(selector?9:14),w-32,h-12,selector?16:17,paper,TextAnchor.UpperCenter);
  }
  void DrawAudioSettings(){
-  Panel(318,99,965,733);SmallTag("VOICE & SOUND",359,128,216,accent);Label("声音与配音",356,180,800,66,43,paper);
-  Label("三位驾驶员，三种声音",359,281,840,36,23,accent);
-  Label("苍凛 · 清亮温柔     绯音 · 低柔慵懒     雪璃 · 清冷知性",359,333,840,43,18,muted);
-  ToggleRow("角色配音","剧情与战斗语音；重要通讯优先播放。",ref VoiceEnabled,412);
-  Label("配音音量",360,511,211,36,20,paper);
-  if(Button("−",608,501,61,47)){VoiceVolume=Mathf.Max(0,VoiceVolume-.1f);SaveSettings();}
-  Bar(693,523,298,VoiceVolume,accent,6);
-  if(Button("+",1013,501,61,47)){VoiceVolume=Mathf.Min(1,VoiceVolume+.1f);SaveSettings();}
-  Label(Mathf.RoundToInt(VoiceVolume*100)+"%",1106,511,98,32,19,paper,TextAnchor.MiddleRight);
-  Label("说话时，音乐与枪炮声会柔和降低；台词结束后自动恢复。",359,594,840,54,17,muted);
-  if(Button("试听当前驾驶员  ·  "+PilotNames[Ship],359,668,482,60,true))PreviewPilotVoice();
-  Label("原创合成声线 · 中文",876,685,329,30,15,muted,TextAnchor.UpperRight);
+  Panel(318,99,965,733);SmallTag("VOICE & SOUND",359,128,216,accent);Label("声音与配音",356,177,800,66,43,paper);
+  Label("配音语言",359,265,200,35,22,paper);
+  string[] languages={"中文","English","日本語"};
+  for(int i=0;i<3;i++)if(Button(languages[i],599+i*202,257,185,51,VoiceLanguage==i))SetVoiceLanguage(i);
+  Label("六位角色完整配音 · 保留中文字幕 · 选择会自动保存",359,328,840,31,17,muted);
+  ToggleRow("角色配音","驾驶员与敌方指挥官；重要战况优先。",ref VoiceEnabled,393);
+  Label("配音音量",360,488,211,36,20,paper);
+  if(Button("−",608,477,61,47)){VoiceVolume=Mathf.Max(0,VoiceVolume-.1f);SaveSettings();}
+  Bar(693,499,298,VoiceVolume,accent,6);
+  if(Button("+",1013,477,61,47)){VoiceVolume=Mathf.Min(1,VoiceVolume+.1f);SaveSettings();}
+  Label(Mathf.RoundToInt(VoiceVolume*100)+"%",1106,488,98,32,19,paper,TextAnchor.MiddleRight);
+  Label("通讯会降低音乐与枪炮音量，结束后恢复。\n敌方会在入场、受挫、濒危和败北时作出不同反应。",359,562,840,67,17,muted);
+  if(Button("试听驾驶员 · "+PilotNames[Ship],359,670,410,60,true))PreviewPilotVoice();
+  if(Button("试听敌方 · "+new[]{"加兰","卡西娅","诺克特"}[Ship],799,670,410,60))PreviewCommanderVoice();
+  Label(voiceClips.Count<voiceById.Count?"正在准备配音 "+voiceClips.Count+" / "+voiceById.Count:"原创合成声线 · "+languages[VoiceLanguage]+" · 中文字幕",359,760,846,30,15,muted);
   if(Button("← 返回设置",42,765,226,55)){menuPage=1;SaveSettings();}
  }
+ void PreviewCommanderVoice(){if(!VoiceEnabled){Toast("请先开启角色配音",2);return;}ClearVoices();QueueVoiceId("commander_"+Ship+"_entry",100,.05f,true);}
 }
 }

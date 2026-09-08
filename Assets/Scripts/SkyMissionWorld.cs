@@ -22,8 +22,8 @@ public partial class SkyWorld {
   if(missionRoot)Destroy(missionRoot.gameObject);civilians.Clear();orbitalLinks.Clear();
   missionRoot=new GameObject("Mission · visible civilian operations").transform;missionRoot.SetParent(terrain,false);
   if(Stage==0)for(int i=0;i<3;i++){
-   var o=Art.Model("RescueFerry",missionRoot);o.name=new[]{"曙光号 · 312 人","归港号 · 268 人","白鹭号 · 190 人"}[i];o.transform.localScale=Vector3.one*.68f;
-   var c=new SkyCivilian{go=o,index=i,station=new Vector3((i-1)*5.6f,-2.68f,i==1?0:3.2f)};o.transform.position=c.station;
+   var o=Art.Model("RescueFerry",missionRoot);o.name=new[]{"曙光号 · 312 人","归港号 · 268 人","白鹭号 · 190 人"}[i];o.transform.localScale=Vector3.one*.42f;
+   var c=new SkyCivilian{go=o,index=i,station=new Vector3((i-1)*6.3f,-9.68f,i==1?4.8f:8.2f)};o.transform.position=c.station;
    c.wakeLeft=Art.Line(missionRoot,"Port wake",new Vector3[12],new Color(.1f,.29f,.30f,.28f),.075f);c.wakeRight=Art.Line(missionRoot,"Starboard wake",new Vector3[12],new Color(.1f,.29f,.30f,.28f),.075f);c.wakeLeft.useWorldSpace=c.wakeRight.useWorldSpace=true;
    foreach(var wake in new[]{c.wakeLeft,c.wakeRight})if(wake){wake.startColor=new Color(.9f,1,1,.65f);wake.endColor=new Color(.9f,1,1,0);wake.widthCurve=new AnimationCurve(new Keyframe(0,.035f),new Keyframe(.3f,.09f),new Keyframe(1,.025f));}
    civilians.Add(c);
@@ -36,6 +36,7 @@ public partial class SkyWorld {
    for(int i=0;i<2;i++){var ship=Art.Model("CargoShuttle",missionRoot);ship.transform.localScale=Vector3.one*.3f;var c=new SkyCivilian{go=ship,index=i,station=new Vector3(i==0?-5:5,-3.7f,-5)};ship.transform.position=c.station;civilians.Add(c);}
   }
  }
+ public Vector3 CivilianAirTarget(SkyCivilian c){var p=c.go?c.go.transform.position:c.station;return new Vector3(p.x,1,p.z+(p.y-1)*.57735027f);}
  public void SetDistrictPower(int index){if(index>=0&&index<3)gridRestored[index]=true;}
  public void SetUplink(float progress,bool complete=false){UplinkActive=true;UplinkProgress=Mathf.Clamp01(progress);UplinkComplete=complete;}
  public void DepartCivilians(){foreach(var c in civilians)if(c.health>0)c.departed=true;}
@@ -48,7 +49,7 @@ public partial class SkyWorld {
    if(c.health<=0){p.y-=Mathf.Min(1.1f,c.age*.008f);c.go.transform.rotation=Quaternion.Euler(0,0,16);}else if(c.departed){c.station+=Vector3.forward*dt*(Stage==0?4.8f:10);p=c.station;}
    else {p.x+=Mathf.Sin(c.age*.32f+c.index)*.14f;p.y+=Mathf.Sin(c.age*1.5f+c.index)*.04f;c.go.transform.rotation=Quaternion.Euler(Mathf.Sin(c.age*.7f)*.65f,Mathf.Sin(c.age*.32f)*1.2f,Mathf.Sin(c.age*.8f)*1.2f);}
    c.go.transform.position=p;
-   if(c.wakeLeft){float length=c.health<=0?1.5f:c.departed?7:4;for(int j=0;j<12;j++){float t=j/11f;float spread=.55f+t*.85f;float z=p.z-1.2f-t*length;float ripple=Mathf.Sin(t*19-c.age*4)*.075f*t;c.wakeLeft.SetPosition(j,new Vector3(p.x-spread+ripple,-2.94f,z));c.wakeRight.SetPosition(j,new Vector3(p.x+spread-ripple,-2.94f,z));}}
+   if(c.wakeLeft){float length=c.health<=0?1.5f:c.departed?7:4;for(int j=0;j<12;j++){float t=j/11f;float spread=.32f+t*.65f;float z=p.z-.8f-t*length;float ripple=Mathf.Sin(t*19-c.age*4)*.075f*t;c.wakeLeft.SetPosition(j,new Vector3(p.x-spread+ripple,-9.94f,z));c.wakeRight.SetPosition(j,new Vector3(p.x+spread-ripple,-9.94f,z));}}
   }
   if(orbitalDish)orbitalDish.localRotation=Quaternion.Slerp(orbitalDish.localRotation,Quaternion.Euler(0,UplinkActive?0:Mathf.Sin(Time.time*.25f)*45,UplinkActive?0:32),dt*.6f);
   for(int i=0;i<orbitalLinks.Count;i++){float p=UplinkProgress;Color c=gridRestored[i]?new Color(.13f,.66f,.86f):new Color(.12f,.2f,.29f);if(UplinkActive)c*=.7f+p*.7f;orbitalLinks[i].startColor=orbitalLinks[i].endColor=c;orbitalLinks[i].startWidth=orbitalLinks[i].endWidth=UplinkComplete?.11f:.045f;}

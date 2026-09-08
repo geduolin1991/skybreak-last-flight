@@ -16,13 +16,13 @@ public partial class SkyGame {
  int PilotLevel(int pilot)=>Mathf.Min(10,1+pilotXp[pilot]/100000);
  void RewardPilot(){if(rewardSaved)return;rewardSaved=true;earnedSalvage=Mathf.Max(25,Score/250)+(State==FlightState.Victory?300:0);earnedXp=Score;if(qaRunning)return;salvage+=earnedSalvage;pilotXp[Ship]+=Score;pilotBest[Ship]=Mathf.Max(pilotBest[Ship],Score);totalRuns++;SavePilotProgress();}
  void ResetFeatures(){toastClock=0;toastText="";earnedSalvage=earnedXp=0;hitStop=0;SkillCooldown=0;SkillTime=0;cutinClock=0;wingmen=hunters=focusLevel=leechLevel=critLevel=temporalLevel=0;rewardSaved=false;rescueSignals=0;sideObjectiveComplete=false;eliteSent=false;featureClock=0;}
- void ResetStageFeatures(){SkillTime=0;eliteSent=false;sideObjectiveComplete=false;eliteTarget=null;SkillCooldown=Mathf.Max(0,SkillCooldown-8);pilotSpeaker=Ship;foreach(var s in shocks)if(s.line)Destroy(s.line.gameObject);shocks.Clear();}
+ void ResetStageFeatures(){SkillTime=0;eliteSent=false;sideObjectiveComplete=false;eliteTarget=null;SkillCooldown=Mathf.Max(0,SkillCooldown-8);pilotSpeaker=Ship;ClearShocks();}
  void TickFeatures(float dt){SkillCooldown=Mathf.Max(0,SkillCooldown-dt);SkillTime=Mathf.Max(0,SkillTime-dt);cutinClock=Mathf.Max(0,cutinClock-dt);toastClock=Mathf.Max(0,toastClock-dt);featureClock+=dt;
- for(int i=shocks.Count-1;i>=0;i--){var s=shocks[i];s.age+=dt;float t=s.age/s.max;if(t>=1){Destroy(s.line.gameObject);shocks.RemoveAt(i);continue;}s.line.transform.localScale=Vector3.one*Mathf.Lerp(.1f,s.radius,1-Mathf.Pow(1-t,3));s.line.startWidth=s.line.endWidth=(1-t)*.075f;}
+ for(int i=shocks.Count-1;i>=0;i--){var s=shocks[i];s.age+=dt;float t=s.age/s.max;if(t>=1){ReturnShock(s);shocks.RemoveAt(i);continue;}s.line.transform.localScale=Vector3.one*Mathf.Lerp(.1f,s.radius,1-Mathf.Pow(1-t,3));s.line.startWidth=s.line.endWidth=(1-t)*.075f;}
  if(!eliteSent&&StageTime>=52&&StageTime<115&&stageEndClock==0){eliteSent=true;eliteTarget=SpawnEnemy(8,new Vector3(0,1,18),4);eliteTarget.elite=true;eliteTarget.hp=eliteTarget.maxHp=620+Stage*180;eliteTarget.go.transform.localScale=Vector3.one*.75f;MissionSay("elite_arrive",82,()=>eliteTarget!=null&&Enemies.Contains(eliteTarget));Toast("可选目标 · 截获干扰指挥机",4);Sound("Warning",.5f);}
  }
  void Toast(string text,float time=2.5f){toastText=text;toastClock=time;}
- void Shockwave(Vector3 pos,Color color,float radius=6,float duration=.55f){var l=Art.Ring(null,1,color,.1f);l.transform.position=pos+Vector3.up*.05f;shocks.Add(new Shock{line=l,max=duration,radius=radius});}
+ void Shockwave(Vector3 pos,Color color,float radius=6,float duration=.55f){if(shocks.Count>=64)return;var s=shockPool.Count>0?shockPool.Pop():CreateShock();s.age=0;s.max=duration;s.radius=radius;var l=s.line;l.sharedMaterial=Art.GlowMat(color);l.transform.position=pos+Vector3.up*.05f;l.transform.localScale=Vector3.one*.1f;l.startWidth=l.endWidth=.075f;l.gameObject.SetActive(true);shocks.Add(s);}
  public void UsePilotSkill(){if(State!=FlightState.Playing||SkillCooldown>0||stageEndClock>0)return;SkillCooldown=(Ship==0?18:Ship==1?22:24)*Mathf.Pow(.8f,temporalLevel)*(1-researchSkill*.05f);SkillTime=Ship==0?2:Ship==1?5:4.5f;cutinClock=1.65f;cutinIsOverdrive=false;invuln=Mathf.Max(invuln,1.2f);Sound("Overdrive",.8f);QueueVoiceId("route_skill_"+Ship+"_"+CurrentRoute,80);shake=.28f;Shockwave(PlayerPos,Ship==1?Art.Orange:Ship==2?Art.Violet:Art.Cyan,8);pilotSpeaker=Ship;
  ApplyRouteSkill();
  }
@@ -54,8 +54,20 @@ public partial class SkyGame {
   var m=portraitMats[pilot];SkyPortraitRig.Animate(m,pilot,clock,age,face,fade);
   Graphics.DrawTexture(new Rect(x,y,w,h),portraits[pilot],m);
  }
- string radioLast="";float radioBegan;
- void DrawRadio(){if(dialogClock<=0&&!VoiceRadioActive)return;int speaker=VoiceRadioActive?voiceCurrent.pilot:pilotSpeaker;string line=VoiceRadioActive?voiceCurrent.text:RadioText;string name=VoiceRadioActive?PilotNames[speaker]+" / 小队通讯":RadioName;Panel(26,318,222,287);Portrait(speaker,34,325,205,141,true,false);Rect(26,462,222,143,new Color(.004f,.009f,.016f,.98f));Label(name,41,475,193,27,13,accent);if(radioLast!=line){radioLast=line;radioBegan=Time.unscaledTime;}int count=Mathf.Min(line.Length,Mathf.Max(1,(int)((Time.unscaledTime-radioBegan)*25)));string text=line.Substring(0,count);Label(text,41,513,190,83,15,paper);}
+ void DrawRadio(){
+  bool enemyFallback=commanderRadio!=null&&commanderRadioClock>0;
+  if(dialogClock<=0&&!VoiceRadioActive&&!enemyFallback)return;
+  var entry=VoiceRadioActive?voiceCurrent:enemyFallback?commanderRadio:null;
+  int speaker=entry!=null?entry.pilot:pilotSpeaker;string line=entry!=null?entry.text:RadioText;
+  string name=entry!=null?SpeakerName(speaker)+(speaker<3?" / 小队通讯":""):RadioName;
+  Panel(26,318,222,287);
+  if(speaker>=3)DrawCommanderPortrait(speaker,34,325,205,141,entry!=null&&entry.id.EndsWith("death")?2:entry!=null&&entry.id.EndsWith("entry")?0:1);
+  else Portrait(speaker,34,325,205,141,true,false);
+  Rect(26,462,222,143,new Color(.004f,.009f,.016f,.98f));Label(name,41,475,193,27,13,speaker>=3?Art.Orange:accent);
+  // Stable whole captions avoid allocating a substring and rebuilding glyphs every frame.
+  Label(line,41,513,190,83,15,paper);
+ }
+
  void DrawFeatures(){if(State==FlightState.Playing){Panel(1352,289,222,124);Label("驾驶员技  [Q]",1370,304,190,24,13,muted);Label(ActiveSkillName,1370,338,190,31,21,paper);Label(SkillCooldown>0?Mathf.CeilToInt(SkillCooldown)+" 秒":"READY TO CAST",1371,382,187,23,12,SkillCooldown>0?muted:accent);DrawRadio();if(toastClock>0)Label(toastText,432,180,736,40,18,accent,TextAnchor.MiddleCenter);}
  if(cutinClock>0&&State==FlightState.Playing){float a=Mathf.Clamp01(cutinClock/.25f);float enter=Mathf.Clamp01((1.65f-cutinClock)*5);float x=Mathf.Lerp(1700,1010,1-Mathf.Pow(1-enter,3));Rect(x,490,553,144,new Color(.005f,.012f,.026f,.9f*a));Portrait(Ship,x+175,420,368,250,true);Label("LINK BURST",x+22,508,284,26,12,accent);Label(cutinIsOverdrive?"天翼机甲展开":ActiveSkillName,x+22,550,342,49,29,paper);Line(x+22,617,480,accent);}
  }

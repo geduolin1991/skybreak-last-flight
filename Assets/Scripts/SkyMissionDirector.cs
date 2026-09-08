@@ -18,7 +18,9 @@ public partial class SkyGame {
   if(valid!=null&&!valid())return;
   pilotSpeaker=entry.pilot;RadioName=PilotNames[entry.pilot]+" / 实时通讯";RadioText=entry.text;voiceLastRadio=RadioText;dialogClock=Mathf.Clamp(entry.text.Length*.14f,3,7);
   int stage=Stage;Func<bool> context=()=>Stage==stage&&State==FlightState.Playing&&(valid==null||valid());
-  QueueVoice(entry,priority,0,true);var request=voiceQueue.Find(r=>r.entry.id==id);if(request!=null){request.valid=context;request.expires=Time.unscaledTime+8;}
+  float delay=stageEndClock>0?Mathf.Max(0,commanderRadioClock):0;
+  if(stageEndClock>0&&!qaRunning)stageEndClock=Mathf.Max(stageEndClock,delay+VoiceDuration(entry)+.5f);
+  QueueVoice(entry,priority,delay,true);var request=voiceQueue.Find(r=>r.entry.id==id);if(request!=null){request.valid=context;request.expires=Time.unscaledTime+delay+8;}
  }
  void TickMission(float dt){
   World.TickLivingMission(dt);TickSquadron(dt);TickSpecialization(dt);
@@ -56,11 +58,16 @@ public partial class SkyGame {
   else {if(!missionResolved)ResolveMission(false);MissionSay(World.UplinkComplete?"orbit_clear_link":"orbit_clear_partial",96);}
   ClearHostileProjectiles();BeginSquadronDeparture(false);
  }
- void ClearHostileProjectiles(){for(int i=Enemies.Count-1;i>=0;i--)if(Enemies[i].kind==10||Enemies[i].kind==11){if(Enemies[i].go)Destroy(Enemies[i].go);Enemies.RemoveAt(i);}}
+ void ClearHostileProjectiles(){for(int i=Enemies.Count-1;i>=0;i--)if(Enemies[i].kind==10||Enemies[i].kind==11){ReleaseEnemyVisual(Enemies[i]);Enemies.RemoveAt(i);}}
  void DrawLivingMission(){
   if(State!=FlightState.Playing)return;
-  if(Stage==0)for(int i=0;i<World.Civilians.Count;i++){var c=World.Civilians[i];if(!c.go||c.station.z>18)continue;Vector3 v=Cam.WorldToViewportPoint(c.go.transform.position+Vector3.back*1.9f);float x=v.x*1600,y=(1-v.y)*900;if(x<280||x>1320||y<100||y>780)continue;Rect(x-62,y-5,124,39,new Color(.005f,.03f,.05f,.82f));Label(new[]{"曙光号","归港号","白鹭号"}[i]+(c.health<=0?" · 失能":c.departed?" · 撤离":""),x-58,y-2,116,23,12,c.health>40?paper:Art.Orange,TextAnchor.MiddleCenter);Bar(x-50,y+24,100,c.health/100,c.health>40?accent:Art.Orange,3);}
-  foreach(var e in missionTargets){if(!e.go||!Enemies.Contains(e))continue;Vector3 v=Cam.WorldToViewportPoint(e.pos);float x=v.x*1600,y=(1-v.y)*900;Rect(x-52,y+28,104,35,new Color(.02f,.015f,.03f,.88f));Label((Stage==1?"干扰塔 ":"封锁接点 ")+(e.missionIndex+1),x-50,y+29,100,22,12,paper,TextAnchor.MiddleCenter);Bar(x-43,y+56,86,e.hp/e.maxHp,Art.Orange,3);}
+  if(Stage==0){
+   for(int i=0;i<World.Civilians.Count;i++){var c=World.Civilians[i];float y=543+i*16;
+    Label(new[]{"曙光","归港","白鹭"}[i],1370,y-4,47,19,10,muted);
+    Bar(1420,y+4,104,c.health/100,c.health<=40?Art.Orange:accent,3);
+    if(c.health<=0)Label("失能",1529,y-4,35,18,10,Art.Orange);}
+  }
+  // Ground objective health stays below the target in world space, so aircraft occlude it.
   if(Stage==2&&World.UplinkActive&&!World.UplinkComplete){Panel(581,115,438,52);Label("雪璃正在上传识别密钥  "+Mathf.CeilToInt(World.UplinkProgress*100)+"%",594,123,412,26,16,accent,TextAnchor.MiddleCenter);Bar(600,153,400,World.UplinkProgress,Art.Violet,3);}
   DrawSquadronHUD();DrawSpecializationHUD();
  }

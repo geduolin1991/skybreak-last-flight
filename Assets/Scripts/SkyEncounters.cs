@@ -86,12 +86,12 @@ public partial class SkyGame {
 
  void DrawMissionOrder() {
   if(State!=FlightState.Playing||stageBanner>0||warningClock>1.7f)return;
-  Panel(1352,440,222,145);
-  Label("当前目标",1370,456,188,24,13,muted);
+  Panel(1352,440,222,Stage==0?153:145);
+  Label(Stage==0?"护送船队 · "+ConvoySurvivors+" / 3":"当前目标",1370,456,188,24,13,muted);
   Label(Boss!=null?"击破防护节点与核心":Stage==0?"拦截袭船轰炸机":Stage==1?(sideObjectiveComplete?"保护撤离车队":"摧毁三座干扰塔"):World.UplinkComplete?"掩护接驳船进港":World.UplinkActive?"掩护识别密钥上传":"解除三个封锁接点",1370,490,188,48,19,paper);
   string detail=MissionStatus;bool eliteActive=eliteTarget!=null&&Enemies.Contains(eliteTarget);
-  Label(detail,1370,551,188,26,12,sideObjectiveComplete?accent:muted);
-  if(eliteActive)Bar(1370,578,186,eliteTarget.hp/eliteTarget.maxHp,Art.Orange,3);
+  Label(Stage==0?"":detail,1370,551,188,26,12,sideObjectiveComplete?accent:muted);
+  if(eliteActive)Bar(1370,Stage==0?590:578,186,eliteTarget.hp/eliteTarget.maxHp,Art.Orange,3);
  }
 
  // Integration checks exercise the actual director and live target lock.

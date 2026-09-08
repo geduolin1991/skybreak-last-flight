@@ -1,0 +1,98 @@
+select_0_0	I'm Aoi. Ready whenever you are. Let's fly.	アオイです。準備完了、いつでも飛べます。
+select_0_1	Ready? We're coming home together. Promise.	準備はいい？ 今度も、一緒に帰ろうね。
+launch_0_0	Stay on my wing! Let's go!	ついてきて！ 行くよ！
+bomb_0_0	Skybreak! Deploy!	スカイブレイク、展開！
+bomb_0_1	I'll open a path!	この道は、私が開く！
+overdrive_0_0	Wings deployed! Break through!	天翼展開！ 全力で突破する！
+hurt_0_0	I'm okay. I can still fly.	大丈夫。まだ飛べる。
+hurt_0_1	Just a scratch. Keep moving.	かすっただけ。進もう。
+danger_0_0	Armor's failing! Steady. Dodge first!	装甲が限界！ 落ち着いて、まず弾を避けて！
+victory_0_0	Blockade cleared! Check formation. We're going home.	封鎖を突破！ 隊形を確認して、帰ろう。
+defeat_0_0	Don't give up. We'll fly together again.	諦めないで。また一緒に飛ぼう。
+profile_0_0	I'm Aoi. Promise me we'll see tomorrow's sky together.	アオイです。約束しよう。明日の空も、一緒に見ようね。
+select_1_0	Right here, darling. I've got all the firepower you need.	ここにいるわ。安心して、火力ならたっぷりよ。
+select_1_1	Picking me? Mm. Good taste.	私を選ぶの？ ふふ、見る目あるわね。
+launch_1_0	Hold tight! Time to work!	しっかりつかまって。仕事の時間よ！
+bomb_1_0	Stand back! Here comes the big one!	下がって！ 大きいの、行くわよ！
+bomb_1_1	This one's on me!	これは私からの、お返しよ！
+overdrive_1_0	Engines wide open! Now that's more like it!	エンジン全開！ ああ、これよ、これ！
+hurt_1_0	Tch. You scratched my wings.	ちっ、翼に傷つけたわね。
+hurt_1_1	Nothing serious. I'll fix it later.	かすり傷よ。修理は後ね。
+danger_1_0	Armor won't hold! Dodge it. Don't take that hit!	装甲が持たない！ 避けて、無理に受けないで！
+victory_1_0	Ha! Punched right through. Bring it home, everyone.	はっ、ぶち抜いた！ みんな、引き揚げるわよ。
+defeat_1_0	You're alive. That's what matters. We'll patch up and try again.	無事ならそれでいい。直したら、また行こうね。
+profile_1_0	Easy now. Listen to that engine. With me here, you'll never run short on firepower.	慌てないで。まずはエンジンの音を聞いて。私がいれば、火力には困らないわ。
+select_2_0	Yuki here. Flight path confirmed.	ユキ、航路を確認しました。
+select_2_1	Your signal... I hear you.	あなたの信号、受け取りました。
+launch_2_0	Path is clear. Let's go.	航路はクリア。行きましょう。
+bomb_2_0	Clear the obstruction. Skybreak, release.	障害を排除。スカイブレイク、解放。
+bomb_2_1	Now! Open the route!	今です。航路を開いて！
+overdrive_2_0	Limits released! Rewrite the flight path!	制限解除。航路を、書き換える！
+hurt_2_0	Damage contained. Don't worry.	損傷は軽微。心配しないで。
+hurt_2_1	I'm still here. Keep going.	まだ、ここにいます。続けて。
+danger_2_0	Warning. Armor critical. Keep your distance.	警告、装甲が限界です。距離を取って。
+victory_2_0	Attack orders terminated. We... did it.	攻撃命令、停止。私たち、やったんですね。
+defeat_2_0	If the numbers leave no room for hope... run them again.	計算の中に希望がないなら、もう一度、計算する。
+profile_2_0	I'm Yuki. If the numbers leave no room for hope... run them again.	ユキです。計算の中に希望がないなら、もう一度、計算する。
+briefing_0_0	Three rescue ships below. We're bringing those people home. Intercept the dive bombers. Don't let their bombs reach the ships!	下に救助船が三隻。みんなを家に帰すよ。急降下爆撃機を止めて、船に爆弾を落とさせないで！
+briefing_0_1	Three jammers have cut the city's power. Take them out, one by one. Get those lights and evacuation vehicles moving again!	三基の妨害塔が街の電力を断ってる。一基ずつ壊して、街灯と避難車両を動かそう！
+briefing_0_2	Clear the three blockade nodes. Then cover Yuki's ID upload. She needs eight seconds. We'll give her that.	三つの封鎖ノードを解除して、ユキの識別コード送信を援護する。必要なのは八秒。私たちで稼ごう。
+briefing_1_0	Three ships. More than seven hundred people. Mm. We'd better sweep every last bomber out of their way.	三隻に、七百人以上ね。ふうん。前の爆撃機、一機残らず片づけなくちゃ。
+briefing_1_1	See those three jammers? Tear them down. Once the lights come back, the buses can get everyone out.	あの三基の妨害塔、見える？ ぶっ壊して。電気が戻れば、バスでみんなを逃がせるわ。
+briefing_1_2	The dock's sealed off. Break the three nodes. Give Yuki eight seconds. I'll handle the incoming fire.	ドックは封鎖されてる。三つのノードを壊して、ユキに八秒あげて。敵の火力は私が引き受ける。
+briefing_2_0	Three civilian ships are on our route. Enemy dive bombers will target the convoy. Intercept them first.	民間船三隻が航路に入りました。敵の急降下爆撃機が船団を狙います。優先して迎撃してください。
+briefing_2_1	Three jammers are still active. Destroy one, and its district gets power back.	三基の妨害塔が稼働中です。一基破壊するごとに、対応する地区の電力が復旧します。
+briefing_2_2	That dock... I used to work there. Clear the three blockade nodes. I need eight seconds to reconnect it.	あのドック、昔、私が働いていた場所です。三つの封鎖ノードを解除してください。再接続には、八秒必要です。
+world_intro_0	Three white rescue ships in sight! All units, hold this route!	下に白い救助船、三隻確認！ 全機、この航路を守って！
+world_intro_1	There are the jammers. Three of them! Split up and tear them down. Those people have waited in the dark long enough.	妨害塔よ。三基、手分けして壊すわよ！ 下のみんなを、これ以上暗闇で待たせないで。
+world_intro_2	That's the dock. The red nodes are still blocking access. Destroy them first!	あのドックです。赤いノードが封鎖を維持しています。先に破壊して！
+convoy_bomber	Dive bomber heading for the convoy! Stop it!	急降下爆撃機が船団へ！ 止めて！
+convoy_bomb_lock	It's lining up on a ship! Shoot it down before it drops!	船を狙ってる！ 投下される前に撃ち落として！
+convoy_intercept	Got it! Keep the convoy covered.	止めた！ 続けて船団を守ろう。
+convoy_hit	Rescue ship hit! Watch for the next bomb!	救助船に被弾！ 次の爆弾に注意して！
+convoy_disabled	One ship's lost power... Cover the others!	一隻、動力を失った。残りの船を援護して！
+coast_clear_all	Fortress guns are silent! All three ships made it. They're sailing past the blockade!	要塞が沈黙！ 三隻とも無事よ。封鎖線を抜けていくわ！
+coast_clear_some	Fortress down! All ships still under power, withdraw now. Rescue crews, reach the disabled ships.	要塞撃破！ 動ける船はすぐに撤退して。救助隊、動力を失った船の救援をお願い。
+coast_clear_lost	Fortress down... but the convoy's dead in the water. Get rescue crews here, now!	要塞は撃破。でも、船団は動けない。後方へ連絡、すぐに救助隊を！
+city_grid_1	First one down! Look, that district's lit up!	一基目、破壊！ 見て、あの地区に明かりが戻った！
+city_grid_2	Another district has power! The evacuation vehicles are moving!	次の地区も電力復旧！ 避難車両が動き始めたよ！
+city_grid_3	All three are down! Ha! The whole road's lit again!	三基とも停止！ はっ、道の明かりが全部戻ったわ！
+city_clear_power	Air platform destroyed! Grid is stable. The evacuation convoy can keep moving.	制空プラットフォーム撃破！ 電力は安定。避難車列、進んでください。
+city_clear_partial	Platform's down. Some districts are still dark. Ground crews, keep those repairs going!	プラットフォームは落としたわ。でも、まだ停電してる地区がある。地上班、復旧を続けて！
+orbit_node_1	First blockade cleared. Dock control... answer me.	一つ目の封鎖を解除。ドック管制、応答して。
+orbit_node_2	Second node down! Yuki, we're right here with you.	二つ目のノード撃破！ ユキ、私たちはそばにいるよ。
+orbit_node_3	All nodes cleared! Uploading now. Cover my flanks!	全ノード解除！ アップロード開始。側面を援護して！
+orbit_connected	Connected... It recognizes us! Shuttles, you're clear to dock.	つながった。私たちを認識してる！ シャトル、入港できます。
+orbit_clear_link	The core has ceased fire. Our ID is accepted. Welcome home.	コアの攻撃停止。識別コードが有効になりました。お帰りなさい。
+orbit_clear_partial	The attacks have stopped. The ID link isn't up yet. Ground teams, continue the upload.	攻撃は停止。でも、識別回線はまだつながっていません。地上班、送信を続けてください。
+support_beacon	Support beacon incoming! Grab it, and we can fight together!	支援ビーコン投下！ 拾ってくれたら、一緒に戦えるよ！
+ward_contact	That ring drone sustains the purple shields. Take out the generator first!	紫の盾はリング型ドローンが維持しています。先に発生器を破壊して！
+rail_lock	Railgun lock! Move sideways, now!	レールガン、ロックされた！ 今、横に避けて！
+carrier_launch	That carrier keeps launching drones. Go straight for the carrier!	あの母機、まだ小型機を出してる。母機を直接叩いて！
+elite_arrive	Heavy command ship! Bring it down. There's a supply haul in it for us.	重装指揮機よ！ 落とせば、補給をまとめて手に入れられるわ。
+elite_down	Command ship destroyed! Supplies released. If you need repairs, move in!	指揮機撃破、補給を確認！ 修理が必要なら、近づいて！
+core_exposed	All shield nodes destroyed! Core exposed! Focus fire now!	防護ノード、全破壊！ コア露出、今すぐ火力を集中して！
+boss_warning_0	Leviathan entering our route! Break the turrets, then hit the core!	リヴァイアサンが航路に侵入！ 砲塔を壊してから、コアを狙って！
+boss_warning_1	Here comes Tempest. Watch the laser warnings. Don't let it pin you between them!	テンペストが来たわ。レーザー予告を見て、挟まれないように！
+boss_warning_2	Seraph approaching. Its nodes are still feeding power. Cut them off first!	セラフ接近。ノードがまだ電力を供給しています。先に切断して！
+support_enter_0	Kestrel in position! Missiles away. Clearing your flanks!	ケストレル、配置完了！ ミサイル発射、側面を片づけるよ！
+support_exit_0	Support window's over. I'm pulling out. Hold your course!	支援時間終了。いったん離脱するね。航路を守って！
+support_extend_0	New beacon received! Both wingmen, stay with the lead!	新しいビーコン受信！ 二機とも、支援を続けるよ！
+route_up_0	Weapons synced! Next specialization tier is online!	武装同期！ 特化レベルが上がったよ！
+support_enter_1	Manta in position. Mm. Brought you a little heavy firepower.	マンタ、配置完了。ふふ、重火力を持ってきたわよ。
+support_exit_1	Ammo's running dry. I'll restock. Save me a spot for the next round.	弾薬切れね。補充してくるわ。次も、隣を空けといてね。
+support_extend_1	Resupply confirmed! Ha, enough for another round!	補給、接続！ はっ、もうひと暴れできるわね！
+route_up_1	Upgrades are live! Let's give them a taste.	改装完了！ この火力、味わってもらおうかしら。
+support_enter_2	Needle in position. I'll carve a straight path with the railgun.	ニードル、配置完了。レールガンで、まっすぐ道を開きます。
+support_exit_2	Coordination window closed. Needle disengaging. Keep comms open.	連携時間終了。ニードル離脱。通信は維持します。
+support_extend_2	Support beacon confirmed. Coordination window extended.	支援ビーコン確認。連携時間を延長しました。
+route_up_2	Specialization updated. My next shot will be sharper.	戦術データ更新。次の一射は、もっと正確に。
+route_skill_0_0	Targets locked! Swarm, fire!	目標ロック！ スウォーム、一斉射撃！
+route_skill_0_1	On my wing! Escort formation!	みんな、ついてきて！ 護衛隊形、展開！
+route_skill_0_2	Hold on! Gale rush!	つかまって！ ゲイル、突撃！
+route_skill_1_0	Five ahead! Furnace barrage!	前方五点！ ファーネス、砲撃！
+route_skill_1_1	Don't take that hit! Get behind the barrier! Armor, repair!	無理しないで、防壁に入って！ 装甲、修復！
+route_skill_1_2	Limits off! Ha! Full firepower!	出力制限、解除！ はっ、火力全開！
+route_skill_2_0	You're in my sights. Endpoint... calibrated!	もう射線上です。終点、照準完了！
+route_skill_2_1	Leave us... a little time. Zero hour, unfold!	私たちに、時間を。ゼロアワー、展開！
+route_skill_2_2	Coordinates locked. Phase jump!	座標ロック。フェイズ、ジャンプ！

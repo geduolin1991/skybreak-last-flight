@@ -1,0 +1,19 @@
+# Original commander expression atlases
+
+Created with the built-in image generation tool. Each image contains three expression frames. No real person's likeness or pre-existing franchise character was used.
+
+Paths: `Assets/Resources/BossPortraits/Garan.png`, `Cassia.png`, `Noct.png`.
+
+## Final prompts
+
+### Garan
+
+Use case: stylized-concept. Asset type: production anime game communication portrait EXPRESSION ATLAS. Make a wide 3:1 sheet, exactly THREE equal SQUARE panels side by side, NO gutters, no text. Each panel repeats the exact same original adult male naval fortress commander Garan, age 43, short graphite hair with silver temples, amber eyes, a small eyebrow scar, sharp dark navy officer flightsuit, copper epaulets, headset. Sophisticated hand-painted Japanese anime game rendering, refined facial anatomy and fabric detail. Head and upper chest framed identically with complete hair in every panel, face large readable at thumbnail size. Dark teal cockpit background, orange instrument rim light. Left: battle entrance, calm intimidating crooked confident smile, chin slightly raised. Middle: fortress failing, sweat bead, furrowed brow and clenched jaw, alarm under military discipline. Right: final defeat, defiant angry shouting, mouth open, collar rumpled, small sparks in distant cockpit, no gore. Strong expressive differences, consistent identity and outfit. No logos, watermark, typography, borders. Each face entirely inside its own equal third.
+
+### Cassia
+
+Use case: stylized-concept. Asset type: production anime game communication portrait EXPRESSION ATLAS. Wide 3:1 sheet, exactly THREE equal SQUARE panels side by side, NO gutters, no text. All panels repeat the exact same original adult female enemy ace commander Cassia, age 31, elegant asymmetrical short silver-lavender hair, vivid magenta eyes, dark violet high-neck flight jacket with silver armor and burgundy trim, communications earpiece. Fully clothed professional pilot. High-quality hand-painted Japanese anime game art, refined expressive face, beautiful controlled brushwork, hair strands and mechanical detail. Identical head and upper chest crop with complete hair in each panel, dark violet cockpit background, rose instrument rim lighting. Left: entrance, teasing smug laugh and playful raised eyebrow, superiority. Middle: low hull, composure broken, eyes wide, anxious anger and sweat. Right: explosion imminent, frightened shocked shout with open mouth and raised tense shoulders, flickering distant sparks, no gore. Exact same person and outfit across three panels, expression differences unmistakable at thumbnail size. No words, logos, watermarks, margins, panel borders. Faces stay entirely within each equal third.
+
+### Noct
+
+Use case: stylized-concept. Asset type: production anime game communication portrait EXPRESSION ATLAS. Wide 3:1 sheet with exactly THREE equal SQUARE panels side by side, NO gutters, no text. All panels show the exact same original adult male orbital commander Noct, age 35, porcelain-pale skin, long black hair swept back with a single white streak, icy cyan eyes, subtle thin cyan cybernetic tracing at one temple, dark charcoal high-collar armored uniform with white geometric ceramic plates. Noble austere face, handsome and serious. Polished hand-painted Japanese anime game style, detailed controlled illustration. Identical head and upper chest framing, complete hair, large readable face within each third. Dark blue orbital cockpit, cool instrument rim lighting. Left: entry, solemn disciplined unwavering gaze, closed lips, absolutely no smile. Middle: systems failing, haunted disbelief, tight trembling mouth, one bead of sweat, eyebrows strained. Right: last transmission, resigned sorrow and dignified silence, gaze lowered, eyes almost closed, lights dying. Clearly different emotional states, same identity and costume, no gore. No typography, logo, watermark, gutters or borders.

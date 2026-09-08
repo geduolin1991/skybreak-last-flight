@@ -6,7 +6,7 @@ namespace Skybreak {public partial class SkyGame {
  void InitBossEncounter(){bossMechanisms=Boss.go.AddComponent<SkyBossMechanisms>();bossMechanisms.Initialize();bossTell=0;bossShots=0;Boss.attackClock=1.3f;Boss.bossAttackIndex=-1;Boss.coreExpose=0;
   coreShield=Art.Ring(Boss.go.transform,1.15f,Art.Cyan,.075f,96);coreShield.transform.localPosition=Vector3.up*.7f;
   int count=Stage==2?3:2;for(int i=0;i<count;i++){var offset=Stage==2?new Vector3(Mathf.Cos(i*Mathf.PI*2/3)*3.35f,0,Mathf.Sin(i*Mathf.PI*2/3)*2):new Vector3(i==0?-3.25f:3.25f,0,-.3f);
-   var node=SpawnEnemy(2,Boss.pos+offset,0);Destroy(node.go);node.go=Art.Model(Stage==2?"ShieldEmitter":"SiegeTurret",null);node.go.transform.localScale=Vector3.one*(Stage==2?.9f:1.05f);node.go.transform.position=node.pos;node.owner=Boss;node.mountOffset=offset;node.hp=node.maxHp=Stage==0?210:Stage==1?270:220;node.fire=2.6f+i*.5f;node.renderers=node.go.GetComponentsInChildren<Renderer>();node.baseColors=RendererColors(node.renderers);
+   var node=SpawnEnemy(2,Boss.pos+offset,0);ReleaseEnemyVisual(node);node.go=Art.Model(Stage==2?"ShieldEmitter":"SiegeTurret",null);node.go.transform.localScale=Vector3.one*(Stage==2?.9f:1.05f);node.go.transform.position=node.pos;node.owner=Boss;node.mountOffset=offset;node.hp=node.maxHp=Stage==0?210:Stage==1?270:220;node.fire=2.6f+i*.5f;node.renderers=node.go.GetComponentsInChildren<Renderer>();node.baseColors=RendererColors(node.renderers);
   }
   bossOrder=Stage==0?"拆除左右炮台，击穿海上要塞":Stage==1?"摧毁两座涡轮，关闭风暴护盾":"破坏三枚轨道节点，暴露天环核心";
  }

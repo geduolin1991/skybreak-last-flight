@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "clips": [
     {
       "id": "select_0_0",
@@ -7,7 +7,11 @@
       "text": "我是苍凛。准备就绪，随时可以起飞。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_0_0"
+      "clip": "Voices/Clips/select_0_0",
+      "en": "I'm Aoi. Ready whenever you are. Let's fly.",
+      "ja": "アオイです。準備完了、いつでも飛べます。",
+      "clipEn": "Voices/Clips/en/select_0_0",
+      "clipJa": "Voices/Clips/ja/select_0_0"
     },
     {
       "id": "select_0_1",
@@ -15,7 +19,11 @@
       "text": "准备好了吗？这次，也一起回来。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_0_1"
+      "clip": "Voices/Clips/select_0_1",
+      "en": "Ready? We're coming home together. Promise.",
+      "ja": "準備はいい？ 今度も、一緒に帰ろうね。",
+      "clipEn": "Voices/Clips/en/select_0_1",
+      "clipJa": "Voices/Clips/ja/select_0_1"
     },
     {
       "id": "launch_0_0",
@@ -23,7 +31,11 @@
       "text": "跟紧我，出发！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/launch_0_0"
+      "clip": "Voices/Clips/launch_0_0",
+      "en": "Stay on my wing! Let's go!",
+      "ja": "ついてきて！ 行くよ！",
+      "clipEn": "Voices/Clips/en/launch_0_0",
+      "clipJa": "Voices/Clips/ja/launch_0_0"
     },
     {
       "id": "bomb_0_0",
@@ -31,7 +43,11 @@
       "text": "裂空，展开！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_0_0"
+      "clip": "Voices/Clips/bomb_0_0",
+      "en": "Skybreak! Deploy!",
+      "ja": "スカイブレイク、展開！",
+      "clipEn": "Voices/Clips/en/bomb_0_0",
+      "clipJa": "Voices/Clips/ja/bomb_0_0"
     },
     {
       "id": "bomb_0_1",
@@ -39,7 +55,11 @@
       "text": "这条路，由我打开！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_0_1"
+      "clip": "Voices/Clips/bomb_0_1",
+      "en": "I'll open a path!",
+      "ja": "この道は、私が開く！",
+      "clipEn": "Voices/Clips/en/bomb_0_1",
+      "clipJa": "Voices/Clips/ja/bomb_0_1"
     },
     {
       "id": "overdrive_0_0",
@@ -47,7 +67,11 @@
       "text": "天翼展开，全力突破！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/overdrive_0_0"
+      "clip": "Voices/Clips/overdrive_0_0",
+      "en": "Wings deployed! Break through!",
+      "ja": "天翼展開！ 全力で突破する！",
+      "clipEn": "Voices/Clips/en/overdrive_0_0",
+      "clipJa": "Voices/Clips/ja/overdrive_0_0"
     },
     {
       "id": "hurt_0_0",
@@ -55,7 +79,11 @@
       "text": "没事，我还能飞。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_0_0"
+      "clip": "Voices/Clips/hurt_0_0",
+      "en": "I'm okay. I can still fly.",
+      "ja": "大丈夫。まだ飛べる。",
+      "clipEn": "Voices/Clips/en/hurt_0_0",
+      "clipJa": "Voices/Clips/ja/hurt_0_0"
     },
     {
       "id": "hurt_0_1",
@@ -63,7 +91,11 @@
       "text": "擦到了，继续前进。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_0_1"
+      "clip": "Voices/Clips/hurt_0_1",
+      "en": "Just a scratch. Keep moving.",
+      "ja": "かすっただけ。進もう。",
+      "clipEn": "Voices/Clips/en/hurt_0_1",
+      "clipJa": "Voices/Clips/ja/hurt_0_1"
     },
     {
       "id": "danger_0_0",
@@ -71,7 +103,11 @@
       "text": "装甲告急。稳住，先避开弹幕！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/danger_0_0"
+      "clip": "Voices/Clips/danger_0_0",
+      "en": "Armor's failing! Steady. Dodge first!",
+      "ja": "装甲が限界！ 落ち着いて、まず弾を避けて！",
+      "clipEn": "Voices/Clips/en/danger_0_0",
+      "clipJa": "Voices/Clips/ja/danger_0_0"
     },
     {
       "id": "victory_0_0",
@@ -79,7 +115,11 @@
       "text": "封锁解除了！检查队形，我们回家。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/victory_0_0"
+      "clip": "Voices/Clips/victory_0_0",
+      "en": "Blockade cleared! Check formation. We're going home.",
+      "ja": "封鎖を突破！ 隊形を確認して、帰ろう。",
+      "clipEn": "Voices/Clips/en/victory_0_0",
+      "clipJa": "Voices/Clips/ja/victory_0_0"
     },
     {
       "id": "defeat_0_0",
@@ -87,7 +127,11 @@
       "text": "别放弃。我们还会一起起飞。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/defeat_0_0"
+      "clip": "Voices/Clips/defeat_0_0",
+      "en": "Don't give up. We'll fly together again.",
+      "ja": "諦めないで。また一緒に飛ぼう。",
+      "clipEn": "Voices/Clips/en/defeat_0_0",
+      "clipJa": "Voices/Clips/ja/defeat_0_0"
     },
     {
       "id": "profile_0_0",
@@ -95,7 +139,11 @@
       "text": "我是苍凛。约好了，一起看见明天的天空。",
       "category": "profile",
       "match": "",
-      "clip": "Voices/Clips/profile_0_0"
+      "clip": "Voices/Clips/profile_0_0",
+      "en": "I'm Aoi. Promise me we'll see tomorrow's sky together.",
+      "ja": "アオイです。約束しよう。明日の空も、一緒に見ようね。",
+      "clipEn": "Voices/Clips/en/profile_0_0",
+      "clipJa": "Voices/Clips/ja/profile_0_0"
     },
     {
       "id": "select_1_0",
@@ -103,7 +151,11 @@
       "text": "我在这儿。放心，火力管够。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_1_0"
+      "clip": "Voices/Clips/select_1_0",
+      "en": "Right here, darling. I've got all the firepower you need.",
+      "ja": "ここにいるわ。安心して、火力ならたっぷりよ。",
+      "clipEn": "Voices/Clips/en/select_1_0",
+      "clipJa": "Voices/Clips/ja/select_1_0"
     },
     {
       "id": "select_1_1",
@@ -111,7 +163,11 @@
       "text": "选我呀？嗯，有眼光。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_1_1"
+      "clip": "Voices/Clips/select_1_1",
+      "en": "Picking me? Mm. Good taste.",
+      "ja": "私を選ぶの？ ふふ、見る目あるわね。",
+      "clipEn": "Voices/Clips/en/select_1_1",
+      "clipJa": "Voices/Clips/ja/select_1_1"
     },
     {
       "id": "launch_1_0",
@@ -119,7 +175,11 @@
       "text": "坐稳了，开工！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/launch_1_0"
+      "clip": "Voices/Clips/launch_1_0",
+      "en": "Hold tight! Time to work!",
+      "ja": "しっかりつかまって。仕事の時間よ！",
+      "clipEn": "Voices/Clips/en/launch_1_0",
+      "clipJa": "Voices/Clips/ja/launch_1_0"
     },
     {
       "id": "bomb_1_0",
@@ -127,7 +187,11 @@
       "text": "退后，大家伙来了！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_1_0"
+      "clip": "Voices/Clips/bomb_1_0",
+      "en": "Stand back! Here comes the big one!",
+      "ja": "下がって！ 大きいの、行くわよ！",
+      "clipEn": "Voices/Clips/en/bomb_1_0",
+      "clipJa": "Voices/Clips/ja/bomb_1_0"
     },
     {
       "id": "bomb_1_1",
@@ -135,7 +199,11 @@
       "text": "这一发，送你们的！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_1_1"
+      "clip": "Voices/Clips/bomb_1_1",
+      "en": "This one's on me!",
+      "ja": "これは私からの、お返しよ！",
+      "clipEn": "Voices/Clips/en/bomb_1_1",
+      "clipJa": "Voices/Clips/ja/bomb_1_1"
     },
     {
       "id": "overdrive_1_0",
@@ -143,7 +211,11 @@
       "text": "引擎全开！这才叫痛快！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/overdrive_1_0"
+      "clip": "Voices/Clips/overdrive_1_0",
+      "en": "Engines wide open! Now that's more like it!",
+      "ja": "エンジン全開！ ああ、これよ、これ！",
+      "clipEn": "Voices/Clips/en/overdrive_1_0",
+      "clipJa": "Voices/Clips/ja/overdrive_1_0"
     },
     {
       "id": "hurt_1_0",
@@ -151,7 +223,11 @@
       "text": "啧，刮花我的机翼了。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_1_0"
+      "clip": "Voices/Clips/hurt_1_0",
+      "en": "Tch. You scratched my wings.",
+      "ja": "ちっ、翼に傷つけたわね。",
+      "clipEn": "Voices/Clips/en/hurt_1_0",
+      "clipJa": "Voices/Clips/ja/hurt_1_0"
     },
     {
       "id": "hurt_1_1",
@@ -159,7 +235,11 @@
       "text": "小伤。待会儿再修。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_1_1"
+      "clip": "Voices/Clips/hurt_1_1",
+      "en": "Nothing serious. I'll fix it later.",
+      "ja": "かすり傷よ。修理は後ね。",
+      "clipEn": "Voices/Clips/en/hurt_1_1",
+      "clipJa": "Voices/Clips/ja/hurt_1_1"
     },
     {
       "id": "danger_1_0",
@@ -167,7 +247,11 @@
       "text": "装甲快撑不住了。先躲，别硬扛！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/danger_1_0"
+      "clip": "Voices/Clips/danger_1_0",
+      "en": "Armor won't hold! Dodge it. Don't take that hit!",
+      "ja": "装甲が持たない！ 避けて、無理に受けないで！",
+      "clipEn": "Voices/Clips/en/danger_1_0",
+      "clipJa": "Voices/Clips/ja/danger_1_0"
     },
     {
       "id": "victory_1_0",
@@ -175,7 +259,11 @@
       "text": "哈，打穿了！收队吧，大家。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/victory_1_0"
+      "clip": "Voices/Clips/victory_1_0",
+      "en": "Ha! Punched right through. Bring it home, everyone.",
+      "ja": "はっ、ぶち抜いた！ みんな、引き揚げるわよ。",
+      "clipEn": "Voices/Clips/en/victory_1_0",
+      "clipJa": "Voices/Clips/ja/victory_1_0"
     },
     {
       "id": "defeat_1_0",
@@ -183,7 +271,11 @@
       "text": "人没事就好。修好了，我们再来。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/defeat_1_0"
+      "clip": "Voices/Clips/defeat_1_0",
+      "en": "You're alive. That's what matters. We'll patch up and try again.",
+      "ja": "無事ならそれでいい。直したら、また行こうね。",
+      "clipEn": "Voices/Clips/en/defeat_1_0",
+      "clipJa": "Voices/Clips/ja/defeat_1_0"
     },
     {
       "id": "profile_1_0",
@@ -191,7 +283,11 @@
       "text": "别急嘛。先听听引擎的声音。有我在，火力管够。",
       "category": "profile",
       "match": "",
-      "clip": "Voices/Clips/profile_1_0"
+      "clip": "Voices/Clips/profile_1_0",
+      "en": "Easy now. Listen to that engine. With me here, you'll never run short on firepower.",
+      "ja": "慌てないで。まずはエンジンの音を聞いて。私がいれば、火力には困らないわ。",
+      "clipEn": "Voices/Clips/en/profile_1_0",
+      "clipJa": "Voices/Clips/ja/profile_1_0"
     },
     {
       "id": "select_2_0",
@@ -199,7 +295,11 @@
       "text": "雪璃，航线已确认。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_2_0"
+      "clip": "Voices/Clips/select_2_0",
+      "en": "Yuki here. Flight path confirmed.",
+      "ja": "ユキ、航路を確認しました。",
+      "clipEn": "Voices/Clips/en/select_2_0",
+      "clipJa": "Voices/Clips/ja/select_2_0"
     },
     {
       "id": "select_2_1",
@@ -207,7 +307,11 @@
       "text": "你的信号，我收到了。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/select_2_1"
+      "clip": "Voices/Clips/select_2_1",
+      "en": "Your signal... I hear you.",
+      "ja": "あなたの信号、受け取りました。",
+      "clipEn": "Voices/Clips/en/select_2_1",
+      "clipJa": "Voices/Clips/ja/select_2_1"
     },
     {
       "id": "launch_2_0",
@@ -215,7 +319,11 @@
       "text": "航线清晰。我们走。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/launch_2_0"
+      "clip": "Voices/Clips/launch_2_0",
+      "en": "Path is clear. Let's go.",
+      "ja": "航路はクリア。行きましょう。",
+      "clipEn": "Voices/Clips/en/launch_2_0",
+      "clipJa": "Voices/Clips/ja/launch_2_0"
     },
     {
       "id": "bomb_2_0",
@@ -223,7 +331,11 @@
       "text": "清除阻碍。裂空，释放。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_2_0"
+      "clip": "Voices/Clips/bomb_2_0",
+      "en": "Clear the obstruction. Skybreak, release.",
+      "ja": "障害を排除。スカイブレイク、解放。",
+      "clipEn": "Voices/Clips/en/bomb_2_0",
+      "clipJa": "Voices/Clips/ja/bomb_2_0"
     },
     {
       "id": "bomb_2_1",
@@ -231,7 +343,11 @@
       "text": "现在，打开航路！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/bomb_2_1"
+      "clip": "Voices/Clips/bomb_2_1",
+      "en": "Now! Open the route!",
+      "ja": "今です。航路を開いて！",
+      "clipEn": "Voices/Clips/en/bomb_2_1",
+      "clipJa": "Voices/Clips/ja/bomb_2_1"
     },
     {
       "id": "overdrive_2_0",
@@ -239,7 +355,11 @@
       "text": "解除限制，重写航线！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/overdrive_2_0"
+      "clip": "Voices/Clips/overdrive_2_0",
+      "en": "Limits released! Rewrite the flight path!",
+      "ja": "制限解除。航路を、書き換える！",
+      "clipEn": "Voices/Clips/en/overdrive_2_0",
+      "clipJa": "Voices/Clips/ja/overdrive_2_0"
     },
     {
       "id": "hurt_2_0",
@@ -247,7 +367,11 @@
       "text": "损伤可控，不用担心。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_2_0"
+      "clip": "Voices/Clips/hurt_2_0",
+      "en": "Damage contained. Don't worry.",
+      "ja": "損傷は軽微。心配しないで。",
+      "clipEn": "Voices/Clips/en/hurt_2_0",
+      "clipJa": "Voices/Clips/ja/hurt_2_0"
     },
     {
       "id": "hurt_2_1",
@@ -255,7 +379,11 @@
       "text": "我还在。继续。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/hurt_2_1"
+      "clip": "Voices/Clips/hurt_2_1",
+      "en": "I'm still here. Keep going.",
+      "ja": "まだ、ここにいます。続けて。",
+      "clipEn": "Voices/Clips/en/hurt_2_1",
+      "clipJa": "Voices/Clips/ja/hurt_2_1"
     },
     {
       "id": "danger_2_0",
@@ -263,7 +391,11 @@
       "text": "警告，装甲临界。先保持距离。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/danger_2_0"
+      "clip": "Voices/Clips/danger_2_0",
+      "en": "Warning. Armor critical. Keep your distance.",
+      "ja": "警告、装甲が限界です。距離を取って。",
+      "clipEn": "Voices/Clips/en/danger_2_0",
+      "clipJa": "Voices/Clips/ja/danger_2_0"
     },
     {
       "id": "victory_2_0",
@@ -271,7 +403,11 @@
       "text": "攻击指令已终止。我们，做到了。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/victory_2_0"
+      "clip": "Voices/Clips/victory_2_0",
+      "en": "Attack orders terminated. We... did it.",
+      "ja": "攻撃命令、停止。私たち、やったんですね。",
+      "clipEn": "Voices/Clips/en/victory_2_0",
+      "clipJa": "Voices/Clips/ja/victory_2_0"
     },
     {
       "id": "defeat_2_0",
@@ -279,7 +415,11 @@
       "text": "如果计算里没有希望，就重新计算。",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/defeat_2_0"
+      "clip": "Voices/Clips/defeat_2_0",
+      "en": "If the numbers leave no room for hope... run them again.",
+      "ja": "計算の中に希望がないなら、もう一度、計算する。",
+      "clipEn": "Voices/Clips/en/defeat_2_0",
+      "clipJa": "Voices/Clips/ja/defeat_2_0"
     },
     {
       "id": "profile_2_0",
@@ -287,7 +427,11 @@
       "text": "我是雪璃。如果计算里没有希望，就重新计算。",
       "category": "profile",
       "match": "",
-      "clip": "Voices/Clips/profile_2_0"
+      "clip": "Voices/Clips/profile_2_0",
+      "en": "I'm Yuki. If the numbers leave no room for hope... run them again.",
+      "ja": "ユキです。計算の中に希望がないなら、もう一度、計算する。",
+      "clipEn": "Voices/Clips/en/profile_2_0",
+      "clipJa": "Voices/Clips/ja/profile_2_0"
     },
     {
       "id": "briefing_0_0",
@@ -295,7 +439,11 @@
       "text": "下方三艘救援船，都是我们要带回家的人。拦住俯冲轰炸机，别让炸弹落到船上！",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_0_0"
+      "clip": "Voices/Clips/briefing_0_0",
+      "en": "Three rescue ships below. We're bringing those people home. Intercept the dive bombers. Don't let their bombs reach the ships!",
+      "ja": "下に救助船が三隻。みんなを家に帰すよ。急降下爆撃機を止めて、船に爆弾を落とさせないで！",
+      "clipEn": "Voices/Clips/en/briefing_0_0",
+      "clipJa": "Voices/Clips/ja/briefing_0_0"
     },
     {
       "id": "briefing_0_1",
@@ -303,7 +451,11 @@
       "text": "三座干扰塔切断了城市供电。逐座击破，让街灯和撤离车队重新动起来！",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_0_1"
+      "clip": "Voices/Clips/briefing_0_1",
+      "en": "Three jammers have cut the city's power. Take them out, one by one. Get those lights and evacuation vehicles moving again!",
+      "ja": "三基の妨害塔が街の電力を断ってる。一基ずつ壊して、街灯と避難車両を動かそう！",
+      "clipEn": "Voices/Clips/en/briefing_0_1",
+      "clipJa": "Voices/Clips/ja/briefing_0_1"
     },
     {
       "id": "briefing_0_2",
@@ -311,7 +463,11 @@
       "text": "先解除三个封锁接点，再掩护雪璃上传识别码。八秒，我们替她争取。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_0_2"
+      "clip": "Voices/Clips/briefing_0_2",
+      "en": "Clear the three blockade nodes. Then cover Yuki's ID upload. She needs eight seconds. We'll give her that.",
+      "ja": "三つの封鎖ノードを解除して、ユキの識別コード送信を援護する。必要なのは八秒。私たちで稼ごう。",
+      "clipEn": "Voices/Clips/en/briefing_0_2",
+      "clipJa": "Voices/Clips/ja/briefing_0_2"
     },
     {
       "id": "briefing_1_0",
@@ -319,7 +475,11 @@
       "text": "三艘船，七百多口人。嗯，这回可得把前面的轰炸机，清得干干净净。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_1_0"
+      "clip": "Voices/Clips/briefing_1_0",
+      "en": "Three ships. More than seven hundred people. Mm. We'd better sweep every last bomber out of their way.",
+      "ja": "三隻に、七百人以上ね。ふうん。前の爆撃機、一機残らず片づけなくちゃ。",
+      "clipEn": "Voices/Clips/en/briefing_1_0",
+      "clipJa": "Voices/Clips/ja/briefing_1_0"
     },
     {
       "id": "briefing_1_1",
@@ -327,7 +487,11 @@
       "text": "看见那三座干扰塔没？拆掉它们。等灯亮了，公交车才能把人送出去。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_1_1"
+      "clip": "Voices/Clips/briefing_1_1",
+      "en": "See those three jammers? Tear them down. Once the lights come back, the buses can get everyone out.",
+      "ja": "あの三基の妨害塔、見える？ ぶっ壊して。電気が戻れば、バスでみんなを逃がせるわ。",
+      "clipEn": "Voices/Clips/en/briefing_1_1",
+      "clipJa": "Voices/Clips/ja/briefing_1_1"
     },
     {
       "id": "briefing_1_2",
@@ -335,7 +499,11 @@
       "text": "船坞被封死了。拆开三个接点，给雪璃留八秒。剩下的火力，我来扛。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_1_2"
+      "clip": "Voices/Clips/briefing_1_2",
+      "en": "The dock's sealed off. Break the three nodes. Give Yuki eight seconds. I'll handle the incoming fire.",
+      "ja": "ドックは封鎖されてる。三つのノードを壊して、ユキに八秒あげて。敵の火力は私が引き受ける。",
+      "clipEn": "Voices/Clips/en/briefing_1_2",
+      "clipJa": "Voices/Clips/ja/briefing_1_2"
     },
     {
       "id": "briefing_2_0",
@@ -343,7 +511,11 @@
       "text": "三艘民用船已进入航线。敌人的俯冲机，会攻击船队。请优先拦截。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_2_0"
+      "clip": "Voices/Clips/briefing_2_0",
+      "en": "Three civilian ships are on our route. Enemy dive bombers will target the convoy. Intercept them first.",
+      "ja": "民間船三隻が航路に入りました。敵の急降下爆撃機が船団を狙います。優先して迎撃してください。",
+      "clipEn": "Voices/Clips/en/briefing_2_0",
+      "clipJa": "Voices/Clips/ja/briefing_2_0"
     },
     {
       "id": "briefing_2_1",
@@ -351,7 +523,11 @@
       "text": "三座干扰塔仍在运行。摧毁一座，对应街区就能恢复供电。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_2_1"
+      "clip": "Voices/Clips/briefing_2_1",
+      "en": "Three jammers are still active. Destroy one, and its district gets power back.",
+      "ja": "三基の妨害塔が稼働中です。一基破壊するごとに、対応する地区の電力が復旧します。",
+      "clipEn": "Voices/Clips/en/briefing_2_1",
+      "clipJa": "Voices/Clips/ja/briefing_2_1"
     },
     {
       "id": "briefing_2_2",
@@ -359,7 +535,11 @@
       "text": "那座船坞……我曾在那里工作。解除三个封锁接点，我需要八秒，重新接通它。",
       "category": "briefing",
       "match": "",
-      "clip": "Voices/Clips/briefing_2_2"
+      "clip": "Voices/Clips/briefing_2_2",
+      "en": "That dock... I used to work there. Clear the three blockade nodes. I need eight seconds to reconnect it.",
+      "ja": "あのドック、昔、私が働いていた場所です。三つの封鎖ノードを解除してください。再接続には、八秒必要です。",
+      "clipEn": "Voices/Clips/en/briefing_2_2",
+      "clipJa": "Voices/Clips/ja/briefing_2_2"
     },
     {
       "id": "world_intro_0",
@@ -367,7 +547,11 @@
       "text": "看到下方三艘白色救援船了。全队，守住这条航线！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/world_intro_0"
+      "clip": "Voices/Clips/world_intro_0",
+      "en": "Three white rescue ships in sight! All units, hold this route!",
+      "ja": "下に白い救助船、三隻確認！ 全機、この航路を守って！",
+      "clipEn": "Voices/Clips/en/world_intro_0",
+      "clipJa": "Voices/Clips/ja/world_intro_0"
     },
     {
       "id": "world_intro_1",
@@ -375,7 +559,11 @@
       "text": "干扰塔出现了。三座，分开拆！别让下面的人，再摸黑等了。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/world_intro_1"
+      "clip": "Voices/Clips/world_intro_1",
+      "en": "There are the jammers. Three of them! Split up and tear them down. Those people have waited in the dark long enough.",
+      "ja": "妨害塔よ。三基、手分けして壊すわよ！ 下のみんなを、これ以上暗闇で待たせないで。",
+      "clipEn": "Voices/Clips/en/world_intro_1",
+      "clipJa": "Voices/Clips/ja/world_intro_1"
     },
     {
       "id": "world_intro_2",
@@ -383,7 +571,11 @@
       "text": "就是这座船坞。红色接点还在封锁，先击破它们！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/world_intro_2"
+      "clip": "Voices/Clips/world_intro_2",
+      "en": "That's the dock. The red nodes are still blocking access. Destroy them first!",
+      "ja": "あのドックです。赤いノードが封鎖を維持しています。先に破壊して！",
+      "clipEn": "Voices/Clips/en/world_intro_2",
+      "clipJa": "Voices/Clips/ja/world_intro_2"
     },
     {
       "id": "convoy_bomber",
@@ -391,7 +583,11 @@
       "text": "俯冲机正冲向船队！拦住它！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/convoy_bomber"
+      "clip": "Voices/Clips/convoy_bomber",
+      "en": "Dive bomber heading for the convoy! Stop it!",
+      "ja": "急降下爆撃機が船団へ！ 止めて！",
+      "clipEn": "Voices/Clips/en/convoy_bomber",
+      "clipJa": "Voices/Clips/ja/convoy_bomber"
     },
     {
       "id": "convoy_bomb_lock",
@@ -399,7 +595,11 @@
       "text": "它在瞄准船！赶紧打掉，别让它投弹！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/convoy_bomb_lock"
+      "clip": "Voices/Clips/convoy_bomb_lock",
+      "en": "It's lining up on a ship! Shoot it down before it drops!",
+      "ja": "船を狙ってる！ 投下される前に撃ち落として！",
+      "clipEn": "Voices/Clips/en/convoy_bomb_lock",
+      "clipJa": "Voices/Clips/ja/convoy_bomb_lock"
     },
     {
       "id": "convoy_intercept",
@@ -407,7 +607,11 @@
       "text": "拦下了！继续守住船队。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/convoy_intercept"
+      "clip": "Voices/Clips/convoy_intercept",
+      "en": "Got it! Keep the convoy covered.",
+      "ja": "止めた！ 続けて船団を守ろう。",
+      "clipEn": "Voices/Clips/en/convoy_intercept",
+      "clipJa": "Voices/Clips/ja/convoy_intercept"
     },
     {
       "id": "convoy_hit",
@@ -415,7 +619,11 @@
       "text": "救援船中弹！盯住下一个炸弹！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/convoy_hit"
+      "clip": "Voices/Clips/convoy_hit",
+      "en": "Rescue ship hit! Watch for the next bomb!",
+      "ja": "救助船に被弾！ 次の爆弾に注意して！",
+      "clipEn": "Voices/Clips/en/convoy_hit",
+      "clipJa": "Voices/Clips/ja/convoy_hit"
     },
     {
       "id": "convoy_disabled",
@@ -423,7 +631,11 @@
       "text": "有一艘失去动力了……掩护剩下的船！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/convoy_disabled"
+      "clip": "Voices/Clips/convoy_disabled",
+      "en": "One ship's lost power... Cover the others!",
+      "ja": "一隻、動力を失った。残りの船を援護して！",
+      "clipEn": "Voices/Clips/en/convoy_disabled",
+      "clipJa": "Voices/Clips/ja/convoy_disabled"
     },
     {
       "id": "coast_clear_all",
@@ -431,7 +643,11 @@
       "text": "要塞哑火了！三艘船都还在，正在驶出封锁线！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/coast_clear_all"
+      "clip": "Voices/Clips/coast_clear_all",
+      "en": "Fortress guns are silent! All three ships made it. They're sailing past the blockade!",
+      "ja": "要塞が沈黙！ 三隻とも無事よ。封鎖線を抜けていくわ！",
+      "clipEn": "Voices/Clips/en/coast_clear_all",
+      "clipJa": "Voices/Clips/ja/coast_clear_all"
     },
     {
       "id": "coast_clear_some",
@@ -439,7 +655,11 @@
       "text": "要塞击破！还能航行的船，立刻撤离。救援队，请接应失去动力的船。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/coast_clear_some"
+      "clip": "Voices/Clips/coast_clear_some",
+      "en": "Fortress down! All ships still under power, withdraw now. Rescue crews, reach the disabled ships.",
+      "ja": "要塞撃破！ 動ける船はすぐに撤退して。救助隊、動力を失った船の救援をお願い。",
+      "clipEn": "Voices/Clips/en/coast_clear_some",
+      "clipJa": "Voices/Clips/ja/coast_clear_some"
     },
     {
       "id": "coast_clear_lost",
@@ -447,7 +667,11 @@
       "text": "要塞击破……可是，船队失去动力了。通知后方，立刻派救援！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/coast_clear_lost"
+      "clip": "Voices/Clips/coast_clear_lost",
+      "en": "Fortress down... but the convoy's dead in the water. Get rescue crews here, now!",
+      "ja": "要塞は撃破。でも、船団は動けない。後方へ連絡、すぐに救助隊を！",
+      "clipEn": "Voices/Clips/en/coast_clear_lost",
+      "clipJa": "Voices/Clips/ja/coast_clear_lost"
     },
     {
       "id": "city_grid_1",
@@ -455,7 +679,11 @@
       "text": "第一座拆掉了！看，那个街区亮了。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/city_grid_1"
+      "clip": "Voices/Clips/city_grid_1",
+      "en": "First one down! Look, that district's lit up!",
+      "ja": "一基目、破壊！ 見て、あの地区に明かりが戻った！",
+      "clipEn": "Voices/Clips/en/city_grid_1",
+      "clipJa": "Voices/Clips/ja/city_grid_1"
     },
     {
       "id": "city_grid_2",
@@ -463,7 +691,11 @@
       "text": "又一个街区恢复供电！撤离车辆开始移动了。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/city_grid_2"
+      "clip": "Voices/Clips/city_grid_2",
+      "en": "Another district has power! The evacuation vehicles are moving!",
+      "ja": "次の地区も電力復旧！ 避難車両が動き始めたよ！",
+      "clipEn": "Voices/Clips/en/city_grid_2",
+      "clipJa": "Voices/Clips/ja/city_grid_2"
     },
     {
       "id": "city_grid_3",
@@ -471,7 +703,11 @@
       "text": "三座全部熄火！哈，整条路的灯都回来了！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/city_grid_3"
+      "clip": "Voices/Clips/city_grid_3",
+      "en": "All three are down! Ha! The whole road's lit again!",
+      "ja": "三基とも停止！ はっ、道の明かりが全部戻ったわ！",
+      "clipEn": "Voices/Clips/en/city_grid_3",
+      "clipJa": "Voices/Clips/ja/city_grid_3"
     },
     {
       "id": "city_clear_power",
@@ -479,7 +715,11 @@
       "text": "制空平台击破！电网稳定，撤离车队可以继续走了。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/city_clear_power"
+      "clip": "Voices/Clips/city_clear_power",
+      "en": "Air platform destroyed! Grid is stable. The evacuation convoy can keep moving.",
+      "ja": "制空プラットフォーム撃破！ 電力は安定。避難車列、進んでください。",
+      "clipEn": "Voices/Clips/en/city_clear_power",
+      "clipJa": "Voices/Clips/ja/city_clear_power"
     },
     {
       "id": "city_clear_partial",
@@ -487,7 +727,11 @@
       "text": "平台打下来了。但还有街区没电，地面队伍，继续抢修！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/city_clear_partial"
+      "clip": "Voices/Clips/city_clear_partial",
+      "en": "Platform's down. Some districts are still dark. Ground crews, keep those repairs going!",
+      "ja": "プラットフォームは落としたわ。でも、まだ停電してる地区がある。地上班、復旧を続けて！",
+      "clipEn": "Voices/Clips/en/city_clear_partial",
+      "clipJa": "Voices/Clips/ja/city_clear_partial"
     },
     {
       "id": "orbit_node_1",
@@ -495,7 +739,11 @@
       "text": "第一条封锁解除。船坞，回应我。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_node_1"
+      "clip": "Voices/Clips/orbit_node_1",
+      "en": "First blockade cleared. Dock control... answer me.",
+      "ja": "一つ目の封鎖を解除。ドック管制、応答して。",
+      "clipEn": "Voices/Clips/en/orbit_node_1",
+      "clipJa": "Voices/Clips/ja/orbit_node_1"
     },
     {
       "id": "orbit_node_2",
@@ -503,7 +751,11 @@
       "text": "第二个接点击破！雪璃，我们还在你身边。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_node_2"
+      "clip": "Voices/Clips/orbit_node_2",
+      "en": "Second node down! Yuki, we're right here with you.",
+      "ja": "二つ目のノード撃破！ ユキ、私たちはそばにいるよ。",
+      "clipEn": "Voices/Clips/en/orbit_node_2",
+      "clipJa": "Voices/Clips/ja/orbit_node_2"
     },
     {
       "id": "orbit_node_3",
@@ -511,7 +763,11 @@
       "text": "接点全部解除！正在上传，掩护我的侧翼！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_node_3"
+      "clip": "Voices/Clips/orbit_node_3",
+      "en": "All nodes cleared! Uploading now. Cover my flanks!",
+      "ja": "全ノード解除！ アップロード開始。側面を援護して！",
+      "clipEn": "Voices/Clips/en/orbit_node_3",
+      "clipJa": "Voices/Clips/ja/orbit_node_3"
     },
     {
       "id": "orbit_connected",
@@ -519,7 +775,11 @@
       "text": "接通了……它认出我们了！接驳船，可以进港。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_connected"
+      "clip": "Voices/Clips/orbit_connected",
+      "en": "Connected... It recognizes us! Shuttles, you're clear to dock.",
+      "ja": "つながった。私たちを認識してる！ シャトル、入港できます。",
+      "clipEn": "Voices/Clips/en/orbit_connected",
+      "clipJa": "Voices/Clips/ja/orbit_connected"
     },
     {
       "id": "orbit_clear_link",
@@ -527,7 +787,11 @@
       "text": "核心停止攻击。识别码已经生效。欢迎回家。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_clear_link"
+      "clip": "Voices/Clips/orbit_clear_link",
+      "en": "The core has ceased fire. Our ID is accepted. Welcome home.",
+      "ja": "コアの攻撃停止。識別コードが有効になりました。お帰りなさい。",
+      "clipEn": "Voices/Clips/en/orbit_clear_link",
+      "clipJa": "Voices/Clips/ja/orbit_clear_link"
     },
     {
       "id": "orbit_clear_partial",
@@ -535,7 +799,11 @@
       "text": "攻击停止了。识别链路还没接通……让地面队伍继续上传。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/orbit_clear_partial"
+      "clip": "Voices/Clips/orbit_clear_partial",
+      "en": "The attacks have stopped. The ID link isn't up yet. Ground teams, continue the upload.",
+      "ja": "攻撃は停止。でも、識別回線はまだつながっていません。地上班、送信を続けてください。",
+      "clipEn": "Voices/Clips/en/orbit_clear_partial",
+      "clipJa": "Voices/Clips/ja/orbit_clear_partial"
     },
     {
       "id": "support_beacon",
@@ -543,7 +811,11 @@
       "text": "支援信标投下来了！接住它，我们就能并肩作战。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_beacon"
+      "clip": "Voices/Clips/support_beacon",
+      "en": "Support beacon incoming! Grab it, and we can fight together!",
+      "ja": "支援ビーコン投下！ 拾ってくれたら、一緒に戦えるよ！",
+      "clipEn": "Voices/Clips/en/support_beacon",
+      "clipJa": "Voices/Clips/ja/support_beacon"
     },
     {
       "id": "ward_contact",
@@ -551,7 +823,11 @@
       "text": "紫色护盾由圆环机维持。先打掉发生器！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/ward_contact"
+      "clip": "Voices/Clips/ward_contact",
+      "en": "That ring drone sustains the purple shields. Take out the generator first!",
+      "ja": "紫の盾はリング型ドローンが維持しています。先に発生器を破壊して！",
+      "clipEn": "Voices/Clips/en/ward_contact",
+      "clipJa": "Voices/Clips/ja/ward_contact"
     },
     {
       "id": "rail_lock",
@@ -559,7 +835,11 @@
       "text": "轨道炮锁定了！现在横移！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/rail_lock"
+      "clip": "Voices/Clips/rail_lock",
+      "en": "Railgun lock! Move sideways, now!",
+      "ja": "レールガン、ロックされた！ 今、横に避けて！",
+      "clipEn": "Voices/Clips/en/rail_lock",
+      "clipJa": "Voices/Clips/ja/rail_lock"
     },
     {
       "id": "carrier_launch",
@@ -567,7 +847,11 @@
       "text": "那艘母机还在放小飞机。直接拆母机！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/carrier_launch"
+      "clip": "Voices/Clips/carrier_launch",
+      "en": "That carrier keeps launching drones. Go straight for the carrier!",
+      "ja": "あの母機、まだ小型機を出してる。母機を直接叩いて！",
+      "clipEn": "Voices/Clips/en/carrier_launch",
+      "clipJa": "Voices/Clips/ja/carrier_launch"
     },
     {
       "id": "elite_arrive",
@@ -575,7 +859,11 @@
       "text": "重装指挥机！打掉它，能拿到一批补给。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/elite_arrive"
+      "clip": "Voices/Clips/elite_arrive",
+      "en": "Heavy command ship! Bring it down. There's a supply haul in it for us.",
+      "ja": "重装指揮機よ！ 落とせば、補給をまとめて手に入れられるわ。",
+      "clipEn": "Voices/Clips/en/elite_arrive",
+      "clipJa": "Voices/Clips/ja/elite_arrive"
     },
     {
       "id": "elite_down",
@@ -583,7 +871,11 @@
       "text": "指挥机击破，补给释放！需要修复的，靠过来。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/elite_down"
+      "clip": "Voices/Clips/elite_down",
+      "en": "Command ship destroyed! Supplies released. If you need repairs, move in!",
+      "ja": "指揮機撃破、補給を確認！ 修理が必要なら、近づいて！",
+      "clipEn": "Voices/Clips/en/elite_down",
+      "clipJa": "Voices/Clips/ja/elite_down"
     },
     {
       "id": "core_exposed",
@@ -591,7 +883,11 @@
       "text": "防护节点全部击破！核心暴露，现在集中火力！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/core_exposed"
+      "clip": "Voices/Clips/core_exposed",
+      "en": "All shield nodes destroyed! Core exposed! Focus fire now!",
+      "ja": "防護ノード、全破壊！ コア露出、今すぐ火力を集中して！",
+      "clipEn": "Voices/Clips/en/core_exposed",
+      "clipJa": "Voices/Clips/ja/core_exposed"
     },
     {
       "id": "boss_warning_0",
@@ -599,7 +895,11 @@
       "text": "利维坦进入航线！先拆它的炮塔，再打核心！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/boss_warning_0"
+      "clip": "Voices/Clips/boss_warning_0",
+      "en": "Leviathan entering our route! Break the turrets, then hit the core!",
+      "ja": "リヴァイアサンが航路に侵入！ 砲塔を壊してから、コアを狙って！",
+      "clipEn": "Voices/Clips/en/boss_warning_0",
+      "clipJa": "Voices/Clips/ja/boss_warning_0"
     },
     {
       "id": "boss_warning_1",
@@ -607,7 +907,11 @@
       "text": "暴风眼来了。看准激光预警，别被两边夹住！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/boss_warning_1"
+      "clip": "Voices/Clips/boss_warning_1",
+      "en": "Here comes Tempest. Watch the laser warnings. Don't let it pin you between them!",
+      "ja": "テンペストが来たわ。レーザー予告を見て、挟まれないように！",
+      "clipEn": "Voices/Clips/en/boss_warning_1",
+      "clipJa": "Voices/Clips/ja/boss_warning_1"
     },
     {
       "id": "boss_warning_2",
@@ -615,7 +919,11 @@
       "text": "炽天使接近。它的节点还在供能，先切断它们！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/boss_warning_2"
+      "clip": "Voices/Clips/boss_warning_2",
+      "en": "Seraph approaching. Its nodes are still feeding power. Cut them off first!",
+      "ja": "セラフ接近。ノードがまだ電力を供給しています。先に切断して！",
+      "clipEn": "Voices/Clips/en/boss_warning_2",
+      "clipJa": "Voices/Clips/ja/boss_warning_2"
     },
     {
       "id": "support_enter_0",
@@ -623,7 +931,11 @@
       "text": "苍隼到位！导弹跟着我，清理侧翼！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_enter_0"
+      "clip": "Voices/Clips/support_enter_0",
+      "en": "Kestrel in position! Missiles away. Clearing your flanks!",
+      "ja": "ケストレル、配置完了！ ミサイル発射、側面を片づけるよ！",
+      "clipEn": "Voices/Clips/en/support_enter_0",
+      "clipJa": "Voices/Clips/ja/support_enter_0"
     },
     {
       "id": "support_exit_0",
@@ -631,7 +943,11 @@
       "text": "支援时间到，我先脱离。保持航线！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_exit_0"
+      "clip": "Voices/Clips/support_exit_0",
+      "en": "Support window's over. I'm pulling out. Hold your course!",
+      "ja": "支援時間終了。いったん離脱するね。航路を守って！",
+      "clipEn": "Voices/Clips/en/support_exit_0",
+      "clipJa": "Voices/Clips/ja/support_exit_0"
     },
     {
       "id": "support_extend_0",
@@ -639,7 +955,11 @@
       "text": "收到新信标！继续保持双机支援！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_extend_0"
+      "clip": "Voices/Clips/support_extend_0",
+      "en": "New beacon received! Both wingmen, stay with the lead!",
+      "ja": "新しいビーコン受信！ 二機とも、支援を続けるよ！",
+      "clipEn": "Voices/Clips/en/support_extend_0",
+      "clipJa": "Voices/Clips/ja/support_extend_0"
     },
     {
       "id": "route_up_0",
@@ -647,7 +967,11 @@
       "text": "武装同步了！新一阶专精，可以用了！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/route_up_0"
+      "clip": "Voices/Clips/route_up_0",
+      "en": "Weapons synced! Next specialization tier is online!",
+      "ja": "武装同期！ 特化レベルが上がったよ！",
+      "clipEn": "Voices/Clips/en/route_up_0",
+      "clipJa": "Voices/Clips/ja/route_up_0"
     },
     {
       "id": "support_enter_1",
@@ -655,7 +979,11 @@
       "text": "蝠鲼到位。嗯，给你带了点重火力。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_enter_1"
+      "clip": "Voices/Clips/support_enter_1",
+      "en": "Manta in position. Mm. Brought you a little heavy firepower.",
+      "ja": "マンタ、配置完了。ふふ、重火力を持ってきたわよ。",
+      "clipEn": "Voices/Clips/en/support_enter_1",
+      "clipJa": "Voices/Clips/ja/support_enter_1"
     },
     {
       "id": "support_exit_1",
@@ -663,7 +991,11 @@
       "text": "弹药见底，我回去补充。下一轮，接着陪你。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_exit_1"
+      "clip": "Voices/Clips/support_exit_1",
+      "en": "Ammo's running dry. I'll restock. Save me a spot for the next round.",
+      "ja": "弾薬切れね。補充してくるわ。次も、隣を空けといてね。",
+      "clipEn": "Voices/Clips/en/support_exit_1",
+      "clipJa": "Voices/Clips/ja/support_exit_1"
     },
     {
       "id": "support_extend_1",
@@ -671,7 +1003,11 @@
       "text": "补给接上了。哈，这下还能多打一轮！",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_extend_1"
+      "clip": "Voices/Clips/support_extend_1",
+      "en": "Resupply confirmed! Ha, enough for another round!",
+      "ja": "補給、接続！ はっ、もうひと暴れできるわね！",
+      "clipEn": "Voices/Clips/en/support_extend_1",
+      "clipJa": "Voices/Clips/ja/support_extend_1"
     },
     {
       "id": "route_up_1",
@@ -679,7 +1015,11 @@
       "text": "改装生效！让它们试试这份火力。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/route_up_1"
+      "clip": "Voices/Clips/route_up_1",
+      "en": "Upgrades are live! Let's give them a taste.",
+      "ja": "改装完了！ この火力、味わってもらおうかしら。",
+      "clipEn": "Voices/Clips/en/route_up_1",
+      "clipJa": "Voices/Clips/ja/route_up_1"
     },
     {
       "id": "support_enter_2",
@@ -687,7 +1027,11 @@
       "text": "银针就位。轨道炮，替你打开一条直线。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_enter_2"
+      "clip": "Voices/Clips/support_enter_2",
+      "en": "Needle in position. I'll carve a straight path with the railgun.",
+      "ja": "ニードル、配置完了。レールガンで、まっすぐ道を開きます。",
+      "clipEn": "Voices/Clips/en/support_enter_2",
+      "clipJa": "Voices/Clips/ja/support_enter_2"
     },
     {
       "id": "support_exit_2",
@@ -695,7 +1039,11 @@
       "text": "协同窗口结束。银针脱离，通讯保持。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_exit_2"
+      "clip": "Voices/Clips/support_exit_2",
+      "en": "Coordination window closed. Needle disengaging. Keep comms open.",
+      "ja": "連携時間終了。ニードル離脱。通信は維持します。",
+      "clipEn": "Voices/Clips/en/support_exit_2",
+      "clipJa": "Voices/Clips/ja/support_exit_2"
     },
     {
       "id": "support_extend_2",
@@ -703,7 +1051,11 @@
       "text": "支援信标确认。协同时间已延长。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/support_extend_2"
+      "clip": "Voices/Clips/support_extend_2",
+      "en": "Support beacon confirmed. Coordination window extended.",
+      "ja": "支援ビーコン確認。連携時間を延長しました。",
+      "clipEn": "Voices/Clips/en/support_extend_2",
+      "clipJa": "Voices/Clips/ja/support_extend_2"
     },
     {
       "id": "route_up_2",
@@ -711,7 +1063,11 @@
       "text": "专精参数更新。下一轮，我会更准。",
       "category": "story",
       "match": "",
-      "clip": "Voices/Clips/route_up_2"
+      "clip": "Voices/Clips/route_up_2",
+      "en": "Specialization updated. My next shot will be sharper.",
+      "ja": "戦術データ更新。次の一射は、もっと正確に。",
+      "clipEn": "Voices/Clips/en/route_up_2",
+      "clipJa": "Voices/Clips/ja/route_up_2"
     },
     {
       "id": "route_skill_0_0",
@@ -719,7 +1075,11 @@
       "text": "锁定目标！蜂群，齐射！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_0_0"
+      "clip": "Voices/Clips/route_skill_0_0",
+      "en": "Targets locked! Swarm, fire!",
+      "ja": "目標ロック！ スウォーム、一斉射撃！",
+      "clipEn": "Voices/Clips/en/route_skill_0_0",
+      "clipJa": "Voices/Clips/ja/route_skill_0_0"
     },
     {
       "id": "route_skill_0_1",
@@ -727,7 +1087,11 @@
       "text": "队友，跟上！展开护航！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_0_1"
+      "clip": "Voices/Clips/route_skill_0_1",
+      "en": "On my wing! Escort formation!",
+      "ja": "みんな、ついてきて！ 護衛隊形、展開！",
+      "clipEn": "Voices/Clips/en/route_skill_0_1",
+      "clipJa": "Voices/Clips/ja/route_skill_0_1"
     },
     {
       "id": "route_skill_0_2",
@@ -735,7 +1099,11 @@
       "text": "抓紧了！疾风，突进！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_0_2"
+      "clip": "Voices/Clips/route_skill_0_2",
+      "en": "Hold on! Gale rush!",
+      "ja": "つかまって！ ゲイル、突撃！",
+      "clipEn": "Voices/Clips/en/route_skill_0_2",
+      "clipJa": "Voices/Clips/ja/route_skill_0_2"
     },
     {
       "id": "route_skill_1_0",
@@ -743,7 +1111,11 @@
       "text": "前方五点！熔炉轰击！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_1_0"
+      "clip": "Voices/Clips/route_skill_1_0",
+      "en": "Five ahead! Furnace barrage!",
+      "ja": "前方五点！ ファーネス、砲撃！",
+      "clipEn": "Voices/Clips/en/route_skill_1_0",
+      "clipJa": "Voices/Clips/ja/route_skill_1_0"
     },
     {
       "id": "route_skill_1_1",
@@ -751,7 +1123,11 @@
       "text": "别硬扛，进防壁！装甲，修复！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_1_1"
+      "clip": "Voices/Clips/route_skill_1_1",
+      "en": "Don't take that hit! Get behind the barrier! Armor, repair!",
+      "ja": "無理しないで、防壁に入って！ 装甲、修復！",
+      "clipEn": "Voices/Clips/en/route_skill_1_1",
+      "clipJa": "Voices/Clips/ja/route_skill_1_1"
     },
     {
       "id": "route_skill_1_2",
@@ -759,7 +1135,11 @@
       "text": "解除限流！哈，火力全开！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_1_2"
+      "clip": "Voices/Clips/route_skill_1_2",
+      "en": "Limits off! Ha! Full firepower!",
+      "ja": "出力制限、解除！ はっ、火力全開！",
+      "clipEn": "Voices/Clips/en/route_skill_1_2",
+      "clipJa": "Voices/Clips/ja/route_skill_1_2"
     },
     {
       "id": "route_skill_2_0",
@@ -767,7 +1147,11 @@
       "text": "你已在射线上。终点，校准！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_2_0"
+      "clip": "Voices/Clips/route_skill_2_0",
+      "en": "You're in my sights. Endpoint... calibrated!",
+      "ja": "もう射線上です。終点、照準完了！",
+      "clipEn": "Voices/Clips/en/route_skill_2_0",
+      "clipJa": "Voices/Clips/ja/route_skill_2_0"
     },
     {
       "id": "route_skill_2_1",
@@ -775,7 +1159,11 @@
       "text": "给我们……留下时间。零时，展开！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_2_1"
+      "clip": "Voices/Clips/route_skill_2_1",
+      "en": "Leave us... a little time. Zero hour, unfold!",
+      "ja": "私たちに、時間を。ゼロアワー、展開！",
+      "clipEn": "Voices/Clips/en/route_skill_2_1",
+      "clipJa": "Voices/Clips/ja/route_skill_2_1"
     },
     {
       "id": "route_skill_2_2",
@@ -783,7 +1171,169 @@
       "text": "坐标锁定。相位，跃迁！",
       "category": "bark",
       "match": "",
-      "clip": "Voices/Clips/route_skill_2_2"
+      "clip": "Voices/Clips/route_skill_2_2",
+      "en": "Coordinates locked. Phase jump!",
+      "ja": "座標ロック。フェイズ、ジャンプ！",
+      "clipEn": "Voices/Clips/en/route_skill_2_2",
+      "clipJa": "Voices/Clips/ja/route_skill_2_2"
+    },
+    {
+      "id": "commander_0_entry",
+      "pilot": 3,
+      "category": "boss",
+      "match": "",
+      "text": "小队也敢挑战利维坦？这条航线，到此为止。",
+      "en": "A little squadron, against Leviathan? Your flight ends here.",
+      "ja": "その小隊でリヴァイアサンに挑むか。お前たちの航路は、ここまでだ。",
+      "emotion": "挑衅",
+      "clip": "Voices/Clips/commander_0_entry",
+      "clipEn": "Voices/Clips/en/commander_0_entry",
+      "clipJa": "Voices/Clips/ja/commander_0_entry"
+    },
+    {
+      "id": "commander_0_phase",
+      "pilot": 3,
+      "category": "boss",
+      "match": "",
+      "text": "左舷失压？封死隔舱！全炮列，压住她们！",
+      "en": "Port side losing pressure? Seal the bulkheads! All batteries, pin them down!",
+      "ja": "左舷が危険だ！ 隔壁を閉めろ！ 全砲門、撃て！",
+      "emotion": "强撑镇定",
+      "clip": "Voices/Clips/commander_0_phase",
+      "clipEn": "Voices/Clips/en/commander_0_phase",
+      "clipJa": "Voices/Clips/ja/commander_0_phase"
+    },
+    {
+      "id": "commander_0_critical",
+      "pilot": 3,
+      "category": "boss",
+      "match": "",
+      "text": "核心温度失控？不可能！备用回路，快接上！",
+      "en": "Core temperature runaway? Impossible! Backup circuit! Connect it, now!",
+      "ja": "コア温度が制御不能？ ありえん！ 予備回路、早くつなげ！",
+      "emotion": "惊慌",
+      "clip": "Voices/Clips/commander_0_critical",
+      "clipEn": "Voices/Clips/en/commander_0_critical",
+      "clipJa": "Voices/Clips/ja/commander_0_critical"
+    },
+    {
+      "id": "commander_0_death",
+      "pilot": 3,
+      "category": "boss",
+      "match": "",
+      "text": "不！我还没有……认输！",
+      "en": "No! I have not... surrendered!",
+      "ja": "違う！ 私はまだ、負けてなど！",
+      "emotion": "不服",
+      "clip": "Voices/Clips/commander_0_death",
+      "clipEn": "Voices/Clips/en/commander_0_death",
+      "clipJa": "Voices/Clips/ja/commander_0_death"
+    },
+    {
+      "id": "commander_1_entry",
+      "pilot": 4,
+      "category": "boss",
+      "match": "",
+      "text": "哎呀，护送完小船，又来陪我玩了？别掉得太快哦。",
+      "en": "Oh, done babysitting those boats? Come play. Try not to fall too fast.",
+      "ja": "あら、小舟のお守りは終わり？ 遊んであげる。すぐに落ちないでね。",
+      "emotion": "嘲笑",
+      "clip": "Voices/Clips/commander_1_entry",
+      "clipEn": "Voices/Clips/en/commander_1_entry",
+      "clipJa": "Voices/Clips/ja/commander_1_entry"
+    },
+    {
+      "id": "commander_1_phase",
+      "pilot": 4,
+      "category": "boss",
+      "match": "",
+      "text": "打坏我的翼阵？啧，那就贴近点，尝尝雷暴！",
+      "en": "You broke my wing array? Tch. Come closer. Taste the storm!",
+      "ja": "私の翼を壊したの？ ちっ、近くに来なさい。雷の嵐を浴びて！",
+      "emotion": "恼怒",
+      "clip": "Voices/Clips/commander_1_phase",
+      "clipEn": "Voices/Clips/en/commander_1_phase",
+      "clipJa": "Voices/Clips/ja/commander_1_phase"
+    },
+    {
+      "id": "commander_1_critical",
+      "pilot": 4,
+      "category": "boss",
+      "match": "",
+      "text": "等等，推力怎么掉了？给我拉起来！快啊！",
+      "en": "Wait! Where did my thrust go? Pull up! Come on!",
+      "ja": "待って、推力が落ちてる？ 上がって！ 早く！",
+      "emotion": "恐惧",
+      "clip": "Voices/Clips/commander_1_critical",
+      "clipEn": "Voices/Clips/en/commander_1_critical",
+      "clipJa": "Voices/Clips/ja/commander_1_critical"
+    },
+    {
+      "id": "commander_1_death",
+      "pilot": 4,
+      "category": "boss",
+      "match": "",
+      "text": "不要！弹射器……啊——！",
+      "en": "No! The ejector... Aah!",
+      "ja": "いや、開かない！ ああっ！",
+      "emotion": "尖叫",
+      "clip": "Voices/Clips/commander_1_death",
+      "clipEn": "Voices/Clips/en/commander_1_death",
+      "clipJa": "Voices/Clips/ja/commander_1_death"
+    },
+    {
+      "id": "commander_2_entry",
+      "pilot": 5,
+      "category": "boss",
+      "match": "",
+      "text": "炽天使，接管防线。你们的信号，我会亲自审判。",
+      "en": "Seraph, assuming defensive control. I will judge your signal myself.",
+      "ja": "セラフ、防衛線を引き継ぐ。お前たちの信号は、私が裁定する。",
+      "emotion": "严阵以待",
+      "clip": "Voices/Clips/commander_2_entry",
+      "clipEn": "Voices/Clips/en/commander_2_entry",
+      "clipJa": "Voices/Clips/ja/commander_2_entry"
+    },
+    {
+      "id": "commander_2_phase",
+      "pilot": 5,
+      "category": "boss",
+      "match": "",
+      "text": "护盾节点消失了……你们真的，要推翻这个命令？",
+      "en": "The shield nodes are gone... You truly intend to defy this order?",
+      "ja": "防護ノードが消えた。本当に、この命令に逆らうつもりか。",
+      "emotion": "动摇",
+      "clip": "Voices/Clips/commander_2_phase",
+      "clipEn": "Voices/Clips/en/commander_2_phase",
+      "clipJa": "Voices/Clips/ja/commander_2_phase"
+    },
+    {
+      "id": "commander_2_critical",
+      "pilot": 5,
+      "category": "boss",
+      "match": "",
+      "text": "核心正在崩溃。原来……错的是这条命令。",
+      "en": "The core is collapsing. So... the order itself was wrong.",
+      "ja": "コアが崩壊している。そうか、間違っていたのは、この命令だ。",
+      "emotion": "悔悟",
+      "clip": "Voices/Clips/commander_2_critical",
+      "clipEn": "Voices/Clips/en/commander_2_critical",
+      "clipJa": "Voices/Clips/ja/commander_2_critical"
+    },
+    {
+      "id": "commander_2_death",
+      "pilot": 5,
+      "category": "boss",
+      "match": "",
+      "text": "到此为止吧。天空……还给你们。",
+      "en": "Then let it end. The sky... is yours.",
+      "ja": "もう、終わりにしよう。空は、お前たちに返す。",
+      "emotion": "低声诀别后沉默",
+      "clip": "Voices/Clips/commander_2_death",
+      "clipEn": "Voices/Clips/en/commander_2_death",
+      "clipJa": "Voices/Clips/ja/commander_2_death"
     }
-  ]
+  ],
+  "language": "zh,en,ja",
+  "synthetic": true
 }
