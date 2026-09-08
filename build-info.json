@@ -94,8 +94,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 9352,
-      "sha256": "e43f3dd133c3a4e821b8889a2c11f76aa3231844c529b4a90887528b3b61bcd3"
+      "bytes": 10062,
+      "sha256": "7f5abbb7978ba4981ac61d709a8dccaac12dbadfeb61e2e7fdcac935bbef7135"
     },
     {
       "path": "mobile-1.8.css",
@@ -107,5 +107,14 @@
       "bytes": 16487,
       "sha256": "893d4592be2b1f7f67a35c64478d17e57766e3f9bc663b1ddbd684979c9e561e"
     }
-  ]
+  ],
+  "web_wrapper_revision": "0644f375e2f96a640967fc39dbbfd065c7c4fd5d",
+  "security_hardened_at_utc": "2026-09-08T05:13:17.094853+00:00",
+  "security_hardening": {
+    "content_security_policy": "meta tag; explicit script and connection sources",
+    "inline_bootstrap_sha256": true,
+    "initial_js_css_integrity": true,
+    "referrer_policy": "no-referrer",
+    "game_binaries_changed": false
+  }
 }
