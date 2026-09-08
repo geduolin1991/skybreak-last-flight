@@ -2,9 +2,10 @@
 <html lang="zh-CN">
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta name="description" content="裂空：最后航线。驾驶三种特色战机，突破弹幕与机械要塞。无需安装，浏览器直接试玩。">
  <meta name="theme-color" content="#07121c">
+ <link rel="stylesheet" href="mobile-1.8.css">
  <title>裂空：最后航线 · 在线试玩</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307121c'/%3E%3Cpath d='M50 10 90 82 50 65 10 82Z' fill='%2378ebff'/%3E%3C/svg%3E">
  <style>
@@ -41,39 +42,47 @@
     <p class="copy">三架战机，最后一支撤离船队。<br>穿越风暴与弹幕，把天空还给所有人。</p>
     <div class="load"><button id="start" disabled>正在准备航线…</button><button id="retry" hidden>重新加载</button><div id="progress"><div id="bar"></div></div><div id="status" role="status" aria-live="polite">正在连接飞行系统…</div></div>
     <p class="small">无需安装 · 首次打开需加载游戏资源 · 开启声音体验完整配乐</p>
-    <p id="mobile" class="small" hidden>这款游戏使用键盘操作，请在配有键盘的电脑上试玩。</p>
+    <p id="mobile" class="small" hidden>已识别触屏设备 · 横屏游玩 · 左手移动，右手技能</p>
    </div></div>
   </div>
-  <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="fullscreen">全屏 ⛶</button></div>
+  <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="touch-mode">触屏操作</button><button id="fullscreen">全屏 ⛶</button></div>
  </main>
- <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑浏览器试玩 · v1.7.0</span></footer>
- <script src="Build/v1.7.0/Web.loader.js"></script>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.8.0</span></footer>
+ <script src="mobile-1.8.js"></script>
+ <script src="Build/v1.8.0/Web.loader.js"></script>
  <script>
   const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
   const director='SKYBREAK · Game Director';let active=false,instance=null;
-  document.getElementById('mobile').hidden=!(/Android|iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1));
+  const send=(method,value)=>{if(instance)instance.SendMessage(director,method,value);};
+  async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.getElementById('stage').requestFullscreen)await document.getElementById('stage').requestFullscreen();if(active&&!mobileUI.enabled)canvas.focus();}catch{}}
+  const mobileUI=createSkybreakMobile({canvas,stage:document.getElementById('stage'),send,fullscreen});
+  document.getElementById('mobile').hidden=!mobileUI.enabled;
+  if(mobileUI.enabled){canvas.setAttribute('aria-label','裂空触屏游戏画面');document.querySelector('#cover .small').textContent='首次加载约 100 MB · 自动缓存 · 支持横屏触控';}
+  document.getElementById('touch-mode').onclick=mobileUI.enableTouch;
   function fail(message){console.error(message);cover.hidden=false;status.textContent='加载未完成，请刷新重试，或下载 Mac 版。';start.textContent='加载未完成';start.disabled=true;document.getElementById('retry').hidden=false;}
   document.getElementById('retry').onclick=()=>location.reload();
-  start.onclick=()=>{if(!instance)return;active=true;cover.hidden=true;canvas.focus();instance.SendMessage(director,'WebActivate');};
-  document.getElementById('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.getElementById('stage').requestFullscreen();if(active)canvas.focus();}catch(e){status.textContent='当前浏览器不支持全屏，请使用窗口模式。';}};
+  start.onclick=()=>{if(!instance){if(mobileUI.enabled&&!loading)boot();return;}active=true;cover.hidden=true;canvas.focus();send('WebActivate');mobileUI.activate();};
+  document.getElementById('fullscreen').onclick=fullscreen;
   canvas.addEventListener('pointerdown',()=>canvas.focus());
   canvas.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','Tab'].includes(e.code))e.preventDefault();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&active&&instance)instance.SendMessage(director,'WebFocusLost');});
+  let loading=false;function boot(){loading=true;start.disabled=true;start.textContent="正在准备航线…";
   createUnityInstance(canvas,{
    arguments:[],
-   dataUrl:'Build/v1.7.0/Web.data.unityweb',
-   frameworkUrl:'Build/v1.7.0/Web.framework.js.unityweb',
-   codeUrl:'Build/v1.7.0/Web.wasm.unityweb',
+   dataUrl:'Build/v1.8.0/Web.data.unityweb',
+   frameworkUrl:'Build/v1.8.0/Web.framework.js.unityweb',
+   codeUrl:'Build/v1.8.0/Web.wasm.unityweb',
    streamingAssetsUrl:'StreamingAssets',
    companyName:"Skybreak Studio",
    productName:"SKYBREAK",
-   productVersion:"1.7.0",
+   productVersion:"1.8.0",
    autoSyncPersistentDataPath:true,
-   devicePixelRatio:Math.min(window.devicePixelRatio||1,1.25),
+   devicePixelRatio:mobileUI.enabled?Math.min(window.devicePixelRatio||1,1):Math.min(window.devicePixelRatio||1,1.25),
    showBanner:(message,type)=>{if(type==='error')fail(message);else console.warn(message);}
   },progress=>{bar.style.width=Math.round(progress*100)+'%';status.textContent=progress<.9?'正在加载游戏资源 · '+Math.round(progress*100)+'%':'正在启动引擎与音效，请稍候…';})
   .then(game=>{instance=game;window.skybreakInstance=game;start.disabled=false;start.textContent='进入驾驶舱　→';status.textContent='航线已就绪 · 点击开始并启用声音';bar.style.width='100%';})
-  .catch(fail);
+  .catch(fail);}
+  if(mobileUI.enabled){start.disabled=false;start.textContent="加载游戏";status.textContent="横屏后游玩 · 点击加载完整航线";}else boot();
  </script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.7.0-web",
+  "version": "1.8.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "1adcccf86dc8c2e7e17d8126a85e4cdedfef8692",
-  "built_at_utc": "2026-09-08T01:29:37.915349+00:00",
-  "build_identity": "8a7694218a1ef193b5dc803e97323506f8bbd97aa6793718c63cfa2a0e329ab4",
+  "source_revision": "981c24cf28eadfc1804b9292e5cc4f48398fc361",
+  "built_at_utc": "2026-09-08T04:40:34.656720+00:00",
+  "build_identity": "2d6c536e503894bb1ed228cf63e811bf518b9f80f9b72c4ddad9e5ebd6a380dd",
   "voice_clips": 330,
   "voice_events": 110,
   "voice_languages": [
@@ -14,7 +14,13 @@
   ],
   "commanders": 3,
   "specializations": 9,
-  "runtime_checks": 224,
+  "runtime_checks": 245,
+  "mobile": {
+    "auto_detect": true,
+    "orientation": "landscape",
+    "multitouch": true,
+    "physical_device_tested": false
+  },
   "assets": [
     {
       "path": ".nojekyll",
@@ -62,14 +68,44 @@
       "sha256": "6b04ad70a6d4da364d12fb93d08ce20963fa8120304f19f78b6d128a47191995"
     },
     {
+      "path": "Build/v1.8.0/Web.data.unityweb",
+      "bytes": 90517251,
+      "sha256": "4ee5ce69f476a648d2f617d93e0d5a049f439880fb2f418d7bdc63e6ff758a1a"
+    },
+    {
+      "path": "Build/v1.8.0/Web.framework.js.unityweb",
+      "bytes": 73736,
+      "sha256": "1696b35fc124a83f3a08df4a669845388fb5880562abef950a2e86100a6f40aa"
+    },
+    {
+      "path": "Build/v1.8.0/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "9b40250ff5f6802e34765e01b195c8f5b89ceba792a02bc0078fc2d186608090"
+    },
+    {
+      "path": "Build/v1.8.0/Web.wasm.unityweb",
+      "bytes": 5720955,
+      "sha256": "808a8076b374dfa67c8fbb3158e813e1d89e90aaa127d6120021218449e7faa9"
+    },
+    {
       "path": "cover.png",
       "bytes": 1317440,
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
       "path": "index.html",
-      "bytes": 8455,
-      "sha256": "8690fa8bbe1a1091c61fc436984711ab4a8a103372be2bb79697c70e01af0294"
+      "bytes": 9352,
+      "sha256": "e43f3dd133c3a4e821b8889a2c11f76aa3231844c529b4a90887528b3b61bcd3"
+    },
+    {
+      "path": "mobile-1.8.css",
+      "bytes": 9769,
+      "sha256": "c0dd3f3db06aca4446c2ba6a5a7536bcdadf2eb447d28bff3416dddb30cf93c7"
+    },
+    {
+      "path": "mobile-1.8.js",
+      "bytes": 16487,
+      "sha256": "893d4592be2b1f7f67a35c64478d17e57766e3f9bc663b1ddbd684979c9e561e"
     }
   ]
 }
