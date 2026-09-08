@@ -5,6 +5,8 @@ using System.Runtime.InteropServices;
 namespace Skybreak {
 public partial class SkyGame {
  [DllImport("__Internal")] static extern void SkyWebReport(string json);
+ [DllImport("__Internal")] static extern void SkyWebMobileReport(string json);
+ public void WebMobileStatus(){SkyWebMobileReport(JsonUtility.ToJson(MobileStatus()));}
  [System.Serializable] class WebSnapshot {
   public string voiceLanguage,commanderEvent;public int commanderExpression,voiceClipsReady,commanderPortraitsReady;public float peakKillMs,lastKillMs;public int sparks,shockAllocations;public string mission,supportingPilots,routeName;public int missionNodes,convoySurvivors,wingmen,route,routeTier;public float convoyIntegrity,supportSeconds;public string state,music;public int ship,weapon,stage,hull,bombs,kills,enemies,bullets;
   public float stageTime,fps,musicTime,bossHp;public bool musicPlaying,nova;public string voiceId;public bool voicePlaying,voiceEnabled;public float voiceTime,voiceGain,musicGain;
@@ -15,7 +17,7 @@ public partial class SkyGame {
   Application.targetFrameRate=60;ActivateVoices();
   if(music&&music.clip&&!music.isPlaying)RestoreSoundtrack(false);
  }
- public void WebFocusLost(){SaveSettings();if(State==FlightState.Playing)Pause();}
+ public void WebFocusLost(){ResetMobileInput();SaveSettings();if(State==FlightState.Playing)Pause();}
  // Read-only diagnostics used to verify the same public browser build.
  public void WebStatus() {
   SkyWebReport(JsonUtility.ToJson(new WebSnapshot {
