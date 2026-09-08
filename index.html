@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
  <meta charset="utf-8">
- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'wasm-unsafe-eval' 'sha256-yDAv/kO0O1WVgwmZ4yqzguV5kT0METwnxu01xxM0DU0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; connect-src 'self' blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'wasm-unsafe-eval' 'sha256-yqZU/jyhipyr86AelX8gdw4T6NJXQxIDL6ANDNiwGZ8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; connect-src 'self' blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
  <meta name="referrer" content="no-referrer">
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta name="description" content="裂空：最后航线。驾驶三种特色战机，突破弹幕与机械要塞。无需安装，浏览器直接试玩。">
  <meta name="theme-color" content="#07121c">
- <link rel="stylesheet" href="mobile-1.9.css" integrity="sha256-wN0/PbBqykRGwrpqWnU2vNrfLrRH0ov/NBbd2zDPk8c=" crossorigin="anonymous">
+ <link rel="stylesheet" href="mobile-1.9.1.css" integrity="sha256-MMNiI5cnmIwptSx3sqTtXU7/MByqvQGS6WO+Ooux2N4=" crossorigin="anonymous">
  <title>裂空：最后航线 · 在线试玩</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307121c'/%3E%3Cpath d='M50 10 90 82 50 65 10 82Z' fill='%2378ebff'/%3E%3C/svg%3E">
  <style>
@@ -49,15 +49,18 @@
   </div>
   <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="touch-mode">触屏操作</button><button id="fullscreen">全屏 ⛶</button></div>
  </main>
- <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.9.0</span></footer>
- <script src="mobile-1.9.js" integrity="sha256-t1Vi/AXvjwxzmk/Qf2yNlDV3n+MNZggCrfSX405YfiM=" crossorigin="anonymous"></script>
- <script src="Build/v1.9.0/Web.loader.js" integrity="sha256-0MtOxChzW8hzryilNcmEdOMjadTMlNA38i3ADf8VxDE=" crossorigin="anonymous"></script>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.9.1</span></footer>
+ <script src="mobile-1.9.1.js" integrity="sha256-5IX3ThMcQiX4jbKXe8PaulyajXT2UELdgok+O9ytq6E=" crossorigin="anonymous"></script>
+ <script src="display-1.9.1.js" integrity="sha256-WuVcTgQsFRFpnFvTqpqqAfEXopWS7TPUefUcx0CEIoE=" crossorigin="anonymous"></script>
+ <script src="Build/v1.9.1/Web.loader.js" integrity="sha256-+FZA86rk2Wx/vQyFCG7jxOcBo9svTgiIP/OpUPVqjqU=" crossorigin="anonymous"></script>
  <script>
   const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
   const director='SKYBREAK · Game Director';let active=false,instance=null;
   const send=(method,value)=>{if(instance)instance.SendMessage(director,method,value);};
   async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.getElementById('stage').requestFullscreen)await document.getElementById('stage').requestFullscreen();if(active&&!mobileUI.enabled)canvas.focus();}catch{}}
   const mobileUI=createSkybreakMobile({canvas,stage:document.getElementById('stage'),send,fullscreen});
+  const display=createSkybreakDisplay({canvas,stage:document.getElementById('stage'),mobile:mobileUI.enabled,onLayout:mobileUI.syncLayout});
+  window.skybreakDisplay=display;
   document.getElementById('mobile').hidden=!mobileUI.enabled;
   if(mobileUI.enabled){canvas.setAttribute('aria-label','裂空触屏游戏画面');document.querySelector('#cover .small').textContent='首次加载约 100 MB · 自动缓存 · 支持横屏触控';}
   document.getElementById('touch-mode').onclick=mobileUI.enableTouch;
@@ -71,15 +74,15 @@
   let loading=false;function boot(){loading=true;start.disabled=true;start.textContent="正在准备航线…";
   createUnityInstance(canvas,{
    arguments:[],
-   dataUrl:'Build/v1.9.0/Web.data.unityweb',
-   frameworkUrl:'Build/v1.9.0/Web.framework.js.unityweb',
-   codeUrl:'Build/v1.9.0/Web.wasm.unityweb',
+   dataUrl:'Build/v1.9.1/Web.data.unityweb',
+   frameworkUrl:'Build/v1.9.1/Web.framework.js.unityweb',
+   codeUrl:'Build/v1.9.1/Web.wasm.unityweb',
    streamingAssetsUrl:'StreamingAssets',
    companyName:"Skybreak Studio",
    productName:"SKYBREAK",
-   productVersion:"1.9.0",
+   productVersion:"1.9.1",
    autoSyncPersistentDataPath:true,
-   devicePixelRatio:mobileUI.enabled?Math.min(window.devicePixelRatio||1,1):Math.min(window.devicePixelRatio||1,1.25),
+   ...display.unityConfig,
    showBanner:(message,type)=>{if(type==='error')fail(message);else console.warn(message);}
   },progress=>{bar.style.width=Math.round(progress*100)+'%';status.textContent=progress<.9?'正在加载游戏资源 · '+Math.round(progress*100)+'%':'正在启动引擎与音效，请稍候…';})
   .then(game=>{instance=game;window.skybreakInstance=game;start.disabled=false;start.textContent='进入驾驶舱　→';status.textContent='航线已就绪 · 点击开始并启用声音';bar.style.width='100%';})

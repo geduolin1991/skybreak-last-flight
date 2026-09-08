@@ -1,11 +1,12 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.9.0-web",
+  "version": "1.9.1-web",
   "unity": "6000.6.0f1",
-  "source_revision": "0223158f9f8f2763f919d80a3c7db8cc6d985019",
-  "web_wrapper_revision": "0223158f9f8f2763f919d80a3c7db8cc6d985019",
-  "built_at_utc": "2026-09-08T07:37:08.532225+00:00",
-  "build_identity": "0d13d3d89200c8ae2818523c9d357f08f3ce44280b423a35bd0da603d311c803",
+  "source_revision": "999c14eebd359b42d9b21d7c33f18ea04a704e1e",
+  "web_wrapper_revision": "999c14eebd359b42d9b21d7c33f18ea04a704e1e",
+  "built_at_utc": "2026-09-08T08:44:58.683366+00:00",
+  "build_identity": "8272c716e3c9a07d1e528516979aa8e2164d568a549c55d385cf7efe10e047be",
+  "native_download_version": "1.9.0",
   "voice_clips": 330,
   "voice_events": 110,
   "voice_languages": [
@@ -14,13 +15,25 @@
     "ja"
   ],
   "specializations": 9,
-  "runtime_checks": 271,
   "boss_arrival_seconds": [
     75,
     95,
     110
   ],
   "mobile": true,
+  "quality_modes": [
+    "balanced",
+    "clear",
+    "smooth"
+  ],
+  "mobile_frame_target": 60,
+  "validation": {
+    "display_checks": 29,
+    "touch_checks": 15,
+    "webkit_checks": 11,
+    "baseline_campaign_version": "1.9.0",
+    "physical_phone_tested": false
+  },
   "security_hardening": [
     "CSP",
     "SRI for entry scripts and CSS",
@@ -113,24 +126,49 @@
       "sha256": "c28bdf94e3fee8448925f3284b72c6a67ffa54ac8443d637a3b6748059d4305b"
     },
     {
+      "path": "Build/v1.9.1/Web.data.unityweb",
+      "bytes": 92728206,
+      "sha256": "38c97180344d8c1095809e7396ae7d576b6683a7fef5325a33afc9612059751a"
+    },
+    {
+      "path": "Build/v1.9.1/Web.framework.js.unityweb",
+      "bytes": 73736,
+      "sha256": "f4eceedfb30fa4f8b4006719473b9553d67abb81af5c03792664f5fee32290b2"
+    },
+    {
+      "path": "Build/v1.9.1/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "f85640f3aae4d96c7fbd0c85086ee3c4e701a3db2f4e08883ff3a950f56a8ea5"
+    },
+    {
+      "path": "Build/v1.9.1/Web.wasm.unityweb",
+      "bytes": 5732327,
+      "sha256": "379de0c6496c44d5e6b9884e1bc45db43a78bf7d2fe8c92c23631005f79797bc"
+    },
+    {
       "path": "cover.png",
       "bytes": 1317440,
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
+      "path": "display-1.9.1.js",
+      "bytes": 2440,
+      "sha256": "5ae55c4e042c1511699c5bd3aa9aaa01f117a29592ed33d479f51cc740842281"
+    },
+    {
       "path": "index.html",
-      "bytes": 10062,
-      "sha256": "fb83cdec020d0a9dcbbd2625d8ffea0b6551e1f1659e7a95be542249344a5c2f"
+      "bytes": 10279,
+      "sha256": "d163b88c919c23aa4c896bc803990fbcb94a2fe94f426c0483310a1befccc823"
     },
     {
-      "path": "mobile-1.9.css",
-      "bytes": 9769,
-      "sha256": "c0dd3f3db06aca4446c2ba6a5a7536bcdadf2eb447d28bff3416dddb30cf93c7"
+      "path": "mobile-1.9.1.css",
+      "bytes": 10012,
+      "sha256": "30c362239727988c29b52c77b2a4ed5d4eff301caabd0192e963be3a8bb1d8de"
     },
     {
-      "path": "mobile-1.9.js",
-      "bytes": 16524,
-      "sha256": "b75562fc05ef8f0c739a4fd07f6c8d9435779fe30d660802adf497e34e587e23"
+      "path": "mobile-1.9.1.js",
+      "bytes": 17148,
+      "sha256": "e485f74e131c4225f88db2977bc3daba5c9a8d74f65042dd82893e3bdcadaba1"
     }
   ]
 }
