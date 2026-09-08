@@ -13,7 +13,7 @@ public partial class SkyGame {
   public int shipIndex,difficulty,hull,maxHull,bombs,score,highScore,combo,salvage,level,unlocked,stageIndex,routeTier,voiceReady,speaker,expression,kills,maxCombo,earnedSalvage;
   public float energy,overdrive,skillCooldown,bossHealth,progress,masterVolume,voiceVolume,moveX,moveY,playerX,playerZ;
   public bool mobile,focus,voiceEnabled,musicEnabled,shakeEnabled,voicePlaying,nova,portrait,radio,canSkill,canBomb,canOverdrive;
-  public float[] convoy; public MobileChoice[] routes,upgrades,research;
+  public string bossInstruction;public int bossModules;public bool bossTelegraph;public int wingmen;public float supportSeconds;public float cameraAspect,cameraSize;public Vector2 playerViewport;public Vector2 flightMin,flightMax;public float[] convoy; public MobileChoice[] routes,upgrades,research;
  }
  public void WebMobileMode(string mode){
   bool next=mode=="1";if(next&&!MobileMode){desktopShadowDistance=QualitySettings.shadowDistance;desktopShadowCascades=QualitySettings.shadowCascades;desktopVSync=QualitySettings.vSyncCount;desktopFrameRate=Application.targetFrameRate;}
@@ -71,7 +71,7 @@ public partial class SkyGame {
  }
  public MobileSnapshot MobileStatus(){
   MobileRadio(out int speaker,out string name,out string line,out int expression);
-  var s=new MobileSnapshot{encounter=EncounterLabel,debrief=ChapterDebrief,stageTime=StageTime,bossArrival=BossArrivalTime,mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
+  var s=new MobileSnapshot{bossInstruction=Boss!=null?bossOrder:"",bossModules=BossModuleCount,bossTelegraph=bossTell>0,wingmen=WingmanCount,supportSeconds=SupportRemaining,cameraAspect=Cam.aspect,cameraSize=Cam.orthographicSize,playerViewport=Cam.WorldToViewportPoint(PlayerPos),flightMin=Cam.WorldToViewportPoint(new Vector3(-10,1,-10)),flightMax=Cam.WorldToViewportPoint(new Vector3(10,1,10)),encounter=EncounterLabel,debrief=ChapterDebrief,stageTime=StageTime,bossArrival=BossArrivalTime,mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
    shipIndex=Ship,difficulty=Difficulty,hull=Hull,maxHull=MaxHull,bombs=Bombs,score=Score,highScore=HighScore,combo=Combo,salvage=salvage,level=PilotLevel(Ship),unlocked=Unlocked,stageIndex=Stage,routeTier=RouteTier,voiceReady=VoiceClipsReady,speaker=speaker,expression=expression,kills=Kills,maxCombo=MaxCombo,earnedSalvage=earnedSalvage,
    energy=Energy,overdrive=Overdrive,skillCooldown=SkillCooldown,bossHealth=Boss!=null?Boss.hp/Boss.maxHp:0,progress=Progress,masterVolume=MasterVolume,voiceVolume=VoiceVolume,moveX=MobileMovement.x,moveY=MobileMovement.y,playerX=PlayerPos.x,playerZ=PlayerPos.z,
    focus=mobileFocus,voiceEnabled=VoiceEnabled,musicEnabled=MusicEnabled,shakeEnabled=ShakeEnabled,voicePlaying=VoicePlaying,nova=NovaActive,portrait=State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory,
@@ -87,10 +87,7 @@ public partial class SkyGame {
  void DrawMobilePresentation(){
   if(Event.current.type!=EventType.Repaint)return;
   GUI.matrix=Matrix4x4.identity;
-  // Camera letterboxing does not clear the gutters. Erase previous portrait pixels there.
-  float scale=Mathf.Min(Screen.width/1600f,Screen.height/900f),ox=(Screen.width-1600*scale)/2,oy=(Screen.height-900*scale)/2;
-  if(ox>0){Rect(0,0,ox,Screen.height,new Color(.027f,.071f,.11f));Rect(Screen.width-ox,0,ox,Screen.height,new Color(.027f,.071f,.11f));}
-  if(oy>0){Rect(0,0,Screen.width,oy,new Color(.027f,.071f,.11f));Rect(0,Screen.height-oy,Screen.width,oy,new Color(.027f,.071f,.11f));}
+  // The mobile camera fills its own canvas. HUD and controls live outside it.
   Rect r=new Rect(mobilePortraitRect.x*Screen.width,mobilePortraitRect.y*Screen.height,mobilePortraitRect.width*Screen.width,mobilePortraitRect.height*Screen.height);
   if(r.width<=0||r.height<=0)return;
   if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Ship,r.x,r.y,r.width,r.height);}

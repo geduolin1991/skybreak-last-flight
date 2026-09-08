@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta name="description" content="裂空：最后航线。驾驶三种特色战机，突破弹幕与机械要塞。无需安装，浏览器直接试玩。">
  <meta name="theme-color" content="#07121c">
- <link rel="stylesheet" href="mobile-1.9.1.css">
+ <link rel="stylesheet" href="mobile-1.9.2.css">
  <title>裂空：最后航线 · 在线试玩</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307121c'/%3E%3Cpath d='M50 10 90 82 50 65 10 82Z' fill='%2378ebff'/%3E%3C/svg%3E">
  <style>
@@ -42,14 +42,14 @@
     <p class="copy">三架战机，最后一支撤离船队。<br>穿越风暴与弹幕，把天空还给所有人。</p>
     <div class="load"><button id="start" disabled>正在准备航线…</button><button id="retry" hidden>重新加载</button><div id="progress"><div id="bar"></div></div><div id="status" role="status" aria-live="polite">正在连接飞行系统…</div></div>
     <p class="small">无需安装 · 首次打开需加载游戏资源 · 开启声音体验完整配乐</p>
-    <p id="mobile" class="small" hidden>已识别触屏设备 · 横屏游玩 · 左手移动，右手技能</p>
+    <p id="mobile" class="small" hidden>已识别触屏设备 · 横竖屏均可玩 · 建议横屏体验</p>
    </div></div>
   </div>
   <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="touch-mode">触屏操作</button><button id="fullscreen">全屏 ⛶</button></div>
  </main>
- <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.9.1</span></footer>
- <script src="mobile-1.9.1.js"></script>
- <script src="display-1.9.1.js"></script>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.9.2</span></footer>
+ <script src="mobile-1.9.2.js"></script>
+ <script src="display-1.9.2.js"></script>
  <script src="Build/{{{ LOADER_FILENAME }}}"></script>
  <script>
   const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
@@ -60,7 +60,7 @@
   const display=createSkybreakDisplay({canvas,stage:document.getElementById('stage'),mobile:mobileUI.enabled,onLayout:mobileUI.syncLayout});
   window.skybreakDisplay=display;
   document.getElementById('mobile').hidden=!mobileUI.enabled;
-  if(mobileUI.enabled){canvas.setAttribute('aria-label','裂空触屏游戏画面');document.querySelector('#cover .small').textContent='首次加载约 100 MB · 自动缓存 · 支持横屏触控';}
+  if(mobileUI.enabled){canvas.setAttribute('aria-label','裂空触屏游戏画面');document.querySelector('#cover .small').textContent='首次加载约 100 MB · 自动缓存 · 支持横竖屏触控';}
   document.getElementById('touch-mode').onclick=mobileUI.enableTouch;
   function fail(message){console.error(message);cover.hidden=false;status.textContent='加载未完成，请刷新重试，或下载 Mac 版。';start.textContent='加载未完成';start.disabled=true;document.getElementById('retry').hidden=false;}
   document.getElementById('retry').onclick=()=>location.reload();
@@ -85,7 +85,7 @@
   },progress=>{bar.style.width=Math.round(progress*100)+'%';status.textContent=progress<.9?'正在加载游戏资源 · '+Math.round(progress*100)+'%':'正在启动引擎与音效，请稍候…';})
   .then(game=>{instance=game;window.skybreakInstance=game;start.disabled=false;start.textContent='进入驾驶舱　→';status.textContent='航线已就绪 · 点击开始并启用声音';bar.style.width='100%';})
   .catch(fail);}
-  if(mobileUI.enabled){start.disabled=false;start.textContent="加载游戏";status.textContent="横屏后游玩 · 点击加载完整航线";}else boot();
+  if(mobileUI.enabled){start.disabled=false;start.textContent="加载游戏";status.textContent="横竖屏均可玩 · 点击加载完整航线";}else boot();
  </script>
 </body>
 </html>
