@@ -4,7 +4,7 @@ namespace Skybreak {
 // Civilian actors belong to the mission, so they cannot wrap with scenery sectors.
 public sealed class SkyCivilian {
  public GameObject go; public Vector3 station; public float health=100,age; public int index; public bool departed;
- public LineRenderer wakeLeft,wakeRight; public ParticleSystem smoke;
+ public ParticleSystem smoke;
 }
 public partial class SkyWorld {
  readonly List<SkyCivilian> civilians=new List<SkyCivilian>();
@@ -24,8 +24,6 @@ public partial class SkyWorld {
   if(Stage==0)for(int i=0;i<3;i++){
    var o=Art.Model("RescueFerry",missionRoot);o.name=new[]{"曙光号 · 312 人","归港号 · 268 人","白鹭号 · 190 人"}[i];o.transform.localScale=Vector3.one*.42f;
    var c=new SkyCivilian{go=o,index=i,station=new Vector3((i-1)*6.3f,-9.68f,i==1?4.8f:8.2f)};o.transform.position=c.station;
-   c.wakeLeft=Art.Line(missionRoot,"Port wake",new Vector3[12],new Color(.1f,.29f,.30f,.28f),.075f);c.wakeRight=Art.Line(missionRoot,"Starboard wake",new Vector3[12],new Color(.1f,.29f,.30f,.28f),.075f);c.wakeLeft.useWorldSpace=c.wakeRight.useWorldSpace=true;
-   foreach(var wake in new[]{c.wakeLeft,c.wakeRight})if(wake){wake.startColor=new Color(.9f,1,1,.65f);wake.endColor=new Color(.9f,1,1,0);wake.widthCurve=new AnimationCurve(new Keyframe(0,.035f),new Keyframe(.3f,.09f),new Keyframe(1,.025f));}
    civilians.Add(c);
   }
   if(Stage==2){
@@ -49,16 +47,15 @@ public partial class SkyWorld {
    if(c.health<=0){p.y-=Mathf.Min(1.1f,c.age*.008f);c.go.transform.rotation=Quaternion.Euler(0,0,16);}else if(c.departed){c.station+=Vector3.forward*dt*(Stage==0?4.8f:10);p=c.station;}
    else {p.x+=Mathf.Sin(c.age*.32f+c.index)*.14f;p.y+=Mathf.Sin(c.age*1.5f+c.index)*.04f;c.go.transform.rotation=Quaternion.Euler(Mathf.Sin(c.age*.7f)*.65f,Mathf.Sin(c.age*.32f)*1.2f,Mathf.Sin(c.age*.8f)*1.2f);}
    c.go.transform.position=p;
-   if(c.wakeLeft){float length=c.health<=0?1.5f:c.departed?7:4;for(int j=0;j<12;j++){float t=j/11f;float spread=.32f+t*.65f;float z=p.z-.8f-t*length;float ripple=Mathf.Sin(t*19-c.age*4)*.075f*t;c.wakeLeft.SetPosition(j,new Vector3(p.x-spread+ripple,-9.94f,z));c.wakeRight.SetPosition(j,new Vector3(p.x+spread-ripple,-9.94f,z));}}
+
   }
   if(orbitalDish)orbitalDish.localRotation=Quaternion.Slerp(orbitalDish.localRotation,Quaternion.Euler(0,UplinkActive?0:Mathf.Sin(Time.time*.25f)*45,UplinkActive?0:32),dt*.6f);
   for(int i=0;i<orbitalLinks.Count;i++){float p=UplinkProgress;Color c=gridRestored[i]?new Color(.13f,.66f,.86f):new Color(.12f,.2f,.29f);if(UplinkActive)c*=.7f+p*.7f;orbitalLinks[i].startColor=orbitalLinks[i].endColor=c;orbitalLinks[i].startWidth=orbitalLinks[i].endWidth=UplinkComplete?.11f:.045f;}
  }
  void CreateGroundDetail(Transform t,int index){
-  if(Stage==0&&index%3==0)for(int side=-1;side<=1;side+=2)PlaceScenery(t,"CoastalBreakwater",new Vector3(side*12.9f,-2.85f,0),.6f);
   if(Stage==1)PlaceScenery(t,"CivicPlaza",new Vector3((index%2==0?-1:1)*6.9f,-3.04f,4.4f),.72f);
   if(Stage==2&&index%2==1)PlaceScenery(t,"OrbitalTruss",new Vector3((index%4==1?-1:1)*8.4f,-7,1),.72f);
-  if(Stage==0){if(index%2==0){var b=Art.Model("EvacBus",t);b.transform.localPosition=new Vector3(14.1f,-1.7f,2);b.transform.localScale=Vector3.one*.35f;traffic.Add(b.transform);}return;}
+  if(Stage==0)return;
   if(Stage==1){
    for(int side=-1;side<=1;side+=2){var o=Art.Model("CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
     int district=(index/3)%3;foreach(var r in o.GetComponentsInChildren<MeshRenderer>())if(r.sharedMaterial&&r.sharedMaterial.name.Contains("City_Window"))districtWindows[district].Add(r);
@@ -74,7 +71,7 @@ public partial class SkyWorld {
  void TickGroundLife(float dt){
   if(groundSurface){groundSurface.SetFloat("_Travel",motion);groundSurface.SetVector("_Power",new Vector4(gridPower[0],gridPower[1],gridPower[2],0));}
   for(int i=0;i<3;i++){gridPower[i]=Mathf.MoveTowards(gridPower[i],gridRestored[i]?1:0,dt*.35f);if(Mathf.Approximately(renderedGridPower[i],gridPower[i]))continue;renderedGridPower[i]=gridPower[i];worldBlock.Clear();worldBlock.SetColor("_EmissionColor",new Color(.95f,.59f,.21f)*gridPower[i]*1.1f);worldBlock.SetColor("_Color",Color.Lerp(new Color(.028f,.075f,.10f),new Color(.68f,.42f,.14f),gridPower[i]));foreach(var renderer in districtWindows[i])if(renderer)renderer.SetPropertyBlock(worldBlock);}
-  for(int i=0;i<traffic.Count;i++){var t=traffic[i];if(!t)continue;float speed=Stage==0?1.2f:gridRestored[(i/6)%3]?2.4f:.2f;t.localPosition+=Vector3.forward*dt*speed*(t.localRotation.eulerAngles.y>90?-1:1);if(t.localPosition.z>7)t.localPosition+=Vector3.back*14;if(t.localPosition.z<-7)t.localPosition+=Vector3.forward*14;}
+  for(int i=0;i<traffic.Count;i++){var t=traffic[i];if(!t)continue;float speed=Stage==0?1.2f:gridRestored[(i/6)%3]?2.4f:.2f;t.localPosition+=Vector3.forward*dt*speed*(t.localRotation.eulerAngles.y>90?-1:1);Vector2 limits=Stage==0&&coastTrafficLimits.TryGetValue(t,out var quay)?quay:new Vector2(-7,7);float span=limits.y-limits.x;if(t.localPosition.z>limits.y)t.localPosition+=Vector3.back*span;if(t.localPosition.z<limits.x)t.localPosition+=Vector3.forward*span;}
  }
 }
 }

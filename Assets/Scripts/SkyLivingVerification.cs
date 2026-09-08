@@ -7,7 +7,8 @@ public partial class SkyGame {
  IEnumerator VerifyLivingCampaign(Action<bool,string> check,string output){
   for(int i=0;i<3;i++)selectedRoutes[i]=0;Ship=0;Difficulty=0;BeginRun();Launch();AutoFire=false;invuln=999;StageTime=4;TickMission(0);
   check(World.Civilians.Count==3&&ConvoySurvivors==3,"Three separate rescue ships are present in the playable coast");
-  check(World.Civilians[0].wakeLeft&&World.Civilians[0].go.GetComponentsInChildren<MeshFilter>().Length>3,"Rescue ships use authored geometry and independent wake trails");
+  yield return null;var wake=World.RescueWake(0);var boat=World.Civilians[0].go;
+  check(World.OceanReady&&wake.z>0&&Mathf.Abs(wake.x-boat.transform.position.x)<.1f&&boat.GetComponentsInChildren<MeshFilter>().Length>3,"Authored rescue ship has a live wake aligned to its position on the ocean");
   var first=World.Civilians[0];var second=World.Civilians[1];World.DamageCivilian(0,50);
   check(first.health==50&&second.health==100&&first.smoke,"Bomb damage affects the targeted ship and starts engine smoke");
   var bomber=SpawnEnemy(4,new Vector3(first.station.x,1,8),0);bomber.missionIndex=0;TickSpecialEnemy(bomber,.02f);

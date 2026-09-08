@@ -85,7 +85,7 @@ public partial class SkyWorld {
   mist=null;if(Stage==2)return;
   var shader=Shader.Find("Skybreak/Atmosphere");if(!shader)return;
   mist=owned.Keep(new Material(shader));
-  mist.SetColor("_Tint",Stage==0?new Color(.26f,.49f,.54f,.025f):new Color(.24f,.28f,.45f,.018f));
+  mist.SetColor("_Tint",Stage==0?new Color(.45f,.59f,.70f,.012f):new Color(.24f,.28f,.45f,.018f));
   var layer=Art.Primitive(terrain,"Low sea mist",new Vector3(0,-1.85f,20),
    new Vector3(15,1,26),mist,PrimitiveType.Plane);
   layer.GetComponent<Renderer>().shadowCastingMode=ShadowCastingMode.Off;

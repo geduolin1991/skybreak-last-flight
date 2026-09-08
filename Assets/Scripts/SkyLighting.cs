@@ -9,13 +9,13 @@ public partial class SkyWorld {
  public int StarDrawCalls {get;private set;}
 
  void SetChapterLighting(){
-  sun.color=Stage==0?new Color(1,.84f,.66f):Stage==1?new Color(.63f,.73f,1):new Color(.68f,.82f,1);
-  sun.transform.rotation=Quaternion.Euler(Stage==0?39:Stage==1?53:32,Stage==2?-58:-35,0);
+  sun.color=Stage==0?new Color(1,.93f,.82f):Stage==1?new Color(.63f,.73f,1):new Color(.68f,.82f,1);
+  sun.transform.rotation=Quaternion.Euler(Stage==0?39:Stage==1?53:32,Stage==0?145:Stage==2?-58:-35,0);
   sun.shadowStrength=.72f;sun.shadowBias=.035f;sun.shadowNormalBias=.18f;
-  if(fillLight){fillLight.color=Stage==0?new Color(.36f,.67f,.92f):new Color(1,.47f,.26f);fillLight.intensity=Stage==0?.30f:Stage==1?.23f:.34f;}
-  RenderSettings.ambientSkyColor=Stage==0?new Color(.20f,.29f,.38f):Stage==1?new Color(.13f,.19f,.31f):new Color(.10f,.16f,.26f);
-  RenderSettings.ambientEquatorColor=Stage==0?new Color(.075f,.13f,.17f):new Color(.055f,.075f,.12f);
-  RenderSettings.ambientGroundColor=Stage==0?new Color(.045f,.085f,.085f):new Color(.025f,.035f,.065f);
+  if(fillLight){fillLight.color=Stage==0?new Color(.54f,.72f,.95f):new Color(1,.47f,.26f);fillLight.intensity=Stage==0?.38f:Stage==1?.23f:.34f;}
+  RenderSettings.ambientSkyColor=Stage==0?new Color(.29f,.37f,.48f):Stage==1?new Color(.13f,.19f,.31f):new Color(.10f,.16f,.26f);
+  RenderSettings.ambientEquatorColor=Stage==0?new Color(.15f,.20f,.25f):new Color(.055f,.075f,.12f);
+  RenderSettings.ambientGroundColor=Stage==0?new Color(.08f,.11f,.14f):new Color(.025f,.035f,.065f);
   RenderSettings.fogDensity=Stage==0?.0025f:Stage==1?.0035f:.0015f;
   for(int i=0;i<renderedGridPower.Length;i++)renderedGridPower[i]=-1;
   StarDrawCalls=0;
