@@ -1,13 +1,20 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.6.0-web",
+  "version": "1.7.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "11dd030adc03c58775054e7d88fa298ee0faa2ef",
-  "built_at_utc": "2026-09-07T23:40:38.306374+00:00",
-  "build_identity": "4dbadc36dfbd72caa8e044d76d08694bd710769895c684fab0209faa570066bb",
-  "voice_clips": 98,
+  "source_revision": "1adcccf86dc8c2e7e17d8126a85e4cdedfef8692",
+  "built_at_utc": "2026-09-08T01:29:37.915349+00:00",
+  "build_identity": "8a7694218a1ef193b5dc803e97323506f8bbd97aa6793718c63cfa2a0e329ab4",
+  "voice_clips": 330,
+  "voice_events": 110,
+  "voice_languages": [
+    "zh",
+    "en",
+    "ja"
+  ],
+  "commanders": 3,
   "specializations": 9,
-  "runtime_checks": 166,
+  "runtime_checks": 224,
   "assets": [
     {
       "path": ".nojekyll",
@@ -35,14 +42,34 @@
       "sha256": "3f1cce36d9e4856b3a6c254716e837522015484c3817a0f8aac15fe79a84d1c4"
     },
     {
+      "path": "Build/v1.7.0/Web.data.unityweb",
+      "bytes": 90512362,
+      "sha256": "b89bef5c39922598abc52a96db82a5a89b0d37a9e5528539030068eedb86f8ce"
+    },
+    {
+      "path": "Build/v1.7.0/Web.framework.js.unityweb",
+      "bytes": 73721,
+      "sha256": "4a4d204f4eef6f7870b97904a2300b14e7cb92ddfbeeb359a7bb4181f2dbb36a"
+    },
+    {
+      "path": "Build/v1.7.0/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "ab4b651f982e639341aa868f8bfbf75b5661b7afde5fa5c72c8bd6021c56be17"
+    },
+    {
+      "path": "Build/v1.7.0/Web.wasm.unityweb",
+      "bytes": 5715220,
+      "sha256": "6b04ad70a6d4da364d12fb93d08ce20963fa8120304f19f78b6d128a47191995"
+    },
+    {
       "path": "cover.png",
       "bytes": 1317440,
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
       "path": "index.html",
-      "bytes": 8454,
-      "sha256": "840cb2d628efc7478e400361437898e8a842f86d3b2a1b0a945d0539d81d1a35"
+      "bytes": 8455,
+      "sha256": "8690fa8bbe1a1091c61fc436984711ab4a8a103372be2bb79697c70e01af0294"
     }
   ]
 }
