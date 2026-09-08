@@ -1,11 +1,11 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.9.1-web",
+  "version": "1.9.2-web",
   "unity": "6000.6.0f1",
-  "source_revision": "999c14eebd359b42d9b21d7c33f18ea04a704e1e",
-  "web_wrapper_revision": "999c14eebd359b42d9b21d7c33f18ea04a704e1e",
-  "built_at_utc": "2026-09-08T08:44:58.683366+00:00",
-  "build_identity": "8272c716e3c9a07d1e528516979aa8e2164d568a549c55d385cf7efe10e047be",
+  "source_revision": "ddee16f9079ac013a7a074eae1ae1f085ef49067",
+  "web_wrapper_revision": "ddee16f9079ac013a7a074eae1ae1f085ef49067",
+  "built_at_utc": "2026-09-08T20:39:08.710330+00:00",
+  "build_identity": "391869fee8917ff7652550ae7172f62e0c633b84d8e3d0fe47f9054e0bae0369",
   "native_download_version": "1.9.0",
   "voice_clips": 330,
   "voice_events": 110,
@@ -21,6 +21,10 @@
     110
   ],
   "mobile": true,
+  "orientations": [
+    "landscape",
+    "portrait"
+  ],
   "quality_modes": [
     "balanced",
     "clear",
@@ -28,9 +32,53 @@
   ],
   "mobile_frame_target": 60,
   "validation": {
-    "display_checks": 29,
-    "touch_checks": 15,
-    "webkit_checks": 11,
+    "mobile_checks": 68,
+    "webkit_checks": 16,
+    "boss_hud": true,
+    "performance": [
+      {
+        "quality": "balanced",
+        "render": [
+          585,
+          780
+        ],
+        "meanGameFps": 60.222412109375,
+        "minGameFps": 60.085975646972656,
+        "peakKillMs": 0.30000001192092896,
+        "resizeCounts": [
+          20
+        ],
+        "musicContinuous": true
+      },
+      {
+        "quality": "clear",
+        "render": [
+          780,
+          1040
+        ],
+        "meanGameFps": 60.56200136457171,
+        "minGameFps": 60.05919647216797,
+        "peakKillMs": 0.6000000238418579,
+        "resizeCounts": [
+          21
+        ],
+        "musicContinuous": true
+      },
+      {
+        "quality": "smooth",
+        "render": [
+          390,
+          520
+        ],
+        "meanGameFps": 60.197206380415935,
+        "minGameFps": 60.04100036621094,
+        "peakKillMs": 0.6000000238418579,
+        "resizeCounts": [
+          22
+        ],
+        "musicContinuous": true
+      }
+    ],
     "baseline_campaign_version": "1.9.0",
     "physical_phone_tested": false
   },
@@ -146,29 +194,49 @@
       "sha256": "379de0c6496c44d5e6b9884e1bc45db43a78bf7d2fe8c92c23631005f79797bc"
     },
     {
+      "path": "Build/v1.9.2/Web.data.unityweb",
+      "bytes": 92727876,
+      "sha256": "a5cfa79297e397035a6bf1a965aab391ea1f6a2e683842b6e1afb806d274ea64"
+    },
+    {
+      "path": "Build/v1.9.2/Web.framework.js.unityweb",
+      "bytes": 73736,
+      "sha256": "96cc4c8eb78ee27dfea9219aac2b4cc4755972791e20e62fc6e45c4deae867e6"
+    },
+    {
+      "path": "Build/v1.9.2/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "9993dd45d5cdb0143fddfd14affa593a9774c03ced4e7c005a6cfd407a14c385"
+    },
+    {
+      "path": "Build/v1.9.2/Web.wasm.unityweb",
+      "bytes": 5732592,
+      "sha256": "a3cae2a076e17fdfe130b4ed659f624eefc442aefb99664ddb30302d34b1d9f4"
+    },
+    {
       "path": "cover.png",
       "bytes": 1317440,
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.9.1.js",
-      "bytes": 2440,
-      "sha256": "5ae55c4e042c1511699c5bd3aa9aaa01f117a29592ed33d479f51cc740842281"
+      "path": "display-1.9.2.js",
+      "bytes": 2958,
+      "sha256": "2bd8a758729dd34dcec59f50c7588c7af506f69041638f2860d6dbedb556355c"
     },
     {
       "path": "index.html",
-      "bytes": 10279,
-      "sha256": "d163b88c919c23aa4c896bc803990fbcb94a2fe94f426c0483310a1befccc823"
+      "bytes": 10282,
+      "sha256": "972a1d630ea8dde46ebf4b32f9687ebce819eb155a5e1b89c7c39ce29997480b"
     },
     {
-      "path": "mobile-1.9.1.css",
-      "bytes": 10012,
-      "sha256": "30c362239727988c29b52c77b2a4ed5d4eff301caabd0192e963be3a8bb1d8de"
+      "path": "mobile-1.9.2.css",
+      "bytes": 14284,
+      "sha256": "5d1a565bd76c5bcb49d4536b623ee90bfaa8e2a70134172a31c58b250c2a1e6a"
     },
     {
-      "path": "mobile-1.9.1.js",
-      "bytes": 17148,
-      "sha256": "e485f74e131c4225f88db2977bc3daba5c9a8d74f65042dd82893e3bdcadaba1"
+      "path": "mobile-1.9.2.js",
+      "bytes": 17686,
+      "sha256": "4d7d1ca9ed3e059623b1663931ec822bb7b3763a0d7a585bf9e6717cf8996b18"
     }
   ]
 }
