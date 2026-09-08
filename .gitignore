@@ -12,6 +12,8 @@
 !/ProjectSettings/
 !/Tools/
 !/Docs/
+!/.github/
+!/SECURITY.md
 
 **/__pycache__/
 *.py[cod]

@@ -18,6 +18,8 @@ def version_assets(output:Path):
     index.write_text(html)
     assert (destination/'Web.loader.js').is_file()
     assert ('Build/v'+version+'/Web.data.unityweb') in html
+    from harden_web import harden
+    harden(output)
     return version
 
 if __name__=='__main__':
