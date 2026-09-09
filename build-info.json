@@ -1,12 +1,12 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.10.0-web",
+  "version": "1.11.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "995f57b55e8df17f5303ed77bf3626abde23efe9",
-  "web_wrapper_revision": "995f57b55e8df17f5303ed77bf3626abde23efe9",
-  "built_at_utc": "2026-09-08T22:43:59.701822+00:00",
-  "build_identity": "fffd7030645682f344b2ad2677692c72914c2e777efd0019b399d167f4f56f44",
-  "native_download_version": "1.9.0",
+  "source_revision": "9cd8c7661ead43714c74cc7f827b2f6569b93df1",
+  "web_wrapper_revision": "9cd8c7661ead43714c74cc7f827b2f6569b93df1",
+  "built_at_utc": "2026-09-09T20:20:30.425695+00:00",
+  "build_identity": "32dc89850eefe60dc92d3387babefcbe5dfc7dfca74bd29191a17ad1101f5110",
+  "native_download_version": "1.11.0",
   "voice_clips": 330,
   "voice_events": 110,
   "voice_languages": [
@@ -32,21 +32,21 @@
   ],
   "mobile_frame_target": 60,
   "validation": {
-    "mobile_checks": 68,
+    "mobile_checks": 100,
     "webkit_checks": 16,
     "boss_hud": true,
     "performance": [
       {
         "quality": "balanced",
         "render": [
-          585,
-          780
+          584,
+          848
         ],
-        "meanGameFps": 60.08779754638672,
-        "minGameFps": 60.01105499267578,
-        "peakKillMs": 0.20000000298023224,
+        "meanGameFps": 60.09687545776367,
+        "minGameFps": 59.99659729003906,
+        "peakKillMs": 0.30000001192092896,
         "resizeCounts": [
-          20
+          31
         ],
         "musicContinuous": true
       },
@@ -54,13 +54,13 @@
         "quality": "clear",
         "render": [
           780,
-          1040
+          1132
         ],
-        "meanGameFps": 60.08566520690918,
-        "minGameFps": 60.0051155090332,
-        "peakKillMs": 0.30000001192092896,
+        "meanGameFps": 60.09033103942871,
+        "minGameFps": 59.984947204589844,
+        "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          21
+          32
         ],
         "musicContinuous": true
       },
@@ -68,29 +68,138 @@
         "quality": "smooth",
         "render": [
           390,
-          520
+          566
         ],
-        "meanGameFps": 60.05871688842773,
-        "minGameFps": 59.96036148071289,
-        "peakKillMs": 0.4000000059604645,
+        "meanGameFps": 60.09267822265625,
+        "minGameFps": 59.99522018432617,
+        "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          22
+          33
         ],
         "musicContinuous": true
       }
     ],
-    "baseline_campaign_version": "1.9.0",
+    "baseline_campaign_version": "1.11.0",
+    "native": {
+      "pass": true,
+      "identity": "82bd383396bfb955b78d8e3861d9f3fb677dbde33047aeb371b134bdbe6dd33a",
+      "steps": [
+        {
+          "step": "runtime",
+          "seconds": 91.0,
+          "pass": true,
+          "checks": 278
+        },
+        {
+          "step": "campaign0",
+          "seconds": 171.9,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "campaign1",
+          "seconds": 188.9,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "campaign2",
+          "seconds": 165.5,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "portraits",
+          "seconds": 15.6,
+          "pass": true,
+          "checks": 0
+        }
+      ]
+    },
+    "android_checks": 8,
+    "cast": {
+      "pass": true,
+      "checks": [
+        "Pilot 0 real portrait, motion frames and complete caption",
+        "Pilot 1 real portrait, motion frames and complete caption",
+        "Pilot 2 real portrait, motion frames and complete caption",
+        "Rendered portrait and caption use the same delivered actor",
+        "Actual boss entrance uses enemy portrait and matching caption"
+      ],
+      "samples": [
+        {
+          "pilot": 0,
+          "name": "苍凛",
+          "line": "跟紧我，出发！",
+          "slot": {
+            "x": 8,
+            "y": 570,
+            "width": 82,
+            "height": 96
+          },
+          "coastInset": 5
+        },
+        {
+          "pilot": 1,
+          "name": "绯音",
+          "line": "坐稳了，开工！",
+          "slot": {
+            "x": 8,
+            "y": 570,
+            "width": 82,
+            "height": 96
+          },
+          "coastInset": 5
+        },
+        {
+          "pilot": 2,
+          "name": "雪璃",
+          "line": "航线清晰。我们走。",
+          "slot": {
+            "x": 8,
+            "y": 570,
+            "width": 82,
+            "height": 96
+          },
+          "coastInset": 5
+        }
+      ],
+      "enemy": {
+        "name": "加兰 / 利维坦舰长",
+        "line": "小队也敢挑战利维坦？这条航线，到此为止。",
+        "event": "commander_0_entry"
+      }
+    },
+    "portrait_motion": {
+      "pass": true,
+      "checks": [
+        {
+          "pilot": 0,
+          "changed_pixels": 17713
+        },
+        {
+          "pilot": 1,
+          "changed_pixels": 21469
+        },
+        {
+          "pilot": 2,
+          "changed_pixels": 18451
+        }
+      ]
+    },
+    "recommended_orientation": "landscape",
+    "portrait_blocked": false,
     "physical_phone_tested": false,
     "coast": {
       "pass": true,
       "seconds": 45,
-      "samples": 192,
+      "samples": 193,
       "coastFootprints": 20,
       "wakeAlignment": true,
       "sceneResetsWithoutDuplicateCoast": true,
       "musicContinuous": true,
-      "meanFps": 60.07481870546446,
-      "peakKillMs": 0.6000000238418579,
+      "meanFps": 60.07061015061342,
+      "peakKillMs": 0.4000000059604645,
       "sceneryRenderers": 118,
       "errors": [],
       "scope": "Actual mobile-emulated combat across multiple scenery wraps, desktop GPU"
@@ -126,6 +235,26 @@
       "path": "Build/v1.10.0/Web.wasm.unityweb",
       "bytes": 5741607,
       "sha256": "eacfa09cb3307f35dbdda208436a0da92a94a91f295e9a66e2f2186de6534f52"
+    },
+    {
+      "path": "Build/v1.11.0/Web.data.unityweb",
+      "bytes": 94452878,
+      "sha256": "a281cc54a90a99cf3d66149b0236b3054af7f7d98fe3b703556c584d9a962289"
+    },
+    {
+      "path": "Build/v1.11.0/Web.framework.js.unityweb",
+      "bytes": 73736,
+      "sha256": "dd87b806db5647c7744bef355b0468e838e7e32cc482f6e92b897bb749412743"
+    },
+    {
+      "path": "Build/v1.11.0/Web.loader.js",
+      "bytes": 48779,
+      "sha256": "90726be849868231f7582f19a8a55430cdfdc73fe4f3f7d6dd363712ba87d2b3"
+    },
+    {
+      "path": "Build/v1.11.0/Web.wasm.unityweb",
+      "bytes": 5739802,
+      "sha256": "01ff701a8918cd11b4dd71252517a6916816d0be6bc749f0f1148fa54edb681f"
     },
     {
       "path": "Build/v1.6.0/Web.data.unityweb",
@@ -253,24 +382,24 @@
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.10.0.js",
-      "bytes": 2958,
-      "sha256": "2bd8a758729dd34dcec59f50c7588c7af506f69041638f2860d6dbedb556355c"
+      "path": "display-1.11.0.js",
+      "bytes": 3540,
+      "sha256": "1cfef70f97ed6707719179da446a51338ef4134437e8c61b48b6af246e409e5e"
     },
     {
       "path": "index.html",
       "bytes": 10291,
-      "sha256": "79357461dca6d496dea2a97b720e1575ea501b87a852ebab227d9ec4036a7af5"
+      "sha256": "c04cce08913f60358848965e9a4c7607a2985e58edfb1c0d0ff62e1de0e1b446"
     },
     {
-      "path": "mobile-1.10.0.css",
-      "bytes": 14284,
-      "sha256": "5d1a565bd76c5bcb49d4536b623ee90bfaa8e2a70134172a31c58b250c2a1e6a"
+      "path": "mobile-1.11.0.css",
+      "bytes": 18713,
+      "sha256": "c84e405a0b4dcc10788c269cc4acdf0f0e06255dcfa7a2b82c90cd26132fbac0"
     },
     {
-      "path": "mobile-1.10.0.js",
-      "bytes": 17687,
-      "sha256": "3b6861e8259064fc7b0f5e033a57c108f520e0dd352dcd8fcb7bad516bd3d61f"
+      "path": "mobile-1.11.0.js",
+      "bytes": 20511,
+      "sha256": "0180c1e18246bc66bf6d91b0ec7a9f4fc42e124891e4bf3d58d1506d1299d605"
     }
   ]
 }
