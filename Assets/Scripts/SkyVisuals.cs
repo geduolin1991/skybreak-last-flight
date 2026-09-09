@@ -33,7 +33,7 @@ public partial class SkyWorld:MonoBehaviour {
  if(stage==1){CreateRain();var ground=Art.Primitive(terrain,"Rainwashed city boulevard",new Vector3(0,-3.16f,20),new Vector3(18,1,30),Art.Mat("Road base",new Color(.025f,.045f,.06f)),PrimitiveType.Plane);var road=owned.Keep(new Material(Shader.Find("Skybreak/Ground")));groundSurface=road;ground.GetComponent<Renderer>().sharedMaterial=road;}if(stage==0){CreateOcean();
  }else if(stage==2){CreateStars();var p=Art.Model("BluePlanet",terrain);p.transform.localPosition=new Vector3(-22,-31,49);p.transform.localScale=Vector3.one*61;foreach(var r in p.GetComponentsInChildren<Renderer>())r.sharedMaterial=owned.Keep(new Material(Shader.Find("Skybreak/Planet")));p.transform.rotation=Quaternion.Euler(0,0,20);var halo=Art.Ring(terrain,31,Art.Cyan*.4f,.4f,180);halo.transform.position=p.transform.position+new Vector3(0,-3,0);}
  Random.InitState(120+stage);
- for(int i=0;i<10;i++){var t=new GameObject("Scenery sector "+i).transform;t.SetParent(terrain);t.position=new Vector3(0,0,-35+i*14);chunks.Add(t);if(stage==0)Harbor(t,i);else if(stage==1)City(t,i);else Orbit(t,i);AddChapterLandmark(t,i);CreateGroundDetail(t,i);BuildDistrictTransit(t,i);CombineSector(t);}CreateLowMist();if(stage<2)terrain.position=Vector3.down*7;BuildCampaignWorld();FrameCoast();UpdateCoast();Random.state=randomState;
+ for(int i=0;i<10;i++){var t=new GameObject("Scenery sector "+i).transform;t.SetParent(terrain);t.position=new Vector3(0,0,-35+i*14);chunks.Add(t);if(stage==0)Harbor(t,i);else if(stage==1)City(t,i);else Orbit(t,i);AddChapterLandmark(t,i);CreateGroundDetail(t,i);BuildDistrictTransit(t,i);BuildCampaignSector(t,i);CombineSector(t);}CreateLowMist();if(stage<2)terrain.position=Vector3.down*7;FrameCoast();UpdateCoast();Random.state=randomState;
  }
  void PlaceScenery(Transform parent,string model,Vector3 position,float scale){var o=Art.Model(model,parent);o.transform.localPosition=position;o.transform.localScale=Vector3.one*scale;foreach(var renderer in o.GetComponentsInChildren<MeshRenderer>()){var src=renderer.sharedMaterials;for(int i=0;i<src.Length;i++){var m=src[i];if(!m||!m.IsKeywordEnabled("_EMISSION"))continue;if(!landmarkMaterials.TryGetValue(m,out var toned)){toned=owned.Keep(new Material(m));toned.name="Scenery finish / "+m.name;toned.SetColor("_EmissionColor",m.GetColor("_EmissionColor")*(Stage==1?.2f:.38f));toned.SetFloat("_Glossiness",.34f);landmarkMaterials[m]=toned;}src[i]=toned;}renderer.sharedMaterials=src;}}
 
@@ -42,7 +42,13 @@ public partial class SkyWorld:MonoBehaviour {
  void City(Transform t,int index){for(int side=-1;side<=1;side+=2)PlaceScenery(t,"StormCity",new Vector3(side*(18+(index%3)*1.1f),-2.7f,0),.9f+(index%3)*.12f);}
  void Orbit(Transform t,int index){for(int side=-1;side<=1;side+=2)PlaceScenery(t,"OrbitHabitat",new Vector3(side*(18+(index%2)), -4,0),.95f);}
  void CreateStars(){BuildStarField();}
- void Update(){if(FrameCoast())UpdateCoast();float dt=Mathf.Min(Time.deltaTime,.05f);if(!Scrolling)return;motion+=dt*Speed;UpdateChapterAtmosphere(dt);TickGroundLife(dt);TickCampaignWorld(dt);UpdateRescueWakes();if(ocean)ocean.SetFloat("_Travel",motion);foreach(var t in chunks){t.position+=Vector3.back*dt*Speed;if(t.position.z<-45)t.position+=Vector3.forward*140;}UpdateCoast();}
+ void Update(){if(FrameCoast())UpdateCoast();if(Scrolling)AdvanceScenery(Mathf.Min(Time.deltaTime,.05f));}
+ void AdvanceScenery(float dt){
+  motion+=dt*Speed;UpdateChapterAtmosphere(dt);TickGroundLife(dt);TickCampaignWorld(dt);UpdateRescueWakes();
+  if(ocean)ocean.SetFloat("_Travel",motion);
+  foreach(var t in chunks){t.position+=Vector3.back*dt*Speed;if(t.position.z<-45){t.position+=Vector3.forward*140;ResetSectorTransit(t);}}
+  UpdateCoast();
+ }
 }
 [ExecuteAlways]
 public class SkyPost:MonoBehaviour {

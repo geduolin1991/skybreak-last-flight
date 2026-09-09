@@ -10,13 +10,14 @@ float band(float x,float halfWidth){return 1-smoothstep(halfWidth,halfWidth+max(
 float noise(float2 p){float2 i=floor(p),f=frac(p);f=f*f*(3-2*f);return lerp(lerp(hash(i),hash(i+float2(1,0)),f.x),lerp(hash(i+float2(0,1)),hash(i+1),f.x),f.y);}
 void surf(Input IN,inout SurfaceOutputStandard o){
  float2 p=IN.worldPos.xz+float2(0,_Travel);float2 q=float2(p.x,p.y+35);
- float street=band(p.x,3.5)+band(abs(p.x)-12,1.4);float cross=band(abs(frac(q.y/14)*14-7)-5.4,1.4);float road=saturate(street+cross);
+ float street=band(p.x,3.5)+band(abs(p.x)-12,1.4);float cross=band(frac((q.y-5.5)/14+.5)*14-7,1.4);float road=saturate(street+cross);
  float grain=(hash(floor(p*30))-.5)*.016*(1-saturate(length(fwidth(p))*12));float slab=(hash(floor(p*1.3))-.5)*.022;
  float2 grid=abs(frac(p*1.3)-.5);float seam=smoothstep(.472,.5,max(grid.x,grid.y));
  float3 concrete=float3(.14,.18,.20)+slab-seam*.027;float3 asphalt=float3(.043,.061,.074)+grain;
  float lane=band(abs(p.x)-.11,.025)*step(.3,frac(q.y/2.7));float edge=band(abs(p.x)-3.28,.04);float stripe=lane*.58+edge*.35;
  float gutter=band(abs(p.x)-3.48,.05)*step(.3,frac(q.y*3));
- float district=fmod(floor((q.y+7)/42)+30,3);float power=district<1?_Power.x:district<2?_Power.y:_Power.z;
+ // Ten 14 m sectors wrap together; three power districts do not form a 126 m loop.
+ float sector=fmod(floor((q.y+7)/14)+1000,10);float district=fmod(floor(sector/3),3);float power=district<1?_Power.x:district<2?_Power.y:_Power.z;
  float light=band(abs(p.x)-3.36,.018)*step(.75,frac(q.y/3));
  float puddle=smoothstep(.47,.70,noise(p*float2(.9,.24)))*road;
  float reflection=exp(-abs(abs(p.x)-3.0)*1.7)*pow(saturate(sin(q.y*2.3+noise(p*.6)*2)),4)*puddle*power;

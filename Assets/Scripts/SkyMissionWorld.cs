@@ -9,6 +9,8 @@ public sealed class SkyCivilian {
 public partial class SkyWorld {
  readonly List<SkyCivilian> civilians=new List<SkyCivilian>();
  readonly List<Transform> traffic=new List<Transform>();
+ readonly Dictionary<Transform,Vector3> trafficStarts=new Dictionary<Transform,Vector3>();
+ void RegisterGroundTraffic(Transform car){traffic.Add(car);trafficStarts[car]=car.localPosition;}
  readonly List<Renderer>[] districtWindows={new List<Renderer>(),new List<Renderer>(),new List<Renderer>()};
  readonly float[] gridPower=new float[3];readonly bool[] gridRestored=new bool[3];
  readonly List<LineRenderer> orbitalLinks=new List<LineRenderer>();
@@ -17,7 +19,7 @@ public partial class SkyWorld {
  public int PoweredDistricts {get{int n=0;foreach(bool on in gridRestored)if(on)n++;return n;}}
  public bool UplinkActive {get;private set;}public bool UplinkComplete {get;private set;}
  public float UplinkProgress {get;private set;}
- void ResetLivingWorld(){groundSurface=null;civilians.Clear();traffic.Clear();orbitalLinks.Clear();missionRoot=null;orbitalDish=null;UplinkActive=UplinkComplete=false;UplinkProgress=0;for(int i=0;i<3;i++){districtWindows[i].Clear();gridPower[i]=0;gridRestored[i]=false;}}
+ void ResetLivingWorld(){groundSurface=null;civilians.Clear();traffic.Clear();trafficStarts.Clear();orbitalLinks.Clear();missionRoot=null;orbitalDish=null;UplinkActive=UplinkComplete=false;UplinkProgress=0;for(int i=0;i<3;i++){districtWindows[i].Clear();gridPower[i]=0;gridRestored[i]=false;}}
  public void BeginLivingMission(){
   if(missionRoot)Destroy(missionRoot.gameObject);civilians.Clear();orbitalLinks.Clear();
   missionRoot=new GameObject("Mission · visible civilian operations").transform;missionRoot.SetParent(terrain,false);
@@ -46,7 +48,8 @@ public partial class SkyWorld {
  public void TickLivingMission(float dt){
   foreach(var c in civilians){if(!c.go)continue;c.age+=dt;Vector3 p=c.station;
    if(c.health<=0){p.y-=Mathf.Min(1.1f,c.age*.008f);c.go.transform.rotation=Quaternion.Euler(0,0,16);}else if(c.departed){c.station+=Vector3.forward*dt*(Stage==0?4.8f:Stage==1?1.6f:10);p=c.station;}
-   else {p.x+=Mathf.Sin(c.age*.32f+c.index)*.14f;p.y+=Mathf.Sin(c.age*1.5f+c.index)*.04f;c.go.transform.rotation=Quaternion.Euler(Mathf.Sin(c.age*.7f)*.65f,Mathf.Sin(c.age*.32f)*1.2f,Mathf.Sin(c.age*.8f)*1.2f);}
+   else if(Stage!=1){p.x+=Mathf.Sin(c.age*.32f+c.index)*.14f;p.y+=Mathf.Sin(c.age*1.5f+c.index)*.04f;c.go.transform.rotation=Quaternion.Euler(Mathf.Sin(c.age*.7f)*.65f,Mathf.Sin(c.age*.32f)*1.2f,Mathf.Sin(c.age*.8f)*1.2f);}
+   if(Stage==1)c.go.transform.rotation=Quaternion.identity;
    c.go.transform.position=p;
 
   }
@@ -60,7 +63,7 @@ public partial class SkyWorld {
   if(Stage==1){
    for(int side=-1;side<=1;side+=2){var o=Art.Model(index%3==1?"CivicHospital112":"CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
     int district=(index/3)%3;foreach(var r in o.GetComponentsInChildren<MeshRenderer>())if(r.sharedMaterial&&(r.sharedMaterial.name.Contains("City_Window")||r.sharedMaterial.name.Contains("Campaign_Window")))districtWindows[district].Add(r);
-    var car=Art.Model(index%3==0?"EvacBus":"TrafficCar",t);car.transform.localPosition=new Vector3(side*(index%2==0?1.9f:12.1f),-3.04f,side*3);car.transform.localScale=Vector3.one*.28f;car.transform.localRotation=Quaternion.Euler(0,side<0?180:0,0);traffic.Add(car.transform);
+    var car=Art.Model(index%3==0?"EvacBus":"TrafficCar",t);car.transform.localPosition=new Vector3(side*(index%2==0?1.9f:12.1f),-3.04f,side*3);car.transform.localScale=Vector3.one*.28f;car.transform.localRotation=Quaternion.Euler(0,side<0?180:0,0);RegisterGroundTraffic(car.transform);
    }
    // Fine kerbs, drains and crossing stripes are geometry, not a blurred backdrop.
    var concrete=Art.Mat("Pavement concrete",new Color(.16f,.21f,.24f));var stripe=Art.Mat("Pedestrian ivory",new Color(.44f,.52f,.53f));
@@ -72,7 +75,7 @@ public partial class SkyWorld {
  void TickGroundLife(float dt){
   if(groundSurface){groundSurface.SetFloat("_Travel",motion);groundSurface.SetVector("_Power",new Vector4(gridPower[0],gridPower[1],gridPower[2],0));}
   for(int i=0;i<3;i++){gridPower[i]=Mathf.MoveTowards(gridPower[i],gridRestored[i]?1:0,dt*.35f);if(Mathf.Approximately(renderedGridPower[i],gridPower[i]))continue;renderedGridPower[i]=gridPower[i];worldBlock.Clear();worldBlock.SetColor("_EmissionColor",new Color(.95f,.59f,.21f)*gridPower[i]*1.1f);worldBlock.SetColor("_Color",Color.Lerp(new Color(.028f,.075f,.10f),new Color(.68f,.42f,.14f),gridPower[i]));foreach(var renderer in districtWindows[i])if(renderer)renderer.SetPropertyBlock(worldBlock);}
-  for(int i=0;i<traffic.Count;i++){var t=traffic[i];if(!t)continue;float speed=Stage==0?1.2f:gridRestored[(i/6)%3]?2.4f:.2f;t.localPosition+=Vector3.forward*dt*speed*(t.localRotation.eulerAngles.y>90?-1:1);Vector2 limits=Stage==0&&coastTrafficLimits.TryGetValue(t,out var quay)?quay:new Vector2(-7,7);float span=limits.y-limits.x;if(t.localPosition.z>limits.y)t.localPosition+=Vector3.back*span;if(t.localPosition.z<limits.x)t.localPosition+=Vector3.forward*span;}
+  for(int i=0;i<traffic.Count;i++){var t=traffic[i];if(!t)continue;float speed=Stage==0?1.2f:gridRestored[(i/6)%3]?2.4f:.2f;Vector2 limits=Stage==0&&coastTrafficLimits.TryGetValue(t,out var quay)?quay:new Vector2(-6,6);var p=t.localPosition;p.z=Mathf.Clamp(p.z+dt*speed*(t.localRotation.eulerAngles.y>90?-1:1),limits.x,limits.y);t.localPosition=p;}
  }
 }
 }

@@ -18,22 +18,30 @@ public partial class SkyWorld {
   tableauRoot=null;for(int i=0;i<3;i++)tableauPlanes[i]=null;weatherAge=tableauAge=0;stormAmount=1;
  }
  void CollectCampaignJoints(GameObject model,int district){
-  foreach(var t in model.GetComponentsInChildren<Transform>())if(t.name.StartsWith("Motion_"))
+  foreach(var t in model.GetComponentsInChildren<Transform>())if(t.name.StartsWith("Motion_")){
    campaignJoints.Add(new CampaignJoint{part=t,rest=t.localRotation,rotor=t.name.Contains("Rotor"),district=district});
+   campaignMovingRoots.Add(t);
+  }
  }
  bool IsCampaignMoving(Transform part){foreach(var root in campaignMovingRoots)if(root&&(part==root||part.IsChildOf(root)))return true;return false;}
- void BuildCampaignWorld(){
-  if(Stage==0)for(int side=-1;side<=1;side+=2){
-   var beacon=Art.Model("HarborSignal112",terrain);beacon.transform.localPosition=new Vector3(side*11.5f,-3,11);
-   beacon.transform.localScale=Vector3.one*.52f;CollectCampaignJoints(beacon,0);
-  }
-  if(Stage==2){
-   var observatory=Art.Model("OrbitalObservatory112",terrain);observatory.transform.localPosition=new Vector3(-7.5f,-8.2f,18);
+ void BuildHarborBeacon(Transform sector,int side,float x,float z,float scale){
+  // The vacant quay corner supports the foundation; its steps face inland.
+  // Both the batched tower and the rotating lamp follow this same bank.
+  var beacon=Art.Model("HarborSignal112",sector);
+  beacon.transform.localPosition=new Vector3(x+2.8f*scale,-3+.44f*scale,z+5.15f*scale);
+  beacon.transform.localScale=Vector3.one*(.28f*scale);
+  beacon.transform.localRotation=Quaternion.Euler(0,180,0);
+  TrackCoast(beacon.transform,side);CollectCampaignJoints(beacon,0);
+ }
+ void BuildCampaignSector(Transform sector,int index){
+  if(Stage==2&&index%5==1){
+   var observatory=Art.Model("OrbitalObservatory112",sector);observatory.transform.localPosition=new Vector3((index%2==0?-1:1)*7.5f,-8.2f,0);
    observatory.transform.localScale=Vector3.one*.68f;CollectCampaignJoints(observatory,0);
-   for(int side=-1;side<=1;side+=2){
-    var sail=Art.Model("SolarSail112",terrain);sail.transform.localPosition=new Vector3(side*10.6f,-7,side<0?-8:15);
+  }
+  if(Stage==2&&index%5==3){
+    int side=index%2==0?1:-1;
+    var sail=Art.Model("SolarSail112",sector);sail.transform.localPosition=new Vector3(side*10.6f,-7,0);
     sail.transform.localScale=Vector3.one*.47f;sail.transform.localRotation=Quaternion.Euler(0,side*16,0);CollectCampaignJoints(sail,side<0?1:2);
-   }
   }
  }
  void BuildDistrictTransit(Transform sector,int index){
@@ -60,8 +68,14 @@ public partial class SkyWorld {
   }
   foreach(var train in campaignTrains){
    if(!train.part)continue;if(gridRestored[train.district])train.travel+=dt*1.65f;
-   train.part.localPosition=train.start+Vector3.forward*Mathf.Repeat(train.travel,5.2f);
+   // Arrive at the station without teleporting back along visible track.
+   // A recycled sector resets its train only after leaving the camera.
+   train.part.localPosition=train.start+Vector3.forward*Mathf.Min(train.travel,5.2f);
   }
+ }
+ void ResetSectorTransit(Transform sector){
+  foreach(var train in campaignTrains)if(train.part&&train.part.parent==sector){train.travel=0;train.part.localPosition=train.start;}
+  foreach(var car in traffic)if(car&&car.parent==sector&&trafficStarts.TryGetValue(car,out var start))car.localPosition=start;
  }
  public void PresentCampaignTableau(int stage,int shot,bool aftermath){
   if(Stage!=stage){SetStage(stage);BeginLivingMission();}

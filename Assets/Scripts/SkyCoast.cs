@@ -35,8 +35,9 @@ public partial class SkyWorld {
    PlaceScenery(sector,port?"DawnHarbor":"DawnCove",new Vector3(x,-3,z),scale);
    coastAnchors.Add(new ShoreAnchor{sector=sector,shape=new Vector4(x,z,4.15f*scale,(port?5.9f:-5.8f)*scale)});
    if(port) {
+    if(pattern==0)BuildHarborBeacon(sector,side,x,z,scale);
     var bus=Art.Model("EvacBus",sector);bus.transform.localPosition=new Vector3(x-1.7f*scale,-2.54f,z);
-    bus.transform.localScale=Vector3.one*.26f;traffic.Add(bus.transform);
+    bus.transform.localScale=Vector3.one*.26f;RegisterGroundTraffic(bus.transform);
     TrackCoast(bus.transform,side);
     coastTrafficLimits[bus.transform]=new Vector2(z-4.5f*scale,z+4.5f*scale);
    }
