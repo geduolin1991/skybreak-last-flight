@@ -1,12 +1,12 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.12.0-web",
+  "version": "1.12.1-web",
   "unity": "6000.6.0f1",
-  "source_revision": "48505c5c3d74809092a2f088da892c490febadc4",
-  "web_wrapper_revision": "48505c5c3d74809092a2f088da892c490febadc4",
-  "built_at_utc": "2026-09-09T21:52:58.584948+00:00",
-  "build_identity": "ddae80d7db34582a1c605b288dc005b490c66208b142fab18a86e1708c32dfff",
-  "native_download_version": "1.12.0",
+  "source_revision": "8139c3b5878f6a3f701a5f9284faaabdfed90bf3",
+  "web_wrapper_revision": "8139c3b5878f6a3f701a5f9284faaabdfed90bf3",
+  "built_at_utc": "2026-09-09T23:03:19.523355+00:00",
+  "build_identity": "5361a83d9b2762ede2f895e07eb19385de1c31033ed142605d1fc95c259af71e",
+  "native_download_version": "1.12.1",
   "voice_clips": 423,
   "voice_events": 141,
   "voice_languages": [
@@ -34,6 +34,133 @@
   ],
   "mobile_frame_target": 60,
   "validation": {
+    "scenery_native": {
+      "pass": true,
+      "checks": [
+        "PASS Stage 0 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
+        "PASS Stage 0 retains its authored campaign landmarks",
+        "PASS Stage 0 moving lamps, dishes and panels survive static geometry batching",
+        "PASS Stage 0 / aspect 0.636 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 0 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 0 / aspect 0.636 cars and trains never teleport within a visible sector",
+        "PASS Stage 0 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 0 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 0 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 0 / aspect 1.777778 cars and trains never teleport within a visible sector",
+        "PASS Stage 0 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 0 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 0 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 0 / aspect 2.1641 cars and trains never teleport within a visible sector",
+        "PASS Stage 0 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 0 paused scenery does not advance",
+        "PASS Stage 1 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
+        "PASS Stage 1 retains its authored campaign landmarks",
+        "PASS Stage 1 moving lamps, dishes and panels survive static geometry batching",
+        "PASS Stage 1 / aspect 0.636 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 1 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 1 / aspect 0.636 cars and trains never teleport within a visible sector",
+        "PASS Stage 1 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 1 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 1 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 1 / aspect 1.777778 cars and trains never teleport within a visible sector",
+        "PASS Stage 1 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 1 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 1 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 1 / aspect 2.1641 cars and trains never teleport within a visible sector",
+        "PASS Stage 1 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
+        "PASS Road vehicles do not inherit floating-ship sway, bob or roll",
+        "PASS Stage 1 paused scenery does not advance",
+        "PASS Stage 2 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
+        "PASS Stage 2 retains its authored campaign landmarks",
+        "PASS Stage 2 moving lamps, dishes and panels survive static geometry batching",
+        "PASS Stage 2 / aspect 0.636 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 2 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 2 / aspect 0.636 cars and trains never teleport within a visible sector",
+        "PASS Stage 2 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 2 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 2 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 2 / aspect 1.777778 cars and trains never teleport within a visible sector",
+        "PASS Stage 2 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 2 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
+        "PASS Stage 2 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
+        "PASS Stage 2 / aspect 2.1641 cars and trains never teleport within a visible sector",
+        "PASS Stage 2 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
+        "PASS Stage 2 paused scenery does not advance"
+      ],
+      "runtime_total_checks": 396,
+      "simulated_seconds_per_map": 180,
+      "aspects": [
+        0.636,
+        1.777778,
+        2.1641
+      ],
+      "build_identity": "48433b0583ac27296c65e1d2290f92b8a0a8510c443c38432d94f047f5047d6c"
+    },
+    "scenery_all_stages": {
+      "pass": true,
+      "checks": [
+        "Stage 0: all fixtures move with their own sector",
+        "Stage 0: vehicles have no jump between route endpoints",
+        "Stage 0: continuity survives actual sector recycling",
+        "Stage 1: all fixtures move with their own sector",
+        "Stage 1: vehicles have no jump between route endpoints",
+        "Stage 1: continuity survives actual sector recycling",
+        "Powered trains visibly travel, arrive and wait without teleporting",
+        "Stage 2: all fixtures move with their own sector",
+        "Stage 2: vehicles have no jump between route endpoints",
+        "Stage 2: continuity survives actual sector recycling",
+        "No browser errors across the three maps"
+      ],
+      "stages": [
+        {
+          "stage": 0,
+          "samples": 102,
+          "wraps": 15,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 12
+        },
+        {
+          "stage": 1,
+          "samples": 100,
+          "wraps": 34,
+          "trainMotion": 102,
+          "trainStops": 191,
+          "anchors": 23
+        },
+        {
+          "stage": 2,
+          "samples": 102,
+          "wraps": 6,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 4
+        }
+      ],
+      "errors": [],
+      "scenario": "Controlled QA chapter transitions and restored city power; live rendering, scrolling and normal combat in each stage"
+    },
+    "scenery_browser": {
+      "pass": true,
+      "checks": [
+        "All four beacon bases retain their position relative to their own quay throughout live scrolling",
+        "Fixtures use the same speed and offscreen recycling as the coastline",
+        "Harbor vehicles have continuous motion with no visible route teleport",
+        "Pause freezes scenery travel",
+        "Return to hangar recreates exactly four anchored beacons with no duplicates",
+        "No browser errors"
+      ],
+      "coastFootprints": 20,
+      "wakeAlignment": true,
+      "musicContinuous": true,
+      "sceneResetsWithoutDuplicateCoast": true,
+      "seconds": 40,
+      "samples": 156,
+      "anchorWraps": 27,
+      "meanFps": 61.42833644396638,
+      "errors": [],
+      "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU"
+    },
     "story": {
       "pass": true,
       "checks": [
@@ -415,7 +542,9 @@
       "review": {
         "en/campaign_ending_full_2": "ASR formats the spoken number seven hundred and seventy as 770. Remaining words match."
       },
-      "physical_listening_panel": false
+      "physical_listening_panel": false,
+      "baseline_version": "1.12.0",
+      "reuse_reason": "No audio or campaign dialogue source changed in 1.12.1; playback rechecked in runtime QA."
     },
     "mobile_checks": 100,
     "webkit_checks": 16,
@@ -427,11 +556,11 @@
           584,
           848
         ],
-        "meanGameFps": 61.57169586181641,
-        "minGameFps": 60.95783996582031,
+        "meanGameFps": 61.43038505554199,
+        "minGameFps": 61.098575592041016,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          45
+          43
         ],
         "musicContinuous": true
       },
@@ -441,11 +570,11 @@
           780,
           1132
         ],
-        "meanGameFps": 61.4155776977539,
-        "minGameFps": 60.79481887817383,
+        "meanGameFps": 61.4647184753418,
+        "minGameFps": 60.95537567138672,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          46
+          44
         ],
         "musicContinuous": true
       },
@@ -455,139 +584,77 @@
           390,
           566
         ],
-        "meanGameFps": 61.0597339630127,
-        "minGameFps": 60.52710723876953,
+        "meanGameFps": 61.05713005065918,
+        "minGameFps": 60.033172607421875,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          47
+          45
         ],
         "musicContinuous": true
       }
     ],
-    "baseline_campaign_version": "1.12.0",
+    "baseline_campaign_version": "1.12.1",
     "native": {
       "pass": true,
-      "identity": "f3330833b4d1f53fbb74cc2d121942f65fd2415c75a0158ee0ab65fa6a807170",
+      "identity": "48433b0583ac27296c65e1d2290f92b8a0a8510c443c38432d94f047f5047d6c",
       "steps": [
         {
           "step": "runtime",
-          "seconds": 102.1,
+          "seconds": 101.9,
           "pass": true,
-          "checks": 347
+          "checks": 396
         },
         {
           "step": "campaign0",
-          "seconds": 165.7,
+          "seconds": 164.6,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign1",
-          "seconds": 189.5,
+          "seconds": 186.5,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign2",
-          "seconds": 172.7,
+          "seconds": 168.5,
           "pass": true,
           "checks": 4
         },
         {
           "step": "portraits",
-          "seconds": 18.3,
+          "seconds": 11.6,
           "pass": true,
           "checks": 0
         }
       ]
     },
     "android_checks": 8,
-    "cast": {
-      "pass": true,
-      "checks": [
-        "Pilot 0 real portrait, motion frames and complete caption",
-        "Pilot 1 real portrait, motion frames and complete caption",
-        "Pilot 2 real portrait, motion frames and complete caption",
-        "Rendered portrait and caption use the same delivered actor",
-        "Actual boss entrance uses enemy portrait and matching caption"
-      ],
-      "samples": [
-        {
-          "pilot": 0,
-          "name": "苍凛",
-          "line": "跟紧我，出发！",
-          "slot": {
-            "x": 8,
-            "y": 570,
-            "width": 82,
-            "height": 96
-          },
-          "coastInset": 5
-        },
-        {
-          "pilot": 1,
-          "name": "绯音",
-          "line": "坐稳了，开工！",
-          "slot": {
-            "x": 8,
-            "y": 570,
-            "width": 82,
-            "height": 96
-          },
-          "coastInset": 5
-        },
-        {
-          "pilot": 2,
-          "name": "雪璃",
-          "line": "航线清晰。我们走。",
-          "slot": {
-            "x": 8,
-            "y": 570,
-            "width": 82,
-            "height": 96
-          },
-          "coastInset": 5
-        }
-      ],
-      "enemy": {
-        "name": "加兰 / 利维坦舰长",
-        "line": "小队也敢挑战利维坦？这条航线，到此为止。",
-        "event": "commander_0_entry"
-      }
-    },
-    "portrait_motion": {
-      "pass": true,
-      "checks": [
-        {
-          "pilot": 0,
-          "changed_pixels": 22499
-        },
-        {
-          "pilot": 1,
-          "changed_pixels": 19618
-        },
-        {
-          "pilot": 2,
-          "changed_pixels": 14102
-        }
-      ]
-    },
     "recommended_orientation": "landscape",
     "portrait_blocked": false,
     "physical_phone_tested": false,
     "coast": {
       "pass": true,
-      "seconds": 45,
-      "samples": 193,
+      "checks": [
+        "All four beacon bases retain their position relative to their own quay throughout live scrolling",
+        "Fixtures use the same speed and offscreen recycling as the coastline",
+        "Harbor vehicles have continuous motion with no visible route teleport",
+        "Pause freezes scenery travel",
+        "Return to hangar recreates exactly four anchored beacons with no duplicates",
+        "No browser errors"
+      ],
       "coastFootprints": 20,
       "wakeAlignment": true,
-      "sceneResetsWithoutDuplicateCoast": true,
       "musicContinuous": true,
-      "meanFps": 61.09240983223003,
-      "peakKillMs": 0.4000000059604645,
-      "sceneryRenderers": 118,
+      "sceneResetsWithoutDuplicateCoast": true,
+      "seconds": 40,
+      "samples": 156,
+      "anchorWraps": 27,
+      "meanFps": 61.42833644396638,
       "errors": [],
-      "scope": "Actual mobile-emulated combat across multiple scenery wraps, desktop GPU"
+      "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU",
+      "same_scenario_as": "scenery-flow"
     }
   },
   "security_hardening": [
@@ -660,6 +727,26 @@
       "path": "Build/v1.12.0/Web.wasm.unityweb",
       "bytes": 4351635,
       "sha256": "05fd6b600df63ba43c189768a978852ac8fc281dc0a32cd656f94fbf98d7dcfd"
+    },
+    {
+      "path": "Build/v1.12.1/Web.data.unityweb",
+      "bytes": 101706809,
+      "sha256": "5d3ef0da15c4a715b1a0a285c000b50f8ec1956ce56425a6cd1eed7c9c868f85"
+    },
+    {
+      "path": "Build/v1.12.1/Web.framework.js.unityweb",
+      "bytes": 65033,
+      "sha256": "69a75aa78a0fb552bc20fc653be57e127a27c83de4b879f3064f73582802fe54"
+    },
+    {
+      "path": "Build/v1.12.1/Web.loader.js",
+      "bytes": 118806,
+      "sha256": "faa87b9c7383dda32e60abf9b420cfd8e7da543afc2d51a2654f5d23fcb899a1"
+    },
+    {
+      "path": "Build/v1.12.1/Web.wasm.unityweb",
+      "bytes": 4359637,
+      "sha256": "695e9021aae81f269ef1d058dee335c37b5d3e3924515ee18bc2d9a3f003abed"
     },
     {
       "path": "Build/v1.6.0/Web.data.unityweb",
@@ -787,24 +874,24 @@
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.12.0.js",
+      "path": "display-1.12.1.js",
       "bytes": 3540,
       "sha256": "1cfef70f97ed6707719179da446a51338ef4134437e8c61b48b6af246e409e5e"
     },
     {
       "path": "index.html",
       "bytes": 10291,
-      "sha256": "94aee81c46a2e29772f9ae721a8e7023bd97e30765494cd3cebf29ba32b16ee6"
+      "sha256": "d6023f854907ec53fb4490c694a29341ce3f32d2317205cc22f455c96c8063f2"
     },
     {
-      "path": "mobile-1.12.0.css",
+      "path": "mobile-1.12.1.css",
       "bytes": 20730,
       "sha256": "c29ca355a99c93d3342cc29e5536482f43a52acfcb43607a118e2de14926c0a3"
     },
     {
-      "path": "mobile-1.12.0.js",
+      "path": "mobile-1.12.1.js",
       "bytes": 21970,
-      "sha256": "d6c66214a0f5692d120de0a287f8dc99183e667affcb41b71251ccd072bdfccf"
+      "sha256": "6b7027b09e8a6861f61de0e48bac2e0709bd851b1055c710b271297c725bbef4"
     }
   ]
 }
