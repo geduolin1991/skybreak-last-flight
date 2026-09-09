@@ -64,7 +64,7 @@ public partial class SkyWorld {
   SectorRenderersBefore+=sector.GetComponentsInChildren<Renderer>().Length;
   foreach(var entry in groups) {
    var mesh=owned.Keep(new Mesh{name="Sector / "+entry.Key.name,indexFormat=IndexFormat.UInt32});
-   mesh.CombineMeshes(entry.Value.ToArray(),true,true);
+   mesh.CombineMeshes(entry.Value.ToArray(),true,true);if(Stage==0)TrackCoastMesh(mesh);
    var part=new GameObject("Batched / "+entry.Key.name);part.transform.SetParent(sector,false);
    part.AddComponent<MeshFilter>().sharedMesh=mesh;
    var renderer=part.AddComponent<MeshRenderer>();renderer.sharedMaterial=entry.Key;

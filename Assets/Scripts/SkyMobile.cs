@@ -4,11 +4,13 @@ namespace Skybreak {
 public partial class SkyGame {
  public bool MobileMode {get;private set;}
  float desktopShadowDistance;int desktopShadowCascades,desktopVSync,desktopFrameRate;
- bool mobileFocus;Vector2 mobileMove;float mobileInputAt;Rect mobilePortraitRect;string mobilePage="home";
+ bool mobileFocus;Vector2 mobileMove;float mobileInputAt;Rect mobilePortraitRect;Rect mobileBattleViewport=new Rect(0,0,1,1);string mobilePage="home";
+ int mobilePortraitSpeaker,mobilePortraitExpression;bool mobileRadioPresentation;
  [Serializable] class MobileInput {public float x,y;}
- [Serializable] class MobilePortraitBounds {public float x,y,w,h;}
+ [Serializable] class MobilePortraitBounds {public float x,y,w,h;public int speaker,expression;public bool radio;}
  [Serializable] public class MobileChoice {public string name,description,detail;public bool selected,enabled=true;public int index;}
  [Serializable] public class MobileSnapshot {
+  public string eventMessage,routeNode,routeNext,supportPilots;public float routeProgress,coastInset;public int shields,portraitSpeaker,portraitExpression;public Rect battleViewport,portraitBounds;public bool portraitReady;
   public string encounter,debrief;public float stageTime,bossArrival;public string state,page,pilot,age,bio,motto,ship,shipDescription,skill,weapon,route,stage,boss,mission,radioName,radioText,voiceLanguage,voiceId,commanderEvent;
   public int shipIndex,difficulty,hull,maxHull,bombs,score,highScore,combo,salvage,level,unlocked,stageIndex,routeTier,voiceReady,speaker,expression,kills,maxCombo,earnedSalvage;
   public float energy,overdrive,skillCooldown,bossHealth,progress,masterVolume,voiceVolume,moveX,moveY,playerX,playerZ;
@@ -18,7 +20,7 @@ public partial class SkyGame {
  public void WebMobileMode(string mode){
   bool next=mode=="1";if(next&&!MobileMode){desktopShadowDistance=QualitySettings.shadowDistance;desktopShadowCascades=QualitySettings.shadowCascades;desktopVSync=QualitySettings.vSyncCount;desktopFrameRate=Application.targetFrameRate;}
   if(!next&&MobileMode){QualitySettings.shadowDistance=desktopShadowDistance;QualitySettings.shadowCascades=desktopShadowCascades;QualitySettings.vSyncCount=desktopVSync;Application.targetFrameRate=desktopFrameRate;}
-  MobileMode=next;ResetMobileInput();mobileFocus=false;
+  MobileMode=next;ResetMobileInput();mobileFocus=false;if(!next)mobileBattleViewport=new Rect(0,0,1,1);
   if(Post)Post.MobileQuality=MobileMode;
   // The sea and city sit roughly 48 units from the camera. The old 35-unit
   // cutoff removed their shadows completely, even in the normal mobile view.
@@ -31,7 +33,13 @@ public partial class SkyGame {
  void ResetMobileInput(){mobileMove=Vector2.zero;mobileInputAt=-1;}
  Vector2 MobileMovement=>State==FlightState.Playing&&Time.unscaledTime-mobileInputAt<.35f?mobileMove:Vector2.zero;
  public void WebMobilePage(string page){if(page=="home"||page=="routes"||page=="settings"||page=="dossier"||page=="research"||page=="chapters"||page=="guide")mobilePage=page;}
- public void WebMobilePortrait(string json){try{var r=JsonUtility.FromJson<MobilePortraitBounds>(json);if(r!=null)mobilePortraitRect=new Rect(r.x,r.y,Mathf.Clamp01(r.w),Mathf.Clamp01(r.h));}catch(ArgumentException){}}
+ public void WebMobilePortrait(string json){try{var r=JsonUtility.FromJson<MobilePortraitBounds>(json);if(r!=null&&FiniteBounds(r)){mobilePortraitRect=new Rect(r.x,r.y,Mathf.Clamp01(r.w),Mathf.Clamp01(r.h));mobilePortraitSpeaker=Mathf.Clamp(r.speaker,0,5);mobilePortraitExpression=Mathf.Clamp(r.expression,0,2);mobileRadioPresentation=r.radio;}}catch(ArgumentException){}}
+ public void WebMobileViewport(string json){
+  try{var r=JsonUtility.FromJson<MobilePortraitBounds>(json);if(r==null||!FiniteBounds(r)||r.x<0||r.y<0||r.w<.1f||r.h<.1f||r.x+r.w>1.001f||r.y+r.h>1.001f)return;
+   mobileBattleViewport=new Rect(r.x,r.y,r.w,r.h);ApplyViewport();
+  }catch(ArgumentException){}
+ }
+ static bool FiniteBounds(MobilePortraitBounds r)=>!float.IsNaN(r.x+r.y+r.w+r.h)&&!float.IsInfinity(r.x+r.y+r.w+r.h);
  public void WebMobileAction(string action){
   if(!MobileMode||string.IsNullOrEmpty(action))return;
   if(action=="release"){ResetMobileInput();return;}
@@ -71,11 +79,14 @@ public partial class SkyGame {
  }
  public MobileSnapshot MobileStatus(){
   MobileRadio(out int speaker,out string name,out string line,out int expression);
-  var s=new MobileSnapshot{bossInstruction=Boss!=null?bossOrder:"",bossModules=BossModuleCount,bossTelegraph=bossTell>0,wingmen=WingmanCount,supportSeconds=SupportRemaining,cameraAspect=Cam.aspect,cameraSize=Cam.orthographicSize,playerViewport=Cam.WorldToViewportPoint(PlayerPos),flightMin=Cam.WorldToViewportPoint(new Vector3(-10,1,-10)),flightMax=Cam.WorldToViewportPoint(new Vector3(10,1,10)),encounter=EncounterLabel,debrief=ChapterDebrief,stageTime=StageTime,bossArrival=BossArrivalTime,mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
+  int radioActor=string.IsNullOrEmpty(line)?Ship:speaker;
+  var s=new MobileSnapshot{eventMessage=toastClock>0?toastText:"",coastInset=World.CoastInset,routeNode=routeNodes[Ship,CurrentRoute,RouteTier-1],routeNext=RouteTier<3?routeNodes[Ship,CurrentRoute,RouteTier]:"全部专精已展开",routeProgress=RouteTier>=3?1:Mathf.Clamp01((routeExperience-(RouteTier==1?0:30))/(RouteTier==1?30f:55f)),shields=routeShield,supportPilots=string.Join(" / ",squadron.ConvertAll(w=>PilotNames[w.pilot])),battleViewport=mobileBattleViewport,portraitBounds=mobilePortraitRect,portraitReady=radioActor>=3?commanderPortraits[Mathf.Clamp(radioActor-3,0,2)]!=null:portraits[Mathf.Clamp(radioActor,0,2)]!=null,
+   bossInstruction=Boss!=null?bossOrder:"",bossModules=BossModuleCount,bossTelegraph=bossTell>0,wingmen=WingmanCount,supportSeconds=SupportRemaining,cameraAspect=Cam.aspect,cameraSize=Cam.orthographicSize,playerViewport=Cam.WorldToViewportPoint(PlayerPos),flightMin=Cam.WorldToViewportPoint(new Vector3(-10,1,-10)),flightMax=Cam.WorldToViewportPoint(new Vector3(10,1,10)),encounter=EncounterLabel,debrief=ChapterDebrief,stageTime=StageTime,bossArrival=BossArrivalTime,mobile=MobileMode,state=State.ToString(),page=mobilePage,pilot=PilotNames[Ship],age=PilotAges[Ship],bio=PilotBios[Ship],motto=PilotMottos[Ship],ship=ShipNames[Ship],shipDescription=new[]{"速射主炮 / 蜂群导弹","重型破片 / 聚爆火力","高速机动 / 贯穿轨道炮"}[Ship],skill=ActiveSkillName,weapon=WeaponTitle,route=RouteName,stage=StageNames[Stage],boss=Boss!=null?BossNames[Stage]:"",mission=MissionStatus,radioName=name,radioText=line,voiceLanguage=VoiceLanguageCode,voiceId=VoiceActiveId,commanderEvent=CommanderEvent,
    shipIndex=Ship,difficulty=Difficulty,hull=Hull,maxHull=MaxHull,bombs=Bombs,score=Score,highScore=HighScore,combo=Combo,salvage=salvage,level=PilotLevel(Ship),unlocked=Unlocked,stageIndex=Stage,routeTier=RouteTier,voiceReady=VoiceClipsReady,speaker=speaker,expression=expression,kills=Kills,maxCombo=MaxCombo,earnedSalvage=earnedSalvage,
    energy=Energy,overdrive=Overdrive,skillCooldown=SkillCooldown,bossHealth=Boss!=null?Boss.hp/Boss.maxHp:0,progress=Progress,masterVolume=MasterVolume,voiceVolume=VoiceVolume,moveX=MobileMovement.x,moveY=MobileMovement.y,playerX=PlayerPos.x,playerZ=PlayerPos.z,
    focus=mobileFocus,voiceEnabled=VoiceEnabled,musicEnabled=MusicEnabled,shakeEnabled=ShakeEnabled,voicePlaying=VoicePlaying,nova=NovaActive,portrait=State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory,
    radio=State==FlightState.Playing&&!string.IsNullOrEmpty(line),canSkill=State==FlightState.Playing&&SkillCooldown<=0,canBomb=State==FlightState.Playing&&Bombs>0&&stageEndClock<=0&&!NovaActive,canOverdrive=State==FlightState.Playing&&Energy>=100&&Overdrive<=0};
+  s.portraitSpeaker=mobilePortraitSpeaker;s.portraitExpression=mobilePortraitExpression;
   if(Stage==0&&State!=FlightState.Hangar){s.convoy=new float[World.Civilians.Count];for(int i=0;i<s.convoy.Length;i++)s.convoy[i]=World.Civilians[i].health/100f;}
   if(State==FlightState.Hangar){
    s.routes=new MobileChoice[3];s.research=new MobileChoice[3];int[] levels={researchFire,researchArmor,researchSkill};
@@ -87,11 +98,18 @@ public partial class SkyGame {
  void DrawMobilePresentation(){
   if(Event.current.type!=EventType.Repaint)return;
   GUI.matrix=Matrix4x4.identity;
-  // The mobile camera fills its own canvas. HUD and controls live outside it.
+  // Portrait mode reserves a real radio dock below the camera. It shares the
+  // Unity canvas so the same animated pilot rig remains visible on every device.
+  if(mobileBattleViewport.y>0)Rect(0,Screen.height*(1-mobileBattleViewport.y),Screen.width,Screen.height*mobileBattleViewport.y,new Color(.028f,.065f,.09f,1));
   Rect r=new Rect(mobilePortraitRect.x*Screen.width,mobilePortraitRect.y*Screen.height,mobilePortraitRect.width*Screen.width,mobilePortraitRect.height*Screen.height);
   if(r.width<=0||r.height<=0)return;
   if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Ship,r.x,r.y,r.width,r.height);}
-  else if(State==FlightState.Playing){MobileRadio(out int speaker,out string name,out string line,out int expression);if(!string.IsNullOrEmpty(line)){if(speaker>=3)DrawCommanderPortrait(speaker,r.x,r.y,r.width,r.height,expression);else {r=SkyPortraitRig.FitRect(r,(2f/3)*.62f/.28f);Portrait(speaker,r.x,r.y,r.width,r.height,true,false);}}}
+  else if(State==FlightState.Playing&&mobileRadioPresentation){int speaker=mobilePortraitSpeaker;
+   // The web caption and portrait use one delivered radio snapshot. Sampling
+   // the live voice here could show the next actor before its caption arrived.
+   if(speaker>=3)DrawCommanderPortrait(speaker,r.x,r.y,r.width,r.height,mobilePortraitExpression);
+   else {r=SkyPortraitRig.FitRect(r,SkyPortraitRig.BustAspect);Portrait(speaker,r.x,r.y,r.width,r.height,false,false,true);}
+  }
   GUI.enabled=true;
  }
 }

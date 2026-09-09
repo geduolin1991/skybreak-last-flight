@@ -3,6 +3,7 @@ using UnityEngine;
 namespace Skybreak {
 // Analytic, unscaled motion is independent of GUI repaint counts and frame rate.
 public static class SkyPortraitRig {
+ public const float BustAspect=(2f/3)*.94f/.73f;
  public static Rect FitRect(Rect bounds,float aspect) {
   float width=Mathf.Min(bounds.width,bounds.height*aspect),height=width/aspect;
   return new Rect(bounds.center.x-width*.5f,bounds.center.y-height*.5f,width,height);
@@ -49,7 +50,7 @@ public static class SkyPortraitRig {
   pose=new Vector4(turn*.14f,bend,Mathf.Sin(breath)*.45f,0);
   return new Vector4(lean,lateral,rise,0);
  }
- public static void Animate(Material material,int pilot,float clock,float selectionAge,bool face,bool fade) {
+ public static void Animate(Material material,int pilot,float clock,float selectionAge,bool face,bool fade,bool bust=false) {
   var p=profiles[pilot];float t=clock*p.tempo+pilot*1.75f;
   Vector4 body=SampleBody(p,pilot,t,out var pose);
   Vector4 lag=SampleBody(p,pilot,t-.10f,out var a)*.62f
@@ -72,7 +73,7 @@ public static class SkyPortraitRig {
    phase>.32f&&phase<.45f?Mathf.Sin((phase-.32f)/.13f*Mathf.PI):0;
   material.SetFloat("_Blink",blink);material.SetFloat("_Life",t);
   material.SetFloat("_Fade",fade?1:0);
-  material.SetVector("_UVRect",face?new Vector4(pilot==2?.04f:.12f,.68f,.62f,.28f):new Vector4(0,0,1,1));
+  material.SetVector("_UVRect",bust?new Vector4(.02f,.25f,.94f,.73f):face?new Vector4(pilot==2?.04f:.12f,.68f,.62f,.28f):new Vector4(0,0,1,1));
  }
 }
 }

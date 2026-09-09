@@ -43,7 +43,7 @@ body.touch-mode #mobile-shell.ready{display:block;position:absolute;inset:0;colo
 .m-radio{top:calc(var(--game-inset-y,0px) + 8px);left:calc(var(--game-inset-x,0px) + 7px);width:min(150px,calc(var(--game-width,100%) * .22))}.m-radio-face{width:76px;height:49px}.m-radio-copy{max-height:130px;padding:5px 6px}.m-radio-copy p{font-size:11px!important;line-height:1.5!important}
 .battle-layout:not(.portrait-layout) .m-actions{right:8px;bottom:12px;width:max(78px,calc(var(--game-inset-x) - 16px));max-width:116px;grid-template-columns:1fr;gap:6px}
 .battle-layout:not(.portrait-layout) .m-actions button{height:46px;min-height:44px}
-.battle-layout:not(.portrait-layout) .m-focus{right:8px;bottom:222px;width:max(78px,calc(var(--game-inset-x) - 16px));max-width:116px}
+.battle-layout:not(.portrait-layout) .m-focus{right:8px;bottom:204px;width:max(78px,calc(var(--game-inset-x) - 16px));max-width:116px}
 .battle-layout:not(.portrait-layout) .m-stick-zone{width:max(100px,var(--game-inset-x));height:170px}
 .battle-layout:not(.portrait-layout) .m-stick-base{width:88px;height:88px;left:50%;margin-left:-44px;bottom:42px}
 .battle-layout:not(.portrait-layout) .m-stick-knob{left:23px;top:23px}
@@ -72,3 +72,53 @@ body.touch-mode #mobile-shell.ready{display:block;position:absolute;inset:0;colo
 @media(max-height:710px) and (orientation:portrait){.portrait-layout .m-home-info{bottom:110px;padding-top:8px}.portrait-layout .m-home-info h2{font-size:24px}.portrait-layout .m-home-info .m-motto{margin:3px 0}.portrait-layout .m-picker{margin:4px 0}.portrait-layout .m-home-info .m-deploy{margin-top:5px}.portrait-layout .m-home-portrait{height:50%;top:48px}.portrait-layout .m-brief{max-height:50%}}
 
 #m-objective.m-threat{color:#ffc19a;font-weight:700}
+
+/* 1.11 cockpit: retain mission, upgrades and the actual animated cast. */
+.m-orientation-tip{display:none}
+.m-hud #m-mission-status{display:block;font-size:11px;line-height:16px;white-space:normal}
+.m-hud .m-mission{white-space:normal;overflow:visible}
+#m-objective{display:block;line-height:16px;min-height:16px}
+.m-radio{width:min(158px,calc(var(--game-width) * .24))}
+.m-radio-face{width:86px;height:100px}
+.m-radio-copy{max-height:none;overflow:visible;background:#07121ce8}
+.m-radio-copy p{font-size:12px!important;line-height:1.5!important;overflow-wrap:anywhere}
+.m-radio-heading{display:flex;align-items:center;justify-content:space-between;gap:5px}
+.m-radio-heading strong{font-size:12px;line-height:18px}
+#m-channel{font-size:10px;color:#89a8b8;white-space:nowrap}
+.m-radio.speaking #m-channel{color:#aff5dc}
+.m-radio.enemy #m-channel{color:#ffb893}
+.m-radio.idle{display:none}
+.m-flight-record{border-top:1px solid #41636f;margin-top:16px;padding-top:14px}
+.m-flight-record p,.m-transmissions p{font-size:12px!important}
+.m-transmissions{margin-top:12px;pointer-events:auto}
+.m-transmissions summary{min-height:44px;display:flex;align-items:center;color:#a4edf4;cursor:pointer}
+.m-transmissions summary::before{content:'▸';margin-right:8px}.m-transmissions[open] summary::before{content:'▾'}
+.m-transmissions article{padding:10px 0;border-top:1px solid #28424e}
+.m-transmissions article strong{font-size:12px}
+.m-transmissions article small{margin-left:10px}
+.m-event{position:absolute;top:calc(var(--game-inset-y) + 8px);left:50%;transform:translateX(-50%);width:min(340px,55%);text-align:center;padding:5px 8px;background:#102530e8;border-bottom:2px solid #84edfa;font-size:12px;line-height:18px;pointer-events:none}
+.m-support progress{width:100%;height:3px;display:block;accent-color:#84edfa;border:0;background:#29434e;margin-top:4px}
+.battle-layout:not(.portrait-layout) .m-support{display:block;left:8px;bottom:186px;transform:none;width:max(90px,calc(var(--game-inset-x) - 16px));max-width:116px;font-size:10px;padding:0;background:none}
+.battle-layout:not(.portrait-layout) .m-radio-heading{display:block}
+.battle-layout:not(.portrait-layout) #m-channel{display:none}
+.portrait-layout .m-radio,.portrait-layout .m-radio.idle{display:flex;top:var(--game-bottom);left:0;width:100%;height:var(--radio-height);padding:4px 8px;align-items:center;gap:8px;border-top:1px solid #41636f;border-bottom:1px solid #28424e;background:transparent}
+.portrait-layout .m-radio-face{width:82px;height:96px;flex:0 0 82px;align-self:center}
+.portrait-layout .m-radio-copy{flex:1;min-width:0;max-height:none;padding:0 4px;background:transparent;border:0}
+.portrait-layout .m-radio-copy p{font-size:12px!important;line-height:1.45!important;margin:4px 0 0!important}
+.portrait-layout .m-radio.idle .m-radio-copy p{color:#96b4c2}
+.portrait-layout .m-stick-zone{bottom:0;height:var(--deck-height);width:46%}
+.portrait-layout .m-stick-base{width:94px;height:94px;margin-left:-47px;bottom:22px}
+.portrait-layout .m-stick-knob{left:26px;top:26px}
+.portrait-layout .m-stick-label{bottom:5px}
+.portrait-layout .m-actions{bottom:8px;gap:6px}
+.portrait-layout .m-actions button{height:49px;min-height:44px}
+.portrait-layout .m-actions button b{font-size:12px}
+.portrait-layout .m-focus{bottom:118px;min-height:44px!important}
+.portrait-layout .m-support{top:calc(100% - var(--deck-height) + 9px);bottom:auto;left:10px;width:40%;max-width:40%;font-size:10px;line-height:14px}
+.portrait-layout .m-event{top:calc(var(--game-inset-y) + 5px);max-width:85%;width:max-content;font-size:11px;padding:3px 7px}
+@media (max-height:710px) and (orientation:portrait){.portrait-layout .m-radio-copy p{font-size:11px!important}.portrait-layout .m-radio-heading strong{font-size:11px}}
+@media (max-height:350px) and (orientation:landscape){.battle-layout:not(.portrait-layout) .m-focus{bottom:204px}.battle-layout:not(.portrait-layout) .m-support{bottom:174px}.battle-layout:not(.portrait-layout) .m-radio-face{width:73px;height:85px}.battle-layout:not(.portrait-layout) .m-radio-copy p{font-size:11px!important}}
+
+.battle-layout:not(.portrait-layout) .m-actions{bottom:8px;gap:4px}
+.battle-layout:not(.portrait-layout) .m-actions button{height:44px;min-height:44px}
+.m-support progress::-webkit-progress-bar{background:#29434e}.m-support progress::-webkit-progress-value{background:#84edfa}.m-support progress::-moz-progress-bar{background:#84edfa}

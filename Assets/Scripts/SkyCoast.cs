@@ -9,6 +9,12 @@ public partial class SkyWorld {
  readonly Dictionary<Transform,Vector2> coastTrafficLimits=new Dictionary<Transform,Vector2>();
  readonly Vector4[] visibleShores=new Vector4[8];
  readonly float[] shoreDistances=new float[8];
+ struct FramedCoast {public Transform part;public float origin;public int side;}
+ readonly List<FramedCoast> framedCoast=new List<FramedCoast>(20);
+ struct CoastMesh {public Mesh mesh;public Vector3[] original,framed;}
+ readonly List<CoastMesh> coastMeshes=new List<CoastMesh>(120);
+ float coastInset=-1;
+ public float CoastInset=>Mathf.Max(0,coastInset);
  static readonly int shoreProperty=Shader.PropertyToID("_Shore");
  public int CoastFootprints {get;private set;}
  public bool OceanReady=>ocean&&ocean.shader.isSupported&&ocean.GetTexture("_WaveMap");
@@ -31,9 +37,25 @@ public partial class SkyWorld {
    if(port) {
     var bus=Art.Model("EvacBus",sector);bus.transform.localPosition=new Vector3(x-1.7f*scale,-2.54f,z);
     bus.transform.localScale=Vector3.one*.26f;traffic.Add(bus.transform);
+    TrackCoast(bus.transform,side);
     coastTrafficLimits[bus.transform]=new Vector2(z-4.5f*scale,z+4.5f*scale);
    }
   }
+ }
+ void TrackCoast(Transform part,int side){framedCoast.Add(new FramedCoast{part=part,origin=part.localPosition.x,side=side});}
+ void TrackCoastMesh(Mesh mesh){var points=mesh.vertices;coastMeshes.Add(new CoastMesh{mesh=mesh,original=points,framed=new Vector3[points.Length]});}
+ bool FrameCoast(){
+  if(Stage!=0)return false;
+  float next=Mathf.Clamp(18-Cam.orthographicSize*Cam.aspect,0,5);
+  if(Mathf.Abs(next-coastInset)<.005f)return false;coastInset=next;
+  // Translate whole banks, including their vehicles. Geometry and the flight
+  // corridor retain their scale; rotation never reconstructs the level.
+  foreach(var item in framedCoast)if(item.part){var p=item.part.localPosition;p.x=item.origin-item.side*next;item.part.localPosition=p;}
+  // Coast banks consist of disconnected islands, wholly on either side of
+  // x=0. Shift their cached vertices only on viewport changes, preserving each
+  // triangle, the original normals and a single draw per shared material.
+  foreach(var item in coastMeshes)if(item.mesh){for(int i=0;i<item.original.Length;i++){var p=item.original[i];p.x-=Mathf.Sign(p.x)*next;item.framed[i]=p;}item.mesh.SetVertices(item.framed);item.mesh.RecalculateBounds();}
+  return true;
  }
  void UpdateCoast() {
   if(!ocean)return;
@@ -42,7 +64,7 @@ public partial class SkyWorld {
   float center=Cam.transform.position.z+(Cam.transform.position.y+10)*.57735027f;
   for(int i=0;i<8;i++){shoreDistances[i]=float.MaxValue;visibleShores[i]=new Vector4(10000,10000,1,1);}
   foreach(var anchor in coastAnchors) {
-   if(!anchor.sector)continue;Vector4 shape=anchor.shape;shape.y+=anchor.sector.position.z;
+   if(!anchor.sector)continue;Vector4 shape=anchor.shape;shape.x-=Mathf.Sign(shape.x)*CoastInset;shape.y+=anchor.sector.position.z;
    float distance=Mathf.Abs(shape.y-center);
    for(int i=0;i<8;i++)if(distance<shoreDistances[i]) {
     for(int j=7;j>i;j--){shoreDistances[j]=shoreDistances[j-1];visibleShores[j]=visibleShores[j-1];}

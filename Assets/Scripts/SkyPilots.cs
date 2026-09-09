@@ -42,7 +42,7 @@ public partial class SkyGame {
    SkyPortraitRig.Configure(portraitMats[i],i);
   }
  }
- void Portrait(int pilot,float x,float y,float w,float h,bool face=false,bool fade=true){
+ void Portrait(int pilot,float x,float y,float w,float h,bool face=false,bool fade=true,bool bust=false){
   if(Event.current.type!=EventType.Repaint)return;
   InitPortraits();if(!portraits[pilot])return;
   if(!face){
@@ -51,7 +51,7 @@ public partial class SkyGame {
   }
   float clock=portraitCaptureTime>=0?portraitCaptureTime:Time.unscaledTime;
   float age=portraitCaptureTime>=0?portraitCaptureTime:Time.unscaledTime-portraitShownAt[pilot];
-  var m=portraitMats[pilot];SkyPortraitRig.Animate(m,pilot,clock,age,face,fade);
+  var m=portraitMats[pilot];SkyPortraitRig.Animate(m,pilot,clock,age,face,fade,bust);
   Graphics.DrawTexture(new Rect(x,y,w,h),portraits[pilot],m);
  }
  void DrawRadio(){
