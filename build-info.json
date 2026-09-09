@@ -1,14 +1,14 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.11.0-web",
+  "version": "1.12.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "9cd8c7661ead43714c74cc7f827b2f6569b93df1",
-  "web_wrapper_revision": "9cd8c7661ead43714c74cc7f827b2f6569b93df1",
-  "built_at_utc": "2026-09-09T20:20:30.425695+00:00",
-  "build_identity": "32dc89850eefe60dc92d3387babefcbe5dfc7dfca74bd29191a17ad1101f5110",
-  "native_download_version": "1.11.0",
-  "voice_clips": 330,
-  "voice_events": 110,
+  "source_revision": "48505c5c3d74809092a2f088da892c490febadc4",
+  "web_wrapper_revision": "48505c5c3d74809092a2f088da892c490febadc4",
+  "built_at_utc": "2026-09-09T21:52:58.584948+00:00",
+  "build_identity": "ddae80d7db34582a1c605b288dc005b490c66208b142fab18a86e1708c32dfff",
+  "native_download_version": "1.12.0",
+  "voice_clips": 423,
+  "voice_events": 141,
   "voice_languages": [
     "zh",
     "en",
@@ -20,6 +20,8 @@
     95,
     110
   ],
+  "campaign_sequences": 11,
+  "campaign_endings": 3,
   "mobile": true,
   "orientations": [
     "landscape",
@@ -32,6 +34,389 @@
   ],
   "mobile_frame_target": 60,
   "validation": {
+    "story": {
+      "pass": true,
+      "checks": [
+        "Starting a full run presents the three-part prologue",
+        "390x844 story remains safe through rotation",
+        "390x844 complete prose is preserved without horizontal clipping",
+        "390x844 long story content remains scrollable",
+        "390x844 full-proportion animated pilot slot",
+        "390x844 all story buttons remain visible and tappable",
+        "390x844 dialogue text does not overlap controls",
+        "360x640 story remains safe through rotation",
+        "360x640 complete prose is preserved without horizontal clipping",
+        "360x640 long story content remains scrollable",
+        "360x640 full-proportion animated pilot slot",
+        "360x640 all story buttons remain visible and tappable",
+        "360x640 dialogue text does not overlap controls",
+        "430x932 story remains safe through rotation",
+        "430x932 complete prose is preserved without horizontal clipping",
+        "430x932 long story content remains scrollable",
+        "430x932 full-proportion animated pilot slot",
+        "430x932 all story buttons remain visible and tappable",
+        "430x932 dialogue text does not overlap controls",
+        "768x1024 story remains safe through rotation",
+        "768x1024 complete prose is preserved without horizontal clipping",
+        "768x1024 long story content remains scrollable",
+        "768x1024 full-proportion animated pilot slot",
+        "768x1024 all story buttons remain visible and tappable",
+        "768x1024 dialogue text does not overlap controls",
+        "844x390 story remains safe through rotation",
+        "844x390 complete prose is preserved without horizontal clipping",
+        "844x390 long story content remains scrollable",
+        "844x390 full-proportion animated pilot slot",
+        "844x390 all story buttons remain visible and tappable",
+        "844x390 dialogue text does not overlap controls",
+        "667x320 story remains safe through rotation",
+        "667x320 complete prose is preserved without horizontal clipping",
+        "667x320 long story content remains scrollable",
+        "667x320 full-proportion animated pilot slot",
+        "667x320 all story buttons remain visible and tappable",
+        "667x320 dialogue text does not overlap controls",
+        "Next page changes narrative and speaker together",
+        "Rendered story portrait matches the delivered speaker",
+        "Autoplay can be enabled",
+        "Autoplay can be disabled",
+        "Completing the prologue returns to launch briefing",
+        "Archive contains all campaign sequences with progress-based locks",
+        "Archive replays the prologue independently of a battle",
+        "Archive skip returns to the archive menu",
+        "Prologue plays its actual zh recording",
+        "Prologue plays its actual en recording",
+        "Prologue plays its actual ja recording",
+        "No story browser errors"
+      ],
+      "samples": [
+        {
+          "size": [
+            390,
+            844
+          ],
+          "portrait": {
+            "x": 133.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 256.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 19.5,
+            "y": 248,
+            "w": 351,
+            "h": 470,
+            "right": 370.5,
+            "bottom": 718
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 19.5,
+              "y": 728,
+              "w": 171.5,
+              "h": 48,
+              "right": 191,
+              "bottom": 776
+            },
+            {
+              "x": 199,
+              "y": 728,
+              "w": 171.5,
+              "h": 48,
+              "right": 370.5,
+              "bottom": 776
+            },
+            {
+              "x": 19.5,
+              "y": 784,
+              "w": 351,
+              "h": 48,
+              "right": 370.5,
+              "bottom": 832
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            360,
+            640
+          ],
+          "portrait": {
+            "x": 130,
+            "y": 55,
+            "w": 100,
+            "h": 150,
+            "right": 230,
+            "bottom": 205
+          },
+          "copy": {
+            "x": 18,
+            "y": 207,
+            "w": 324,
+            "h": 307,
+            "right": 342,
+            "bottom": 514
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 18,
+              "y": 524,
+              "w": 158,
+              "h": 48,
+              "right": 176,
+              "bottom": 572
+            },
+            {
+              "x": 184,
+              "y": 524,
+              "w": 158,
+              "h": 48,
+              "right": 342,
+              "bottom": 572
+            },
+            {
+              "x": 18,
+              "y": 580,
+              "w": 324,
+              "h": 48,
+              "right": 342,
+              "bottom": 628
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            430,
+            932
+          ],
+          "portrait": {
+            "x": 153.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 276.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 21.5,
+            "y": 248,
+            "w": 387,
+            "h": 558,
+            "right": 408.5,
+            "bottom": 806
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 21.5,
+              "y": 816,
+              "w": 189.5,
+              "h": 48,
+              "right": 211,
+              "bottom": 864
+            },
+            {
+              "x": 219,
+              "y": 816,
+              "w": 189.5,
+              "h": 48,
+              "right": 408.5,
+              "bottom": 864
+            },
+            {
+              "x": 21.5,
+              "y": 872,
+              "w": 387,
+              "h": 48,
+              "right": 408.5,
+              "bottom": 920
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            768,
+            1024
+          ],
+          "portrait": {
+            "x": 322.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 445.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 38.390625,
+            "y": 248,
+            "w": 691.1875,
+            "h": 650,
+            "right": 729.578125,
+            "bottom": 898
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 38.390625,
+              "y": 908,
+              "w": 341.609375,
+              "h": 48,
+              "right": 380,
+              "bottom": 956
+            },
+            {
+              "x": 388,
+              "y": 908,
+              "w": 341.609375,
+              "h": 48,
+              "right": 729.609375,
+              "bottom": 956
+            },
+            {
+              "x": 38.390625,
+              "y": 964,
+              "w": 691.21875,
+              "h": 48,
+              "right": 729.609375,
+              "bottom": 1012
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            844,
+            390
+          ],
+          "portrait": {
+            "x": 614.71875,
+            "y": 56,
+            "w": 178.65625,
+            "h": 268,
+            "right": 793.375,
+            "bottom": 324
+          },
+          "copy": {
+            "x": 42.1875,
+            "y": 72,
+            "w": 464.1875,
+            "h": 236,
+            "right": 506.375,
+            "bottom": 308
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 42.1875,
+              "y": 330,
+              "w": 212.453125,
+              "h": 48,
+              "right": 254.640625,
+              "bottom": 378
+            },
+            {
+              "x": 262.640625,
+              "y": 330,
+              "w": 212.46875,
+              "h": 48,
+              "right": 475.109375,
+              "bottom": 378
+            },
+            {
+              "x": 483.109375,
+              "y": 330,
+              "w": 318.6875,
+              "h": 48,
+              "right": 801.796875,
+              "bottom": 378
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            667,
+            320
+          ],
+          "portrait": {
+            "x": 490.328125,
+            "y": 52,
+            "w": 136.65625,
+            "h": 205,
+            "right": 626.984375,
+            "bottom": 257
+          },
+          "copy": {
+            "x": 33.34375,
+            "y": 59,
+            "w": 366.84375,
+            "h": 193,
+            "right": 400.1875,
+            "bottom": 252
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 33.34375,
+              "y": 268,
+              "w": 166.9375,
+              "h": 44,
+              "right": 200.28125,
+              "bottom": 312
+            },
+            {
+              "x": 208.28125,
+              "y": 268,
+              "w": 166.953125,
+              "h": 44,
+              "right": 375.234375,
+              "bottom": 312
+            },
+            {
+              "x": 383.234375,
+              "y": 268,
+              "w": 250.421875,
+              "h": 44,
+              "right": 633.65625,
+              "bottom": 312
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        }
+      ],
+      "errors": []
+    },
+    "voice_review": {
+      "pass": true,
+      "clips": 93,
+      "languages": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "method": "Independent local Qwen3-ASR transcript and waveform validation",
+      "review": {
+        "en/campaign_ending_full_2": "ASR formats the spoken number seven hundred and seventy as 770. Remaining words match."
+      },
+      "physical_listening_panel": false
+    },
     "mobile_checks": 100,
     "webkit_checks": 16,
     "boss_hud": true,
@@ -42,11 +427,11 @@
           584,
           848
         ],
-        "meanGameFps": 60.09687545776367,
-        "minGameFps": 59.99659729003906,
-        "peakKillMs": 0.30000001192092896,
+        "meanGameFps": 61.57169586181641,
+        "minGameFps": 60.95783996582031,
+        "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          31
+          45
         ],
         "musicContinuous": true
       },
@@ -56,11 +441,11 @@
           780,
           1132
         ],
-        "meanGameFps": 60.09033103942871,
-        "minGameFps": 59.984947204589844,
+        "meanGameFps": 61.4155776977539,
+        "minGameFps": 60.79481887817383,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          32
+          46
         ],
         "musicContinuous": true
       },
@@ -70,47 +455,47 @@
           390,
           566
         ],
-        "meanGameFps": 60.09267822265625,
-        "minGameFps": 59.99522018432617,
+        "meanGameFps": 61.0597339630127,
+        "minGameFps": 60.52710723876953,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          33
+          47
         ],
         "musicContinuous": true
       }
     ],
-    "baseline_campaign_version": "1.11.0",
+    "baseline_campaign_version": "1.12.0",
     "native": {
       "pass": true,
-      "identity": "82bd383396bfb955b78d8e3861d9f3fb677dbde33047aeb371b134bdbe6dd33a",
+      "identity": "f3330833b4d1f53fbb74cc2d121942f65fd2415c75a0158ee0ab65fa6a807170",
       "steps": [
         {
           "step": "runtime",
-          "seconds": 91.0,
+          "seconds": 102.1,
           "pass": true,
-          "checks": 278
+          "checks": 347
         },
         {
           "step": "campaign0",
-          "seconds": 171.9,
+          "seconds": 165.7,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign1",
-          "seconds": 188.9,
+          "seconds": 189.5,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign2",
-          "seconds": 165.5,
+          "seconds": 172.7,
           "pass": true,
           "checks": 4
         },
         {
           "step": "portraits",
-          "seconds": 15.6,
+          "seconds": 18.3,
           "pass": true,
           "checks": 0
         }
@@ -175,15 +560,15 @@
       "checks": [
         {
           "pilot": 0,
-          "changed_pixels": 17713
+          "changed_pixels": 22499
         },
         {
           "pilot": 1,
-          "changed_pixels": 21469
+          "changed_pixels": 19618
         },
         {
           "pilot": 2,
-          "changed_pixels": 18451
+          "changed_pixels": 14102
         }
       ]
     },
@@ -198,7 +583,7 @@
       "wakeAlignment": true,
       "sceneResetsWithoutDuplicateCoast": true,
       "musicContinuous": true,
-      "meanFps": 60.07061015061342,
+      "meanFps": 61.09240983223003,
       "peakKillMs": 0.4000000059604645,
       "sceneryRenderers": 118,
       "errors": [],
@@ -255,6 +640,26 @@
       "path": "Build/v1.11.0/Web.wasm.unityweb",
       "bytes": 5739802,
       "sha256": "01ff701a8918cd11b4dd71252517a6916816d0be6bc749f0f1148fa54edb681f"
+    },
+    {
+      "path": "Build/v1.12.0/Web.data.unityweb",
+      "bytes": 101711132,
+      "sha256": "7487e4c57408587c99c0f5d5fe0d0a769386b692f9aa5274deae5851d34af3ab"
+    },
+    {
+      "path": "Build/v1.12.0/Web.framework.js.unityweb",
+      "bytes": 65033,
+      "sha256": "69a75aa78a0fb552bc20fc653be57e127a27c83de4b879f3064f73582802fe54"
+    },
+    {
+      "path": "Build/v1.12.0/Web.loader.js",
+      "bytes": 118806,
+      "sha256": "edabd48a508460ac32a488309146c63a8e0ac21d197f4d060a6d810e727bbc45"
+    },
+    {
+      "path": "Build/v1.12.0/Web.wasm.unityweb",
+      "bytes": 4351635,
+      "sha256": "05fd6b600df63ba43c189768a978852ac8fc281dc0a32cd656f94fbf98d7dcfd"
     },
     {
       "path": "Build/v1.6.0/Web.data.unityweb",
@@ -382,24 +787,24 @@
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.11.0.js",
+      "path": "display-1.12.0.js",
       "bytes": 3540,
       "sha256": "1cfef70f97ed6707719179da446a51338ef4134437e8c61b48b6af246e409e5e"
     },
     {
       "path": "index.html",
       "bytes": 10291,
-      "sha256": "c04cce08913f60358848965e9a4c7607a2985e58edfb1c0d0ff62e1de0e1b446"
+      "sha256": "94aee81c46a2e29772f9ae721a8e7023bd97e30765494cd3cebf29ba32b16ee6"
     },
     {
-      "path": "mobile-1.11.0.css",
-      "bytes": 18713,
-      "sha256": "c84e405a0b4dcc10788c269cc4acdf0f0e06255dcfa7a2b82c90cd26132fbac0"
+      "path": "mobile-1.12.0.css",
+      "bytes": 20730,
+      "sha256": "c29ca355a99c93d3342cc29e5536482f43a52acfcb43607a118e2de14926c0a3"
     },
     {
-      "path": "mobile-1.11.0.js",
-      "bytes": 20511,
-      "sha256": "0180c1e18246bc66bf6d91b0ec7a9f4fc42e124891e4bf3d58d1506d1299d605"
+      "path": "mobile-1.12.0.js",
+      "bytes": 21970,
+      "sha256": "d6c66214a0f5692d120de0a287f8dc99183e667affcb41b71251ccd072bdfccf"
     }
   ]
 }

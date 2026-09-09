@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
  <meta charset="utf-8">
- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'wasm-unsafe-eval' 'sha256-B9ULiW6W2RXB78jGwH/zsDt3taR+48L+adAD05KVqY0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; connect-src 'self' blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' blob: 'wasm-unsafe-eval' 'sha256-e8yVtEPEeRcDZ4k1s6PlWr61iGQwyZ4RgUrkVaRPH3g='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; connect-src 'self' blob:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
  <meta name="referrer" content="no-referrer">
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta name="description" content="裂空：最后航线。驾驶三种特色战机，突破弹幕与机械要塞。无需安装，浏览器直接试玩。">
  <meta name="theme-color" content="#07121c">
- <link rel="stylesheet" href="mobile-1.11.0.css" integrity="sha256-yE5AWgtNzBB4jCacxKzfDw4GJV3Pp6K4LJDNJhMvusA=" crossorigin="anonymous">
+ <link rel="stylesheet" href="mobile-1.12.0.css" integrity="sha256-wpyjVamck9M0LMKeVTZIL0OlKs/LQ2B6EY4t4UkmwKM=" crossorigin="anonymous">
  <title>裂空：最后航线 · 在线试玩</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307121c'/%3E%3Cpath d='M50 10 90 82 50 65 10 82Z' fill='%2378ebff'/%3E%3C/svg%3E">
  <style>
@@ -49,10 +49,10 @@
   </div>
   <div class="toolbar"><div class="keys"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 移动</span><span><kbd>Shift</kbd> 精准移动</span><span><kbd>Space</kbd> 裂空炸弹</span><span><kbd>Q</kbd> 驾驶员技能</span><span><kbd>E</kbd> 超载</span><span><kbd>R</kbd> 切换武器</span><span><kbd>Esc</kbd> 暂停</span></div><button id="touch-mode">触屏操作</button><button id="fullscreen">全屏 ⛶</button></div>
  </main>
- <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.11.0</span></footer>
- <script src="mobile-1.11.0.js" integrity="sha256-AYDB4YJGvGa/bZGw7HqfT8QuEkiR5L89WNFQbRKZ1gU=" crossorigin="anonymous"></script>
- <script src="display-1.11.0.js" integrity="sha256-HP73D5ftZwdxkXnaRGpRM470E0Q36MYbSLavJG5Anl4=" crossorigin="anonymous"></script>
- <script src="Build/v1.11.0/Web.loader.js" integrity="sha256-kHJr6EmGgjH3WC8ZqKVUMM39xz/k8/fW3TY3ErqH0rM=" crossorigin="anonymous"></script>
+ <footer><span>默认自动射击 · 机库中用 ← → 选机，Enter 出击 · 进度保存在当前浏览器</span><span>电脑 / 手机在线试玩 · v1.12.0</span></footer>
+ <script src="mobile-1.12.0.js" integrity="sha256-1sZiFKD1aS0SDeCih/jcmRg+Znr/y0G3ElHM0HK9/M8=" crossorigin="anonymous"></script>
+ <script src="display-1.12.0.js" integrity="sha256-HP73D5ftZwdxkXnaRGpRM470E0Q36MYbSLavJG5Anl4=" crossorigin="anonymous"></script>
+ <script src="Build/v1.12.0/Web.loader.js" integrity="sha256-7avUilCEYKwypIgwkUbGOo4Kwh0Zf00GCm2BDnJ7vEU=" crossorigin="anonymous"></script>
  <script>
   const canvas=document.getElementById('unity-canvas'),cover=document.getElementById('cover'),start=document.getElementById('start'),status=document.getElementById('status'),bar=document.getElementById('bar');
   const director='SKYBREAK · Game Director';let active=false,instance=null;
@@ -74,13 +74,13 @@
   let loading=false;function boot(){loading=true;start.disabled=true;start.textContent="正在准备航线…";
   createUnityInstance(canvas,{
    arguments:[],
-   dataUrl:'Build/v1.11.0/Web.data.unityweb',
-   frameworkUrl:'Build/v1.11.0/Web.framework.js.unityweb',
-   codeUrl:'Build/v1.11.0/Web.wasm.unityweb',
+   dataUrl:'Build/v1.12.0/Web.data.unityweb',
+   frameworkUrl:'Build/v1.12.0/Web.framework.js.unityweb',
+   codeUrl:'Build/v1.12.0/Web.wasm.unityweb',
    streamingAssetsUrl:'StreamingAssets',
    companyName:"Skybreak Studio",
    productName:"SKYBREAK",
-   productVersion:"1.11.0",
+   productVersion:"1.12.0",
    autoSyncPersistentDataPath:true,
    ...display.unityConfig,
    showBanner:(message,type)=>{if(type==='error')fail(message);else console.warn(message);}
