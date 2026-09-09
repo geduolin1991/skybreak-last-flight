@@ -1,0 +1,839 @@
+{
+  "zh/campaign_open_0": {
+    "expected": "它不是认不出我们。有人锁住了它的记忆。",
+    "recognized": "他不是认不出我们，有人锁住了他的记忆。",
+    "error_rate": 0.0,
+    "seconds": 3.66375,
+    "peak": 0.788604736328125,
+    "rms": 0.13495492051997007,
+    "sha256": "79ab03a2f221261cbb6df836822f6d506cf45ab8f7cb69282d39ba14ef21c108"
+  },
+  "zh/campaign_open_1": {
+    "expected": "三艘船，七百七十个人。今天，一个都别掉队。",
+    "recognized": "三艘船，七百七十个人，今天一个都别掉队。",
+    "error_rate": 0.0,
+    "seconds": 4.74,
+    "peak": 0.794586181640625,
+    "rms": 0.12979558940797803,
+    "sha256": "2028ab7dc95817ecfa40cbc86f1a1be87280796a3cf0e4c0bc5cf27a4cf07f27"
+  },
+  "zh/campaign_open_2": {
+    "expected": "先护住船队，再去夺回天空。第七小队，跟上我！",
+    "recognized": "先护住船队，再去夺回天空。第七小队，跟上我。",
+    "error_rate": 0.0,
+    "seconds": 3.7412083333333332,
+    "peak": 0.67974853515625,
+    "rms": 0.1251504021540457,
+    "sha256": "058d3d9c2ea41b88e35f729c4e1644bd337f04590bf22413ead724a2551cad4c"
+  },
+  "zh/campaign_coast_after_0": {
+    "expected": "海上火力停了。救援队，接下来的航线交给你们。",
+    "recognized": "海上火力停了，救援队。接下来的航线交给你们。",
+    "error_rate": 0.0,
+    "seconds": 3.68,
+    "peak": 0.729644775390625,
+    "rms": 0.12515987261290168,
+    "sha256": "c412df1f3d35c16404b5554fec16a7232d96ab73eebe0050b5c6ebee29cc55f6"
+  },
+  "zh/campaign_coast_after_1": {
+    "expected": "名册收到了。下一步，让城里的导航站重新亮起来。",
+    "recognized": "名册收到了，下一步让城里的导航站重新亮起来。",
+    "error_rate": 0.0,
+    "seconds": 4.620541666666667,
+    "peak": 0.794189453125,
+    "rms": 0.14108795097370141,
+    "sha256": "32607152d0946bf755bc9b1d02f602be6d240a8cc16df913a5dae81aa7a5286c"
+  },
+  "zh/campaign_city_before_0": {
+    "expected": "下面还有撤离巴士。把电抢回来，给他们一条能走的路。",
+    "recognized": "下面还有撤离巴士，把店抢回来，给他们一条能走的路。",
+    "error_rate": 0.0,
+    "seconds": 4.98,
+    "peak": 0.793975830078125,
+    "rms": 0.12023027955631185,
+    "sha256": "f17e1f259012991bd0d1d3651c3b03e8a43bfaed04e7d7c41783215bf9cecf18"
+  },
+  "zh/campaign_city_before_1": {
+    "expected": "灯每亮起一片，就有一批人的名字能传上去。",
+    "recognized": "灯每亮起一片，就有一批人的名字能传上去。",
+    "error_rate": 0.0,
+    "seconds": 3.9029166666666666,
+    "peak": 0.7333984375,
+    "rms": 0.13851553003693873,
+    "sha256": "4a0ae662bbe2b3ba75e9f07e0f3095a1381ad61069f11f40eaa258389a098e7e"
+  },
+  "zh/campaign_city_before_2": {
+    "expected": "她能封住天空，封不住我们回家的路。出发！",
+    "recognized": "他能封住天空，封不住我们回家的路。出发。",
+    "error_rate": 0.0,
+    "seconds": 3.28,
+    "peak": 0.794281005859375,
+    "rms": 0.12838026736161728,
+    "sha256": "e21db576cd7bb80a1f3f7669696ce1975aa20c2333c170a440d4119cda258071"
+  },
+  "zh/campaign_city_after_0": {
+    "expected": "听，地面频道接通了。嗯……这声音可比爆炸好听。",
+    "recognized": "听，地面频道接通了。嗯，这声音可比爆炸好听。",
+    "error_rate": 0.0,
+    "seconds": 5.28,
+    "peak": 0.652862548828125,
+    "rms": 0.12332113462531737,
+    "sha256": "8d19fb752794b886b42c9edad3309ff461313b3c55c9ca1ab304615b807ab39f"
+  },
+  "zh/campaign_city_after_1": {
+    "expected": "我曾经相信这套系统。现在，我要让它学会停下来。",
+    "recognized": "我曾经相信这套系统，现在我要让他学会停下来。",
+    "error_rate": 0.0,
+    "seconds": 4.839541666666666,
+    "peak": 0.795166015625,
+    "rms": 0.1314212497984436,
+    "sha256": "560c487d471ec1203e22817ead93b77d449235296a09ccf2fa58d60434c44472"
+  },
+  "zh/campaign_orbit_before_0": {
+    "expected": "接驳船还在等。解除三个接点，我来完成上传。",
+    "recognized": "接驳船还在等，解除三个接点，我来完成上船。",
+    "error_rate": 0.0,
+    "seconds": 4.859791666666666,
+    "peak": 0.794464111328125,
+    "rms": 0.12710112719448027,
+    "sha256": "6ed6b4cd8bfed083ca30d12c5b0c4962d93b9fe165918d559dc85659ca92ba26"
+  },
+  "zh/campaign_orbit_before_1": {
+    "expected": "战争已经结束了。最后这道命令，由我们来终止。",
+    "recognized": "战争已经结束了。最后，这道命令由我们来终止。",
+    "error_rate": 0.0,
+    "seconds": 3.94,
+    "peak": 0.780517578125,
+    "rms": 0.13409864952748873,
+    "sha256": "1fc46fdca0f4df032fd94d6f04fea537c4542a89d44abdd9d7791877bf460a58"
+  },
+  "zh/campaign_orbit_before_2": {
+    "expected": "别把最后一次飞行说得那么悲壮。我们三个，都要回去。",
+    "recognized": "别把最后一次飞行说的那么悲壮。我们三个都要回去。",
+    "error_rate": 0.0,
+    "seconds": 4.32,
+    "peak": 0.74066162109375,
+    "rms": 0.1247287991718249,
+    "sha256": "1dbd28173c8e31508aa8f25b4160a76664176831d12e35c0fb6c62a87c1ba176"
+  },
+  "zh/campaign_ending_full_0": {
+    "expected": "确认，所有民用信号已被识别。天空，交还给你们。",
+    "recognized": "确认所有民用信号已被识别，天空交还给你们。",
+    "error_rate": 0.0,
+    "seconds": 5.577625,
+    "peak": 0.793548583984375,
+    "rms": 0.11245353004757083,
+    "sha256": "94f5fbeafbeddc192be86b6902a853c8498d5a1bcb9108df0d1e33c96f63b166"
+  },
+  "zh/campaign_ending_full_1": {
+    "expected": "车队动起来了。慢慢开，明天还有很长的路呢。",
+    "recognized": "车队动起来了，慢慢开。明天还有很长的路呢。",
+    "error_rate": 0.0,
+    "seconds": 3.94,
+    "peak": 0.791107177734375,
+    "rms": 0.12671892860977116,
+    "sha256": "cb61d8976c806ef1ee2a44ad8e2d45c0f9dd948d4350bb123f8e3d9ab7743b2e"
+  },
+  "zh/campaign_ending_full_2": {
+    "expected": "七百七十人，全员到港。我们答应过的，做到了。",
+    "recognized": "七百七十人全员到岗。我们答应过的做到了。",
+    "error_rate": 0.0,
+    "seconds": 3.92,
+    "peak": 0.698333740234375,
+    "rms": 0.12042442419884897,
+    "sha256": "bc8e0c2b563253ccb42d8f8befeb4c9959a2be3d90930264c3bdd21e58f7920b"
+  },
+  "zh/campaign_ending_partial_0": {
+    "expected": "通道接通了。我会记住这一次，没能及时回应的名字。",
+    "recognized": "通道接通了，我会记住这一次没能及时回应的名字。",
+    "error_rate": 0.0,
+    "seconds": 4.601041666666666,
+    "peak": 0.79327392578125,
+    "rms": 0.13885754294154512,
+    "sha256": "04d842737de49af57e2890202f3a117f92a3438b32bf67e78d5c0d3fae9585d5"
+  },
+  "zh/campaign_ending_partial_1": {
+    "expected": "把剩下的坐标发给救援队。没做完的事，我们接着做。",
+    "recognized": "把剩下的坐标发给救援队。没做完的事，我们接着做。",
+    "error_rate": 0.0,
+    "seconds": 4.182,
+    "peak": 0.794281005859375,
+    "rms": 0.12339838051566575,
+    "sha256": "b0bdb149cb0e714375d79dda7fd5af28384f2a59ed9a9320d856bca3e579dfbc"
+  },
+  "zh/campaign_ending_partial_2": {
+    "expected": "今天先把他们送回家。明天，我们再去接剩下的人。",
+    "recognized": "今天先把他们送回家，明天我们再去接剩下的人。",
+    "error_rate": 0.0,
+    "seconds": 3.420625,
+    "peak": 0.79144287109375,
+    "rms": 0.12554630784676957,
+    "sha256": "4f4d6c2300a0758442051da1fbb9d0af614f10a851da0fe9ed1fe54c72b8e323"
+  },
+  "zh/campaign_ending_guard_0": {
+    "expected": "攻击停止了。识别还没完成，我会守着这条回线。",
+    "recognized": "攻击停止了，识别还没完成。我会守着这条回线。",
+    "error_rate": 0.0,
+    "seconds": 4.919041666666667,
+    "peak": 0.7196044921875,
+    "rms": 0.12229520121970593,
+    "sha256": "a5d967a325de5830daace75c9a27854e2490b01a7dfaf306ea037b60b221956f"
+  },
+  "zh/campaign_ending_guard_1": {
+    "expected": "系统帮不上忙，就由人来。一个一个接，我们有耐心。",
+    "recognized": "系统帮不上忙，就由人来，一个一个接。我们有耐心。",
+    "error_rate": 0.0,
+    "seconds": 4.34,
+    "peak": 0.724334716796875,
+    "rms": 0.12668599165804556,
+    "sha256": "d632b8568011ab13f4f2c6f740e1880fa3094dd99ad03a887353871acecf34bd"
+  },
+  "zh/campaign_ending_guard_2": {
+    "expected": "我们已经打开了航线。现在，守到最后一个人回家。",
+    "recognized": "我们已经打开了航线，现在守到最后一个人回家。",
+    "error_rate": 0.0,
+    "seconds": 3.92,
+    "peak": 0.794403076171875,
+    "rms": 0.12835714179979454,
+    "sha256": "20548d77d854d88f22c699e99b0c18fc0c902b7ac0bab52ff484560b9c35b204"
+  },
+  "zh/campaign_pilot_0": {
+    "expected": "下次起飞，也让我听见你的声音。",
+    "recognized": "下次起飞，也让我听见你的声音。",
+    "error_rate": 0.0,
+    "seconds": 2.4,
+    "peak": 0.77215576171875,
+    "rms": 0.11589669284232564,
+    "sha256": "b8ffa75f73512481ad7cdd1d934c6fc3f0a66f0865fe9612fdfc2bd7a16ae5b7"
+  },
+  "zh/campaign_pilot_1": {
+    "expected": "回去喝杯热的吧。这次，我请。",
+    "recognized": "回去喝杯热的吧。这次我请。",
+    "error_rate": 0.0,
+    "seconds": 2.487625,
+    "peak": 0.794219970703125,
+    "rms": 0.11899599144151198,
+    "sha256": "2635956d8ee575f75a5f633c65a8cb4b4289cbf5f2995efd2ed05019c3b5c0ed"
+  },
+  "zh/campaign_pilot_2": {
+    "expected": "天空这么大，终于可以自己选择航线了。",
+    "recognized": "天空这么大，终于可以自己选择航线了。",
+    "error_rate": 0.0,
+    "seconds": 3.982625,
+    "peak": 0.791473388671875,
+    "rms": 0.13441175455414311,
+    "sha256": "904d9d0a38c3d78f3478a9e41d9e04f31d88f9d3f41e8837ef47e338d6500e0a"
+  },
+  "zh/campaign_beacon": {
+    "expected": "防波堤的航标亮了！沿着灯带，护住船队。",
+    "recognized": "防波堤的航标亮了，沿着灯带护住船队。",
+    "error_rate": 0.0,
+    "seconds": 3.92,
+    "peak": 0.74212646484375,
+    "rms": 0.12714102686812928,
+    "sha256": "f94e57c0a76aeb13c23cf4a974ada62feffe106b79f996abf8e6f22973d0b821"
+  },
+  "zh/campaign_blockade": {
+    "expected": "封锁线就在前面。别急，先拆掉它的侧翼。",
+    "recognized": "封锁线就在前面，别急，先拆掉他的侧翼。",
+    "error_rate": 0.0,
+    "seconds": 3.88,
+    "peak": 0.790252685546875,
+    "rms": 0.1309690932840268,
+    "sha256": "6c2a0425029764df3c1e61cb8c6de74bdb53adfcaf4f02e779788418fe6966f9"
+  },
+  "zh/campaign_metro": {
+    "expected": "电回来了，撤离车开始动了。掩护他们通过路口！",
+    "recognized": "电回来了，撤离车开始动了。掩护他们通过路口。",
+    "error_rate": 0.0,
+    "seconds": 3.84,
+    "peak": 0.786895751953125,
+    "rms": 0.13222677747402845,
+    "sha256": "47b5b1173948b701942047d1adb92f46d4b749222953f824ad9a469a3e284b33"
+  },
+  "zh/campaign_weather": {
+    "expected": "三个街区都亮了！雷暴正在减弱，抓住这个窗口。",
+    "recognized": "三个街区都亮了。雷暴正在减弱，抓住这个窗口。",
+    "error_rate": 0.0,
+    "seconds": 4.08,
+    "peak": 0.718414306640625,
+    "rms": 0.12290298663481822,
+    "sha256": "1c3f3bb1c1c154e37380148c9849c25711d748aaebbb52c314cdb3db5868757c"
+  },
+  "zh/campaign_array": {
+    "expected": "太阳翼开始转向。第一段通道，已经属于我们。",
+    "recognized": "太阳翼开始转向，第一段通道已经属于我们。",
+    "error_rate": 0.0,
+    "seconds": 4.062375,
+    "peak": 0.7921142578125,
+    "rms": 0.1346609090085563,
+    "sha256": "bab38fdae9cf8cee9b19e1f2383a4e2caabaed8cf9236fb792fec6b7cbf1d873"
+  },
+  "zh/campaign_uplink_hold": {
+    "expected": "还有封锁接点没解除。保持火力，给雪璃争取时间！",
+    "recognized": "还有封锁节点没解除，保持火力，给雪梨争取时间。",
+    "error_rate": 0.0,
+    "seconds": 3.7,
+    "peak": 0.68206787109375,
+    "rms": 0.11999868336090791,
+    "sha256": "0cda505a5e2eadad2ed5c7e979ab15e3254d7c7c2f6ba878305c77d3000ffd0a"
+  },
+  "en/campaign_open_0": {
+    "expected": "It hasn't forgotten us. Someone locked its memories away.",
+    "recognized": "It hasn't forgotten us. Someone locked its memories away.",
+    "error_rate": 0.0,
+    "seconds": 3.5,
+    "peak": 0.795440673828125,
+    "rms": 0.11563263170679147,
+    "sha256": "0a3ff209471d7589f60b6e49ee1b3b6832fa2eef1ceb186796afe76eabb8eed8"
+  },
+  "en/campaign_open_1": {
+    "expected": "Three ships. Seven hundred and seventy people. Nobody gets left behind today.",
+    "recognized": "Three ships, seven hundred and seventy people. Nobody gets left behind today.",
+    "error_rate": 0.0,
+    "seconds": 5.06,
+    "peak": 0.7930908203125,
+    "rms": 0.1260989484113657,
+    "sha256": "6250c899729a5ec505f6ddc0f487312a13a20ad21727ce7a92836a4d51c8b3b1"
+  },
+  "en/campaign_open_2": {
+    "expected": "Protect the convoy, then take back the sky. Seventh Squadron, with me!",
+    "recognized": "Protect the convoy, then take back the sky. Seven squadron with me.",
+    "error_rate": 0.083,
+    "seconds": 5.000041666666666,
+    "peak": 0.795013427734375,
+    "rms": 0.09926232027350552,
+    "sha256": "1b54ffed910ae0cdc9cb4ee252a1791ae7aa2624a9e0f5d07f0ee39338723310"
+  },
+  "en/campaign_coast_after_0": {
+    "expected": "The sea guns are silent. Rescue teams, the route is yours.",
+    "recognized": "The sea guns are silent. Rescue teams, the route is yours.",
+    "error_rate": 0.0,
+    "seconds": 4.26,
+    "peak": 0.794708251953125,
+    "rms": 0.11396783352522241,
+    "sha256": "d6a65b3b243bafce39d2d47a4434a6cbc3c7152aead69867d5effe4b11ecb924"
+  },
+  "en/campaign_coast_after_1": {
+    "expected": "We have the registry. Next, bring the city navigation stations back online.",
+    "recognized": "We have the registry. Next, bring the city navigation stations back online.",
+    "error_rate": 0.0,
+    "seconds": 4.72,
+    "peak": 0.79437255859375,
+    "rms": 0.12166318591089582,
+    "sha256": "7d7bc1ca0b764bb1200c45b11da71f8b9643b0e543f468070b6156b6cc64497e"
+  },
+  "en/campaign_city_before_0": {
+    "expected": "Evacuation buses are still down there. Take back the power. Give them a way out.",
+    "recognized": "Evacuation buses are still down there. Take back the power. Give them a way out.",
+    "error_rate": 0.0,
+    "seconds": 4.98,
+    "peak": 0.794342041015625,
+    "rms": 0.12854308611176402,
+    "sha256": "4a0db7fb0dc433c37911fa3eb91f119345b38eb5a7fef3c414d57ce247d93d41"
+  },
+  "en/campaign_city_before_1": {
+    "expected": "Every district we light up sends another group of names to the sky.",
+    "recognized": "Every district we light up sends another group of names to the sky.",
+    "error_rate": 0.0,
+    "seconds": 3.46,
+    "peak": 0.792236328125,
+    "rms": 0.12503614457977524,
+    "sha256": "14ba46c7655ba159a77748592dbe18c9cafb3f4e5857135eebf60cee59c1323f"
+  },
+  "en/campaign_city_before_2": {
+    "expected": "She can close the skies, but she can't close our way home. Move out!",
+    "recognized": "She can close the skies, but she can't close our way home. Move out.",
+    "error_rate": 0.0,
+    "seconds": 4.02,
+    "peak": 0.78802490234375,
+    "rms": 0.12037620432451458,
+    "sha256": "81458937a801b7acad63e7fb793319e3623139bcc0ef03af2e96abac13853bfc"
+  },
+  "en/campaign_city_after_0": {
+    "expected": "Listen. The ground channel is back. Mm... that sounds better than explosions.",
+    "recognized": "Listen, the ground channel is back. Hmm, that sounds better than explosions.",
+    "error_rate": 0.083,
+    "seconds": 5.34,
+    "peak": 0.79638671875,
+    "rms": 0.12071709802306935,
+    "sha256": "12cb5752a8eddee13adb70aa52340c985cb5577fcb3c0cf73c08e8a3844adc90"
+  },
+  "en/campaign_city_after_1": {
+    "expected": "I used to believe in this system. Now I have to teach it how to stop.",
+    "recognized": "I used to believe in this system. Now I have to teach it how to stop.",
+    "error_rate": 0.0,
+    "seconds": 3.82,
+    "peak": 0.7901611328125,
+    "rms": 0.11285563575385361,
+    "sha256": "e43d24001e7c892d833032e0c2db664318e4a4ba92a00cfeb685cf46d81c9385"
+  },
+  "en/campaign_orbit_before_0": {
+    "expected": "The shuttles are waiting. Release the three contacts. I'll handle the upload.",
+    "recognized": "The shuttles are waiting. Release the three contacts. I'll handle the upload.",
+    "error_rate": 0.0,
+    "seconds": 4.94,
+    "peak": 0.793182373046875,
+    "rms": 0.1263736289772838,
+    "sha256": "424d32281375856ec7507deea5d26605c578df64b4de48b6ec64ac729d425f3c"
+  },
+  "en/campaign_orbit_before_1": {
+    "expected": "The war is over. We'll put an end to this last order.",
+    "recognized": "The war is over. We'll put an end to this last order.",
+    "error_rate": 0.0,
+    "seconds": 3.2,
+    "peak": 0.794464111328125,
+    "rms": 0.11294178755922013,
+    "sha256": "31fc3c98957b77b970d8f8781c0941fc7b0e9eb82dd5b470c98a5ac63ce736e1"
+  },
+  "en/campaign_orbit_before_2": {
+    "expected": "Don't make this last flight sound like a farewell. All three of us are going home.",
+    "recognized": "Don't make this last flight sound like a farewell. All three of us are going home.",
+    "error_rate": 0.0,
+    "seconds": 4.82,
+    "peak": 0.793548583984375,
+    "rms": 0.13324799221820052,
+    "sha256": "4f2dca8b4720836fdb56308063d21cf08db0697c03208060b5a5c8c0b33776a1"
+  },
+  "en/campaign_ending_full_0": {
+    "expected": "Confirmed. Every civilian signal is recognized. The sky belongs to you again.",
+    "recognized": "Confirmed. Every civilian signal is recognized. The sky belongs to you again.",
+    "error_rate": 0.0,
+    "seconds": 5.4,
+    "peak": 0.794891357421875,
+    "rms": 0.12408463090977659,
+    "sha256": "0c261187fda872d2c701ea9cd78d7b61a086327c7d03d858a6954de0be36130e"
+  },
+  "en/campaign_ending_full_1": {
+    "expected": "The convoy's moving. Take it easy. There's a long road ahead tomorrow.",
+    "recognized": "The convoy is moving. Take it easy. There's a long road ahead tomorrow.",
+    "error_rate": 0.167,
+    "seconds": 4.5,
+    "peak": 0.7947998046875,
+    "rms": 0.1477230591136438,
+    "sha256": "db8b69ebb5b224166d55e3840328abb15564480bcb86694b24ad262e7aa027cf"
+  },
+  "en/campaign_ending_full_2": {
+    "expected": "Seven hundred and seventy, all safely ashore. We kept our promise.",
+    "recognized": "770. All safely ashore. We kept our promise.",
+    "error_rate": 0.364,
+    "seconds": 4.32,
+    "peak": 0.79376220703125,
+    "rms": 0.11721712907938214,
+    "sha256": "9e8497b58dc7e641a1df034cd8680f1da05ae80dd9d9d80d65282a650d44c874"
+  },
+  "en/campaign_ending_partial_0": {
+    "expected": "The channel is open. I'll remember the names we couldn't answer in time.",
+    "recognized": "The channel is open. I'll remember the names we couldn't answer in time.",
+    "error_rate": 0.0,
+    "seconds": 3.98,
+    "peak": 0.795074462890625,
+    "rms": 0.11473442423955522,
+    "sha256": "0fef090e4e30c4715544bb089277a6827ffd90bdcf4b2462fa93ae5f6784f659"
+  },
+  "en/campaign_ending_partial_1": {
+    "expected": "Send the remaining coordinates to rescue. We'll finish what we started.",
+    "recognized": "Send the remaining coordinates to rescue. We'll finish what we started.",
+    "error_rate": 0.0,
+    "seconds": 3.92,
+    "peak": 0.77508544921875,
+    "rms": 0.12382468077353148,
+    "sha256": "01ea306edd045c1914d807449e486ff66f1b1135b272bb21afd64b51cb6dce07"
+  },
+  "en/campaign_ending_partial_2": {
+    "expected": "Let's bring them home today. Tomorrow, we go back for the others.",
+    "recognized": "Let's bring them home today. Tomorrow, we go back for the others.",
+    "error_rate": 0.0,
+    "seconds": 3.84,
+    "peak": 0.782318115234375,
+    "rms": 0.1098424616105013,
+    "sha256": "72e5bc4f2dc605b9ee29601c77c7562e539c2a593b24f5b49b5c7cf046b1e7d4"
+  },
+  "en/campaign_ending_guard_0": {
+    "expected": "The attacks have stopped. Identification isn't finished. I'll stay on this channel.",
+    "recognized": "The attacks have stopped. Identification isn't finished. I'll stay on this channel.",
+    "error_rate": 0.0,
+    "seconds": 4.84,
+    "peak": 0.794464111328125,
+    "rms": 0.1158279748248519,
+    "sha256": "2b270e6aad2190ecd3709c11cdd4815ef800c47a41908aa6ffbdd2d5b7514b49"
+  },
+  "en/campaign_ending_guard_1": {
+    "expected": "If the system can't help, we will. One at a time. We've got patience.",
+    "recognized": "If the system can't help, we will, one at a time. We've got patience.",
+    "error_rate": 0.0,
+    "seconds": 4.82,
+    "peak": 0.793792724609375,
+    "rms": 0.12071965837472835,
+    "sha256": "c8bce997adf8b1436cefd2b6ba608166e6c00d27230a8f04df8fa8d29d021514"
+  },
+  "en/campaign_ending_guard_2": {
+    "expected": "The route is open. Now we hold it until the last person gets home.",
+    "recognized": "The route is open. Now we hold it until the last person gets home.",
+    "error_rate": 0.0,
+    "seconds": 3.92,
+    "peak": 0.7933349609375,
+    "rms": 0.1057386598645164,
+    "sha256": "b8027aeda8c28dc24334b1e6f9347262532951b8ce72409de0d1994c275d8d4f"
+  },
+  "en/campaign_pilot_0": {
+    "expected": "Next time we fly, let me hear your voice again.",
+    "recognized": "Next time we fly, let me hear your voice again.",
+    "error_rate": 0.0,
+    "seconds": 2.98,
+    "peak": 0.7840576171875,
+    "rms": 0.0970519050183325,
+    "sha256": "a6e82f55b3820d4513334262238db16cbaf73943d718cfb54486187f6d86a364"
+  },
+  "en/campaign_pilot_1": {
+    "expected": "Let's get something warm when we're back. This one's on me.",
+    "recognized": "Let's get something warm when we're back. This one's on me.",
+    "error_rate": 0.0,
+    "seconds": 3.5,
+    "peak": 0.79071044921875,
+    "rms": 0.1293188960835979,
+    "sha256": "5a61d9d1115fe2f92c4bd45ea9249ad281522ce9bf6a704dda4e8d3ada567167"
+  },
+  "en/campaign_pilot_2": {
+    "expected": "The sky is so wide. At last, we can choose our own course.",
+    "recognized": "The sky is so wide. At last, we can choose our own course.",
+    "error_rate": 0.0,
+    "seconds": 4.2,
+    "peak": 0.79351806640625,
+    "rms": 0.12655120495233074,
+    "sha256": "7eb8f246c3ba586073e845aebebd3236ca9180174f06af3c908a461f6930249c"
+  },
+  "en/campaign_beacon": {
+    "expected": "The breakwater beacons are lit! Follow the lights and cover the convoy.",
+    "recognized": "The breakwater beacons are lit. Follow the lights and cover the convoy.",
+    "error_rate": 0.0,
+    "seconds": 4.28,
+    "peak": 0.793792724609375,
+    "rms": 0.10529993333205279,
+    "sha256": "537b3cd22c2aeb65c45daca79784cfd1e9b8e47c05874be4fb53538bbc26cd8e"
+  },
+  "en/campaign_blockade": {
+    "expected": "The blockade is ahead. Easy. Take its flanks apart first.",
+    "recognized": "The blockade is ahead. Easy, take its flanks apart first.",
+    "error_rate": 0.0,
+    "seconds": 4.26,
+    "peak": 0.794708251953125,
+    "rms": 0.11811253785212515,
+    "sha256": "6ac504ec52e219dd37532fb50b845b9f93197ede4accad3b226d76d4efce2090"
+  },
+  "en/campaign_metro": {
+    "expected": "Power's back. The evacuation vehicles are moving. Cover the crossing!",
+    "recognized": "Powers back. The evacuation vehicles are moving. Cover the crossing.",
+    "error_rate": 0.0,
+    "seconds": 4.76,
+    "peak": 0.793487548828125,
+    "rms": 0.11275712164007666,
+    "sha256": "3d2a865491ad3c5077a27971d0f6b3cd19590884f5673d0f116acab1b6d3d46e"
+  },
+  "en/campaign_weather": {
+    "expected": "All three districts are lit! The storm is weakening. Take this opening.",
+    "recognized": "All three districts are lit. The storm is weakening. Take this opening.",
+    "error_rate": 0.0,
+    "seconds": 4.34,
+    "peak": 0.794158935546875,
+    "rms": 0.1086736231559468,
+    "sha256": "e6bdbb2cdef72cf3db6f6f1d2304d561f6c7c7a8db3884593272a4a4c90c0ed6"
+  },
+  "en/campaign_array": {
+    "expected": "The solar wings are turning. The first channel is ours.",
+    "recognized": "The solar wings are turning. The first channel is ours.",
+    "error_rate": 0.0,
+    "seconds": 3.64,
+    "peak": 0.79296875,
+    "rms": 0.12334531368086642,
+    "sha256": "0e37958136c4eab773c62dfc409799d979bc2f5fe7530d213e2f214a1101df2a"
+  },
+  "en/campaign_uplink_hold": {
+    "expected": "There are still locked contacts. Keep firing. Buy Yuki more time!",
+    "recognized": "There are still locked contacts. Keep firing. Buy Yuki more time.",
+    "error_rate": 0.0,
+    "seconds": 4.48,
+    "peak": 0.79425048828125,
+    "rms": 0.11960253853906824,
+    "sha256": "3154c4cd7742dce18eabc857286db8af565c7fc5af3a7718f02c844a26b8fbcb"
+  },
+  "ja/campaign_open_0": {
+    "expected": "私たちを忘れたわけじゃない。誰かが記憶を閉ざしたんです。",
+    "recognized": "私たちを忘れたわけじゃない。誰かが記憶を閉ざしたんです。",
+    "error_rate": 0.0,
+    "seconds": 3.78,
+    "peak": 0.771575927734375,
+    "rms": 0.1274187659780791,
+    "sha256": "9375efbd637cbaf1d8042e418c988b908e9a66731f5cec70987a6f993a9febdc"
+  },
+  "ja/campaign_open_1": {
+    "expected": "三隻に七百七十人。今日は、誰も置いていかないわ。",
+    "recognized": "三席に七百七十人。こんにちは、誰も置いていかないわ。",
+    "error_rate": 0.238,
+    "seconds": 4.72,
+    "peak": 0.7957763671875,
+    "rms": 0.12208285125038562,
+    "sha256": "c1d2e1b0d6dd5c1ef4fea76a4edf937e4b4ec7db6da0cb6ebf38ac4a2e6611dc"
+  },
+  "ja/campaign_open_2": {
+    "expected": "まず船団を守る。それから空を取り戻す。第七小隊、私に続いて！",
+    "recognized": "まず戦闘を守る、それから空を取り戻す第七章対私に続いて。",
+    "error_rate": 0.154,
+    "seconds": 5.34,
+    "peak": 0.613311767578125,
+    "rms": 0.11526509185591655,
+    "sha256": "99909229e39d4fbf137b71204cf118b26ac1f310488fcb34b070fca696018a17"
+  },
+  "ja/campaign_coast_after_0": {
+    "expected": "海上砲火、停止。救助隊、ここからの航路をお願いします。",
+    "recognized": "海上砲火停止救助隊。ここからの行路をお願いします。",
+    "error_rate": 0.043,
+    "seconds": 4.72,
+    "peak": 0.7103271484375,
+    "rms": 0.14581361232110587,
+    "sha256": "e64af2e33cd21e3205fac1511a84de7d0c02b4372eab6ef270a6f4238407c8e4"
+  },
+  "ja/campaign_coast_after_1": {
+    "expected": "名簿を受信。次は、街の航法局に明かりを戻しましょう。",
+    "recognized": "名簿を入手。次は町の広報局に明かりを戻しましょう。",
+    "error_rate": 0.217,
+    "seconds": 4.98,
+    "peak": 0.794158935546875,
+    "rms": 0.1387744657729915,
+    "sha256": "b804b01c9a022af7664af0f9676a7f7213ebde013c47e092b956f69078004924"
+  },
+  "ja/campaign_city_before_0": {
+    "expected": "下には避難バスが残ってる。電気を取り戻して、通れる道を作るわよ。",
+    "recognized": "下には避難バスが残ってる。電気を取り戻して通れる道を作るわよ。",
+    "error_rate": 0.0,
+    "seconds": 5.32,
+    "peak": 0.794342041015625,
+    "rms": 0.12235231588598154,
+    "sha256": "cf3d56469e7845251f5e93f14e2353be29b7a041239c792b827492901252f035"
+  },
+  "ja/campaign_city_before_1": {
+    "expected": "街区に明かりが戻るたび、そこにいる人たちの名前が空へ届きます。",
+    "recognized": "外国に明かりが戻るたび、そこにいる人たちの名前が空へ届きます。",
+    "error_rate": 0.069,
+    "seconds": 4.72,
+    "peak": 0.685211181640625,
+    "rms": 0.11496826211320998,
+    "sha256": "13b78dc58c60044584a502a57bdcb3ef297d2826921a0ab72b2373088616737e"
+  },
+  "ja/campaign_city_before_2": {
+    "expected": "空を塞がれても、帰り道まで諦めない。行こう！",
+    "recognized": "空を塞がれても帰り道まで諦めない。行こう。",
+    "error_rate": 0.0,
+    "seconds": 4.04,
+    "peak": 0.57904052734375,
+    "rms": 0.12077595210129403,
+    "sha256": "75eac82fc3a0c6e5129d674813ae08c57a064a11355bed8a00d5ebf511c9b04f"
+  },
+  "ja/campaign_city_after_0": {
+    "expected": "聞いて。地上の回線が戻ったわ。ふふ、爆発よりずっといい音ね。",
+    "recognized": "聞いて地上の回線が戻ったわ。ふ、幕は強りずっといい音ね。",
+    "error_rate": 0.154,
+    "seconds": 6.24,
+    "peak": 0.793792724609375,
+    "rms": 0.10692353426300982,
+    "sha256": "4214d3bcb0b7c7c5f2e06dad01825c2ce634fbf2e5cab76238f2ebe2efdef6ee"
+  },
+  "ja/campaign_city_after_1": {
+    "expected": "私は、この仕組みを信じていました。今度は、止まることを教えます。",
+    "recognized": "私はこの仕組みを信じていました。今度は止まることを教えます。",
+    "error_rate": 0.0,
+    "seconds": 5.62,
+    "peak": 0.70941162109375,
+    "rms": 0.12249536459056228,
+    "sha256": "5d3ca875d4fc226319a37ec02e03713b1ddc16553f9945c9effe7e260cbc3281"
+  },
+  "ja/campaign_orbit_before_0": {
+    "expected": "連絡船が待っています。三つの接点を解除してください。転送は私が。",
+    "recognized": "連絡線が待っています。三つの接点を解除してください。転送は私が。",
+    "error_rate": 0.034,
+    "seconds": 5.2,
+    "peak": 0.68121337890625,
+    "rms": 0.12093609954939624,
+    "sha256": "9d25dbe7bb686548d00f747711b7844611c4b6577a5fbda40a6978779617ff9c"
+  },
+  "ja/campaign_orbit_before_1": {
+    "expected": "戦争はもう終わった。残された命令は、私たちが終わらせる。",
+    "recognized": "戦争はもう終わった。残されたメイレーは私たちが終わらせる。",
+    "error_rate": 0.16,
+    "seconds": 4.815083333333333,
+    "peak": 0.615264892578125,
+    "rms": 0.12015152966051934,
+    "sha256": "2a06571be7e00bcad4c19e073e2786adb4ddfef360692084790740e0c250a390"
+  },
+  "ja/campaign_orbit_before_2": {
+    "expected": "最後の飛行を、お別れみたいに言わないで。三人で帰るんだから。",
+    "recognized": "最後の飛行をお別れみたいに言わないで、三人で帰るんだから。",
+    "error_rate": 0.0,
+    "seconds": 4.92,
+    "peak": 0.793792724609375,
+    "rms": 0.10898976292317816,
+    "sha256": "92adf248d2bf24e5f6bb245788b132ea7723c5877aab083992236a8680edafca"
+  },
+  "ja/campaign_ending_full_0": {
+    "expected": "確認。すべての民間信号を認識しました。この空を、皆さんに返します。",
+    "recognized": "確認すべての民間信号を認識しました。この空を皆さんに返します。",
+    "error_rate": 0.0,
+    "seconds": 6.26,
+    "peak": 0.567108154296875,
+    "rms": 0.11417278616493076,
+    "sha256": "7a8f0bbf5538bbfc2ecce733552b347efcb070f6d7269f82a13f79e17d43a991"
+  },
+  "ja/campaign_ending_full_1": {
+    "expected": "車列が動き出したわ。ゆっくりでいい。明日も、その先もあるんだから。",
+    "recognized": "車列が動き出したわ。ゆっくりでいい。明日もその先もあるんだから。",
+    "error_rate": 0.0,
+    "seconds": 5.76,
+    "peak": 0.7926025390625,
+    "rms": 0.12014864937980714,
+    "sha256": "b54aea107e2bd0873f63f2e8512103d6f57a1e31ccd69a3112b97c835921bf7e"
+  },
+  "ja/campaign_ending_full_2": {
+    "expected": "七百七十人、全員到着。約束、守れたね。",
+    "recognized": "七百七十人全員到着約束守れたね",
+    "error_rate": 0.0,
+    "seconds": 4.34,
+    "peak": 0.665863037109375,
+    "rms": 0.13261281161880006,
+    "sha256": "d5227b1446082cca6c2817018fc7e69ab211106e3ec84e162451fcb71bf9a507"
+  },
+  "ja/campaign_ending_partial_0": {
+    "expected": "回線はつながりました。間に合わなかった名前も、忘れません。",
+    "recognized": "回線はつながりました。 間に合わなかった名前も忘れません。",
+    "error_rate": 0.0,
+    "seconds": 4.58,
+    "peak": 0.775726318359375,
+    "rms": 0.12286722789578748,
+    "sha256": "f246040cce1a2bb38e83d0bcad546a0c57d56b42724fa3c1c352a740d12053f1"
+  },
+  "ja/campaign_ending_partial_1": {
+    "expected": "残りの座標を救助隊へ。やり残したことは、これから片づけるわ。",
+    "recognized": "残りの座標を救助隊へ。やり残したことはこれから片付けるわ。",
+    "error_rate": 0.037,
+    "seconds": 5.68,
+    "peak": 0.81146240234375,
+    "rms": 0.10994061660395782,
+    "sha256": "5e82ae23ae42675e3f54b760262c8579b919de194c4094a78ce970edbb0cb2e3"
+  },
+  "ja/campaign_ending_partial_2": {
+    "expected": "今日は、この人たちを家へ。明日は、残っている人たちを迎えに行こう。",
+    "recognized": "こんにちは。この人たちをいえ。明日は残っている人たちを迎えに行こう。",
+    "error_rate": 0.207,
+    "seconds": 5.8,
+    "peak": 0.699951171875,
+    "rms": 0.13081773931544075,
+    "sha256": "92425f32c0ba67b9bcc0eac2e2e310ba96f088f8bc430396432372c7ef522d6f"
+  },
+  "ja/campaign_ending_guard_0": {
+    "expected": "攻撃は止まりました。識別はまだ終わっていない。この回線は、私が守ります。",
+    "recognized": "攻撃は止まりました。識別はまだ終わっていない。この会戦は私が守ります。",
+    "error_rate": 0.062,
+    "seconds": 6.34,
+    "peak": 0.628509521484375,
+    "rms": 0.12408484314472952,
+    "sha256": "d41752bc6c0e73d8473f0a18f968daa4e987f0b3e78df89e556e55f25ebe5dc9"
+  },
+  "ja/campaign_ending_guard_1": {
+    "expected": "仕組みが助けてくれないなら、人がやるまでよ。一人ずつ、焦らずに。",
+    "recognized": "仕組みが助けてくれないなら人がやるまでよ。一人ずつ焦らずに。",
+    "error_rate": 0.0,
+    "seconds": 6.16,
+    "peak": 0.7791748046875,
+    "rms": 0.10976414032706205,
+    "sha256": "1a2895ad747dd9fa975a80a55057e8bf5748e8c2a79e96da298b1c6e30f88745"
+  },
+  "ja/campaign_ending_guard_2": {
+    "expected": "航路は開いた。最後の一人が帰るまで、ここを守ろう。",
+    "recognized": "校路は開いた最後の一人が帰るまでここを守ろう。",
+    "error_rate": 0.045,
+    "seconds": 3.9,
+    "peak": 0.61602783203125,
+    "rms": 0.14127503687555806,
+    "sha256": "8e77211cc82b907ef1663b54934a039009d4890ee6df074198e786f6ced9212b"
+  },
+  "ja/campaign_pilot_0": {
+    "expected": "次に飛ぶ時も、あなたの声を聞かせてね。",
+    "recognized": "次に飛ぶときもあなたの声を聞かせてね。",
+    "error_rate": 0.118,
+    "seconds": 3.14,
+    "peak": 0.709686279296875,
+    "rms": 0.13116058764435584,
+    "sha256": "713eca270f15991808492ca89d368873ad19497182f87a6cf73f030841013789"
+  },
+  "ja/campaign_pilot_1": {
+    "expected": "帰ったら、温かいものでも飲みましょ。今度は私のおごり。",
+    "recognized": "帰ったら暖かいものでも飲みましょう。今度は私のおごり。",
+    "error_rate": 0.083,
+    "seconds": 5.26,
+    "peak": 0.79486083984375,
+    "rms": 0.1145473692093543,
+    "sha256": "b04c0a97dee3b3cf4143023dbf55762cfc9bf9175135763218624c03ec9935ed"
+  },
+  "ja/campaign_pilot_2": {
+    "expected": "空はこんなに広い。やっと、自分で航路を選べます。",
+    "recognized": "空はこんなに広い。やっと自分で校ロを選べます。",
+    "error_rate": 0.095,
+    "seconds": 3.78,
+    "peak": 0.6885986328125,
+    "rms": 0.130040409033349,
+    "sha256": "f1cafcc92421534180f715cdd52eeab4bfd5b80dfcf3938e4380b87c890521e2"
+  },
+  "ja/campaign_beacon": {
+    "expected": "防波堤の標識が点いた！光の先へ、船団を守って！",
+    "recognized": "防犯衣の標識が点いた光の先へ戦闘を守って。",
+    "error_rate": 0.2,
+    "seconds": 5.02,
+    "peak": 0.743377685546875,
+    "rms": 0.13464376648765863,
+    "sha256": "8b9cab2e20a63fb265d96ebf9fc034e1913ff7a79a257dc94d5f82fd949ca492"
+  },
+  "ja/campaign_blockade": {
+    "expected": "封鎖線はすぐそこ。焦らず、まずは両脇を崩すわよ。",
+    "recognized": "風刺線はすぐそこ。焦らず、まずは両脇を崩すわよ。",
+    "error_rate": 0.095,
+    "seconds": 4.8,
+    "peak": 0.79486083984375,
+    "rms": 0.13562897238530588,
+    "sha256": "4c8e93fd69ae8b30aeabdeb2cd9c11a796efbda594c5e4fff8ae6972756f523e"
+  },
+  "ja/campaign_metro": {
+    "expected": "電気が戻った。避難車両が動いてる。交差点を抜けるまで援護して！",
+    "recognized": "電気が戻った。避難車両が動いてる。交差点を抜けるまで援護して。",
+    "error_rate": 0.0,
+    "seconds": 6.04,
+    "peak": 0.7939453125,
+    "rms": 0.11423727013163243,
+    "sha256": "8abe765199105aa975cece3da5782d83cc53ff94fadc9ba0c005a1f5e11858bf"
+  },
+  "ja/campaign_weather": {
+    "expected": "三つの街区が全部点いた！嵐が弱まってる。今がチャンス！",
+    "recognized": "三つのがいくが全部点いた。嵐が弱まってる。今がチャンス。",
+    "error_rate": 0.125,
+    "seconds": 4.72,
+    "peak": 0.739654541015625,
+    "rms": 0.1349626357160255,
+    "sha256": "1b29f9fe1360e8025cc92dbaf76e96eb84b6da01e5b07c802258e0727ef07c39"
+  },
+  "ja/campaign_array": {
+    "expected": "太陽翼が向きを変えています。最初の回線は、もう私たちのものです。",
+    "recognized": "太陽よくが向きを変えています。最初の回線はもう私たちのものです。",
+    "error_rate": 0.069,
+    "seconds": 5.14,
+    "peak": 0.696990966796875,
+    "rms": 0.12482690929077618,
+    "sha256": "f42ffa93651e3737e4fb9ad7f5ad5a885d88746dee9dec436851eb39e2d450da"
+  },
+  "ja/campaign_uplink_hold": {
+    "expected": "まだ封鎖接点が残ってる。射撃を続けて、ユキに時間を！",
+    "recognized": "まだ風射点が残ってる。射撃を続けて雪に時間を",
+    "error_rate": 0.217,
+    "seconds": 4.06,
+    "peak": 0.68048095703125,
+    "rms": 0.13236773054381487,
+    "sha256": "a3ebcb8825d034453640dabeff9af63ae1bdf4d292886b75de77cbf1e3d4711e"
+  }
+}

@@ -20,7 +20,7 @@ namespace Skybreak {public partial class SkyGame {
  void TickBossEncounter(Hostile e,int phase,float dt){if(bossMechanisms)bossMechanisms.Tick(e.age,phase,e.coreExpose>0,bossTell>0);e.coreExpose=Mathf.Max(0,e.coreExpose-dt);if(coreShield){coreShield.enabled=BossModuleCount>0;coreShield.transform.localRotation=Quaternion.Euler(Mathf.Sin(e.age)*20,0,Mathf.Cos(e.age*.7f)*20);coreShield.transform.localScale=Vector3.one*(1+Mathf.Sin(e.age*4)*.045f);}
   if(e.pos.z>9)return;if(bossPhaseBreak>0){bossPhaseBreak=Mathf.Max(0,bossPhaseBreak-dt);return;}e.attackClock-=dt;
   if(bossTell>0){bossTell-=dt;if(bossTell<=0){bossShots=phase+2;bossShotClock=0;}}
-  if(bossShots>0){bossShotClock-=dt;if(bossShotClock<=0){FireBossSetpiece(e,phase,e.bossAttackIndex,bossShots);bossShots--;bossShotClock=.26f;}}
+  if(bossShots>0){bossShotClock-=dt;if(bossShotClock<=0){FireBossSetpiece(e,phase,e.bossAttackIndex,bossShots);bossShots--;bossShotClock=.26f;if(bossShots==0&&BossModuleCount==0){e.coreExpose=Mathf.Max(e.coreExpose,1.4f+phase*.2f);bossOrder="攻势间隙 · 核心易伤，集中火力";}}}
   if(e.attackClock<=0&&bossShots==0&&bossTell<=0){e.bossAttackIndex=(e.bossAttackIndex+1)%4;e.lockedAim=PlayerPos;bossTell=Difficulty==0?1.35f:1.05f;e.attackClock=bossTell+(phase==0?3.8f:phase==1?3.15f:2.65f);bossOrder=BossAttackName(e.bossAttackIndex);Sound("Warning",.27f);
    if(e.bossAttackIndex==2){float safe=Stage==2?Mathf.Clamp(e.lockedAim.x,-6,6):((e.bossAttackIndex+phase)%2==0?-4:4);for(int i=-2;i<=2;i++)if(Mathf.Abs(i*4-safe)>2.2f)AddBeam(i*4);}
   }

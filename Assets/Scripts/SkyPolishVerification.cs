@@ -12,7 +12,7 @@ public partial class SkyGame {
   for(int kind=0;kind<12;kind++){
    var e=SpawnEnemy(kind,new Vector3(0,1,5),0);e.missionIndex=-1;var go=e.go;int before=enemyVisualAllocations;DamageEnemy(e,100000);
    check(hitStop==0,"Enemy kind "+kind+" can be destroyed without slowing player movement");
-   var recycled=SpawnEnemy(kind,new Vector3(2,1,6),0);check(recycled.go==go&&enemyVisualAllocations==before&&recycled.hp>0,"Enemy kind "+kind+" reuses its clean visual after destruction");ReleaseEnemyVisual(recycled);Enemies.Remove(recycled);
+   TickWrecks(2);var recycled=SpawnEnemy(kind,new Vector3(2,1,6),0);check(recycled.go==go&&enemyVisualAllocations==before&&recycled.hp>0,"Enemy kind "+kind+" reuses its clean visual after destruction");ReleaseEnemyVisual(recycled);Enemies.Remove(recycled);
   }
   ClearBattle();StageTime=30;encounterSection=CurrentEncounterSection;eliteSent=true;AutoFire=false;spawnClock=999;invuln=999;missionStarted=missionResolved=true;
   yield return new WaitForSeconds(1.5f);int allocated=shockAllocations;peakKillCostMs=0;renderedSparkPeak=0;var frameMs=new List<float>();
@@ -29,9 +29,9 @@ public partial class SkyGame {
   ClearBattle();missionStarted=missionResolved=true;
   for(int language=0;language<3;language++){
    SetVoiceLanguage(language);float until=Time.realtimeSinceStartup+25;
-   while(VoiceClipsReady<110&&Time.realtimeSinceStartup<until)yield return null;
-   bool complete=VoiceClipsReady==110;foreach(var entry in voiceById.Values)complete&=VoiceClip(entry)!=null;
-   check(complete,"Language "+language+" preloads all 110 pilot and commander events");
+   while(VoiceClipsReady<141&&Time.realtimeSinceStartup<until)yield return null;
+   bool complete=VoiceClipsReady==141;foreach(var entry in voiceById.Values)complete&=VoiceClip(entry)!=null;
+   check(complete,"Language "+language+" preloads all 141 pilot and commander events");
    qaRunning=false;voiceSawState=true;voiceLastState=State;voiceLastRadio=RadioText;ClearVoices();QueueVoiceId("profile_"+language+"_0",100,0,true);
    until=Time.realtimeSinceStartup+4;while(!VoicePlaying&&Time.realtimeSinceStartup<until)yield return null;
    check(VoicePlaying&&voiceCurrent.pilot==language&&voiceAudio.clip==VoiceClip(voiceCurrent),"Language "+language+" plays the selected language's actual pilot recording");
@@ -40,7 +40,7 @@ public partial class SkyGame {
    check(VoicePlaying&&voiceCurrent.pilot==language+3,"Language "+language+" plays a distinct enemy actor without pilot-index errors");
    qaRunning=true;ClearVoices();
   }
-  SetVoiceLanguage(0);float readyUntil=Time.realtimeSinceStartup+25;while(VoiceClipsReady<110&&Time.realtimeSinceStartup<readyUntil)yield return null;
+  SetVoiceLanguage(0);float readyUntil=Time.realtimeSinceStartup+25;while(VoiceClipsReady<141&&Time.realtimeSinceStartup<readyUntil)yield return null;
   for(int stage=0;stage<3;stage++){
    Stage=stage;BeginStage();Launch();ClearBattle();AutoFire=false;spawnClock=999;invuln=999;missionStarted=missionResolved=true;StageTime=116;bossSpawned=true;SpawnBoss();Boss.pos=new Vector3(0,1,8.2f);stageBanner=warningClock=dialogClock=0;
    check(CommanderEvent=="commander_"+stage+"_entry"&&CommanderExpression==0&&commanderPortraits[stage],"Boss "+stage+" enters with an original portrait and personal challenge");

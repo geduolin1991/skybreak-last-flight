@@ -24,7 +24,7 @@ public partial class SkyGame {
   QueueVoice(entry,priority,delay,true);var request=voiceQueue.Find(r=>r.entry.id==id);if(request!=null){request.valid=context;request.expires=Time.unscaledTime+delay+8;}
  }
  void TickMission(float dt){
-  World.TickLivingMission(dt);TickSquadron(dt);TickSpecialization(dt);
+  World.TickLivingMission(dt);TickSquadron(dt);TickSpecialization(dt);TickCampaignRadio();
   if(stageEndClock>0)return;
   if(!missionStarted&&StageTime>3){missionStarted=true;
    MissionSay("world_intro_"+Stage,88);
@@ -48,7 +48,7 @@ public partial class SkyGame {
  }
  void OnMissionTargetDestroyed(Hostile e){
   if(e.kind==4&&e.missionIndex>=0)MissionSay("convoy_intercept",71,()=>Stage==0&&ConvoySurvivors>0,false);
-  if(e.kind==9&&!missionResolved){missionTargets.Remove(e);missionNodes++;World.SetDistrictPower(e.missionIndex);Score+=1800;SpawnSupply(e.pos,2);Shockwave(e.pos,Art.Cyan,3,.65f);
+  if(e.kind==9&&!missionResolved){missionTargets.Remove(e);missionNodes++;if(e.missionIndex>=0&&e.missionIndex<3)chapterNodeMasks[Stage]|=1<<e.missionIndex;World.SetDistrictPower(e.missionIndex);Score+=1800;SpawnSupply(e.pos,2);Shockwave(e.pos,Art.Cyan,3,.65f);
    int completedNode=missionNodes;
    if(Stage==1){MissionSay("city_grid_"+missionNodes,missionNodes==3?93:90,()=>missionNodes==completedNode);if(missionNodes==3)ResolveMission(true);}
    else {MissionSay("orbit_node_"+missionNodes,missionNodes==3?93:90,()=>missionNodes==completedNode&&(completedNode<3||!World.UplinkComplete));if(missionNodes==3){World.SetUplink(0);if(Boss==null&&StageTime<BossWarningTime)for(int side=-1;side<=1;side+=2)SpawnEnemy(1,new Vector3(side*7,1,15),6);}}
@@ -59,8 +59,9 @@ public partial class SkyGame {
   var c=World.Civilians[i];World.DamageCivilian(i,Difficulty==0?18:25);Burst(c.go.transform.position+Vector3.up*.3f,28,1,.7f);Shockwave(c.go.transform.position,Art.Orange,2.1f,.5f);Sound("ExplosionHeavy",.4f);
   MissionSay(c.health<=0?"convoy_disabled":"convoy_hit",97,()=>Stage==0,false);
  }
- void ResolveMission(bool success){if(missionResolved)return;missionResolved=true;sideObjectiveComplete=success;missionResults[Stage]=success?1:-1;if(success){rescueSignals++;Score+=3000;GainRouteExperience(5);Toast("民用行动完成  +3,000  ·  专精经验 +5",3.5f);}else Toast("民用目标未全部完成 · 战斗继续",3);}
+ void ResolveMission(bool success){if(missionResolved)return;missionResolved=true;sideObjectiveComplete=success;missionResults[Stage]=success?1:-1;if(success){Sound("ObjectiveChime",.55f);rescueSignals++;Score+=3000;GainRouteExperience(5);Toast("民用行动完成  +3,000  ·  专精经验 +5",3.5f);}else Toast("民用目标未全部完成 · 战斗继续",3);}
  void MissionBossDefeated(){
+  CaptureChapterOutcome();QuiesceDefeatedBattle();
   if(Stage==0){ResolveMission(ConvoySurvivors==3);World.DepartCivilians();MissionSay(ConvoySurvivors==3?"coast_clear_all":ConvoySurvivors>0?"coast_clear_some":"coast_clear_lost",96);}
   else if(Stage==1){if(!missionResolved)ResolveMission(false);MissionSay(missionNodes==3?"city_clear_power":"city_clear_partial",96);}
   else {if(!missionResolved)ResolveMission(false);MissionSay(World.UplinkComplete?"orbit_clear_link":"orbit_clear_partial",96);}

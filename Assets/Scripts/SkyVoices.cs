@@ -68,7 +68,7 @@ public partial class SkyGame {
  }
  void QueueVoice(SkyVoiceEntry entry,int priority,float delay=0,bool keep=false){
   if(entry==null||!VoiceEnabled||!voiceCanPlay||qaRunning)return;
-  bool story=entry.category=="story"||entry.category=="briefing";
+  bool story=entry.category=="story"||entry.category=="briefing"||entry.category=="cinematic";
   if(voiceCurrent!=null&&!story&&!keep&&priority<=voicePriority&&voiceAudio.clip&&voiceAudio.clip.length-voiceAudio.time>.55f)return;
   if(!story&&!keep){if(voiceQueue.Exists(r=>r.priority>=priority))return;voiceQueue.RemoveAll(r=>r.entry.category=="bark"&&r.priority<=priority);}
   voiceQueue.RemoveAll(r=>r.entry.id==entry.id);
@@ -91,6 +91,7 @@ public partial class SkyGame {
   ClearVoices();QueueVoiceId("profile_"+Ship+"_0",100,.05f,true);
  }
  void ObserveVoiceEvents(){
+  if(StoryActive){voiceSawState=true;voiceLastState=State;voiceLastRadio=RadioText;return;}
   if(!voiceSawState||State!=voiceLastState){
    var previous=voiceLastState;voiceSawState=true;voiceLastState=State;
    if(State==FlightState.Hangar){ClearVoices();voiceLastShip=-1;voiceLastRadio=RadioText;}
@@ -143,7 +144,7 @@ public partial class SkyGame {
   if(sfx)sfx.volume=Mathf.Lerp(1,.83f,voiceEnvelope);
  }
  void DrawVoiceCaption(){
-  if(!VoicePlaying||voiceCurrent.category=="story"||(voiceCurrent.category=="boss"&&State!=FlightState.Hangar)||State==FlightState.Briefing||State==FlightState.Paused)return;
+  if(StoryActive||!VoicePlaying||voiceCurrent.category=="cinematic"||voiceCurrent.category=="story"||(voiceCurrent.category=="boss"&&State!=FlightState.Hangar)||State==FlightState.Briefing||State==FlightState.Paused)return;
   bool hangar=State==FlightState.Hangar;if(hangar&&menuPage!=0&&menuPage!=4&&menuPage!=6)return;
   bool selector=hangar&&menuPage==0;float x=selector?474:478,y=selector?792:hangar?803:785,w=selector?526:644,h=selector?60:53;
   Panel(x,y,w,h);

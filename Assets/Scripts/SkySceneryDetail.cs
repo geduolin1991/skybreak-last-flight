@@ -45,7 +45,7 @@ public partial class SkyWorld {
    // Vehicles keep their transforms so restored power can move them. All
    // static district geometry, pavement and crossings share the sector batch.
    bool moving=false;foreach(var car in traffic)if(car&&(filter.transform==car||filter.transform.IsChildOf(car))){moving=true;break;}
-   if(moving)continue;
+   if(moving||IsCampaignMoving(filter.transform))continue;
    var renderer=filter.GetComponent<MeshRenderer>();var mesh=filter.sharedMesh;
    if(!renderer||!renderer.enabled||!mesh||!mesh.isReadable)continue;
    var materials=renderer.sharedMaterials;
@@ -69,7 +69,7 @@ public partial class SkyWorld {
    part.AddComponent<MeshFilter>().sharedMesh=mesh;
    var renderer=part.AddComponent<MeshRenderer>();renderer.sharedMaterial=entry.Key;
    renderer.receiveShadows=true;renderer.shadowCastingMode=ShadowCastingMode.On;
-   if(Stage==1&&(entry.Key.name.Contains("Ion_Cyan")||entry.Key.name.Contains("City_Window"))){int sectorIndex=0;int.TryParse(sector.name.Replace("Scenery sector ",""),out sectorIndex);districtWindows[(sectorIndex/3)%3].Add(renderer);}
+   if(Stage==1&&(entry.Key.name.Contains("Ion_Cyan")||entry.Key.name.Contains("City_Window")||entry.Key.name.Contains("Campaign_Window"))){int sectorIndex=0;int.TryParse(sector.name.Replace("Scenery sector ",""),out sectorIndex);districtWindows[(sectorIndex/3)%3].Add(renderer);}
   }
   foreach(var district in districtWindows)district.RemoveAll(renderer=>sources.Contains(renderer as MeshRenderer));
   foreach(var renderer in sources) {

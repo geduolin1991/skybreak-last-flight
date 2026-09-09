@@ -26,6 +26,7 @@ public partial class SkyWorld {
    var c=new SkyCivilian{go=o,index=i,station=new Vector3((i-1)*6.3f,-9.68f,i==1?4.8f:8.2f)};o.transform.position=c.station;
    civilians.Add(c);
   }
+  if(Stage==1)for(int i=0;i<3;i++){var bus=Art.Model("EvacBus",missionRoot);bus.name="撤离巴士 / 街区 "+(i+1);bus.transform.localScale=Vector3.one*.4f;var c=new SkyCivilian{go=bus,index=i,station=new Vector3((i-1)*1.8f,-9.96f,4.5f+i*2.5f)};bus.transform.position=c.station;civilians.Add(c);}
   if(Stage==2){
    var dock=Art.Model("OrbitalDock",missionRoot);dock.transform.position=new Vector3(0,-5.2f,5);dock.transform.localScale=Vector3.one*.72f;
    orbitalDish=new GameObject("Tracking aerial").transform;orbitalDish.SetParent(missionRoot,false);orbitalDish.position=new Vector3(0,-3.6f,10);
@@ -35,7 +36,7 @@ public partial class SkyWorld {
   }
  }
  public Vector3 CivilianAirTarget(SkyCivilian c){var p=c.go?c.go.transform.position:c.station;return new Vector3(p.x,1,p.z+(p.y-1)*.57735027f);}
- public void SetDistrictPower(int index){if(index>=0&&index<3)gridRestored[index]=true;}
+ public void SetDistrictPower(int index){if(index<0||index>=3)return;gridRestored[index]=true;if(Stage==1&&index<civilians.Count)civilians[index].departed=true;}
  public void SetUplink(float progress,bool complete=false){UplinkActive=true;UplinkProgress=Mathf.Clamp01(progress);UplinkComplete=complete;}
  public void DepartCivilians(){foreach(var c in civilians)if(c.health>0)c.departed=true;}
  public void DamageCivilian(int index,float damage){
@@ -44,7 +45,7 @@ public partial class SkyWorld {
  }
  public void TickLivingMission(float dt){
   foreach(var c in civilians){if(!c.go)continue;c.age+=dt;Vector3 p=c.station;
-   if(c.health<=0){p.y-=Mathf.Min(1.1f,c.age*.008f);c.go.transform.rotation=Quaternion.Euler(0,0,16);}else if(c.departed){c.station+=Vector3.forward*dt*(Stage==0?4.8f:10);p=c.station;}
+   if(c.health<=0){p.y-=Mathf.Min(1.1f,c.age*.008f);c.go.transform.rotation=Quaternion.Euler(0,0,16);}else if(c.departed){c.station+=Vector3.forward*dt*(Stage==0?4.8f:Stage==1?1.6f:10);p=c.station;}
    else {p.x+=Mathf.Sin(c.age*.32f+c.index)*.14f;p.y+=Mathf.Sin(c.age*1.5f+c.index)*.04f;c.go.transform.rotation=Quaternion.Euler(Mathf.Sin(c.age*.7f)*.65f,Mathf.Sin(c.age*.32f)*1.2f,Mathf.Sin(c.age*.8f)*1.2f);}
    c.go.transform.position=p;
 
@@ -57,8 +58,8 @@ public partial class SkyWorld {
   if(Stage==2&&index%2==1)PlaceScenery(t,"OrbitalTruss",new Vector3((index%4==1?-1:1)*8.4f,-7,1),.72f);
   if(Stage==0)return;
   if(Stage==1){
-   for(int side=-1;side<=1;side+=2){var o=Art.Model("CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
-    int district=(index/3)%3;foreach(var r in o.GetComponentsInChildren<MeshRenderer>())if(r.sharedMaterial&&r.sharedMaterial.name.Contains("City_Window"))districtWindows[district].Add(r);
+   for(int side=-1;side<=1;side+=2){var o=Art.Model(index%3==1?"CivicHospital112":"CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
+    int district=(index/3)%3;foreach(var r in o.GetComponentsInChildren<MeshRenderer>())if(r.sharedMaterial&&(r.sharedMaterial.name.Contains("City_Window")||r.sharedMaterial.name.Contains("Campaign_Window")))districtWindows[district].Add(r);
     var car=Art.Model(index%3==0?"EvacBus":"TrafficCar",t);car.transform.localPosition=new Vector3(side*(index%2==0?1.9f:12.1f),-3.04f,side*3);car.transform.localScale=Vector3.one*.28f;car.transform.localRotation=Quaternion.Euler(0,side<0?180:0,0);traffic.Add(car.transform);
    }
    // Fine kerbs, drains and crossing stripes are geometry, not a blurred backdrop.

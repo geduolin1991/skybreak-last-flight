@@ -1,0 +1,272 @@
+{
+  "native": {
+    "pass": true,
+    "identity": "f3330833b4d1f53fbb74cc2d121942f65fd2415c75a0158ee0ab65fa6a807170",
+    "steps": [
+      {
+        "step": "runtime",
+        "seconds": 102.1,
+        "pass": true,
+        "checks": 347
+      },
+      {
+        "step": "campaign0",
+        "seconds": 165.7,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "campaign1",
+        "seconds": 189.5,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "campaign2",
+        "seconds": 172.7,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "portraits",
+        "seconds": 18.3,
+        "pass": true,
+        "checks": 0
+      }
+    ]
+  },
+  "webkit-checks": {
+    "pass": true,
+    "checks": [
+      "WebKit auto-detects iPhone controls",
+      "Portrait is directly playable without an overlay",
+      "Portrait clear quality applies",
+      "English voice plays from portrait settings",
+      "Portrait touch launches combat",
+      "Portrait touch nova fires",
+      "Rotation pauses controls 852",
+      "Can resume in current orientation 852",
+      "HUD does not cover the arena 852",
+      "Actual camera matches orientation 852",
+      "Rotation pauses controls 393",
+      "Can resume in current orientation 393",
+      "HUD does not cover the arena 393",
+      "Actual camera matches orientation 393",
+      "Quality is adjustable while paused",
+      "No WebKit page or rendering errors"
+    ],
+    "errors": []
+  },
+  "android": {
+    "pass": true,
+    "checks": [
+      "Android automatically selects touch controls",
+      "Android portrait recommends landscape without blocking play",
+      "Japanese preview plays on Android browser",
+      "Android portrait retains real pilot and coastal scenery",
+      "Android touch bomb consumes one charge",
+      "Android rotation pauses safely",
+      "Landscape restores scenery and camera",
+      "No Android browser errors"
+    ],
+    "errors": []
+  },
+  "cast-flow": {
+    "pass": true,
+    "checks": [
+      "Pilot 0 real portrait, motion frames and complete caption",
+      "Pilot 1 real portrait, motion frames and complete caption",
+      "Pilot 2 real portrait, motion frames and complete caption",
+      "Rendered portrait and caption use the same delivered actor",
+      "Actual boss entrance uses enemy portrait and matching caption"
+    ],
+    "samples": [
+      {
+        "pilot": 0,
+        "name": "苍凛",
+        "line": "跟紧我，出发！",
+        "slot": {
+          "x": 8,
+          "y": 570,
+          "width": 82,
+          "height": 96
+        },
+        "coastInset": 5
+      },
+      {
+        "pilot": 1,
+        "name": "绯音",
+        "line": "坐稳了，开工！",
+        "slot": {
+          "x": 8,
+          "y": 570,
+          "width": 82,
+          "height": 96
+        },
+        "coastInset": 5
+      },
+      {
+        "pilot": 2,
+        "name": "雪璃",
+        "line": "航线清晰。我们走。",
+        "slot": {
+          "x": 8,
+          "y": 570,
+          "width": 82,
+          "height": 96
+        },
+        "coastInset": 5
+      }
+    ],
+    "enemy": {
+      "name": "加兰 / 利维坦舰长",
+      "line": "小队也敢挑战利维坦？这条航线，到此为止。",
+      "event": "commander_0_entry"
+    }
+  },
+  "boss-check": {
+    "pass": true,
+    "samples": 80,
+    "lowestHud": 99.5,
+    "fieldTop": 104,
+    "instructions": [
+      "拆除左右炮台，击穿海上要塞",
+      "鱼雷扇面 · 横向穿越缝隙",
+      "交错炮击 · 离开锁定航线",
+      "护盾崩溃 · 核心易伤 8 秒",
+      "攻势间隙 · 核心易伤，集中火力"
+    ],
+    "modules": 2,
+    "errors": [],
+    "scope": "Real first boss spawned early in isolated local test; not a full campaign completion"
+  },
+  "coast-flow": {
+    "pass": true,
+    "seconds": 45,
+    "samples": 193,
+    "coastFootprints": 20,
+    "wakeAlignment": true,
+    "sceneResetsWithoutDuplicateCoast": true,
+    "musicContinuous": true,
+    "meanFps": 61.09240983223003,
+    "peakKillMs": 0.4000000059604645,
+    "sceneryRenderers": 118,
+    "errors": [],
+    "scope": "Actual mobile-emulated combat across multiple scenery wraps, desktop GPU"
+  },
+  "combat-quality": {
+    "pass": true,
+    "results": [
+      {
+        "quality": "balanced",
+        "render": [
+          584,
+          848
+        ],
+        "meanGameFps": 61.57169586181641,
+        "minGameFps": 60.95783996582031,
+        "peakKillMs": 0.20000000298023224,
+        "resizeCounts": [
+          45
+        ],
+        "musicContinuous": true
+      },
+      {
+        "quality": "clear",
+        "render": [
+          780,
+          1132
+        ],
+        "meanGameFps": 61.4155776977539,
+        "minGameFps": 60.79481887817383,
+        "peakKillMs": 0.20000000298023224,
+        "resizeCounts": [
+          46
+        ],
+        "musicContinuous": true
+      },
+      {
+        "quality": "smooth",
+        "render": [
+          390,
+          566
+        ],
+        "meanGameFps": 61.0597339630127,
+        "minGameFps": 60.52710723876953,
+        "peakKillMs": 0.20000000298023224,
+        "resizeCounts": [
+          47
+        ],
+        "musicContinuous": true
+      }
+    ],
+    "errors": [],
+    "samples": 180,
+    "scope": "Desktop GPU with mobile emulation; no physical-phone FPS claim"
+  },
+  "desktop-checks": {
+    "pass": true,
+    "selectedShip": 1,
+    "musicContinues": true,
+    "combat": "Playing",
+    "bombActive": true,
+    "pause": "Paused",
+    "errors": []
+  },
+  "input-consistency": {
+    "pass": true,
+    "web_identity": "ddae80d7db34582a1c605b288dc005b490c66208b142fab18a86e1708c32dfff",
+    "native_identity": "f3330833b4d1f53fbb74cc2d121942f65fd2415c75a0158ee0ab65fa6a807170",
+    "source_assets_match": 972,
+    "version": "1.12.0"
+  },
+  "voice-review": {
+    "pass": true,
+    "clips": 93,
+    "languages": [
+      "zh",
+      "en",
+      "ja"
+    ],
+    "method": "Independent local Qwen3-ASR transcript and waveform validation",
+    "review": {
+      "en/campaign_ending_full_2": "ASR formats the spoken number seven hundred and seventy as 770. Remaining words match."
+    },
+    "physical_listening_panel": false
+  },
+  "portrait-motion": {
+    "pass": true,
+    "checks": [
+      {
+        "pilot": 0,
+        "changed_pixels": 22499
+      },
+      {
+        "pilot": 1,
+        "changed_pixels": 19618
+      },
+      {
+        "pilot": 2,
+        "changed_pixels": 14102
+      }
+    ]
+  },
+  "story_checks": 49,
+  "mobile_checks": 100,
+  "physical_phone_tested": false,
+  "isolated_native": {
+    "pass": true,
+    "checks": 347,
+    "identity": "f3330833b4d1f53fbb74cc2d121942f65fd2415c75a0158ee0ab65fa6a807170",
+    "stress": {
+      "kills": 180,
+      "frames": 360,
+      "average_ms": 17.685,
+      "p95_ms": 17.573,
+      "p99_ms": 66.346,
+      "max_kill_cpu_ms": 0.133,
+      "spark_peak": 945,
+      "new_shock_objects": 0
+    }
+  }
+}

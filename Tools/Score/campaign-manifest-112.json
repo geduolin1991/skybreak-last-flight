@@ -1,0 +1,32 @@
+[
+  {
+    "name": "MusicLeviathan",
+    "bpm": 132,
+    "bars": 32,
+    "seconds": 58.18181818181818
+  },
+  {
+    "name": "MusicTempest",
+    "bpm": 156,
+    "bars": 32,
+    "seconds": 49.23076923076923
+  },
+  {
+    "name": "MusicSeraph",
+    "bpm": 128,
+    "bars": 32,
+    "seconds": 60.0
+  },
+  {
+    "name": "MusicDawn",
+    "bpm": 88,
+    "bars": 24,
+    "seconds": 65.45454545454545
+  },
+  {
+    "name": "MusicAftermath",
+    "bpm": 84,
+    "bars": 24,
+    "seconds": 68.57142857142857
+  }
+]

@@ -5,7 +5,8 @@ const runtime=process.env.SKYBREAK_AUDIO_RUNTIME||path.resolve(root,'../.tools/s
 const {SpessaSynthProcessor,SoundBankLoader,SpessaLog}=await import(pathToFileURL(path.join(runtime,'node_modules/spessasynth_core/dist/index.js')));
 SpessaLog.setLogLevel(false,false,false);
 const raw=fs.readFileSync(path.join(runtime,'GeneralUser-GS.sf2'));const bank=SoundBankLoader.fromArrayBuffer(raw.buffer.slice(raw.byteOffset,raw.byteOffset+raw.byteLength));const sr=44100;
-const manifest=JSON.parse(fs.readFileSync(path.join(root,'Tools/Score/manifest.json')));
+const manifestPath=process.argv[2]?path.resolve(process.argv[2]):path.join(root,'Tools/Score/manifest.json');
+const manifest=JSON.parse(fs.readFileSync(manifestPath));
 for(const entry of manifest){
  const score=JSON.parse(fs.readFileSync(path.join(root,'Tools/Score',entry.name+'.json')));
  const synth=new SpessaSynthProcessor(sr,{eventsEnabled:false});synth.soundBankManager.addSoundBank(bank,'main');await synth.processorInitialized;

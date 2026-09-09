@@ -10,6 +10,7 @@ public partial class SkyGame {
  [Serializable] class MobilePortraitBounds {public float x,y,w,h;public int speaker,expression;public bool radio;}
  [Serializable] public class MobileChoice {public string name,description,detail;public bool selected,enabled=true;public int index;}
  [Serializable] public class MobileSnapshot {
+  public bool storyActive,storyAuto,practice;public int storyIndex,storyCount,storySpeaker,voiceTotal;public string storyTitle,storyHeading,storyBody,storyQuote,storyName,ending,outcome,lastReport;public MobileChoice[] stories;
   public string eventMessage,routeNode,routeNext,supportPilots;public float routeProgress,coastInset;public int shields,portraitSpeaker,portraitExpression;public Rect battleViewport,portraitBounds;public bool portraitReady;
   public string encounter,debrief;public float stageTime,bossArrival;public string state,page,pilot,age,bio,motto,ship,shipDescription,skill,weapon,route,stage,boss,mission,radioName,radioText,voiceLanguage,voiceId,commanderEvent;
   public int shipIndex,difficulty,hull,maxHull,bombs,score,highScore,combo,salvage,level,unlocked,stageIndex,routeTier,voiceReady,speaker,expression,kills,maxCombo,earnedSalvage;
@@ -32,7 +33,7 @@ public partial class SkyGame {
  }
  void ResetMobileInput(){mobileMove=Vector2.zero;mobileInputAt=-1;}
  Vector2 MobileMovement=>State==FlightState.Playing&&Time.unscaledTime-mobileInputAt<.35f?mobileMove:Vector2.zero;
- public void WebMobilePage(string page){if(page=="home"||page=="routes"||page=="settings"||page=="dossier"||page=="research"||page=="chapters"||page=="guide")mobilePage=page;}
+ public void WebMobilePage(string page){if(page=="home"||page=="routes"||page=="settings"||page=="dossier"||page=="research"||page=="chapters"||page=="guide"||page=="archive")mobilePage=page;}
  public void WebMobilePortrait(string json){try{var r=JsonUtility.FromJson<MobilePortraitBounds>(json);if(r!=null&&FiniteBounds(r)){mobilePortraitRect=new Rect(r.x,r.y,Mathf.Clamp01(r.w),Mathf.Clamp01(r.h));mobilePortraitSpeaker=Mathf.Clamp(r.speaker,0,5);mobilePortraitExpression=Mathf.Clamp(r.expression,0,2);mobileRadioPresentation=r.radio;}}catch(ArgumentException){}}
  public void WebMobileViewport(string json){
   try{var r=JsonUtility.FromJson<MobilePortraitBounds>(json);if(r==null||!FiniteBounds(r)||r.x<0||r.y<0||r.w<.1f||r.h<.1f||r.x+r.w>1.001f||r.y+r.h>1.001f)return;
@@ -43,6 +44,8 @@ public partial class SkyGame {
  public void WebMobileAction(string action){
   if(!MobileMode||string.IsNullOrEmpty(action))return;
   if(action=="release"){ResetMobileInput();return;}
+  if(StoryActive){if(action=="storyNext")AdvanceStory();else if(action=="storySkip")SkipStory();else if(action=="storyAuto")storyAuto=!storyAuto;return;}
+  if(action=="endingReplay"&&State==FlightState.Victory&&!Practice){StartStory("ending_"+CampaignEnding,true);return;}
   if(action=="pause"){ResetMobileInput();if(State==FlightState.Playing)Pause();return;}
   if(action=="resume"){ResetMobileInput();if(State==FlightState.Paused)Pause();return;}
   if(action=="launch"){ResetMobileInput();Launch();return;}
@@ -53,6 +56,7 @@ public partial class SkyGame {
   if(State==FlightState.Upgrade&&parts[0]=="upgrade"&&n>=0&&n<3){ResetMobileInput();ApplyUpgrade(n);return;}
   if(State!=FlightState.Hangar)return;
   switch(parts[0]){
+   case "storyReplay":ReplayCampaignStory(n);break;
    case "play":ResetMobileInput();BeginRun();break;
    case "ship":if(n>=0&&n<3)SelectShip(n);break;
    case "route":if(n>=0&&n<3)SelectSpecialization(n);break;
@@ -86,7 +90,7 @@ public partial class SkyGame {
    energy=Energy,overdrive=Overdrive,skillCooldown=SkillCooldown,bossHealth=Boss!=null?Boss.hp/Boss.maxHp:0,progress=Progress,masterVolume=MasterVolume,voiceVolume=VoiceVolume,moveX=MobileMovement.x,moveY=MobileMovement.y,playerX=PlayerPos.x,playerZ=PlayerPos.z,
    focus=mobileFocus,voiceEnabled=VoiceEnabled,musicEnabled=MusicEnabled,shakeEnabled=ShakeEnabled,voicePlaying=VoicePlaying,nova=NovaActive,portrait=State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory,
    radio=State==FlightState.Playing&&!string.IsNullOrEmpty(line),canSkill=State==FlightState.Playing&&SkillCooldown<=0,canBomb=State==FlightState.Playing&&Bombs>0&&stageEndClock<=0&&!NovaActive,canOverdrive=State==FlightState.Playing&&Energy>=100&&Overdrive<=0};
-  s.portraitSpeaker=mobilePortraitSpeaker;s.portraitExpression=mobilePortraitExpression;
+  PopulateStorySnapshot(s);s.portraitSpeaker=mobilePortraitSpeaker;s.portraitExpression=mobilePortraitExpression;
   if(Stage==0&&State!=FlightState.Hangar){s.convoy=new float[World.Civilians.Count];for(int i=0;i<s.convoy.Length;i++)s.convoy[i]=World.Civilians[i].health/100f;}
   if(State==FlightState.Hangar){
    s.routes=new MobileChoice[3];s.research=new MobileChoice[3];int[] levels={researchFire,researchArmor,researchSkill};
@@ -103,7 +107,8 @@ public partial class SkyGame {
   if(mobileBattleViewport.y>0)Rect(0,Screen.height*(1-mobileBattleViewport.y),Screen.width,Screen.height*mobileBattleViewport.y,new Color(.028f,.065f,.09f,1));
   Rect r=new Rect(mobilePortraitRect.x*Screen.width,mobilePortraitRect.y*Screen.height,mobilePortraitRect.width*Screen.width,mobilePortraitRect.height*Screen.height);
   if(r.width<=0||r.height<=0)return;
-  if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Ship,r.x,r.y,r.width,r.height);}
+  if(StoryActive){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Mathf.Clamp(mobilePortraitSpeaker,0,2),r.x,r.y,r.width,r.height);}
+  else if(State==FlightState.Hangar&&(mobilePage=="home"||mobilePage=="dossier")||State==FlightState.Briefing||State==FlightState.Victory){r=SkyPortraitRig.FitRect(r,2f/3);Portrait(Ship,r.x,r.y,r.width,r.height);}
   else if(State==FlightState.Playing&&mobileRadioPresentation){int speaker=mobilePortraitSpeaker;
    // The web caption and portrait use one delivered radio snapshot. Sampling
    // the live voice here could show the next actor before its caption arrived.

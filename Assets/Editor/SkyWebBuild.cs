@@ -8,8 +8,8 @@ using UnityEngine;
 // Run in an isolated project copy: this changes only the copy's platform settings.
 public static class SkyWebBuild {
  public static void Build() {
-  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.11.0";SkyVoiceBuildChecks.Check();
-  PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Gzip;
+  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.12.0";SkyVoiceBuildChecks.Check();
+  PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Brotli;
   PlayerSettings.WebGL.decompressionFallback=true;
   PlayerSettings.WebGL.dataCaching=true;
   // Stable names avoid a Unity 6000.6 Bee regeneration loop with hashed loaders.
@@ -34,14 +34,17 @@ public static class SkyWebBuild {
    if(importer.mipmapEnabled&&importer.filterMode==FilterMode.Trilinear)continue;
    importer.mipmapEnabled=true;importer.filterMode=FilterMode.Trilinear;importer.SaveAndReimport();
   }
-  // Web audio does not support streaming; keep compressed clips until playback.
+  // This disposable project uses platform-specific defaults. Unsupported
+  // AudioImporter override names can silently do nothing; set real defaults.
+  // Web audio stays compressed until playback; full-resolution source WAVs remain.
   foreach(string path in Directory.GetFiles("Assets/Resources/Audio","*.wav")) {
    var importer=(AudioImporter)AssetImporter.GetAtPath(path);
    var settings=importer.defaultSampleSettings;
    settings.loadType=AudioClipLoadType.CompressedInMemory;
-   settings.quality=.7f;
-   if(importer.GetOverrideSampleSettings("WebGL").Equals(settings))continue;
-   importer.SetOverrideSampleSettings("WebGL",settings);
+   settings.quality=path.Contains("Music")?.58f:.7f;
+   if(path.Contains("Music")||path.Contains("Ambience")){settings.sampleRateSetting=AudioSampleRateSetting.OverrideSampleRate;settings.sampleRateOverride=32000;}
+   if(importer.defaultSampleSettings.Equals(settings))continue;
+   importer.defaultSampleSettings=settings;
    importer.SaveAndReimport();
   }
   AssetDatabase.SaveAssets();

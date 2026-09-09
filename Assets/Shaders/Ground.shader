@@ -1,10 +1,10 @@
 Shader "Skybreak/Ground" {
-Properties { _Travel("Travel",Float)=0 _Power("District power",Vector)=(0,0,0,0) }
+Properties { _Travel("Travel",Float)=0 _Storm("Weather intensity",Range(0,1))=1 _Power("District power",Vector)=(0,0,0,0) }
 SubShader { Tags {"RenderType"="Opaque"} LOD 250
 CGPROGRAM
 #pragma surface surf Standard fullforwardshadows
 #pragma target 3.0
-struct Input {float3 worldPos;};float _Travel;float4 _Power;
+struct Input {float3 worldPos;};float _Travel,_Storm;float4 _Power;
 float hash(float2 p){return frac(sin(dot(p,float2(127.1,311.7)))*43758.5453);}
 float band(float x,float halfWidth){return 1-smoothstep(halfWidth,halfWidth+max(.015,fwidth(x)),abs(x));}
 float noise(float2 p){float2 i=floor(p),f=frac(p);f=f*f*(3-2*f);return lerp(lerp(hash(i),hash(i+float2(1,0)),f.x),lerp(hash(i+float2(0,1)),hash(i+1),f.x),f.y);}
@@ -20,7 +20,7 @@ void surf(Input IN,inout SurfaceOutputStandard o){
  float light=band(abs(p.x)-3.36,.018)*step(.75,frac(q.y/3));
  float puddle=smoothstep(.47,.70,noise(p*float2(.9,.24)))*road;
  float reflection=exp(-abs(abs(p.x)-3.0)*1.7)*pow(saturate(sin(q.y*2.3+noise(p*.6)*2)),4)*puddle*power;
- float ripple=sin(p.x*17+p.y*11-_Time.y*4)*.015*puddle;
+ float ripple=sin(p.x*17+p.y*11-_Time.y*4)*.015*puddle*_Storm;
  o.Albedo=(lerp(concrete,asphalt,road)+float3(.6,.62,.50)*stripe-gutter*.02)*lerp(1,.76,puddle);
  o.Normal=normalize(float3(ripple,-ripple*.7,1));o.Metallic=.13;o.Smoothness=lerp(lerp(.34,.60,road),.90,puddle);
  o.Occlusion=1-seam*.18;o.Emission=float3(.15,.48,.67)*light*power*1.7+float3(.60,.25,.08)*reflection*.25;
