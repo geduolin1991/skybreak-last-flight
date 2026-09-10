@@ -140,3 +140,8 @@ body.touch-mode #mobile-shell.ready{display:block;position:absolute;inset:0;colo
 .portrait-layout #mobile-shell .m-story-copy h2{font-size:25px;margin:8px 0 14px}
 @media(max-height:710px) and (orientation:portrait){.portrait-layout .m-story-portrait{height:150px}.portrait-layout .m-story-copy{top:207px}.portrait-layout #mobile-shell .m-story-copy p{font-size:15px}}
 @media(max-height:350px) and (orientation:landscape){.m-story-copy{top:59px;bottom:68px}.m-story-actions{bottom:8px}.m-story-actions button{min-height:44px!important}.m-story-portrait{top:52px;height:calc(100% - 115px)}}
+
+/* Ground campaign entry stays reachable in compact browser landscape. */
+.m-home-info{max-height:calc(100% - 121px);overflow:auto;pointer-events:auto}
+.m-home-info .m-ground-entry{width:100%;min-height:39px;margin-top:5px;border-color:#758e8b;color:#d3efdf}
+.portrait-layout .m-home-info{max-height:60%}

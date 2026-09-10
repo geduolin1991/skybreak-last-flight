@@ -16,6 +16,7 @@ public partial class SkyGame {
  void OnGUI(){PrepareUI();if(MobileMode&&!qaRunning){DrawMobilePresentation();return;}if(Event.current.type==EventType.MouseDown||Event.current.type==EventType.MouseUp)Debug.Log("SKYBREAK_UI "+Event.current.type+" event="+Event.current.mousePosition+" input="+Input.mousePosition+" screen="+Screen.width+"x"+Screen.height+" dpi="+Screen.dpi);float scale=Mathf.Min(Screen.width/1600f,Screen.height/900f);float ox=(Screen.width-1600*scale)/2,oy=(Screen.height-900*scale)/2;GUI.matrix=Matrix4x4.identity;if(ox>0){Rect(0,0,ox,Screen.height,Color.black);Rect(Screen.width-ox,0,ox,Screen.height,Color.black);}if(oy>0){Rect(0,0,Screen.width,oy,Color.black);Rect(0,Screen.height-oy,Screen.width,oy,Color.black);}GUI.matrix=Matrix4x4.TRS(new Vector3(ox,oy,0),Quaternion.identity,new Vector3(scale,scale,1));GUI.depth=0;GUI.enabled=true;
  if(portraitCaptureGrid){DrawPortraitMotionPreview();GUI.matrix=Matrix4x4.identity;return;}
  if(StoryActive){DrawStory();GUI.matrix=Matrix4x4.identity;return;}
+ if(GroundActive){DrawGround115();GUI.matrix=Matrix4x4.identity;return;}
  if(State==FlightState.Hangar)DrawHangar();else {DrawHUD();if(State==FlightState.Briefing)DrawBriefing();else if(State==FlightState.Paused)DrawPause();else if(State==FlightState.Upgrade)DrawUpgrade();else if(State==FlightState.Victory||State==FlightState.Defeat)DrawResult();}
  DrawVoiceCaption();if(showFps)Label(Mathf.RoundToInt(smoothedFps)+" FPS",1430,874,130,25,13,muted,TextAnchor.UpperRight);GUI.matrix=Matrix4x4.identity;GUI.enabled=true;
  }
@@ -25,6 +26,7 @@ public partial class SkyGame {
  Label(PilotMottos[Ship],76,408,453,87,22,paper);Label(PilotNames[Ship]+"  /  "+PilotAges[Ship],77,508,463,29,16,accent);Label("驾驶员技 · "+ActiveSkillName+"    [Q]",77,550,450,29,16,muted);
  if(Button("战术专精 · "+RouteName+"  →",76,578,380,27))menuPage=7;
  if(Button("开始行动     →",76,612,380,64,true))BeginRun();if(Button("飞行手册",76,691,184,48))menuPage=2;if(Button("系统设置",274,691,182,48))menuPage=1;if(Button("章节训练",76,753,184,48))menuPage=3;if(Button("驾驶员档案",274,753,182,48))menuPage=4;
+ if(Button("地面战役 · 断链行动  →",76,814,380,29))BeginGround115();
  DrawShipSelector();
  Label("最高分  "+HighScore.ToString("N0")+"   /   回收点  "+salvage,76,853,600,24,14,muted);Label("ENTER 出击     ← → 选择战机",1020,853,505,28,14,muted,TextAnchor.UpperRight);
  }

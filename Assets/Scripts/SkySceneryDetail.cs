@@ -13,7 +13,7 @@ public partial class SkyWorld {
 
  void AddChapterLandmark(Transform sector,int index) {
   string model=null;Vector3 position=Vector3.zero;float size=1;
-  if(Stage==2&&index%5==2){model="OrbitalGate";position=new Vector3(0,-9,0);size=1.25f;}
+  if(Stage==2&&index%5==2){model="OrbitalRefinery115";position=new Vector3(index%2==0?-8:8,-19,0);size=.62f;}
   if(model==null)return;
   var landmark=Art.Model(model,sector);landmark.transform.localPosition=position;
   landmark.transform.localScale=Vector3.one*size;

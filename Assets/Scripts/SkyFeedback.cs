@@ -15,6 +15,7 @@ public partial class SkyGame {
  void MixSoundtrack(float dt){
   if(!music)return;float target=State==FlightState.Playing?(Overdrive>0?1:Boss!=null?(bossPhase==2?.96f:bossPhase==1?.81f:.64f):EncounterMusic):0;
   if(State==FlightState.Playing&&Boss==null&&Overdrive<=0&&Combo>=16&&!EncounterRecovery&&CurrentEncounterSection<5)target=Mathf.Min(.7f,target+.12f);
+  if(GroundActive)target=State==FlightState.Playing?(groundUnits.Count>0?.68f:.16f):0;
   musicBlend=Mathf.MoveTowards(musicBlend,target,dt*(target>musicBlend?1.7f:.65f));audioDuck=Mathf.Max(0,audioDuck-dt*2.8f);
   float pause=State==FlightState.Paused?.48f:State==FlightState.Playing&&CurrentEncounterSection==5&&Boss==null?.66f:1;float volume=MusicEnabled?MasterVolume*pause*(1-audioDuck*.45f)*(1-voiceEnvelope*.46f):0;
   MixCampaignAudio(dt,volume);

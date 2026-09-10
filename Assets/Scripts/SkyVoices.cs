@@ -91,7 +91,7 @@ public partial class SkyGame {
   ClearVoices();QueueVoiceId("profile_"+Ship+"_0",100,.05f,true);
  }
  void ObserveVoiceEvents(){
-  if(StoryActive){voiceSawState=true;voiceLastState=State;voiceLastRadio=RadioText;return;}
+  if(StoryActive||GroundActive){voiceSawState=true;voiceLastState=State;voiceLastRadio=RadioText;return;}
   if(!voiceSawState||State!=voiceLastState){
    var previous=voiceLastState;voiceSawState=true;voiceLastState=State;
    if(State==FlightState.Hangar){ClearVoices();voiceLastShip=-1;voiceLastRadio=RadioText;}
@@ -116,7 +116,7 @@ public partial class SkyGame {
  void UpdateVoices(float dt){
   if(!voiceAudio)return;
   if(voiceCanPlay&&!qaRunning)ObserveVoiceEvents();
-  if(!VoiceEnabled||qaRunning)ClearVoices();
+  if(!VoiceEnabled||qaRunning||GroundActive)ClearVoices();
   else if(voiceCanPlay){
    if(State==FlightState.Paused){if(!voicePaused){voiceAudio.Pause();voicePaused=true;}foreach(var request in voiceQueue){request.ready+=dt;request.expires+=dt;}voiceStartedAt+=dt;}
    else {

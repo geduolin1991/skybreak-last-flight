@@ -30,7 +30,7 @@ public partial class SkyWorld {
   }
   if(Stage==1)for(int i=0;i<3;i++){var bus=Art.Model("EvacBus",missionRoot);bus.name="撤离巴士 / 街区 "+(i+1);bus.transform.localScale=Vector3.one*.4f;var c=new SkyCivilian{go=bus,index=i,station=new Vector3((i-1)*1.8f,-9.96f,4.5f+i*2.5f)};bus.transform.position=c.station;civilians.Add(c);}
   if(Stage==2){
-   var dock=Art.Model("OrbitalDock",missionRoot);dock.transform.position=new Vector3(0,-5.2f,5);dock.transform.localScale=Vector3.one*.72f;
+   var dock=Art.Model("OrbitalHabitat115",missionRoot);dock.transform.position=new Vector3(0,-7.5f,5);dock.transform.localScale=Vector3.one*.54f;
    orbitalDish=new GameObject("Tracking aerial").transform;orbitalDish.SetParent(missionRoot,false);orbitalDish.position=new Vector3(0,-3.6f,10);
    var ring=Art.Ring(orbitalDish,1.8f,new Color(.12f,.42f,.6f),.055f);ring.transform.localRotation=Quaternion.Euler(0,0,38);
    for(int i=0;i<3;i++){var l=Art.Line(missionRoot,"Uplink circuit "+i,new[]{new Vector3((i-1)*6,-2.4f,7),new Vector3(0,-3.2f,10)},new Color(.08f,.15f,.24f),.055f);l.useWorldSpace=true;orbitalLinks.Add(l);}
@@ -58,7 +58,7 @@ public partial class SkyWorld {
  }
  void CreateGroundDetail(Transform t,int index){
   if(Stage==1)PlaceScenery(t,"CivicPlaza",new Vector3((index%2==0?-1:1)*6.9f,-3.04f,4.4f),.72f);
-  if(Stage==2&&index%2==1)PlaceScenery(t,"OrbitalTruss",new Vector3((index%4==1?-1:1)*8.4f,-7,1),.72f);
+  if(Stage==2&&index%2==1)PlaceScenery(t,"OrbitalRefinery115",new Vector3((index%4==1?-1:1)*9.4f,-14,1),.40f);
   if(Stage==0)return;
   if(Stage==1){
    for(int side=-1;side<=1;side+=2){var o=Art.Model(index%3==1?"CivicHospital112":"CityDistrict",t);o.transform.localPosition=new Vector3(side*6.9f,-3.3f,0);o.transform.localScale=Vector3.one*.57f;
@@ -70,7 +70,7 @@ public partial class SkyWorld {
    for(int s=-1;s<=1;s+=2)Art.Box(t,"Raised boulevard curb",new Vector3(s*3.6f,-3.1f,0),new Vector3(.16f,.15f,14),concrete);
    for(int n=0;n<8;n++)Art.Box(t,"Zebra crossing",new Vector3(-2.8f+n*.8f,-2.985f,5.5f),new Vector3(.4f,.015f,1.35f),stripe);
   }
-  if(Stage==2&&index%2==0){var o=Art.Model("OrbitalDock",t);o.transform.localPosition=new Vector3(index%4==0?-12:12,-7,0);o.transform.localScale=Vector3.one*.45f;}
+  if(Stage==2&&index%2==0){var o=Art.Model("OrbitalHabitat115",t);o.transform.localPosition=new Vector3(index%4==0?-12:12,-13,0);o.transform.localScale=Vector3.one*.45f;}
  }
  void TickGroundLife(float dt){
   if(groundSurface){groundSurface.SetFloat("_Travel",motion);groundSurface.SetVector("_Power",new Vector4(gridPower[0],gridPower[1],gridPower[2],0));}

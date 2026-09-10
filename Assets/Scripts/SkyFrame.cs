@@ -8,6 +8,18 @@ public class SkyFrame:MonoBehaviour {
  public int JointCount=>joints.Count;
  public void Initialize(int ship){variant=ship;foreach(var t in GetComponentsInChildren<Transform>())if(t.name.StartsWith("Motion_"))joints.Add(new Joint{part=t,position=t.localPosition,rotation=t.localRotation,name=t.name,side=t.name.Contains("_L")?-1:1});}
  public void Recoil(){kick=1;}
+ public void GroundTick115(float dt,float speed,bool airborne){
+  clock+=dt*speed*1.8f;kick=Mathf.MoveTowards(kick,0,dt*7);
+  foreach(var j in joints){Vector3 p=j.position;Vector3 a=Vector3.zero;float step=Mathf.Sin(clock+(j.side<0?0:Mathf.PI));
+   if(j.name.Contains("Leg")){a.x=airborne?-28:step*Mathf.Min(19,speed*3);p.y+=airborne?.10f:Mathf.Max(0,step)*Mathf.Min(.09f,speed*.015f);}
+   else if(j.name.Contains("Arm"))a.x=-58+kick*8+(airborne?12:-step*Mathf.Min(5,speed));
+   else if(j.name.Contains("Wing"))a.y=j.side*(airborne?22:7);
+   else if(j.name.Contains("Cannon"))p.z-=kick*.16f;
+   else if(j.name.Contains("Petal"))a.z=Mathf.Sin(clock*.1f)*2;
+   j.part.localPosition=p;j.part.localRotation=j.rotation*Quaternion.Euler(a);
+  }
+ }
+
  public void Tick(float dt,float deployed,Vector2 movement){
   clock+=dt;kick=Mathf.MoveTowards(kick,0,dt*(variant==1?4:7));float fold=1-Mathf.SmoothStep(0,1,deployed);
   foreach(var j in joints){

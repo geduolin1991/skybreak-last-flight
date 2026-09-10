@@ -40,6 +40,14 @@ for ship in [1,2]:
     folder=root/f'Build/QA/Ship{ship}'
     assert (folder/'campaign-build-identity.txt').read_text().strip()==identity
     assert 'PASS Natural campaign reaches ending: Victory' in (folder/'campaign-results.txt').read_text()
+ground=root/'Build/QA/Ground115'
+assert (ground/'QA/ground-build-identity.txt').read_text().strip()==identity, 'Ground QA belongs to a different build.'
+ground_report=(ground/'QA/ground-results.txt').read_text()
+assert 'FAIL' not in ground_report and ground_report.count('PASS ')>=40, 'Ground mechanics have not passed.'
+for ship in range(3):
+    folder=ground/f'Play{ship}'
+    assert (folder/'ground-playtest-build-identity.txt').read_text().strip()==identity
+    assert 'PASS Ground campaign completes with normal weapons, cooldowns, collision and finite player hull: Victory' in (folder/'playtest.txt').read_text()
 built_app=root/(root/'Build/build-app-path.txt').read_text().strip()
 assert built_app.is_dir(), 'Recorded build app is missing.'
 
@@ -72,6 +80,8 @@ with zipfile.ZipFile(releases/'SKYBREAK-Unity-Source.zip','w',zipfile.ZIP_DEFLAT
         for name in ['campaign-results.txt','campaign-build-identity.txt']:
             p=root/f'Build/QA/Ship{ship}'/name
             archive.write(p,Path('SkybreakUnity')/p.relative_to(root))
+    for p in sorted(ground.rglob('*.txt')):
+        archive.write(p,Path('SkybreakUnity')/p.relative_to(root))
     for name in ['README_开始试玩.md','在Unity中打开.command','.gitignore']:
         archive.write(root/name,Path('SkybreakUnity')/name)
 

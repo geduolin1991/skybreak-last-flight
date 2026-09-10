@@ -34,8 +34,8 @@ public partial class SkyWorld {
   const int count=180;var vertices=new Vector3[count*4];var uv=new Vector2[count*4];var triangles=new int[count*6];
   Random.InitState(90);
   for(int i=0;i<count;i++){
-   float s=Random.Range(.035f,.13f)*.5f;Vector3 p=new Vector3(Random.Range(-95,95),Random.Range(-30,-20),Random.Range(-50,180));int v=i*4,t=i*6;
-   vertices[v]=p+new Vector3(-s,0,-s);vertices[v+1]=p+new Vector3(-s,0,s);vertices[v+2]=p+new Vector3(s,0,s);vertices[v+3]=p+new Vector3(s,0,-s);
+   float s=Random.Range(.035f,.13f)*.5f;Vector3 p=Cam.transform.position+Cam.transform.forward*210+Cam.transform.right*Random.Range(-110,110)+Cam.transform.up*Random.Range(-80,80);Vector3 right=Cam.transform.right*s,up=Cam.transform.up*s;int v=i*4,t=i*6;
+   vertices[v]=p-right-up;vertices[v+1]=p-right+up;vertices[v+2]=p+right+up;vertices[v+3]=p+right-up;
    uv[v]=Vector2.zero;uv[v+1]=Vector2.up;uv[v+2]=Vector2.one;uv[v+3]=Vector2.right;
    triangles[t]=v;triangles[t+1]=v+1;triangles[t+2]=v+2;triangles[t+3]=v;triangles[t+4]=v+2;triangles[t+5]=v+3;
   }

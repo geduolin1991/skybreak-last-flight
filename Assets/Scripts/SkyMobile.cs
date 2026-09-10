@@ -10,6 +10,7 @@ public partial class SkyGame {
  [Serializable] class MobilePortraitBounds {public float x,y,w,h;public int speaker,expression;public bool radio;}
  [Serializable] public class MobileChoice {public string name,description,detail;public bool selected,enabled=true;public int index;}
  [Serializable] public class MobileSnapshot {
+  public bool ground,groundTank;public int groundArea,groundRescued,groundEnemies,groundCover,groundGuard,groundCoverHits,groundTransforms,groundDodges;public float groundSwitch,groundUtility,groundExit,groundJump;
   public bool storyActive,storyAuto,practice;public int storyIndex,storyCount,storySpeaker,voiceTotal;public string storyTitle,storyHeading,storyBody,storyQuote,storyName,ending,outcome,lastReport;public MobileChoice[] stories;
   public string armoredThreat;public float armoredHealth;public bool armoredOpen;public int waterCrashes,groundCrashes,airBreakups,vacuumBreakups,activeWrecks,activeSurfaceImpacts;
   public string frameName,frameRole,frameWeapon;public float frameDeployment,counterWindow;public int frameGuard,frameJoints,frameStrokes;
@@ -45,6 +46,7 @@ public partial class SkyGame {
  static bool FiniteBounds(MobilePortraitBounds r)=>!float.IsNaN(r.x+r.y+r.w+r.h)&&!float.IsInfinity(r.x+r.y+r.w+r.h);
  public void WebMobileAction(string action){
   if(!MobileMode||string.IsNullOrEmpty(action))return;
+  if(GroundMobileAction115(action))return;
   if(action=="release"){ResetMobileInput();return;}
   if(StoryActive){if(action=="storyNext")AdvanceStory();else if(action=="storySkip")SkipStory();else if(action=="storyAuto")storyAuto=!storyAuto;return;}
   if(action=="endingReplay"&&State==FlightState.Victory&&!Practice){StartStory("ending_"+CampaignEnding,true);return;}
@@ -60,6 +62,7 @@ public partial class SkyGame {
   switch(parts[0]){
    case "storyReplay":ReplayCampaignStory(n);break;
    case "play":ResetMobileInput();BeginRun();break;
+   case "ground":ResetMobileInput();BeginGround115();break;
    case "ship":if(n>=0&&n<3)SelectShip(n);break;
    case "route":if(n>=0&&n<3)SelectSpecialization(n);break;
    case "difficulty":if(n>=0&&n<3){Difficulty=n;SaveSettings();}break;
@@ -98,6 +101,7 @@ public partial class SkyGame {
    s.routes=new MobileChoice[3];s.research=new MobileChoice[3];int[] levels={researchFire,researchArmor,researchSkill};
    for(int i=0;i<3;i++){s.routes[i]=new MobileChoice{index=i,name=routeNames[Ship,i],description=routeDescriptions[Ship,i].Replace("Q：","技能："),detail="Ⅰ "+routeNodes[Ship,i,0]+"\nⅡ "+routeNodes[Ship,i,1]+"\nⅢ "+routeNodes[Ship,i,2],selected=i==CurrentRoute};int max=i==1?2:3,cost=200+levels[i]*250;s.research[i]=new MobileChoice{index=i,name=new[]{"高效火控","轻质装甲","同步接口"}[i]+" Lv."+levels[i],description=new[]{"每级基础伤害 +4%","每级装甲上限 +1","每级技能冷却 -5%"}[i],detail=levels[i]>=max?"研发完成":cost+" 回收点",enabled=levels[i]<max&&salvage>=cost};}
   }
+  if(GroundActive){PopulateGroundStatus115(s);return s;}
   if(State==FlightState.Upgrade){s.upgrades=new MobileChoice[3];for(int i=0;i<3;i++)s.upgrades[i]=new MobileChoice{index=i,name=UpgradeNames[UpgradeOptions[i]],description=UpgradeDescriptions[UpgradeOptions[i]],detail="装配并前往下一章"};}
   return s;
  }

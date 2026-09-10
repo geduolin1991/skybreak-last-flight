@@ -8,7 +8,7 @@ using UnityEngine;
 // Run in an isolated project copy: this changes only the copy's platform settings.
 public static class SkyWebBuild {
  public static void Build() {
-  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.14.0";SkyVoiceBuildChecks.Check();
+  PlayerSettings.WebGL.template="PROJECT:Skybreak";PlayerSettings.bundleVersion="1.15.0";SkyVoiceBuildChecks.Check();
   PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Brotli;
   PlayerSettings.WebGL.decompressionFallback=true;
   PlayerSettings.WebGL.dataCaching=true;
