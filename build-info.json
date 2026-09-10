@@ -1,12 +1,12 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.13.0-web",
+  "version": "1.14.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
-  "web_wrapper_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
-  "built_at_utc": "2026-09-10T00:03:31.317602+00:00",
-  "build_identity": "f98d053608484b4084e903713ea1d215d1e8593109f487bcd80650b00eb2e384",
-  "native_download_version": "1.13.0",
+  "source_revision": "17eaf731e92b01f6e18ca61d279dac795b0665ce",
+  "web_wrapper_revision": "17eaf731e92b01f6e18ca61d279dac795b0665ce",
+  "built_at_utc": "2026-09-10T02:23:01.656456+00:00",
+  "build_identity": "d1a4a8d629df729201096e656190be92e7e0fdcfd0b06a8256a6f69f5b27edf7",
+  "native_download_version": "1.14.0",
   "voice_clips": 444,
   "voice_events": 148,
   "voice_languages": [
@@ -38,142 +38,4052 @@
     "赤垒",
     "霜环"
   ],
+  "enemy_airframes": 9,
+  "authored_pickup_types": 4,
+  "destruction_surfaces": [
+    "air",
+    "water",
+    "ground",
+    "vacuum"
+  ],
   "frame_counter_seconds": [
     5,
     6,
     7
   ],
   "validation": {
-    "frames": {
+    "destruction": {
       "pass": true,
       "checks": [
-        "Frame 0: distinct model assemblies and name in mobile player",
-        "Frame 0: HUD switches to its own arsenal",
-        "Frame 0: touch button names the deployed frame",
-        "Frame 0: alternate frame weapon works",
-        "Frame 0: rotating pauses its deployment timer",
-        "Frame 0: pause does not consume charge",
-        "Frame 0: landscape resumes with capped effects and pilot portrait",
-        "Frame 0: ability remains inside screen",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: live deployment remains playable (Playing)",
-        "Frame 0: weapon and visual return to aircraft",
-        "Frame 0: no leftover effect or shield in hangar",
-        "Frame 1: distinct model assemblies and name in mobile player",
-        "Frame 1: HUD switches to its own arsenal",
-        "Frame 1: touch button names the deployed frame",
-        "Frame 1: alternate frame weapon works",
-        "Frame 1: rotating pauses its deployment timer",
-        "Frame 1: pause does not consume charge",
-        "Frame 1: landscape resumes with capped effects and pilot portrait",
-        "Frame 1: ability remains inside screen",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: live deployment remains playable (Playing)",
-        "Frame 1: weapon and visual return to aircraft",
-        "Frame 1: no leftover effect or shield in hangar",
-        "Frame 2: distinct model assemblies and name in mobile player",
-        "Frame 2: HUD switches to its own arsenal",
-        "Frame 2: touch button names the deployed frame",
-        "Frame 2: alternate frame weapon works",
-        "Frame 2: rotating pauses its deployment timer",
-        "Frame 2: pause does not consume charge",
-        "Frame 2: landscape resumes with capped effects and pilot portrait",
-        "Frame 2: ability remains inside screen",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: live deployment remains playable (Playing)",
-        "Frame 2: weapon and visual return to aircraft",
-        "Frame 2: no leftover effect or shield in hangar",
-        "No frame rendering or browser errors"
+        "Ordinary live combat produces both falling water crashes and immediate air breakups",
+        "Phone combat respects wreck and surface pool budgets",
+        "Pause retains delayed visuals without advancing them",
+        "Returning to hangar clears all delayed destruction",
+        "No browser errors during destruction playback"
       ],
+      "peakWrecks": 3,
+      "peakImpacts": 3,
+      "observedArmoredContact": true,
+      "observedArmorOpen": true,
       "samples": [
         {
-          "ship": 0,
-          "name": "岚刃",
-          "joints": 6,
-          "language": "zh",
-          "strokePeak": 1,
-          "kills": 4
+          "time": 0.24700002372264862,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
         },
         {
-          "ship": 1,
-          "name": "赤垒",
-          "joints": 8,
-          "language": "en",
-          "strokePeak": 2,
-          "kills": 1
+          "time": 0.429999977350235,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
         },
         {
-          "ship": 2,
-          "name": "霜环",
-          "joints": 11,
-          "language": "ja",
-          "strokePeak": 1,
-          "kills": 1
+          "time": 0.6269998550415039,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 0.8069997429847717,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 0.9859997034072876,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 1.1629998683929443,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 1.3589997291564941,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 1.5379997491836548,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 1.7159996032714844,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 1.9109997749328613,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 2.0889999866485596,
+          "kills": 0,
+          "water": 0,
+          "air": 0,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 2.2709999084472656,
+          "kills": 2,
+          "water": 0,
+          "air": 0,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 2.450000047683716,
+          "kills": 2,
+          "water": 0,
+          "air": 0,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 2.6470000743865967,
+          "kills": 2,
+          "water": 0,
+          "air": 0,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 2.8289999961853027,
+          "kills": 3,
+          "water": 0,
+          "air": 1,
+          "wrecks": 3,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.009000062942505,
+          "kills": 3,
+          "water": 0,
+          "air": 1,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.191999912261963,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.371000051498413,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.5510001182556152,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.7310001850128174,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 3.9270002841949463,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 4.102999687194824,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 4.281998634338379,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 4.461997985839844,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 4.6579976081848145,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 4.838997840881348,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.0189971923828125,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.198997497558594,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.3949971199035645,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.5749969482421875,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.75299596786499,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 5.934996128082275,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 6.11599588394165,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 6.311995029449463,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 6.489994049072266,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 6.6699934005737305,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 6.848993301391602,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.043992519378662,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.222991943359375,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.401991367340088,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.596990585327148,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.775989532470703,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 7.954988956451416,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 8.133988380432129,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 8.313989639282227,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 8.510990142822266,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 8.689990043640137,
+          "kills": 3,
+          "water": 2,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 8.870988845825195,
+          "kills": 4,
+          "water": 2,
+          "air": 1,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 9.051989555358887,
+          "kills": 4,
+          "water": 2,
+          "air": 1,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 9.231987953186035,
+          "kills": 4,
+          "water": 2,
+          "air": 1,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 9.41398811340332,
+          "kills": 4,
+          "water": 2,
+          "air": 1,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 9.5969877243042,
+          "kills": 4,
+          "water": 2,
+          "air": 1,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 9.792987823486328,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 10.14698600769043,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 10.3259859085083,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 10.52098560333252,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 10.702985763549805,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 10.881987571716309,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.062987327575684,
+          "kills": 4,
+          "water": 3,
+          "air": 1,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.243986129760742,
+          "kills": 6,
+          "water": 3,
+          "air": 2,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.426986694335938,
+          "kills": 6,
+          "water": 3,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.608986854553223,
+          "kills": 6,
+          "water": 3,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.803985595703125,
+          "kills": 6,
+          "water": 3,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 11.98598575592041,
+          "kills": 7,
+          "water": 3,
+          "air": 2,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 12.165985107421875,
+          "kills": 7,
+          "water": 4,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 12.346985816955566,
+          "kills": 7,
+          "water": 4,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 12.527984619140625,
+          "kills": 7,
+          "water": 4,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 12.707985877990723,
+          "kills": 7,
+          "water": 4,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 12.888986587524414,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.069988250732422,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.265987396240234,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.443986892700195,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.624985694885254,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.805985450744629,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 13.98598575592041,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 14.180985450744629,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 14.363986015319824,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 14.54598617553711,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 14.72398567199707,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 14.899983406066895,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 15.097982406616211,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 15.279982566833496,
+          "kills": 7,
+          "water": 5,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 15.461982727050781,
+          "kills": 8,
+          "water": 5,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 15.641982078552246,
+          "kills": 8,
+          "water": 5,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 15.822981834411621,
+          "kills": 8,
+          "water": 5,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.002981185913086,
+          "kills": 8,
+          "water": 5,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.19998550415039,
+          "kills": 8,
+          "water": 5,
+          "air": 2,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.37898826599121,
+          "kills": 8,
+          "water": 6,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.557992935180664,
+          "kills": 8,
+          "water": 6,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.737998962402344,
+          "kills": 8,
+          "water": 6,
+          "air": 2,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 16.9320068359375,
+          "kills": 9,
+          "water": 6,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 17.11001205444336,
+          "kills": 9,
+          "water": 6,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 17.289018630981445,
+          "kills": 9,
+          "water": 6,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 17.48302459716797,
+          "kills": 10,
+          "water": 6,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 17.663028717041016,
+          "kills": 10,
+          "water": 6,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 17.846031188964844,
+          "kills": 10,
+          "water": 6,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 18.025035858154297,
+          "kills": 10,
+          "water": 6,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 18.202041625976562,
+          "kills": 11,
+          "water": 6,
+          "air": 3,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 18.38104820251465,
+          "kills": 11,
+          "water": 7,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 18.761058807373047,
+          "kills": 11,
+          "water": 7,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 18.942062377929688,
+          "kills": 11,
+          "water": 7,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 19.12506675720215,
+          "kills": 11,
+          "water": 7,
+          "air": 3,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 19.303071975708008,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 19.483078002929688,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 19.66408348083496,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 19.862089157104492,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.042095184326172,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.221101760864258,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.41310691833496,
+          "kills": 11,
+          "water": 8,
+          "air": 3,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.594112396240234,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.775115966796875,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 20.95412254333496,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 21.137126922607422,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 21.318132400512695,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 21.513139724731445,
+          "kills": 12,
+          "water": 8,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 21.693145751953125,
+          "kills": 14,
+          "water": 8,
+          "air": 4,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 21.872150421142578,
+          "kills": 14,
+          "water": 8,
+          "air": 4,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.052156448364258,
+          "kills": 14,
+          "water": 8,
+          "air": 4,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.246164321899414,
+          "kills": 14,
+          "water": 8,
+          "air": 4,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.425168991088867,
+          "kills": 14,
+          "water": 8,
+          "air": 4,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.606172561645508,
+          "kills": 14,
+          "water": 9,
+          "air": 4,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.78717803955078,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 22.96718406677246,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 23.147188186645508,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 23.344192504882812,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 23.523195266723633,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 23.70119857788086,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 23.881202697753906,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.078208923339844,
+          "kills": 14,
+          "water": 10,
+          "air": 4,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.25721549987793,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.436222076416016,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.616226196289062,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.81123161315918,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 24.99123764038086,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 25.172243118286133,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 25.35324478149414,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 25.534250259399414,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 25.730255126953125,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 25.909259796142578,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 26.089263916015625,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 26.26726722717285,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 26.46227264404297,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 26.641277313232422,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 26.820281982421875,
+          "kills": 15,
+          "water": 10,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.002286911010742,
+          "kills": 17,
+          "water": 10,
+          "air": 5,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.185291290283203,
+          "kills": 17,
+          "water": 10,
+          "air": 5,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.369293212890625,
+          "kills": 17,
+          "water": 10,
+          "air": 5,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.550296783447266,
+          "kills": 17,
+          "water": 10,
+          "air": 5,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.74430274963379,
+          "kills": 17,
+          "water": 10,
+          "air": 5,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 27.92530632019043,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 28.104310989379883,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 28.288314819335938,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 28.468320846557617,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 28.647327423095703,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 28.843332290649414,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.020336151123047,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.20033836364746,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.381343841552734,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.562347412109375,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.7613525390625,
+          "kills": 17,
+          "water": 11,
+          "air": 5,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 29.943357467651367,
+          "kills": 19,
+          "water": 11,
+          "air": 6,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 30.126361846923828,
+          "kills": 19,
+          "water": 11,
+          "air": 6,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 30.310365676879883,
+          "kills": 19,
+          "water": 11,
+          "air": 6,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 30.493370056152344,
+          "kills": 20,
+          "water": 11,
+          "air": 6,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 30.676374435424805,
+          "kills": 20,
+          "water": 11,
+          "air": 6,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 30.861377716064453,
+          "kills": 21,
+          "water": 12,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.044382095336914,
+          "kills": 21,
+          "water": 12,
+          "air": 7,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.22838592529297,
+          "kills": 21,
+          "water": 12,
+          "air": 7,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.410390853881836,
+          "kills": 21,
+          "water": 12,
+          "air": 7,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.592395782470703,
+          "kills": 22,
+          "water": 13,
+          "air": 7,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.77440071105957,
+          "kills": 23,
+          "water": 13,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 31.95740509033203,
+          "kills": 23,
+          "water": 13,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 32.14039993286133,
+          "kills": 23,
+          "water": 13,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 32.325382232666016,
+          "kills": 23,
+          "water": 13,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 32.505367279052734,
+          "kills": 23,
+          "water": 13,
+          "air": 7,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 32.68735122680664,
+          "kills": 23,
+          "water": 15,
+          "air": 7,
+          "wrecks": 0,
+          "impacts": 3,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 32.866336822509766,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 3,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 33.228309631347656,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 33.411293029785156,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 33.59428024291992,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 33.77626419067383,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 33.958248138427734,
+          "kills": 24,
+          "water": 15,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 34.140235900878906,
+          "kills": 25,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 34.33822250366211,
+          "kills": 25,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 34.51920700073242,
+          "kills": 25,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 34.700191497802734,
+          "kills": 25,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 34.87917709350586,
+          "kills": 25,
+          "water": 15,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 散热口暴露 · 集中火力",
+          "open": true
+        },
+        {
+          "time": 35.06216049194336,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 35.24014663696289,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 35.43812942504883,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 35.61911392211914,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 35.79909896850586,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 35.98008728027344,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 36.15907287597656,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 36.33905792236328,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 36.536041259765625,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 36.716026306152344,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 36.89601516723633,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 37.07699966430664,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 重装防护 · 齐射后反击",
+          "open": false
+        },
+        {
+          "time": 37.25698471069336,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 37.43996810913086,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 37.6369514465332,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 37.81693649291992,
+          "kills": 25,
+          "water": 16,
+          "air": 8,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "蜂巢母舰 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 38.00092315673828,
+          "kills": 26,
+          "water": 16,
+          "air": 8,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 38.18291091918945,
+          "kills": 27,
+          "water": 16,
+          "air": 9,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 38.36689758300781,
+          "kills": 27,
+          "water": 16,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 38.55188751220703,
+          "kills": 27,
+          "water": 16,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 38.7348747253418,
+          "kills": 27,
+          "water": 16,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 38.9168586730957,
+          "kills": 28,
+          "water": 16,
+          "air": 9,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 39.09984588623047,
+          "kills": 28,
+          "water": 17,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 39.281829833984375,
+          "kills": 28,
+          "water": 17,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 39.464820861816406,
+          "kills": 28,
+          "water": 17,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 39.64580535888672,
+          "kills": 29,
+          "water": 17,
+          "air": 9,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 39.828792572021484,
+          "kills": 29,
+          "water": 18,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.01077651977539,
+          "kills": 29,
+          "water": 18,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.1917610168457,
+          "kills": 29,
+          "water": 18,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.3757438659668,
+          "kills": 29,
+          "water": 18,
+          "air": 9,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.55873107910156,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 3,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.74071502685547,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 40.92170333862305,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 41.10568618774414,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 41.302669525146484,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 41.48565673828125,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 41.668643951416016,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 41.851627349853516,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.03261184692383,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.21259689331055,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.392581939697266,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.58956527709961,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.77254867553711,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 42.9565315246582,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 43.13951873779297,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 43.32050323486328,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 43.501487731933594,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 43.68147277832031,
+          "kills": 29,
+          "water": 19,
+          "air": 9,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 43.862457275390625,
+          "kills": 30,
+          "water": 19,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.04444122314453,
+          "kills": 31,
+          "water": 19,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.22642517089844,
+          "kills": 31,
+          "water": 19,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.40940856933594,
+          "kills": 31,
+          "water": 19,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.5923957824707,
+          "kills": 31,
+          "water": 19,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.773380279541016,
+          "kills": 31,
+          "water": 19,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 44.95436477661133,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 45.15034866333008,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 45.33333206176758,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 45.515316009521484,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 45.69729995727539,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 45.87828826904297,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.05827331542969,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.240257263183594,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.41924285888672,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.60022735595703,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.79521179199219,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 46.97419738769531,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 47.150184631347656,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 47.34517288208008,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 47.5241584777832,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 47.705142974853516,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 47.88712692260742,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.068111419677734,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.24509811401367,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.442081451416016,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.621070861816406,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.804054260253906,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 48.985042572021484,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 49.16402816772461,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 49.34501266479492,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 49.54099655151367,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 49.721981048583984,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 49.90096664428711,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.08095169067383,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.25993728637695,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.4559211730957,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.63790512084961,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.81888961791992,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 50.99587631225586,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 51.17885971069336,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 51.373844146728516,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 51.556827545166016,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 51.73581314086914,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 51.91579818725586,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 52.09578323364258,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 52.276771545410156,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 52.469757080078125,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 52.64874267578125,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 52.830726623535156,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.010711669921875,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.190696716308594,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.38568115234375,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.56666946411133,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.743656158447266,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 53.923641204833984,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 54.11762619018555,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 54.29761505126953,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 54.47560119628906,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 54.67058563232422,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 54.85157012939453,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.02955627441406,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.20954132080078,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.388526916503906,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.584510803222656,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.764495849609375,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 55.944480895996094,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 56.12646484375,
+          "kills": 31,
+          "water": 20,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 56.30744934082031,
+          "kills": 32,
+          "water": 20,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 56.48943328857422,
+          "kills": 32,
+          "water": 20,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 56.67241668701172,
+          "kills": 33,
+          "water": 20,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 56.85640335083008,
+          "kills": 33,
+          "water": 20,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.03938674926758,
+          "kills": 33,
+          "water": 20,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.22137451171875,
+          "kills": 33,
+          "water": 21,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.4173583984375,
+          "kills": 33,
+          "water": 21,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.599342346191406,
+          "kills": 33,
+          "water": 22,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.78232955932617,
+          "kills": 33,
+          "water": 22,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 57.96731948852539,
+          "kills": 33,
+          "water": 22,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 58.146305084228516,
+          "kills": 33,
+          "water": 22,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 58.32828903198242,
+          "kills": 33,
+          "water": 22,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 58.509273529052734,
+          "kills": 34,
+          "water": 22,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 58.69026184082031,
+          "kills": 34,
+          "water": 22,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 58.87125015258789,
+          "kills": 34,
+          "water": 22,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.07023239135742,
+          "kills": 34,
+          "water": 22,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.25321578979492,
+          "kills": 34,
+          "water": 22,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.42020034790039,
+          "kills": 34,
+          "water": 23,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.61919021606445,
+          "kills": 34,
+          "water": 23,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.80317306518555,
+          "kills": 34,
+          "water": 23,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 59.98415756225586,
+          "kills": 34,
+          "water": 23,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 60.16814422607422,
+          "kills": 34,
+          "water": 23,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 60.350128173828125,
+          "kills": 35,
+          "water": 23,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 60.53211212158203,
+          "kills": 36,
+          "water": 23,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 60.713096618652344,
+          "kills": 36,
+          "water": 23,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 60.89208221435547,
+          "kills": 36,
+          "water": 23,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.07406997680664,
+          "kills": 36,
+          "water": 23,
+          "air": 10,
+          "wrecks": 2,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.271053314208984,
+          "kills": 36,
+          "water": 24,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.454036712646484,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.637020111083984,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.8170051574707,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 61.99699020385742,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 62.17597579956055,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 62.3709602355957,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 62.54994583129883,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 62.72993087768555,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 2,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 62.90891647338867,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 63.08890151977539,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 63.28788757324219,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 63.4688720703125,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 63.64885711669922,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 63.827842712402344,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.00882720947266,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.20281219482422,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.38379669189453,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.56378173828125,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.74476623535156,
+          "kills": 36,
+          "water": 25,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 64.92774963378906,
+          "kills": 37,
+          "water": 25,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 65.10973358154297,
+          "kills": 37,
+          "water": 25,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 65.29171752929688,
+          "kills": 37,
+          "water": 25,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 65.47470092773438,
+          "kills": 37,
+          "water": 25,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 65.65668487548828,
+          "kills": 37,
+          "water": 25,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 65.83966827392578,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 66.02165222167969,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 66.21763610839844,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "铁砧重炮机 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 66.39862060546875,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "铁砧重炮机 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 66.57660675048828,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "铁砧重炮机 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 66.7555923461914,
+          "kills": 37,
+          "water": 26,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "铁砧重炮机 · 装甲破裂",
+          "open": true
+        },
+        {
+          "time": 66.95257568359375,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 67.13356018066406,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 67.31354522705078,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 67.4945297241211,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 67.67351531982422,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 67.8655014038086,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.0464859008789,
+          "kills": 38,
+          "water": 26,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.22347259521484,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.41645812988281,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.59444427490234,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.77442932128906,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 68.95441436767578,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 69.15039825439453,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 69.33138275146484,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 69.51136779785156,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 69.69035339355469,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 69.871337890625,
+          "kills": 38,
+          "water": 27,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.05232238769531,
+          "kills": 39,
+          "water": 27,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.24730682373047,
+          "kills": 39,
+          "water": 27,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.42929077148438,
+          "kills": 39,
+          "water": 27,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.61027526855469,
+          "kills": 39,
+          "water": 27,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.78826141357422,
+          "kills": 39,
+          "water": 27,
+          "air": 10,
+          "wrecks": 1,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 70.96624755859375,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 71.14823150634766,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 71.34321594238281,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 71.52120208740234,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 71.70018768310547,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 71.8791732788086,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.07615661621094,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.25614166259766,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.43212890625,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 1,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.61111450195312,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.8041000366211,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 72.98308563232422,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 73.16506958007812,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 73.34505462646484,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 73.52503967285156,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 73.7220230102539,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 73.90100860595703,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
+        },
+        {
+          "time": 74.07999420166016,
+          "kills": 39,
+          "water": 28,
+          "air": 10,
+          "wrecks": 0,
+          "impacts": 0,
+          "heavy": "",
+          "open": false
         }
       ],
       "errors": [],
-      "scope": "Chrome phone emulation; controlled existing reactor upgrades, live firing and touch controls. Not physical-phone performance."
+      "scope": "Live mobile-input browser gameplay on Mac GPU; controlled flight inputs only, no enemy/health/time overrides"
     },
+    "frame_validation": "Current native runtime covers all three frames; browser frame-specific regression last performed for 1.13.0.",
     "scenery_native": {
       "pass": true,
-      "runtime_identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
+      "runtime_identity": "978cf7bba13542df0181c18c3230ba57aa9cd5ac8c477a1392118cd58d08b249",
       "checks": [
         "PASS Touch training rejects unavailable chapter",
         "PASS City includes three district trains and three waiting evacuation buses",
@@ -196,7 +4106,7 @@
         "PASS Stage 2 / aspect 1.777778 cars and trains never teleport within a visible sector",
         "PASS Stage 2 / aspect 2.1641 cars and trains never teleport within a visible sector"
       ],
-      "scope": "Existing all-stage scenery, three-aspect and traffic regression retained in the 439-check current runtime run."
+      "scope": "All-stage scenery and three camera aspect checks executed in the current runtime run."
     },
     "scenery_all_stages": {
       "pass": true,
@@ -242,605 +4152,14 @@
       "errors": [],
       "scenario": "Controlled QA chapter transitions and restored city power; live rendering, scrolling and normal combat in each stage"
     },
-    "scenery_browser": {
-      "pass": true,
-      "checks": [
-        "All four beacon bases retain their position relative to their own quay throughout live scrolling",
-        "Fixtures use the same speed and offscreen recycling as the coastline",
-        "Harbor vehicles have continuous motion with no visible route teleport",
-        "Pause freezes scenery travel",
-        "Return to hangar recreates exactly four anchored beacons with no duplicates",
-        "No browser errors"
-      ],
-      "coastFootprints": 20,
-      "wakeAlignment": true,
-      "musicContinuous": true,
-      "sceneResetsWithoutDuplicateCoast": true,
-      "seconds": 40,
-      "samples": 156,
-      "anchorWraps": 27,
-      "meanFps": 61.44081332585583,
-      "errors": [],
-      "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU"
-    },
-    "story": {
-      "pass": true,
-      "checks": [
-        "Starting a full run presents the three-part prologue",
-        "390x844 story remains safe through rotation",
-        "390x844 complete prose is preserved without horizontal clipping",
-        "390x844 long story content remains scrollable",
-        "390x844 full-proportion animated pilot slot",
-        "390x844 all story buttons remain visible and tappable",
-        "390x844 dialogue text does not overlap controls",
-        "360x640 story remains safe through rotation",
-        "360x640 complete prose is preserved without horizontal clipping",
-        "360x640 long story content remains scrollable",
-        "360x640 full-proportion animated pilot slot",
-        "360x640 all story buttons remain visible and tappable",
-        "360x640 dialogue text does not overlap controls",
-        "430x932 story remains safe through rotation",
-        "430x932 complete prose is preserved without horizontal clipping",
-        "430x932 long story content remains scrollable",
-        "430x932 full-proportion animated pilot slot",
-        "430x932 all story buttons remain visible and tappable",
-        "430x932 dialogue text does not overlap controls",
-        "768x1024 story remains safe through rotation",
-        "768x1024 complete prose is preserved without horizontal clipping",
-        "768x1024 long story content remains scrollable",
-        "768x1024 full-proportion animated pilot slot",
-        "768x1024 all story buttons remain visible and tappable",
-        "768x1024 dialogue text does not overlap controls",
-        "844x390 story remains safe through rotation",
-        "844x390 complete prose is preserved without horizontal clipping",
-        "844x390 long story content remains scrollable",
-        "844x390 full-proportion animated pilot slot",
-        "844x390 all story buttons remain visible and tappable",
-        "844x390 dialogue text does not overlap controls",
-        "667x320 story remains safe through rotation",
-        "667x320 complete prose is preserved without horizontal clipping",
-        "667x320 long story content remains scrollable",
-        "667x320 full-proportion animated pilot slot",
-        "667x320 all story buttons remain visible and tappable",
-        "667x320 dialogue text does not overlap controls",
-        "Next page changes narrative and speaker together",
-        "Rendered story portrait matches the delivered speaker",
-        "Autoplay can be enabled",
-        "Autoplay can be disabled",
-        "Completing the prologue returns to launch briefing",
-        "Archive contains all campaign sequences with progress-based locks",
-        "Archive replays the prologue independently of a battle",
-        "Archive skip returns to the archive menu",
-        "Prologue plays its actual zh recording",
-        "Prologue plays its actual en recording",
-        "Prologue plays its actual ja recording",
-        "No story browser errors"
-      ],
-      "samples": [
-        {
-          "size": [
-            390,
-            844
-          ],
-          "portrait": {
-            "x": 133.3359375,
-            "y": 55,
-            "w": 123.328125,
-            "h": 185,
-            "right": 256.6640625,
-            "bottom": 240
-          },
-          "copy": {
-            "x": 19.5,
-            "y": 248,
-            "w": 351,
-            "h": 470,
-            "right": 370.5,
-            "bottom": 718
-          },
-          "scrollable": false,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 19.5,
-              "y": 728,
-              "w": 171.5,
-              "h": 48,
-              "right": 191,
-              "bottom": 776
-            },
-            {
-              "x": 199,
-              "y": 728,
-              "w": 171.5,
-              "h": 48,
-              "right": 370.5,
-              "bottom": 776
-            },
-            {
-              "x": 19.5,
-              "y": 784,
-              "w": 351,
-              "h": 48,
-              "right": 370.5,
-              "bottom": 832
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        },
-        {
-          "size": [
-            360,
-            640
-          ],
-          "portrait": {
-            "x": 130,
-            "y": 55,
-            "w": 100,
-            "h": 150,
-            "right": 230,
-            "bottom": 205
-          },
-          "copy": {
-            "x": 18,
-            "y": 207,
-            "w": 324,
-            "h": 307,
-            "right": 342,
-            "bottom": 514
-          },
-          "scrollable": true,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 18,
-              "y": 524,
-              "w": 158,
-              "h": 48,
-              "right": 176,
-              "bottom": 572
-            },
-            {
-              "x": 184,
-              "y": 524,
-              "w": 158,
-              "h": 48,
-              "right": 342,
-              "bottom": 572
-            },
-            {
-              "x": 18,
-              "y": 580,
-              "w": 324,
-              "h": 48,
-              "right": 342,
-              "bottom": 628
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        },
-        {
-          "size": [
-            430,
-            932
-          ],
-          "portrait": {
-            "x": 153.3359375,
-            "y": 55,
-            "w": 123.328125,
-            "h": 185,
-            "right": 276.6640625,
-            "bottom": 240
-          },
-          "copy": {
-            "x": 21.5,
-            "y": 248,
-            "w": 387,
-            "h": 558,
-            "right": 408.5,
-            "bottom": 806
-          },
-          "scrollable": false,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 21.5,
-              "y": 816,
-              "w": 189.5,
-              "h": 48,
-              "right": 211,
-              "bottom": 864
-            },
-            {
-              "x": 219,
-              "y": 816,
-              "w": 189.5,
-              "h": 48,
-              "right": 408.5,
-              "bottom": 864
-            },
-            {
-              "x": 21.5,
-              "y": 872,
-              "w": 387,
-              "h": 48,
-              "right": 408.5,
-              "bottom": 920
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        },
-        {
-          "size": [
-            768,
-            1024
-          ],
-          "portrait": {
-            "x": 322.3359375,
-            "y": 55,
-            "w": 123.328125,
-            "h": 185,
-            "right": 445.6640625,
-            "bottom": 240
-          },
-          "copy": {
-            "x": 38.390625,
-            "y": 248,
-            "w": 691.1875,
-            "h": 650,
-            "right": 729.578125,
-            "bottom": 898
-          },
-          "scrollable": false,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 38.390625,
-              "y": 908,
-              "w": 341.609375,
-              "h": 48,
-              "right": 380,
-              "bottom": 956
-            },
-            {
-              "x": 388,
-              "y": 908,
-              "w": 341.609375,
-              "h": 48,
-              "right": 729.609375,
-              "bottom": 956
-            },
-            {
-              "x": 38.390625,
-              "y": 964,
-              "w": 691.21875,
-              "h": 48,
-              "right": 729.609375,
-              "bottom": 1012
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        },
-        {
-          "size": [
-            844,
-            390
-          ],
-          "portrait": {
-            "x": 614.71875,
-            "y": 56,
-            "w": 178.65625,
-            "h": 268,
-            "right": 793.375,
-            "bottom": 324
-          },
-          "copy": {
-            "x": 42.1875,
-            "y": 72,
-            "w": 464.1875,
-            "h": 236,
-            "right": 506.375,
-            "bottom": 308
-          },
-          "scrollable": true,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 42.1875,
-              "y": 330,
-              "w": 212.453125,
-              "h": 48,
-              "right": 254.640625,
-              "bottom": 378
-            },
-            {
-              "x": 262.640625,
-              "y": 330,
-              "w": 212.46875,
-              "h": 48,
-              "right": 475.109375,
-              "bottom": 378
-            },
-            {
-              "x": 483.109375,
-              "y": 330,
-              "w": 318.6875,
-              "h": 48,
-              "right": 801.796875,
-              "bottom": 378
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        },
-        {
-          "size": [
-            667,
-            320
-          ],
-          "portrait": {
-            "x": 490.328125,
-            "y": 52,
-            "w": 136.65625,
-            "h": 205,
-            "right": 626.984375,
-            "bottom": 257
-          },
-          "copy": {
-            "x": 33.34375,
-            "y": 59,
-            "w": 366.84375,
-            "h": 193,
-            "right": 400.1875,
-            "bottom": 252
-          },
-          "scrollable": true,
-          "overflow": "auto",
-          "buttons": [
-            {
-              "x": 33.34375,
-              "y": 268,
-              "w": 166.9375,
-              "h": 44,
-              "right": 200.28125,
-              "bottom": 312
-            },
-            {
-              "x": 208.28125,
-              "y": 268,
-              "w": 166.953125,
-              "h": 44,
-              "right": 375.234375,
-              "bottom": 312
-            },
-            {
-              "x": 383.234375,
-              "y": 268,
-              "w": 250.421875,
-              "h": 44,
-              "right": 633.65625,
-              "bottom": 312
-            }
-          ],
-          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
-          "pageOverflow": false
-        }
-      ],
-      "errors": []
-    },
+    "story_validation": "Current native campaigns for all three ships and full runtime; no new story content in this patch.",
     "voice_review": {
       "pass": true,
-      "new_events": 7,
-      "new_clips": 21,
-      "languages": [
-        "zh",
-        "en",
-        "ja"
-      ],
-      "review": "Local independent ASR plus signal limits; not a human listening panel. Proper nouns have recognition differences.",
-      "signal_bounds": {
-        "peak_max": 0.796234130859375,
-        "duration_range": [
-          2.54,
-          6.02
-        ]
-      },
-      "new_take_evidence": {
-        "zh/frame113_deploy_0": {
-          "expected": "岚刃展开！侧翼交给我，跟上！",
-          "recognized": "蓝刃展开，侧翼交给我，跟上。",
-          "error_rate": 0.0,
-          "seconds": 2.54,
-          "peak": 0.71087646484375,
-          "rms": 0.11087420417920127,
-          "sha256": "687f6e7173c8593eb00e96f2890ccb16081c5e57118d6c07839e61ba95413512"
-        },
-        "zh/frame113_deploy_1": {
-          "expected": "赤垒，炮架锁定。都躲到我身后！",
-          "recognized": "赤磊，炮架锁定，都躲到我身后。",
-          "error_rate": 0.0,
-          "seconds": 3.22,
-          "peak": 0.75689697265625,
-          "rms": 0.12439537254556685,
-          "sha256": "aa885b22b3ed11d7e4b6dc8d0e0346894131fef286b86946ed0cb5494c898b18"
-        },
-        "zh/frame113_deploy_2": {
-          "expected": "霜环锁定。让这道光，穿过封锁。",
-          "recognized": "双环锁定，让这道光穿过封锁。",
-          "error_rate": 0.0,
-          "seconds": 3.823166666666667,
-          "peak": 0.79217529296875,
-          "rms": 0.13039361787795406,
-          "sha256": "8314189aad6446214e7247041a91e7aeefc5a071e04009f8c61bdcff188d8605"
-        },
-        "zh/frame113_counter_0": {
-          "expected": "是船队的测距信号！弱点标出来了，开火！",
-          "recognized": "是船队的测距信号，弱点标出来了，开火。",
-          "error_rate": 0.0,
-          "seconds": 3.4,
-          "peak": 0.698394775390625,
-          "rms": 0.11932304744530713,
-          "sha256": "260bf54a4109b26a7f27730ba9984dc4e4784abcd3e146fb65fdb7835335d9b4"
-        },
-        "zh/frame113_counter_1": {
-          "expected": "把电送进它的护盾。哈，城市可不是你的电池！",
-          "recognized": "把电送进他的护盾。哈，城市可不是你的电池。",
-          "error_rate": 0.0,
-          "seconds": 4.02,
-          "peak": 0.794525146484375,
-          "rms": 0.13140567372581924,
-          "sha256": "026e108d60fb1890b7f30057936f9f8a973f3dbcd6071d872a5dc9c5e0f553d7"
-        },
-        "zh/frame113_counter_2": {
-          "expected": "名册正在回应！天环，听清楚——他们是人，不是目标！",
-          "recognized": "名册正在回应。天环，听清楚，他们是人，不是目标。",
-          "error_rate": 0.0,
-          "seconds": 5.577625,
-          "peak": 0.790252685546875,
-          "rms": 0.12882478632892078,
-          "sha256": "9bcac918252fd98cf5439ac80ae08f58a8e60a4a2bad8262678b034addc2f2d4"
-        },
-        "zh/frame113_signature": {
-          "expected": "签名是我的……但封锁命令不是。我要亲手撤销它！",
-          "recognized": "签名是我的，但封锁命令不是。我要亲手撤销它。",
-          "error_rate": 0.0,
-          "seconds": 5.019291666666667,
-          "peak": 0.78924560546875,
-          "rms": 0.11886761897749401,
-          "sha256": "ff6fc888e45ff4d6a253afd5a4e51c4b5eca33d192deabba25ac5469bfc264e6"
-        },
-        "en/frame113_deploy_0": {
-          "expected": "Skyrazor, deploy! I have the flanks. Stay with me!",
-          "recognized": "Skyracer deploy! I have the flanks. Stay with me.",
-          "error_rate": 0.111,
-          "seconds": 4.26,
-          "peak": 0.794403076171875,
-          "rms": 0.09629871166332114,
-          "sha256": "cf645857b44d4ebbe11f20d6453faf1be87015996e5bd8e4e6941c1dc79c8939"
-        },
-        "en/frame113_deploy_1": {
-          "expected": "Bastion. Cannons locked. Everyone, get behind me!",
-          "recognized": "Bastion, cannons locked. Everyone, get behind me.",
-          "error_rate": 0.0,
-          "seconds": 3.86,
-          "peak": 0.7860107421875,
-          "rms": 0.13146765357387596,
-          "sha256": "e65e0c051582025acf772ce8452a4c5b233df6bb3c3b9cdd952b17cbfd3ab721"
-        },
-        "en/frame113_deploy_2": {
-          "expected": "Parallax, locked. Let this light pierce the blockade.",
-          "recognized": "Parallax locked. Let this light pierce the blockade.",
-          "error_rate": 0.0,
-          "seconds": 3.92,
-          "peak": 0.7950439453125,
-          "rms": 0.11167539749926711,
-          "sha256": "c3536834139d1fd6d0932a2f7ac7879aa5ba0676dc37eba1d86791a72807815a"
-        },
-        "en/frame113_counter_0": {
-          "expected": "The convoy is sending range data! Weak point marked. Fire!",
-          "recognized": "The convoy is sending range data. Weak point marked. Fire.",
-          "error_rate": 0.0,
-          "seconds": 4.2,
-          "peak": 0.794158935546875,
-          "rms": 0.12586895198133255,
-          "sha256": "911af829183b89e33cc2064f030d2963f1aaacb48de707b6b3ae057baea4f896"
-        },
-        "en/frame113_counter_1": {
-          "expected": "Send the power into its shield. Ha! This city isn't your battery!",
-          "recognized": "Send the power into its shield. Ha! This city isn't your battery.",
-          "error_rate": 0.0,
-          "seconds": 4.54,
-          "peak": 0.795867919921875,
-          "rms": 0.13713877556431284,
-          "sha256": "a31a5ac8737d2ab8c4e7db2b80094203dc5b25d36ebc1e71e8b3c04e8720487c"
-        },
-        "en/frame113_counter_2": {
-          "expected": "The registry is answering! Listen, Sky Array. These are people, not targets!",
-          "recognized": "The registry is answering. Listen, Sky Ray, these are people, not targets.",
-          "error_rate": 0.083,
-          "seconds": 5.8,
-          "peak": 0.794952392578125,
-          "rms": 0.12698458829334858,
-          "sha256": "b87e8b8b62252ce53f1477b4aed87e85561699cba4ab8722446d5c37ffbdc19d"
-        },
-        "en/frame113_signature": {
-          "expected": "That's my signature... but I never ordered a blockade. I'll revoke it myself!",
-          "recognized": "That's my signature, but I never ordered a blockade. I'll revoke it myself.",
-          "error_rate": 0.0,
-          "seconds": 4.7,
-          "peak": 0.796234130859375,
-          "rms": 0.12288194575069265,
-          "sha256": "adcea92055bf5011d12c412c757cd43f15e1f13a75e25861bb5f3888183b7f26"
-        },
-        "ja/frame113_deploy_0": {
-          "expected": "スカイレイザー、展開！両脇は任せて、ついてきて！",
-          "recognized": "スカイレーザー展開、両脇は任せてついてきて",
-          "error_rate": 0.05,
-          "seconds": 3.5,
-          "peak": 0.7890625,
-          "rms": 0.12929836284110757,
-          "sha256": "711dae0e84e3bfba9bf6fb679a84cce28651f55fa7c614da470c5c4619ce3d96"
-        },
-        "ja/frame113_deploy_1": {
-          "expected": "バスティオン、砲架固定。みんな、私の後ろへ！",
-          "recognized": "バステオン、方が固定。みんな私の後ろや",
-          "error_rate": 0.222,
-          "seconds": 4.82,
-          "peak": 0.79437255859375,
-          "rms": 0.1327489300960393,
-          "sha256": "5c066660ff876697196fcba98176a0a275743f37ec9d823b533eca74a2f3b4b5"
-        },
-        "ja/frame113_deploy_2": {
-          "expected": "パララックス、ロック完了。この光で、封鎖を貫きます。",
-          "recognized": "パララックスロック完了。この光で風刺を貫きます。",
-          "error_rate": 0.091,
-          "seconds": 4.9,
-          "peak": 0.793792724609375,
-          "rms": 0.13870858643429085,
-          "sha256": "b07617941688cdb7c77a4603000c32464d22e52573ae864592aefedc75471b43"
-        },
-        "ja/frame113_counter_0": {
-          "expected": "船団から測距信号！弱点が見えた、撃って！",
-          "recognized": "戦闘から即挙信号弱点が見えた撃って",
-          "error_rate": 0.235,
-          "seconds": 3.82,
-          "peak": 0.710205078125,
-          "rms": 0.12653961674573636,
-          "sha256": "5a776d7f9e9a888ae306c808aabba1899bb0234fdf1bb86412e7d7bf5f913343"
-        },
-        "ja/frame113_counter_1": {
-          "expected": "電力を敵の盾へ。ふふ、この街はあなたの電池じゃないのよ！",
-          "recognized": "電力を敵の盾へ。この街はあなたの電池じゃないのよ。",
-          "error_rate": 0.08,
-          "seconds": 5.02,
-          "peak": 0.794708251953125,
-          "rms": 0.13747343331489859,
-          "sha256": "086aa492d0c27e7ba48fc45b1367d2dd939c5ef8890da5ccc289a90e2366953b"
-        },
-        "ja/frame113_counter_2": {
-          "expected": "名簿が応答しています！聞いて、天環。この人たちは、標的じゃない！",
-          "recognized": "名簿が応答しています。聞いて、天官。この人たちは標的じゃない。",
-          "error_rate": 0.037,
-          "seconds": 5.46,
-          "peak": 0.701385498046875,
-          "rms": 0.12425824242846209,
-          "sha256": "3d3629ee2b556a9e59e751a41d3bb581fe2f219143996453908b902720981317"
-        },
-        "ja/frame113_signature": {
-          "expected": "署名は、私のもの。でも封鎖は命じていない。私の手で、取り消します！",
-          "recognized": "署名は私のもの。でも封鎖は明示ていない。私の手で取り消します。",
-          "error_rate": 0.071,
-          "seconds": 6.02,
-          "peak": 0.60302734375,
-          "rms": 0.11990554510007621,
-          "sha256": "8fda61ff117e6974879defecd44dda066ed8192b26f464e8ca0c476e2dc311f4"
-        }
-      },
-      "unchanged_baseline": "1.12.0 original trilingual voice bank; 423 existing clips retained"
+      "scope": "No new spoken dialogue in 1.14.0. Existing 148-event trilingual bank unchanged from validated 1.13.0.",
+      "events": 148,
+      "clips": 444,
+      "source_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
+      "files": 445
     },
     "mobile_checks": 100,
     "webkit_checks": 16,
@@ -852,11 +4171,11 @@
           584,
           848
         ],
-        "meanGameFps": 61.46058258056641,
-        "minGameFps": 60.869361877441406,
-        "peakKillMs": 0.20000000298023224,
+        "meanGameFps": 60.843491287231444,
+        "minGameFps": 60.37766647338867,
+        "peakKillMs": 0.30000001192092896,
         "resizeCounts": [
-          55
+          29
         ],
         "musicContinuous": true
       },
@@ -866,11 +4185,11 @@
           780,
           1132
         ],
-        "meanGameFps": 61.60260948181153,
-        "minGameFps": 61.25223159790039,
-        "peakKillMs": 0.20000000298023224,
+        "meanGameFps": 60.853512573242185,
+        "minGameFps": 60.32966232299805,
+        "peakKillMs": 0.30000001192092896,
         "resizeCounts": [
-          56
+          30
         ],
         "musicContinuous": true
       },
@@ -880,47 +4199,47 @@
           390,
           566
         ],
-        "meanGameFps": 61.29674514770508,
-        "minGameFps": 60.6402473449707,
-        "peakKillMs": 0.30000001192092896,
+        "meanGameFps": 60.397035140991214,
+        "minGameFps": 59.829708099365234,
+        "peakKillMs": 0.4000000059604645,
         "resizeCounts": [
-          57
+          31
         ],
         "musicContinuous": true
       }
     ],
-    "baseline_campaign_version": "1.13.0",
+    "baseline_campaign_version": "1.14.0",
     "native": {
       "pass": true,
-      "identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
+      "identity": "978cf7bba13542df0181c18c3230ba57aa9cd5ac8c477a1392118cd58d08b249",
       "steps": [
         {
           "step": "runtime",
-          "seconds": 107.7,
+          "seconds": 114.6,
           "pass": true,
-          "checks": 439
+          "checks": 484
         },
         {
           "step": "campaign0",
-          "seconds": 170.3,
+          "seconds": 171.7,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign1",
-          "seconds": 176.4,
+          "seconds": 182.5,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign2",
-          "seconds": 166.0,
+          "seconds": 168.8,
           "pass": true,
           "checks": 4
         },
         {
           "step": "portraits",
-          "seconds": 11.4,
+          "seconds": 12.8,
           "pass": true,
           "checks": 0
         }
@@ -929,30 +4248,7 @@
     "android_checks": 8,
     "recommended_orientation": "landscape",
     "portrait_blocked": false,
-    "physical_phone_tested": false,
-    "coast": {
-      "pass": true,
-      "checks": [
-        "All four beacon bases retain their position relative to their own quay throughout live scrolling",
-        "Fixtures use the same speed and offscreen recycling as the coastline",
-        "Harbor vehicles have continuous motion with no visible route teleport",
-        "Pause freezes scenery travel",
-        "Return to hangar recreates exactly four anchored beacons with no duplicates",
-        "No browser errors"
-      ],
-      "coastFootprints": 20,
-      "wakeAlignment": true,
-      "musicContinuous": true,
-      "sceneResetsWithoutDuplicateCoast": true,
-      "seconds": 40,
-      "samples": 156,
-      "anchorWraps": 27,
-      "meanFps": 61.44081332585583,
-      "errors": [],
-      "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU",
-      "sameScenarioAs": "scenery-flow",
-      "note": "Alias used by the publication manifest; not an additional independent test."
-    }
+    "physical_phone_tested": false
   },
   "security_hardening": [
     "CSP",
@@ -964,26 +4260,6 @@
       "path": ".nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "Build/v1.12.0/Web.data.unityweb",
-      "bytes": 101711132,
-      "sha256": "7487e4c57408587c99c0f5d5fe0d0a769386b692f9aa5274deae5851d34af3ab"
-    },
-    {
-      "path": "Build/v1.12.0/Web.framework.js.unityweb",
-      "bytes": 65033,
-      "sha256": "69a75aa78a0fb552bc20fc653be57e127a27c83de4b879f3064f73582802fe54"
-    },
-    {
-      "path": "Build/v1.12.0/Web.loader.js",
-      "bytes": 118806,
-      "sha256": "edabd48a508460ac32a488309146c63a8e0ac21d197f4d060a6d810e727bbc45"
-    },
-    {
-      "path": "Build/v1.12.0/Web.wasm.unityweb",
-      "bytes": 4351635,
-      "sha256": "05fd6b600df63ba43c189768a978852ac8fc281dc0a32cd656f94fbf98d7dcfd"
     },
     {
       "path": "Build/v1.12.1/Web.data.unityweb",
@@ -1026,29 +4302,49 @@
       "sha256": "9cb41798208af90746982df377c4ae28053198e47fd34ad2af7d8771e8fc07f8"
     },
     {
+      "path": "Build/v1.14.0/Web.data.unityweb",
+      "bytes": 103293733,
+      "sha256": "1679810e4084e3b3246bbb40aa4a49552670c7f2696ed080a9cd8a6871e91a60"
+    },
+    {
+      "path": "Build/v1.14.0/Web.framework.js.unityweb",
+      "bytes": 65033,
+      "sha256": "69a75aa78a0fb552bc20fc653be57e127a27c83de4b879f3064f73582802fe54"
+    },
+    {
+      "path": "Build/v1.14.0/Web.loader.js",
+      "bytes": 118806,
+      "sha256": "81d5f59a2937750b5c928e2ce83ff8f962911d3389b92be5c9c1183165bb1ee1"
+    },
+    {
+      "path": "Build/v1.14.0/Web.wasm.unityweb",
+      "bytes": 4386741,
+      "sha256": "92d00b28ed09b1ce1fac63a415a3d80b9e3afa9bfb756b996af30c76a57dcc92"
+    },
+    {
       "path": "cover.png",
       "bytes": 1317440,
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.13.0.js",
+      "path": "display-1.14.0.js",
       "bytes": 3540,
       "sha256": "1cfef70f97ed6707719179da446a51338ef4134437e8c61b48b6af246e409e5e"
     },
     {
       "path": "index.html",
       "bytes": 10291,
-      "sha256": "c38a68c400ff5743e76ee81761594c9978a896b261c9ac5bfbd7329c4a6adcc9"
+      "sha256": "e48784283423f1df8ff1c267bc66000c65fd7fe6dbd97f98b74c5248f442dd60"
     },
     {
-      "path": "mobile-1.13.0.css",
+      "path": "mobile-1.14.0.css",
       "bytes": 20730,
       "sha256": "c29ca355a99c93d3342cc29e5536482f43a52acfcb43607a118e2de14926c0a3"
     },
     {
-      "path": "mobile-1.13.0.js",
-      "bytes": 22099,
-      "sha256": "938113a64e3b6ded32f5f55c8d955d08751dfa87dfcf3f62599130b8551a87e9"
+      "path": "mobile-1.14.0.js",
+      "bytes": 22173,
+      "sha256": "92349435a55732c97854ae19b1737a0c3b209ade1301371067eba7fa078a9601"
     }
   ]
 }
