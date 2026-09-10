@@ -1,0 +1,520 @@
+{
+  "version": "1.14.0",
+  "pass": true,
+  "native_runtime_checks": 484,
+  "scope": "Full native runtime and three automatic campaigns; current browser checks cover destruction, all maps, mobile layout, boss HUD, audio continuity and three quality settings. Frames and story received current native coverage; their browser-specific regression was last run for 1.13.0.",
+  "physical_phone_tested": false,
+  "native_stress": {
+    "kills": 180,
+    "frames": 360,
+    "average_ms": 17.5,
+    "p95_ms": 17.576,
+    "p99_ms": 49.178,
+    "max_kill_cpu_ms": 0.166,
+    "spark_peak": 723,
+    "new_shock_objects": 0
+  },
+  "blender_source_geometry": {
+    "Drone": {
+      "triangles": 3924,
+      "source_objects": 26,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "Interceptor": {
+      "triangles": 4824,
+      "source_objects": 30,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "Gunship": {
+      "triangles": 13052,
+      "source_objects": 81,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Gold",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "CargoShuttle": {
+      "triangles": 8012,
+      "source_objects": 61,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Gold",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "DiveBomber": {
+      "triangles": 5472,
+      "source_objects": 32,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "WardDrone": {
+      "triangles": 2780,
+      "source_objects": 17,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "RailLancer": {
+      "triangles": 7456,
+      "source_objects": 38,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "MineTender": {
+      "triangles": 7040,
+      "source_objects": 38,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "DroneCarrier": {
+      "triangles": 8012,
+      "source_objects": 61,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Glass",
+        "Foundry_Gold",
+        "Foundry_Hot",
+        "Foundry_Hull",
+        "Foundry_Ivory"
+      ]
+    },
+    "RepairPod114": {
+      "triangles": 976,
+      "source_objects": 8,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Green",
+        "Foundry_Ivory"
+      ]
+    },
+    "OrdnanceRack114": {
+      "triangles": 1204,
+      "source_objects": 7,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Hot",
+        "Foundry_Ivory"
+      ]
+    },
+    "ReactorCell114": {
+      "triangles": 2188,
+      "source_objects": 10,
+      "materials": [
+        "Foundry_Blue",
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Ivory"
+      ]
+    },
+    "WingBeacon114": {
+      "triangles": 940,
+      "source_objects": 7,
+      "materials": [
+        "Foundry_Dark",
+        "Foundry_Edge",
+        "Foundry_Gold",
+        "Foundry_Ivory"
+      ]
+    }
+  },
+  "checks": {
+    "native": {
+      "pass": true,
+      "identity": "978cf7bba13542df0181c18c3230ba57aa9cd5ac8c477a1392118cd58d08b249",
+      "steps": [
+        {
+          "step": "runtime",
+          "seconds": 114.6,
+          "pass": true,
+          "checks": 484
+        },
+        {
+          "step": "campaign0",
+          "seconds": 171.7,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "campaign1",
+          "seconds": 182.5,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "campaign2",
+          "seconds": 168.8,
+          "pass": true,
+          "checks": 4
+        },
+        {
+          "step": "portraits",
+          "seconds": 12.8,
+          "pass": true,
+          "checks": 0
+        }
+      ]
+    },
+    "destruction-flow": {
+      "pass": true,
+      "checks": [
+        "Ordinary live combat produces both falling water crashes and immediate air breakups",
+        "Phone combat respects wreck and surface pool budgets",
+        "Pause retains delayed visuals without advancing them",
+        "Returning to hangar clears all delayed destruction",
+        "No browser errors during destruction playback"
+      ],
+      "peakWrecks": 3,
+      "peakImpacts": 3,
+      "observedArmoredContact": true,
+      "observedArmorOpen": true,
+      "errors": [],
+      "scope": "Live mobile-input browser gameplay on Mac GPU; controlled flight inputs only, no enemy/health/time overrides"
+    },
+    "portrait-flow": {
+      "pass": true,
+      "checks": [
+        "No blocking rotation overlay",
+        "390x844 portrait and page proportions",
+        "390x844 deploy visible without rotation",
+        "360x640 portrait and page proportions",
+        "360x640 deploy visible without rotation",
+        "430x932 portrait and page proportions",
+        "430x932 deploy visible without rotation",
+        "768x1024 portrait and page proportions",
+        "768x1024 deploy visible without rotation",
+        "Portrait specialization scroll and equip",
+        "Portrait quality setting",
+        "Portrait drag moves real ship",
+        "Portrait second finger fires nova while steering",
+        "Finger release stops movement",
+        "Portrait skill works",
+        "Portrait precision works",
+        "Portrait weapon swap works",
+        "390x844 high DPI stays active: {\"dpr\":3,\"width\":584,\"css\":390,\"quality\":\"balanced\"}",
+        "390x844 HUD entirely above battlefield",
+        "390x844 field and real camera aspect agree",
+        "390x844 portrait uses full width",
+        "390x844 radio dock outside flight corridor",
+        "390x844 animated character bust has a usable slot",
+        "390x844 complete caption fits its dock",
+        "390x844 precision and abilities have separate touch targets",
+        "390x844 precision button below dialogue",
+        "390x844 whole flight corridor visible",
+        "390x844 ability controls inside screen",
+        "390x844 thumb controls below combat",
+        "390x844 stable drawing buffer",
+        "844x390 orientation pauses and releases movement",
+        "844x390 high DPI stays active: {\"dpr\":3,\"width\":864,\"css\":579.546875,\"quality\":\"balanced\"}",
+        "844x390 HUD entirely above battlefield",
+        "844x390 field and real camera aspect agree",
+        "844x390 whole flight corridor visible",
+        "844x390 ability controls inside screen",
+        "844x390 stable drawing buffer",
+        "667x320 high DPI stays active: {\"dpr\":3,\"width\":672,\"css\":455.109375,\"quality\":\"balanced\"}",
+        "667x320 HUD entirely above battlefield",
+        "667x320 field and real camera aspect agree",
+        "667x320 whole flight corridor visible",
+        "667x320 ability controls inside screen",
+        "667x320 stable drawing buffer",
+        "390x844 orientation pauses and releases movement",
+        "390x844 high DPI stays active: {\"dpr\":3,\"width\":584,\"css\":390,\"quality\":\"balanced\"}",
+        "390x844 HUD entirely above battlefield",
+        "390x844 field and real camera aspect agree",
+        "390x844 portrait uses full width",
+        "390x844 radio dock outside flight corridor",
+        "390x844 animated character bust has a usable slot",
+        "390x844 complete caption fits its dock",
+        "390x844 precision and abilities have separate touch targets",
+        "390x844 precision button below dialogue",
+        "390x844 whole flight corridor visible",
+        "390x844 ability controls inside screen",
+        "390x844 thumb controls below combat",
+        "390x844 stable drawing buffer",
+        "360x640 high DPI stays active: {\"dpr\":3,\"width\":540,\"css\":360,\"quality\":\"balanced\"}",
+        "360x640 HUD entirely above battlefield",
+        "360x640 field and real camera aspect agree",
+        "360x640 portrait uses full width",
+        "360x640 radio dock outside flight corridor",
+        "360x640 animated character bust has a usable slot",
+        "360x640 complete caption fits its dock",
+        "360x640 precision and abilities have separate touch targets",
+        "360x640 precision button below dialogue",
+        "360x640 whole flight corridor visible",
+        "360x640 ability controls inside screen",
+        "360x640 thumb controls below combat",
+        "360x640 stable drawing buffer",
+        "430x932 high DPI stays active: {\"dpr\":3,\"width\":644,\"css\":430,\"quality\":\"balanced\"}",
+        "430x932 HUD entirely above battlefield",
+        "430x932 field and real camera aspect agree",
+        "430x932 portrait uses full width",
+        "430x932 radio dock outside flight corridor",
+        "430x932 animated character bust has a usable slot",
+        "430x932 complete caption fits its dock",
+        "430x932 precision and abilities have separate touch targets",
+        "430x932 precision button below dialogue",
+        "430x932 whole flight corridor visible",
+        "430x932 ability controls inside screen",
+        "430x932 thumb controls below combat",
+        "430x932 stable drawing buffer",
+        "768x1024 high DPI stays active: {\"dpr\":3,\"width\":934,\"css\":768,\"quality\":\"balanced\"}",
+        "768x1024 HUD entirely above battlefield",
+        "768x1024 field and real camera aspect agree",
+        "768x1024 portrait uses full width",
+        "768x1024 radio dock outside flight corridor",
+        "768x1024 animated character bust has a usable slot",
+        "768x1024 complete caption fits its dock",
+        "768x1024 precision and abilities have separate touch targets",
+        "768x1024 precision button below dialogue",
+        "768x1024 whole flight corridor visible",
+        "768x1024 ability controls inside screen",
+        "768x1024 thumb controls below combat",
+        "768x1024 stable drawing buffer",
+        "Pause retains civilian mission and specialization",
+        "Recent actual radio transmissions remain readable",
+        "Quality can change while safely paused",
+        "No browser or renderer errors"
+      ],
+      "errors": []
+    },
+    "scenery-all-stages": {
+      "pass": true,
+      "checks": [
+        "Stage 0: all fixtures move with their own sector",
+        "Stage 0: vehicles have no jump between route endpoints",
+        "Stage 0: continuity survives actual sector recycling",
+        "Stage 1: all fixtures move with their own sector",
+        "Stage 1: vehicles have no jump between route endpoints",
+        "Stage 1: continuity survives actual sector recycling",
+        "Powered trains visibly travel, arrive and wait without teleporting",
+        "Stage 2: all fixtures move with their own sector",
+        "Stage 2: vehicles have no jump between route endpoints",
+        "Stage 2: continuity survives actual sector recycling",
+        "No browser errors across the three maps"
+      ],
+      "stages": [
+        {
+          "stage": 0,
+          "samples": 102,
+          "wraps": 15,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 12
+        },
+        {
+          "stage": 1,
+          "samples": 100,
+          "wraps": 34,
+          "trainMotion": 103,
+          "trainStops": 190,
+          "anchors": 23
+        },
+        {
+          "stage": 2,
+          "samples": 102,
+          "wraps": 6,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 4
+        }
+      ],
+      "errors": [],
+      "scenario": "Controlled QA chapter transitions and restored city power; live rendering, scrolling and normal combat in each stage"
+    },
+    "boss-check": {
+      "pass": true,
+      "samples": 80,
+      "lowestHud": 99.5,
+      "fieldTop": 104,
+      "instructions": [
+        "拆除左右炮台，击穿海上要塞",
+        "鱼雷扇面 · 横向穿越缝隙",
+        "交错炮击 · 离开锁定航线"
+      ],
+      "modules": 2,
+      "errors": [],
+      "scope": "Real first boss spawned early in isolated local test; not a full campaign completion"
+    },
+    "combat-quality": {
+      "pass": true,
+      "results": [
+        {
+          "quality": "balanced",
+          "render": [
+            584,
+            848
+          ],
+          "meanGameFps": 60.843491287231444,
+          "minGameFps": 60.37766647338867,
+          "peakKillMs": 0.30000001192092896,
+          "resizeCounts": [
+            29
+          ],
+          "musicContinuous": true
+        },
+        {
+          "quality": "clear",
+          "render": [
+            780,
+            1132
+          ],
+          "meanGameFps": 60.853512573242185,
+          "minGameFps": 60.32966232299805,
+          "peakKillMs": 0.30000001192092896,
+          "resizeCounts": [
+            30
+          ],
+          "musicContinuous": true
+        },
+        {
+          "quality": "smooth",
+          "render": [
+            390,
+            566
+          ],
+          "meanGameFps": 60.397035140991214,
+          "minGameFps": 59.829708099365234,
+          "peakKillMs": 0.4000000059604645,
+          "resizeCounts": [
+            31
+          ],
+          "musicContinuous": true
+        }
+      ],
+      "errors": [],
+      "samples": 180,
+      "scope": "Desktop GPU with mobile emulation; no physical-phone FPS claim"
+    },
+    "webkit-checks": {
+      "pass": true,
+      "checks": [
+        "WebKit auto-detects iPhone controls",
+        "Portrait is directly playable without an overlay",
+        "Portrait clear quality applies",
+        "English voice plays from portrait settings",
+        "Portrait touch launches combat",
+        "Portrait touch nova fires",
+        "Rotation pauses controls 852",
+        "Can resume in current orientation 852",
+        "HUD does not cover the arena 852",
+        "Actual camera matches orientation 852",
+        "Rotation pauses controls 393",
+        "Can resume in current orientation 393",
+        "HUD does not cover the arena 393",
+        "Actual camera matches orientation 393",
+        "Quality is adjustable while paused",
+        "No WebKit page or rendering errors"
+      ],
+      "errors": []
+    },
+    "android": {
+      "pass": true,
+      "checks": [
+        "Android automatically selects touch controls",
+        "Android portrait recommends landscape without blocking play",
+        "Japanese preview plays on Android browser",
+        "Android portrait retains real pilot and coastal scenery",
+        "Android touch bomb consumes one charge",
+        "Android rotation pauses safely",
+        "Landscape restores scenery and camera",
+        "No Android browser errors"
+      ],
+      "errors": []
+    },
+    "desktop-checks": {
+      "pass": true,
+      "selectedShip": 1,
+      "musicContinues": true,
+      "combat": "Playing",
+      "bombActive": true,
+      "pause": "Paused",
+      "errors": []
+    },
+    "input-consistency": {
+      "pass": true,
+      "web_identity": "d1a4a8d629df729201096e656190be92e7e0fdcfd0b06a8256a6f69f5b27edf7",
+      "native_identity": "978cf7bba13542df0181c18c3230ba57aa9cd5ac8c477a1392118cd58d08b249",
+      "source_assets_match": 1232,
+      "version": "1.14.0"
+    },
+    "impact-audio": {
+      "pass": true,
+      "clips": [
+        {
+          "name": "ArmorBreak114.wav",
+          "seconds": 0.38,
+          "peak_dbfs": -3.74,
+          "clipped": 0
+        },
+        {
+          "name": "CrashGround114.wav",
+          "seconds": 0.86,
+          "peak_dbfs": -3.74,
+          "clipped": 0
+        },
+        {
+          "name": "CrashWater114.wav",
+          "seconds": 1.25,
+          "peak_dbfs": -3.74,
+          "clipped": 0
+        }
+      ],
+      "scope": "Signal analysis and runtime loading; original procedural effects, no new voice recordings."
+    },
+    "voice-review": {
+      "pass": true,
+      "scope": "No new spoken dialogue in 1.14.0. Existing 148-event trilingual bank unchanged from validated 1.13.0.",
+      "events": 148,
+      "clips": 444,
+      "source_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
+      "files": 445
+    }
+  }
+}

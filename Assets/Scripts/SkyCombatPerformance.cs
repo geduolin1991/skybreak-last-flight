@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Skybreak {
 // Pools are owned by this game instance and survive chapter changes.
 public sealed class SkyEnemyVisual : MonoBehaviour {
- public int kind; public Renderer[] renderers; public Color[] colors;
+ public int kind; public Transform[] vents;public Quaternion[] ventRest; public Renderer[] renderers; public Color[] colors;
 }
 public partial class SkyGame {
  readonly Stack<SkyEnemyVisual>[] enemyVisualPool=new Stack<SkyEnemyVisual>[12];
@@ -18,16 +18,16 @@ public partial class SkyGame {
   // Tiny unlit rounds do not need Unity's 515-vertex default sphere.
   sphere=BuildProjectileMesh();
   foreach(string name in new[]{"Explosion","ExplosionHeavy","BossBreak","ImpactLight","ImpactArmor","MissileBurst","ShotPulse","ShotScatter","ShotLance","ShotSeeker","ShotMortar","ShotRailFast","Pickup","Combo","Click","Hit","Warning","Bomb","Overdrive","NovaCharge"}){var c=Clip(name);if(c)c.LoadAudioData();}
-  StartCoroutine(WarmEnemyVisuals());
+  SetupDestruction114();StartCoroutine(WarmEnemyVisuals());
  }
  System.Collections.IEnumerator WarmEnemyVisuals(){
   for(int kind=0;kind<12;kind++){for(int i=0;i<(kind<2?4:2);i++){var v=CreateEnemyVisual(kind);v.gameObject.SetActive(false);enemyVisualPool[kind].Push(v);}yield return null;}
  }
  SkyEnemyVisual CreateEnemyVisual(int kind){
-  var go=Art.Model(EnemyModels[kind],pooledActors);var v=go.AddComponent<SkyEnemyVisual>();v.kind=kind;
+  var go=Art.Model(EnemyModels[kind],pooledActors);var v=go.AddComponent<SkyEnemyVisual>();v.kind=kind;var vents=new List<Transform>();foreach(var t in go.GetComponentsInChildren<Transform>())if(t.name.StartsWith("Motion_Vent_"))vents.Add(t);v.vents=vents.ToArray();v.ventRest=new Quaternion[v.vents.Length];for(int i=0;i<v.vents.Length;i++)v.ventRest[i]=v.vents[i].localRotation;
   v.renderers=go.GetComponentsInChildren<Renderer>();v.colors=RendererColors(v.renderers);enemyVisualAllocations++;return v;
  }
- SkyEnemyVisual RentEnemyVisual(int kind){var pool=enemyVisualPool[kind];var v=pool.Count>0?pool.Pop():CreateEnemyVisual(kind);v.gameObject.SetActive(true);return v;}
+ SkyEnemyVisual RentEnemyVisual(int kind){var pool=enemyVisualPool[kind];var v=pool.Count>0?pool.Pop():CreateEnemyVisual(kind);for(int i=0;i<v.vents.Length;i++)v.vents[i].localRotation=v.ventRest[i];v.gameObject.SetActive(true);return v;}
  void ReleaseEnemyVisual(Hostile e){
   if(!e.go)return;
   var v=e.go.GetComponent<SkyEnemyVisual>();

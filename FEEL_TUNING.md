@@ -23,3 +23,15 @@ Avoid extra full-screen flashes, global hit-stop on ordinary kills and unbounded
 | New weapon identity is hard to hear | Six brief mechanical cues, seven tactical events in three languages | Existing voice ducking; SFX peak below -4 dBFS | New-take ASR/signal review plus live audio continuity |
 
 Retain the 75/95/110-second boss arrivals, readable telegraphs, three outcomes, mobile portrait support and anchored scenery fixes.
+
+
+## 1.14 destruction and enemy equipment
+
+| Weak moment | Change | Budget / constraint | Validation |
+| --- | --- | --- | --- |
+| Every kill reads as the same flash | Immediate air breakup or smoking, rolling descent to the background; water spray/ripples, ground fire/scorch, vacuum dissipation | Reuse 9 wrecks / 5 on touch and 10 surface impacts; kill reward and collision end immediately | All three chapter surfaces, scrolling alignment, single reward, pause and cleanup |
+| Pickups look like abstract shapes | Four Blender equipment models with distinct silhouette, symbol and colour | 940–2,188 imported triangles; same reward and collection range | Real mesh import and all four rewards, browser legibility |
+| Tough enemies only increase health | Two heavy types resist damage, open physical cooling shutters after firing and permanently lose armor at low hull | One threat readout; damage ×0.70 protected, ×1.70 cooling, ×1.12 broken | Damage and hatch direction checks, carrier launch, natural campaigns |
+| Enemies lack construction detail | Rebuild nine airframes with canopy, engine, weapon, vent and wing assemblies | 2,780–12,972 imported triangles / 5–11 renderers | Actual game camera, three browser quality settings and mass kills |
+
+No ordinary-kill full-screen flash or rigidbody debris was added. Impact locations use the same authored shoreline footprints as the ocean renderer; this is cosmetic surface classification, not building destruction physics. New audio cues are original procedural synthesis. Physical phones still require separate performance testing.

@@ -50,7 +50,7 @@ public partial class SkyGame {
   }
   Ship=0;BeginRun();Launch();AutoFire=false;invuln=999;ClearBattle();
   var ward=SpawnEnemy(5,new Vector3(0,1,5),0);var protectedEnemy=SpawnEnemy(2,new Vector3(1,1,5),0);float protectedHp=protectedEnemy.hp;DamageEnemy(protectedEnemy,10);float shielded=protectedHp-protectedEnemy.hp;DamageEnemy(ward,1000);protectedHp=protectedEnemy.hp;DamageEnemy(protectedEnemy,10);
-  check(shielded<5&&protectedHp-protectedEnemy.hp>9,"Destroying the shield drone removes protection from nearby enemies");
+  check(shielded<5&&protectedHp-protectedEnemy.hp>shielded*2&&protectedHp-protectedEnemy.hp<10,"Destroying the shield drone removes its field while the heavy hull keeps its own armor");
   ClearBattle();var lancer=SpawnEnemy(6,new Vector3(0,1,8),0);lancer.fire=.01f;TickSpecialEnemy(lancer,.01f);check(lancer.aimReady&&Bullets.Count==0,"Rail lancer provides a locked telegraph before firing");lancer.fire=0;TickSpecialEnemy(lancer,.01f);check(Bullets.FindAll(b=>!b.friendly&&b.velocity.magnitude>8).Count==4,"Rail lancer releases a distinct fast four-round burst");
   ClearBattle();var tender=SpawnEnemy(7,new Vector3(0,1,8),0);tender.fire=0;TickSpecialEnemy(tender,.01f);check(Enemies.Exists(e=>e.kind==10),"Mine tender deploys separate destructible mines");
   ClearBattle();var carrier=SpawnEnemy(8,new Vector3(0,1,8),0);carrier.fire=0;TickSpecialEnemy(carrier,.01f);check(Enemies.FindAll(e=>e.kind==0).Count==2,"Drone carrier launches two independently simulated aircraft");

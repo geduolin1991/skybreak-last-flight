@@ -3,7 +3,7 @@ namespace Skybreak {
 public partial class SkyGame {
  static readonly string[] EnemyModels={"Drone","Interceptor","Gunship","CargoShuttle","DiveBomber","WardDrone","RailLancer","MineTender","DroneCarrier","GridPylon","ShieldEmitter","SupplyBeacon"};
  static readonly float[] EnemySizes={.8f,.7f,.95f,.67f,.67f,.64f,.65f,.64f,.76f,.58f,.23f,.28f};
- static readonly float[] EnemyHealth={12,26,80,125,95,82,66,110,220,260,18,14};
+ static readonly float[] EnemyHealth={12,26,170,125,95,82,66,110,360,260,18,14};
  float EnemyRadius(Hostile e)=>e.boss?2.65f:e.kind==9?1.04f:e.kind==8?1.6f:e.kind==10?.45f:e.kind==11?.37f:e.kind==3?1.25f:e.kind==2?1.35f:e.kind>=4?.88f:e.kind==1?.75f:.67f;
  void ConfigureEnemy(Hostile e){
   if(e.kind==9){float depth=Stage==2?6:9.8f;e.visualOffset=new Vector3(0,-depth,depth*.57735027f);e.go.transform.localScale=Vector3.one*.45f;e.fire=3.4f;e.marker=Art.Ring(e.go.transform,1.3f,new Color(1,.3f,.1f,.33f),.045f);e.marker.transform.localPosition=Vector3.up*.15f;}
@@ -30,7 +30,7 @@ public partial class SkyGame {
    }else if(e.kind==5){if(e.age>3)MissionSay("ward_contact",86,()=>Enemies.Contains(e)&&!e.retreating);if(e.fire<=0&&e.pos.z<12){for(int i=0;i<8;i++){float a=e.age*.2f+i*Mathf.PI/4;AddBullet(e.pos,new Vector3(Mathf.Sin(a),0,Mathf.Cos(a))*3.2f*DifficultySpeed,false,2);}e.fire=3;}}
    else if(e.kind==6){UpdateWeaponTell(e);if(e.aimReady&&e.fire<.4f)MissionSay("rail_lock",92,()=>Enemies.Contains(e)&&!e.retreating&&e.aimReady);if(e.fire<=0&&e.pos.z<12&&e.pos.z>PlayerPos.z+1){Vector3 dir=(e.lockedAim-e.pos).normalized;for(int i=0;i<4;i++)AddBullet(e.pos-dir*i*.75f,dir*13*DifficultySpeed,false,3,1,.14f);FinishWeaponTell(e);e.fire=3.1f;}}
    else if(e.kind==7){if(e.fire<=0&&e.pos.z<13){if(CountEnemyKind(10)<8){var mine=SpawnEnemy(10,e.pos+Vector3.back*.6f,0);mine.fire=4.1f;}e.fire=2.6f;}}
-   else if(e.kind==8){if(e.fire<=0&&e.pos.z<13){if(Enemies.Count<36)for(int s=-1;s<=1;s+=2)SpawnEnemy(0,e.pos+new Vector3(s*1.4f,0,-1),6);e.fire=5;MissionSay("carrier_launch",84,()=>Enemies.Contains(e)&&!e.retreating);}}
+   else if(e.kind==8){if(e.fire<=0&&e.pos.z<13){if(Enemies.Count<36)for(int s=-1;s<=1;s+=2)SpawnEnemy(0,e.pos+new Vector3(s*1.4f,0,-1),6);e.fire=5;OpenEnemyRadiators(e);MissionSay("carrier_launch",84,()=>Enemies.Contains(e)&&!e.retreating);}}
    else if(e.fire<=0&&e.pos.z<13){EnemyAttack(e);e.fire=2.5f;}
    if(e.pos.z<-15){RemoveSpecialEnemy(e);return true;}
   }

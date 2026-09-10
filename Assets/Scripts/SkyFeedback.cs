@@ -35,12 +35,12 @@ public partial class SkyGame {
   if(impactGate<=0){impactGate=.065f;impactAudio.panStereo=Mathf.Clamp(e.pos.x/10,-1,1)*.45f;var clip=Clip(e.boss||e.kind>=2?"ImpactArmor":"ImpactLight");impactAudio.pitch=Random.Range(.88f,1.12f);if(clip)impactAudio.PlayOneShot(clip,MasterVolume*(e.boss?.55f:.42f));}
  }
  void OnTargetDestroyed(Hostile e,int points){
-  bool heavy=HeavyWreck(e);int multiplier=Mathf.Min(10,1+Combo/8);
+  bool falling=!e.boss&&e.kind<9&&!ImmediateAirBreakup(e);bool heavy=HeavyWreck(e);int multiplier=Mathf.Min(10,1+Combo/8);
   if(scorePops.Count<24)scorePops.Add(new ScorePop{pos=e.pos,text=(e.boss?"CORE BREAK  ":heavy?"BREAK  ":"")+"+"+(points*multiplier).ToString("N0"),max=heavy?1.05f:.68f,heavy=heavy});
-  Shockwave(e.pos,heavy?Art.Orange:Art.Cyan,e.boss?14:heavy?4.5f:1.7f,heavy?.55f:.24f);
-  Burst(e.pos,e.boss?160:heavy?52:e.kind>=10?12:24,1,e.boss?2.8f:heavy?1.35f:1);
+  Shockwave(e.pos,heavy?Art.Orange:Art.Cyan,e.boss?14:falling?(heavy?2.3f:1.1f):heavy?4.5f:1.7f,heavy?.55f:.24f);
+  Burst(e.pos,e.boss?160:falling?(heavy?26:14):heavy?52:e.kind>=10?12:24,1,e.boss?2.8f:heavy?1.35f:1);
   if(e.boss){deathClouds.Add(new DeathCloud{pos=e.pos,bursts=11,size=3.5f,clock=.12f});Sound("BossBreak",1);hitStop=.12f;shake=1.25f;audioDuck=.8f;}
-  else if(heavy){if(deathClouds.Count<6)deathClouds.Add(new DeathCloud{pos=e.pos,bursts=2,size=1.15f,clock=.08f});if(killGate<=0){killGate=.065f;Sound("ExplosionHeavy",.72f);}shake=Mathf.Max(shake,.32f);audioDuck=Mathf.Max(audioDuck,.24f);}
+  else if(heavy){if(deathClouds.Count<6)deathClouds.Add(new DeathCloud{pos=e.pos,bursts=falling?1:2,size=falling?.72f:1.15f,clock=.08f});if(killGate<=0){killGate=.065f;Sound("ExplosionHeavy",.72f);}shake=Mathf.Max(shake,.32f);audioDuck=Mathf.Max(audioDuck,.24f);}
   else {if(killGate<=0){killGate=.045f;Sound("Explosion",.56f);}shake=Mathf.Max(shake,.16f);}
   if(Combo>0&&Combo%8==0){Sound("Combo",.5f);Toast("连锁击破  ×"+multiplier,1.3f);}
  }
@@ -51,6 +51,6 @@ public partial class SkyGame {
   for(int i=0;i<e.renderers.Length;i++){var renderer=e.renderers[i];if(!renderer)continue;block.Clear();if(flash>0){Color original=e.baseColors[i];block.SetColor("_Color",Color.Lerp(original,new Color(1,.71f,.36f),flash*.8f));block.SetColor("_EmissionColor",new Color(1.6f,.8f,.3f)*flash*(e.boss?.65f:1));}renderer.SetPropertyBlock(block);}
  }
  Color[] RendererColors(Renderer[] renderers){var colors=new Color[renderers.Length];for(int i=0;i<colors.Length;i++){var mat=renderers[i].sharedMaterial;colors[i]=mat?mat.color:Color.white;if(mat&&!mat.IsKeywordEnabled("_EMISSION")){mat.EnableKeyword("_EMISSION");mat.SetColor("_EmissionColor",Color.black);}}return colors;}
- void DrawImpactFeedback(){if(State!=FlightState.Playing)return;foreach(var p in scorePops){Vector3 v=Cam.WorldToViewportPoint(p.pos+Vector3.up);if(v.z<0||v.x<.17f||v.x>.83f)continue;float a=Mathf.Min(1,(p.max-p.age)*4);Color c=p.heavy?new Color(1,.76f,.34f,a):new Color(.72f,.98f,1,a);Label(p.text,v.x*1600-140,(1-v.y)*900-16,280,35,p.heavy?22:16,c,TextAnchor.MiddleCenter);}}
+ void DrawImpactFeedback(){DrawEnemyArmor114();if(State!=FlightState.Playing)return;foreach(var p in scorePops){Vector3 v=Cam.WorldToViewportPoint(p.pos+Vector3.up);if(v.z<0||v.x<.17f||v.x>.83f)continue;float a=Mathf.Min(1,(p.max-p.age)*4);Color c=p.heavy?new Color(1,.76f,.34f,a):new Color(.72f,.98f,1,a);Label(p.text,v.x*1600-140,(1-v.y)*900-16,280,35,p.heavy?22:16,c,TextAnchor.MiddleCenter);}}
 }
 }

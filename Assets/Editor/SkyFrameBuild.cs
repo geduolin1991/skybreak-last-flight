@@ -21,7 +21,7 @@ public static class SkyFrameBuild {
    if(joints<6||model.GetComponentsInChildren<Renderer>().Length>65)throw new Exception("Frame articulation or renderer budget failed: "+name);
    Debug.Log("FRAME_IMPORT "+name+" joints="+joints+" renderers="+model.GetComponentsInChildren<Renderer>().Length);
   }
-  PlayerSettings.bundleVersion="1.13.0";AssetDatabase.SaveAssets();Debug.Log("SKYBREAK_FRAMES_PREPARED");
+  PlayerSettings.bundleVersion="1.14.0";AssetDatabase.SaveAssets();Debug.Log("SKYBREAK_FRAMES_PREPARED");
  }
  public static void Build(){Prepare();SkyBuild.BuildCurrentMac();}
 }
