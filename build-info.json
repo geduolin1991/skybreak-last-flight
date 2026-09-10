@@ -1,14 +1,14 @@
 {
   "game": "SKYBREAK / 裂空：最后航线",
-  "version": "1.12.1-web",
+  "version": "1.13.0-web",
   "unity": "6000.6.0f1",
-  "source_revision": "8139c3b5878f6a3f701a5f9284faaabdfed90bf3",
-  "web_wrapper_revision": "8139c3b5878f6a3f701a5f9284faaabdfed90bf3",
-  "built_at_utc": "2026-09-09T23:03:19.523355+00:00",
-  "build_identity": "5361a83d9b2762ede2f895e07eb19385de1c31033ed142605d1fc95c259af71e",
-  "native_download_version": "1.12.1",
-  "voice_clips": 423,
-  "voice_events": 141,
+  "source_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
+  "web_wrapper_revision": "d057f30509f6620273bf1d232af3a2abb4fb3e16",
+  "built_at_utc": "2026-09-10T00:03:31.317602+00:00",
+  "build_identity": "f98d053608484b4084e903713ea1d215d1e8593109f487bcd80650b00eb2e384",
+  "native_download_version": "1.13.0",
+  "voice_clips": 444,
+  "voice_events": 148,
   "voice_languages": [
     "zh",
     "en",
@@ -33,68 +33,170 @@
     "smooth"
   ],
   "mobile_frame_target": 60,
+  "frames": [
+    "岚刃",
+    "赤垒",
+    "霜环"
+  ],
+  "frame_counter_seconds": [
+    5,
+    6,
+    7
+  ],
   "validation": {
-    "scenery_native": {
+    "frames": {
       "pass": true,
       "checks": [
+        "Frame 0: distinct model assemblies and name in mobile player",
+        "Frame 0: HUD switches to its own arsenal",
+        "Frame 0: touch button names the deployed frame",
+        "Frame 0: alternate frame weapon works",
+        "Frame 0: rotating pauses its deployment timer",
+        "Frame 0: pause does not consume charge",
+        "Frame 0: landscape resumes with capped effects and pilot portrait",
+        "Frame 0: ability remains inside screen",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: live deployment remains playable (Playing)",
+        "Frame 0: weapon and visual return to aircraft",
+        "Frame 0: no leftover effect or shield in hangar",
+        "Frame 1: distinct model assemblies and name in mobile player",
+        "Frame 1: HUD switches to its own arsenal",
+        "Frame 1: touch button names the deployed frame",
+        "Frame 1: alternate frame weapon works",
+        "Frame 1: rotating pauses its deployment timer",
+        "Frame 1: pause does not consume charge",
+        "Frame 1: landscape resumes with capped effects and pilot portrait",
+        "Frame 1: ability remains inside screen",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: live deployment remains playable (Playing)",
+        "Frame 1: weapon and visual return to aircraft",
+        "Frame 1: no leftover effect or shield in hangar",
+        "Frame 2: distinct model assemblies and name in mobile player",
+        "Frame 2: HUD switches to its own arsenal",
+        "Frame 2: touch button names the deployed frame",
+        "Frame 2: alternate frame weapon works",
+        "Frame 2: rotating pauses its deployment timer",
+        "Frame 2: pause does not consume charge",
+        "Frame 2: landscape resumes with capped effects and pilot portrait",
+        "Frame 2: ability remains inside screen",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: live deployment remains playable (Playing)",
+        "Frame 2: weapon and visual return to aircraft",
+        "Frame 2: no leftover effect or shield in hangar",
+        "No frame rendering or browser errors"
+      ],
+      "samples": [
+        {
+          "ship": 0,
+          "name": "岚刃",
+          "joints": 6,
+          "language": "zh",
+          "strokePeak": 1,
+          "kills": 4
+        },
+        {
+          "ship": 1,
+          "name": "赤垒",
+          "joints": 8,
+          "language": "en",
+          "strokePeak": 2,
+          "kills": 1
+        },
+        {
+          "ship": 2,
+          "name": "霜环",
+          "joints": 11,
+          "language": "ja",
+          "strokePeak": 1,
+          "kills": 1
+        }
+      ],
+      "errors": [],
+      "scope": "Chrome phone emulation; controlled existing reactor upgrades, live firing and touch controls. Not physical-phone performance."
+    },
+    "scenery_native": {
+      "pass": true,
+      "runtime_identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
+      "checks": [
+        "PASS Touch training rejects unavailable chapter",
+        "PASS City includes three district trains and three waiting evacuation buses",
         "PASS Stage 0 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
         "PASS Stage 0 retains its authored campaign landmarks",
         "PASS Stage 0 moving lamps, dishes and panels survive static geometry batching",
-        "PASS Stage 0 / aspect 0.636 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 0 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 0 / aspect 0.636 cars and trains never teleport within a visible sector",
-        "PASS Stage 0 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 0 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 0 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 0 / aspect 1.777778 cars and trains never teleport within a visible sector",
-        "PASS Stage 0 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 0 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 0 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 0 / aspect 2.1641 cars and trains never teleport within a visible sector",
-        "PASS Stage 0 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 0 paused scenery does not advance",
         "PASS Stage 1 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
         "PASS Stage 1 retains its authored campaign landmarks",
         "PASS Stage 1 moving lamps, dishes and panels survive static geometry batching",
-        "PASS Stage 1 / aspect 0.636 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 1 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 1 / aspect 0.636 cars and trains never teleport within a visible sector",
-        "PASS Stage 1 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 1 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 1 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 1 / aspect 1.777778 cars and trains never teleport within a visible sector",
-        "PASS Stage 1 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 1 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 1 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 1 / aspect 2.1641 cars and trains never teleport within a visible sector",
-        "PASS Stage 1 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
-        "PASS Road vehicles do not inherit floating-ship sway, bob or roll",
-        "PASS Stage 1 paused scenery does not advance",
         "PASS Stage 2 landmarks belong to the scrolling map, with no free-standing scenery at the world root",
         "PASS Stage 2 retains its authored campaign landmarks",
         "PASS Stage 2 moving lamps, dishes and panels survive static geometry batching",
-        "PASS Stage 2 / aspect 0.636 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 2 / aspect 0.636 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 2 / aspect 0.636 cars and trains never teleport within a visible sector",
-        "PASS Stage 2 / aspect 0.636 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 2 / aspect 1.777778 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 2 / aspect 1.777778 all rigid props match their sector motion for 60 simulated seconds",
         "PASS Stage 2 / aspect 1.777778 cars and trains never teleport within a visible sector",
-        "PASS Stage 2 / aspect 1.777778 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 2 / aspect 2.1641 beacon foundations remain on their own quay after reframing",
-        "PASS Stage 2 / aspect 2.1641 all rigid props match their sector motion for 60 simulated seconds",
-        "PASS Stage 2 / aspect 2.1641 cars and trains never teleport within a visible sector",
-        "PASS Stage 2 / aspect 2.1641 repeated map recycling occurs entirely outside the camera",
-        "PASS Stage 2 paused scenery does not advance"
+        "PASS Stage 2 / aspect 2.1641 cars and trains never teleport within a visible sector"
       ],
-      "runtime_total_checks": 396,
-      "simulated_seconds_per_map": 180,
-      "aspects": [
-        0.636,
-        1.777778,
-        2.1641
-      ],
-      "build_identity": "48433b0583ac27296c65e1d2290f92b8a0a8510c443c38432d94f047f5047d6c"
+      "scope": "Existing all-stage scenery, three-aspect and traffic regression retained in the 439-check current runtime run."
     },
     "scenery_all_stages": {
       "pass": true,
@@ -124,8 +226,8 @@
           "stage": 1,
           "samples": 100,
           "wraps": 34,
-          "trainMotion": 102,
-          "trainStops": 191,
+          "trainMotion": 103,
+          "trainStops": 190,
           "anchors": 23
         },
         {
@@ -157,7 +259,7 @@
       "seconds": 40,
       "samples": 156,
       "anchorWraps": 27,
-      "meanFps": 61.42833644396638,
+      "meanFps": 61.44081332585583,
       "errors": [],
       "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU"
     },
@@ -532,19 +634,213 @@
     },
     "voice_review": {
       "pass": true,
-      "clips": 93,
+      "new_events": 7,
+      "new_clips": 21,
       "languages": [
         "zh",
         "en",
         "ja"
       ],
-      "method": "Independent local Qwen3-ASR transcript and waveform validation",
-      "review": {
-        "en/campaign_ending_full_2": "ASR formats the spoken number seven hundred and seventy as 770. Remaining words match."
+      "review": "Local independent ASR plus signal limits; not a human listening panel. Proper nouns have recognition differences.",
+      "signal_bounds": {
+        "peak_max": 0.796234130859375,
+        "duration_range": [
+          2.54,
+          6.02
+        ]
       },
-      "physical_listening_panel": false,
-      "baseline_version": "1.12.0",
-      "reuse_reason": "No audio or campaign dialogue source changed in 1.12.1; playback rechecked in runtime QA."
+      "new_take_evidence": {
+        "zh/frame113_deploy_0": {
+          "expected": "岚刃展开！侧翼交给我，跟上！",
+          "recognized": "蓝刃展开，侧翼交给我，跟上。",
+          "error_rate": 0.0,
+          "seconds": 2.54,
+          "peak": 0.71087646484375,
+          "rms": 0.11087420417920127,
+          "sha256": "687f6e7173c8593eb00e96f2890ccb16081c5e57118d6c07839e61ba95413512"
+        },
+        "zh/frame113_deploy_1": {
+          "expected": "赤垒，炮架锁定。都躲到我身后！",
+          "recognized": "赤磊，炮架锁定，都躲到我身后。",
+          "error_rate": 0.0,
+          "seconds": 3.22,
+          "peak": 0.75689697265625,
+          "rms": 0.12439537254556685,
+          "sha256": "aa885b22b3ed11d7e4b6dc8d0e0346894131fef286b86946ed0cb5494c898b18"
+        },
+        "zh/frame113_deploy_2": {
+          "expected": "霜环锁定。让这道光，穿过封锁。",
+          "recognized": "双环锁定，让这道光穿过封锁。",
+          "error_rate": 0.0,
+          "seconds": 3.823166666666667,
+          "peak": 0.79217529296875,
+          "rms": 0.13039361787795406,
+          "sha256": "8314189aad6446214e7247041a91e7aeefc5a071e04009f8c61bdcff188d8605"
+        },
+        "zh/frame113_counter_0": {
+          "expected": "是船队的测距信号！弱点标出来了，开火！",
+          "recognized": "是船队的测距信号，弱点标出来了，开火。",
+          "error_rate": 0.0,
+          "seconds": 3.4,
+          "peak": 0.698394775390625,
+          "rms": 0.11932304744530713,
+          "sha256": "260bf54a4109b26a7f27730ba9984dc4e4784abcd3e146fb65fdb7835335d9b4"
+        },
+        "zh/frame113_counter_1": {
+          "expected": "把电送进它的护盾。哈，城市可不是你的电池！",
+          "recognized": "把电送进他的护盾。哈，城市可不是你的电池。",
+          "error_rate": 0.0,
+          "seconds": 4.02,
+          "peak": 0.794525146484375,
+          "rms": 0.13140567372581924,
+          "sha256": "026e108d60fb1890b7f30057936f9f8a973f3dbcd6071d872a5dc9c5e0f553d7"
+        },
+        "zh/frame113_counter_2": {
+          "expected": "名册正在回应！天环，听清楚——他们是人，不是目标！",
+          "recognized": "名册正在回应。天环，听清楚，他们是人，不是目标。",
+          "error_rate": 0.0,
+          "seconds": 5.577625,
+          "peak": 0.790252685546875,
+          "rms": 0.12882478632892078,
+          "sha256": "9bcac918252fd98cf5439ac80ae08f58a8e60a4a2bad8262678b034addc2f2d4"
+        },
+        "zh/frame113_signature": {
+          "expected": "签名是我的……但封锁命令不是。我要亲手撤销它！",
+          "recognized": "签名是我的，但封锁命令不是。我要亲手撤销它。",
+          "error_rate": 0.0,
+          "seconds": 5.019291666666667,
+          "peak": 0.78924560546875,
+          "rms": 0.11886761897749401,
+          "sha256": "ff6fc888e45ff4d6a253afd5a4e51c4b5eca33d192deabba25ac5469bfc264e6"
+        },
+        "en/frame113_deploy_0": {
+          "expected": "Skyrazor, deploy! I have the flanks. Stay with me!",
+          "recognized": "Skyracer deploy! I have the flanks. Stay with me.",
+          "error_rate": 0.111,
+          "seconds": 4.26,
+          "peak": 0.794403076171875,
+          "rms": 0.09629871166332114,
+          "sha256": "cf645857b44d4ebbe11f20d6453faf1be87015996e5bd8e4e6941c1dc79c8939"
+        },
+        "en/frame113_deploy_1": {
+          "expected": "Bastion. Cannons locked. Everyone, get behind me!",
+          "recognized": "Bastion, cannons locked. Everyone, get behind me.",
+          "error_rate": 0.0,
+          "seconds": 3.86,
+          "peak": 0.7860107421875,
+          "rms": 0.13146765357387596,
+          "sha256": "e65e0c051582025acf772ce8452a4c5b233df6bb3c3b9cdd952b17cbfd3ab721"
+        },
+        "en/frame113_deploy_2": {
+          "expected": "Parallax, locked. Let this light pierce the blockade.",
+          "recognized": "Parallax locked. Let this light pierce the blockade.",
+          "error_rate": 0.0,
+          "seconds": 3.92,
+          "peak": 0.7950439453125,
+          "rms": 0.11167539749926711,
+          "sha256": "c3536834139d1fd6d0932a2f7ac7879aa5ba0676dc37eba1d86791a72807815a"
+        },
+        "en/frame113_counter_0": {
+          "expected": "The convoy is sending range data! Weak point marked. Fire!",
+          "recognized": "The convoy is sending range data. Weak point marked. Fire.",
+          "error_rate": 0.0,
+          "seconds": 4.2,
+          "peak": 0.794158935546875,
+          "rms": 0.12586895198133255,
+          "sha256": "911af829183b89e33cc2064f030d2963f1aaacb48de707b6b3ae057baea4f896"
+        },
+        "en/frame113_counter_1": {
+          "expected": "Send the power into its shield. Ha! This city isn't your battery!",
+          "recognized": "Send the power into its shield. Ha! This city isn't your battery.",
+          "error_rate": 0.0,
+          "seconds": 4.54,
+          "peak": 0.795867919921875,
+          "rms": 0.13713877556431284,
+          "sha256": "a31a5ac8737d2ab8c4e7db2b80094203dc5b25d36ebc1e71e8b3c04e8720487c"
+        },
+        "en/frame113_counter_2": {
+          "expected": "The registry is answering! Listen, Sky Array. These are people, not targets!",
+          "recognized": "The registry is answering. Listen, Sky Ray, these are people, not targets.",
+          "error_rate": 0.083,
+          "seconds": 5.8,
+          "peak": 0.794952392578125,
+          "rms": 0.12698458829334858,
+          "sha256": "b87e8b8b62252ce53f1477b4aed87e85561699cba4ab8722446d5c37ffbdc19d"
+        },
+        "en/frame113_signature": {
+          "expected": "That's my signature... but I never ordered a blockade. I'll revoke it myself!",
+          "recognized": "That's my signature, but I never ordered a blockade. I'll revoke it myself.",
+          "error_rate": 0.0,
+          "seconds": 4.7,
+          "peak": 0.796234130859375,
+          "rms": 0.12288194575069265,
+          "sha256": "adcea92055bf5011d12c412c757cd43f15e1f13a75e25861bb5f3888183b7f26"
+        },
+        "ja/frame113_deploy_0": {
+          "expected": "スカイレイザー、展開！両脇は任せて、ついてきて！",
+          "recognized": "スカイレーザー展開、両脇は任せてついてきて",
+          "error_rate": 0.05,
+          "seconds": 3.5,
+          "peak": 0.7890625,
+          "rms": 0.12929836284110757,
+          "sha256": "711dae0e84e3bfba9bf6fb679a84cce28651f55fa7c614da470c5c4619ce3d96"
+        },
+        "ja/frame113_deploy_1": {
+          "expected": "バスティオン、砲架固定。みんな、私の後ろへ！",
+          "recognized": "バステオン、方が固定。みんな私の後ろや",
+          "error_rate": 0.222,
+          "seconds": 4.82,
+          "peak": 0.79437255859375,
+          "rms": 0.1327489300960393,
+          "sha256": "5c066660ff876697196fcba98176a0a275743f37ec9d823b533eca74a2f3b4b5"
+        },
+        "ja/frame113_deploy_2": {
+          "expected": "パララックス、ロック完了。この光で、封鎖を貫きます。",
+          "recognized": "パララックスロック完了。この光で風刺を貫きます。",
+          "error_rate": 0.091,
+          "seconds": 4.9,
+          "peak": 0.793792724609375,
+          "rms": 0.13870858643429085,
+          "sha256": "b07617941688cdb7c77a4603000c32464d22e52573ae864592aefedc75471b43"
+        },
+        "ja/frame113_counter_0": {
+          "expected": "船団から測距信号！弱点が見えた、撃って！",
+          "recognized": "戦闘から即挙信号弱点が見えた撃って",
+          "error_rate": 0.235,
+          "seconds": 3.82,
+          "peak": 0.710205078125,
+          "rms": 0.12653961674573636,
+          "sha256": "5a776d7f9e9a888ae306c808aabba1899bb0234fdf1bb86412e7d7bf5f913343"
+        },
+        "ja/frame113_counter_1": {
+          "expected": "電力を敵の盾へ。ふふ、この街はあなたの電池じゃないのよ！",
+          "recognized": "電力を敵の盾へ。この街はあなたの電池じゃないのよ。",
+          "error_rate": 0.08,
+          "seconds": 5.02,
+          "peak": 0.794708251953125,
+          "rms": 0.13747343331489859,
+          "sha256": "086aa492d0c27e7ba48fc45b1367d2dd939c5ef8890da5ccc289a90e2366953b"
+        },
+        "ja/frame113_counter_2": {
+          "expected": "名簿が応答しています！聞いて、天環。この人たちは、標的じゃない！",
+          "recognized": "名簿が応答しています。聞いて、天官。この人たちは標的じゃない。",
+          "error_rate": 0.037,
+          "seconds": 5.46,
+          "peak": 0.701385498046875,
+          "rms": 0.12425824242846209,
+          "sha256": "3d3629ee2b556a9e59e751a41d3bb581fe2f219143996453908b902720981317"
+        },
+        "ja/frame113_signature": {
+          "expected": "署名は、私のもの。でも封鎖は命じていない。私の手で、取り消します！",
+          "recognized": "署名は私のもの。でも封鎖は明示ていない。私の手で取り消します。",
+          "error_rate": 0.071,
+          "seconds": 6.02,
+          "peak": 0.60302734375,
+          "rms": 0.11990554510007621,
+          "sha256": "8fda61ff117e6974879defecd44dda066ed8192b26f464e8ca0c476e2dc311f4"
+        }
+      },
+      "unchanged_baseline": "1.12.0 original trilingual voice bank; 423 existing clips retained"
     },
     "mobile_checks": 100,
     "webkit_checks": 16,
@@ -556,11 +852,11 @@
           584,
           848
         ],
-        "meanGameFps": 61.43038505554199,
-        "minGameFps": 61.098575592041016,
+        "meanGameFps": 61.46058258056641,
+        "minGameFps": 60.869361877441406,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          43
+          55
         ],
         "musicContinuous": true
       },
@@ -570,11 +866,11 @@
           780,
           1132
         ],
-        "meanGameFps": 61.4647184753418,
-        "minGameFps": 60.95537567138672,
+        "meanGameFps": 61.60260948181153,
+        "minGameFps": 61.25223159790039,
         "peakKillMs": 0.20000000298023224,
         "resizeCounts": [
-          44
+          56
         ],
         "musicContinuous": true
       },
@@ -584,47 +880,47 @@
           390,
           566
         ],
-        "meanGameFps": 61.05713005065918,
-        "minGameFps": 60.033172607421875,
-        "peakKillMs": 0.20000000298023224,
+        "meanGameFps": 61.29674514770508,
+        "minGameFps": 60.6402473449707,
+        "peakKillMs": 0.30000001192092896,
         "resizeCounts": [
-          45
+          57
         ],
         "musicContinuous": true
       }
     ],
-    "baseline_campaign_version": "1.12.1",
+    "baseline_campaign_version": "1.13.0",
     "native": {
       "pass": true,
-      "identity": "48433b0583ac27296c65e1d2290f92b8a0a8510c443c38432d94f047f5047d6c",
+      "identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
       "steps": [
         {
           "step": "runtime",
-          "seconds": 101.9,
+          "seconds": 107.7,
           "pass": true,
-          "checks": 396
+          "checks": 439
         },
         {
           "step": "campaign0",
-          "seconds": 164.6,
+          "seconds": 170.3,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign1",
-          "seconds": 186.5,
+          "seconds": 176.4,
           "pass": true,
           "checks": 4
         },
         {
           "step": "campaign2",
-          "seconds": 168.5,
+          "seconds": 166.0,
           "pass": true,
           "checks": 4
         },
         {
           "step": "portraits",
-          "seconds": 11.6,
+          "seconds": 11.4,
           "pass": true,
           "checks": 0
         }
@@ -651,10 +947,11 @@
       "seconds": 40,
       "samples": 156,
       "anchorWraps": 27,
-      "meanFps": 61.42833644396638,
+      "meanFps": 61.44081332585583,
       "errors": [],
       "scope": "Public-build scene transforms and visible rendering, mobile browser emulation on desktop GPU",
-      "same_scenario_as": "scenery-flow"
+      "sameScenarioAs": "scenery-flow",
+      "note": "Alias used by the publication manifest; not an additional independent test."
     }
   },
   "security_hardening": [
@@ -667,46 +964,6 @@
       "path": ".nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "Build/v1.10.0/Web.data.unityweb",
-      "bytes": 94451997,
-      "sha256": "22ced2276d7d16bead1dd5e6682c38d514e09f41a8f88f535df30e5b102f6806"
-    },
-    {
-      "path": "Build/v1.10.0/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "be413a173772c14411029df22ed8303bb27fdf520ddc418374bd014f194618c0"
-    },
-    {
-      "path": "Build/v1.10.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "e73d07cf5215ba37ae7e0827c17d7e0a82a2bef0a8da7ef465f5a72813e35413"
-    },
-    {
-      "path": "Build/v1.10.0/Web.wasm.unityweb",
-      "bytes": 5741607,
-      "sha256": "eacfa09cb3307f35dbdda208436a0da92a94a91f295e9a66e2f2186de6534f52"
-    },
-    {
-      "path": "Build/v1.11.0/Web.data.unityweb",
-      "bytes": 94452878,
-      "sha256": "a281cc54a90a99cf3d66149b0236b3054af7f7d98fe3b703556c584d9a962289"
-    },
-    {
-      "path": "Build/v1.11.0/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "dd87b806db5647c7744bef355b0468e838e7e32cc482f6e92b897bb749412743"
-    },
-    {
-      "path": "Build/v1.11.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "90726be849868231f7582f19a8a55430cdfdc73fe4f3f7d6dd363712ba87d2b3"
-    },
-    {
-      "path": "Build/v1.11.0/Web.wasm.unityweb",
-      "bytes": 5739802,
-      "sha256": "01ff701a8918cd11b4dd71252517a6916816d0be6bc749f0f1148fa54edb681f"
     },
     {
       "path": "Build/v1.12.0/Web.data.unityweb",
@@ -749,124 +1006,24 @@
       "sha256": "695e9021aae81f269ef1d058dee335c37b5d3e3924515ee18bc2d9a3f003abed"
     },
     {
-      "path": "Build/v1.6.0/Web.data.unityweb",
-      "bytes": 56974642,
-      "sha256": "2b0db23077ea9cdf3e20786f190b6106e14ebbc4e6afd2beaaab6e9d310f4d67"
+      "path": "Build/v1.13.0/Web.data.unityweb",
+      "bytes": 104303390,
+      "sha256": "168590fe1115e3bdf1a87891fd498a3581e4485e8503d2ef7bf04a2ba568852f"
     },
     {
-      "path": "Build/v1.6.0/Web.framework.js.unityweb",
-      "bytes": 73721,
-      "sha256": "4f0c798bc806612f3999803e98397e5599c38b00a7f4ebf9c7dc7c28e60fdc12"
+      "path": "Build/v1.13.0/Web.framework.js.unityweb",
+      "bytes": 65033,
+      "sha256": "69a75aa78a0fb552bc20fc653be57e127a27c83de4b879f3064f73582802fe54"
     },
     {
-      "path": "Build/v1.6.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "d314a5c5af5fca87a75c6a046939504da5d43b8e1df80cdb45fd0be2579a0867"
+      "path": "Build/v1.13.0/Web.loader.js",
+      "bytes": 118806,
+      "sha256": "bd610bffce29cb57829244dd731b2fd4d2ead00e63436d420164cf9ffb565a35"
     },
     {
-      "path": "Build/v1.6.0/Web.wasm.unityweb",
-      "bytes": 5700684,
-      "sha256": "3f1cce36d9e4856b3a6c254716e837522015484c3817a0f8aac15fe79a84d1c4"
-    },
-    {
-      "path": "Build/v1.7.0/Web.data.unityweb",
-      "bytes": 90512362,
-      "sha256": "b89bef5c39922598abc52a96db82a5a89b0d37a9e5528539030068eedb86f8ce"
-    },
-    {
-      "path": "Build/v1.7.0/Web.framework.js.unityweb",
-      "bytes": 73721,
-      "sha256": "4a4d204f4eef6f7870b97904a2300b14e7cb92ddfbeeb359a7bb4181f2dbb36a"
-    },
-    {
-      "path": "Build/v1.7.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "ab4b651f982e639341aa868f8bfbf75b5661b7afde5fa5c72c8bd6021c56be17"
-    },
-    {
-      "path": "Build/v1.7.0/Web.wasm.unityweb",
-      "bytes": 5715220,
-      "sha256": "6b04ad70a6d4da364d12fb93d08ce20963fa8120304f19f78b6d128a47191995"
-    },
-    {
-      "path": "Build/v1.8.0/Web.data.unityweb",
-      "bytes": 90517251,
-      "sha256": "4ee5ce69f476a648d2f617d93e0d5a049f439880fb2f418d7bdc63e6ff758a1a"
-    },
-    {
-      "path": "Build/v1.8.0/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "1696b35fc124a83f3a08df4a669845388fb5880562abef950a2e86100a6f40aa"
-    },
-    {
-      "path": "Build/v1.8.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "9b40250ff5f6802e34765e01b195c8f5b89ceba792a02bc0078fc2d186608090"
-    },
-    {
-      "path": "Build/v1.8.0/Web.wasm.unityweb",
-      "bytes": 5720955,
-      "sha256": "808a8076b374dfa67c8fbb3158e813e1d89e90aaa127d6120021218449e7faa9"
-    },
-    {
-      "path": "Build/v1.9.0/Web.data.unityweb",
-      "bytes": 90864460,
-      "sha256": "81244a5501f297c535030c3ef79a6a79058a572354365228a3b06c806f24c84a"
-    },
-    {
-      "path": "Build/v1.9.0/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "5625ceb5759b5bc36ec79d01b0bb49a200d5fff9ef53170539bdbfab177e4aab"
-    },
-    {
-      "path": "Build/v1.9.0/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "d0cb4ec428735bc873af28a535c98474e32369d4cc94d037f22dc00dff15c431"
-    },
-    {
-      "path": "Build/v1.9.0/Web.wasm.unityweb",
-      "bytes": 5730993,
-      "sha256": "c28bdf94e3fee8448925f3284b72c6a67ffa54ac8443d637a3b6748059d4305b"
-    },
-    {
-      "path": "Build/v1.9.1/Web.data.unityweb",
-      "bytes": 92728206,
-      "sha256": "38c97180344d8c1095809e7396ae7d576b6683a7fef5325a33afc9612059751a"
-    },
-    {
-      "path": "Build/v1.9.1/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "f4eceedfb30fa4f8b4006719473b9553d67abb81af5c03792664f5fee32290b2"
-    },
-    {
-      "path": "Build/v1.9.1/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "f85640f3aae4d96c7fbd0c85086ee3c4e701a3db2f4e08883ff3a950f56a8ea5"
-    },
-    {
-      "path": "Build/v1.9.1/Web.wasm.unityweb",
-      "bytes": 5732327,
-      "sha256": "379de0c6496c44d5e6b9884e1bc45db43a78bf7d2fe8c92c23631005f79797bc"
-    },
-    {
-      "path": "Build/v1.9.2/Web.data.unityweb",
-      "bytes": 92727876,
-      "sha256": "a5cfa79297e397035a6bf1a965aab391ea1f6a2e683842b6e1afb806d274ea64"
-    },
-    {
-      "path": "Build/v1.9.2/Web.framework.js.unityweb",
-      "bytes": 73736,
-      "sha256": "96cc4c8eb78ee27dfea9219aac2b4cc4755972791e20e62fc6e45c4deae867e6"
-    },
-    {
-      "path": "Build/v1.9.2/Web.loader.js",
-      "bytes": 48779,
-      "sha256": "9993dd45d5cdb0143fddfd14affa593a9774c03ced4e7c005a6cfd407a14c385"
-    },
-    {
-      "path": "Build/v1.9.2/Web.wasm.unityweb",
-      "bytes": 5732592,
-      "sha256": "a3cae2a076e17fdfe130b4ed659f624eefc442aefb99664ddb30302d34b1d9f4"
+      "path": "Build/v1.13.0/Web.wasm.unityweb",
+      "bytes": 4371303,
+      "sha256": "9cb41798208af90746982df377c4ae28053198e47fd34ad2af7d8771e8fc07f8"
     },
     {
       "path": "cover.png",
@@ -874,24 +1031,24 @@
       "sha256": "f2a33caa18592a978b0fe392ab155b072a46036ef5cafcaaab813bdf3f339ffe"
     },
     {
-      "path": "display-1.12.1.js",
+      "path": "display-1.13.0.js",
       "bytes": 3540,
       "sha256": "1cfef70f97ed6707719179da446a51338ef4134437e8c61b48b6af246e409e5e"
     },
     {
       "path": "index.html",
       "bytes": 10291,
-      "sha256": "d6023f854907ec53fb4490c694a29341ce3f32d2317205cc22f455c96c8063f2"
+      "sha256": "c38a68c400ff5743e76ee81761594c9978a896b261c9ac5bfbd7329c4a6adcc9"
     },
     {
-      "path": "mobile-1.12.1.css",
+      "path": "mobile-1.13.0.css",
       "bytes": 20730,
       "sha256": "c29ca355a99c93d3342cc29e5536482f43a52acfcb43607a118e2de14926c0a3"
     },
     {
-      "path": "mobile-1.12.1.js",
-      "bytes": 21970,
-      "sha256": "6b7027b09e8a6861f61de0e48bac2e0709bd851b1055c710b271297c725bbef4"
+      "path": "mobile-1.13.0.js",
+      "bytes": 22099,
+      "sha256": "938113a64e3b6ded32f5f55c8d955d08751dfa87dfcf3f62599130b8551a87e9"
     }
   ]
 }
