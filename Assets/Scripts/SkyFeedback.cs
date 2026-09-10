@@ -21,7 +21,7 @@ public partial class SkyGame {
  }
  void ResetFeedback(){ClearWrecks();reactorWasReady=false;scorePops.Clear();deathClouds.Clear();weaponKick=hurtEdge=impactGate=killGate=audioDuck=0;bossHpTrail=1;if(Post){Post.Damage=0;Post.Flash=0;}}
  void TickFeedback(float dt){TickWrecks(dt);TickNova(dt);
-  bool ready=Energy>=100&&Overdrive<=0;if(ready&&!reactorWasReady){Sound("Combo",.42f);Toast("超载就绪 · 按 E 展开机甲",2.1f);}reactorWasReady=ready;
+  bool ready=Energy>=100&&Overdrive<=0;if(ready&&!reactorWasReady){Sound("Combo",.42f);Toast(FrameName+"就绪 · "+(MobileMode?"点击超载展开":"按 E 展开机甲"),2.1f);}reactorWasReady=ready;
   impactGate=Mathf.Max(0,impactGate-dt);killGate=Mathf.Max(0,killGate-dt);weaponKick=Mathf.Max(0,weaponKick-dt*8);hurtEdge=Mathf.Max(0,hurtEdge-dt*2.4f);
   if(Boss!=null)bossHpTrail=Mathf.Max(Boss.hp/Boss.maxHp,Mathf.MoveTowards(bossHpTrail,Boss.hp/Boss.maxHp,dt*.35f));else bossHpTrail=1;
   for(int i=scorePops.Count-1;i>=0;i--){var p=scorePops[i];p.age+=dt;p.pos+=Vector3.forward*dt*.6f;if(p.age>=p.max)scorePops.RemoveAt(i);}

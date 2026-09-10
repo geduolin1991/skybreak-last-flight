@@ -14,8 +14,8 @@ public class SkyVoiceImporter:AssetPostprocessor {
 public static class SkyVoiceBuildChecks {
  public static void Check(){
   var asset=Resources.Load<TextAsset>("Voices/voice-bank");if(!asset)throw new Exception("Voice bank missing");
-  var bank=JsonUtility.FromJson<SkyVoiceBank>(asset.text);if(bank.clips.Length!=141)throw new Exception("Expected 141 authored dialogue events");
+  var bank=JsonUtility.FromJson<SkyVoiceBank>(asset.text);if(bank.clips.Length!=148)throw new Exception("Expected 148 authored dialogue events");
   foreach(var line in bank.clips)foreach(var path in new[]{line.clip,line.clipEn,line.clipJa}){var clip=Resources.Load<AudioClip>(path);if(!clip||clip.length<.3f||clip.length>24||clip.channels!=1)throw new Exception("Voice asset invalid: "+line.id);}
-  Directory.CreateDirectory("Build");File.WriteAllText("Build/voice-assets-check.txt","PASS 423 authored mono voice clips in Chinese, English and Japanese\n");Debug.Log("SKYBREAK_VOICE_ASSETS_OK");
+  Directory.CreateDirectory("Build");File.WriteAllText("Build/voice-assets-check.txt","PASS 444 authored mono voice clips in Chinese, English and Japanese\n");Debug.Log("SKYBREAK_VOICE_ASSETS_OK");
  }
 }

@@ -1,5 +1,5 @@
 {
-  "version": "1.12.0",
+  "version": "1.13.0",
   "clips": [
     {
       "id": "select_0_0",
@@ -1735,6 +1735,97 @@
       "clip": "Voices/Clips/campaign_uplink_hold",
       "clipEn": "Voices/Clips/en/campaign_uplink_hold",
       "clipJa": "Voices/Clips/ja/campaign_uplink_hold"
+    },
+    {
+      "id": "frame113_deploy_0",
+      "pilot": 0,
+      "text": "岚刃展开！侧翼交给我，跟上！",
+      "en": "Skyrazor, deploy! I have the flanks. Stay with me!",
+      "ja": "スカイレイザー、展開！両脇は任せて、ついてきて！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_deploy_0",
+      "clipEn": "Voices/Clips/en/frame113_deploy_0",
+      "clipJa": "Voices/Clips/ja/frame113_deploy_0"
+    },
+    {
+      "id": "frame113_deploy_1",
+      "pilot": 1,
+      "text": "赤垒，炮架锁定。都躲到我身后！",
+      "en": "Bastion. Cannons locked. Everyone, get behind me!",
+      "ja": "バスティオン、砲架固定。みんな、私の後ろへ！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_deploy_1",
+      "clipEn": "Voices/Clips/en/frame113_deploy_1",
+      "clipJa": "Voices/Clips/ja/frame113_deploy_1"
+    },
+    {
+      "id": "frame113_deploy_2",
+      "pilot": 2,
+      "text": "霜环锁定。让这道光，穿过封锁。",
+      "en": "Parallax, locked. Let this light pierce the blockade.",
+      "ja": "パララックス、ロック完了。この光で、封鎖を貫きます。",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_deploy_2",
+      "clipEn": "Voices/Clips/en/frame113_deploy_2",
+      "clipJa": "Voices/Clips/ja/frame113_deploy_2"
+    },
+    {
+      "id": "frame113_counter_0",
+      "pilot": 0,
+      "text": "是船队的测距信号！弱点标出来了，开火！",
+      "en": "The convoy is sending range data! Weak point marked. Fire!",
+      "ja": "船団から測距信号！弱点が見えた、撃って！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_counter_0",
+      "clipEn": "Voices/Clips/en/frame113_counter_0",
+      "clipJa": "Voices/Clips/ja/frame113_counter_0"
+    },
+    {
+      "id": "frame113_counter_1",
+      "pilot": 1,
+      "text": "把电送进它的护盾。哈，城市可不是你的电池！",
+      "en": "Send the power into its shield. Ha! This city isn't your battery!",
+      "ja": "電力を敵の盾へ。ふふ、この街はあなたの電池じゃないのよ！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_counter_1",
+      "clipEn": "Voices/Clips/en/frame113_counter_1",
+      "clipJa": "Voices/Clips/ja/frame113_counter_1"
+    },
+    {
+      "id": "frame113_counter_2",
+      "pilot": 2,
+      "text": "名册正在回应！天环，听清楚——他们是人，不是目标！",
+      "en": "The registry is answering! Listen, Sky Array. These are people, not targets!",
+      "ja": "名簿が応答しています！聞いて、天環。この人たちは、標的じゃない！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_counter_2",
+      "clipEn": "Voices/Clips/en/frame113_counter_2",
+      "clipJa": "Voices/Clips/ja/frame113_counter_2"
+    },
+    {
+      "id": "frame113_signature",
+      "pilot": 2,
+      "text": "签名是我的……但封锁命令不是。我要亲手撤销它！",
+      "en": "That's my signature... but I never ordered a blockade. I'll revoke it myself!",
+      "ja": "署名は、私のもの。でも封鎖は命じていない。私の手で、取り消します！",
+      "category": "story",
+      "emotion": "focused urgency with a decisive release",
+      "match": "",
+      "clip": "Voices/Clips/frame113_signature",
+      "clipEn": "Voices/Clips/en/frame113_signature",
+      "clipJa": "Voices/Clips/ja/frame113_signature"
     }
   ],
   "language": "zh,en,ja",

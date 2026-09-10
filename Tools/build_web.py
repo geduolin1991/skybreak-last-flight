@@ -23,4 +23,6 @@ output = workspace / "Build" / "Web"
 assert (output / "index.html").is_file(), "Unity did not produce a web player"
 from version_web_assets import version_assets
 version_assets(output)
+from prune_web_versions import prune_versions
+print("Retired generated browser builds:",prune_versions(output))
 print(f"Browser build: {output}\nBuild log: {log}")

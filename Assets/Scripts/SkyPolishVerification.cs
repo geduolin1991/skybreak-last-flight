@@ -29,9 +29,9 @@ public partial class SkyGame {
   ClearBattle();missionStarted=missionResolved=true;
   for(int language=0;language<3;language++){
    SetVoiceLanguage(language);float until=Time.realtimeSinceStartup+25;
-   while(VoiceClipsReady<141&&Time.realtimeSinceStartup<until)yield return null;
-   bool complete=VoiceClipsReady==141;foreach(var entry in voiceById.Values)complete&=VoiceClip(entry)!=null;
-   check(complete,"Language "+language+" preloads all 141 pilot and commander events");
+   while(VoiceClipsReady<148&&Time.realtimeSinceStartup<until)yield return null;
+   bool complete=VoiceClipsReady==148;foreach(var entry in voiceById.Values)complete&=VoiceClip(entry)!=null;
+   check(complete,"Language "+language+" preloads all 148 pilot and commander events");
    qaRunning=false;voiceSawState=true;voiceLastState=State;voiceLastRadio=RadioText;ClearVoices();QueueVoiceId("profile_"+language+"_0",100,0,true);
    until=Time.realtimeSinceStartup+4;while(!VoicePlaying&&Time.realtimeSinceStartup<until)yield return null;
    check(VoicePlaying&&voiceCurrent.pilot==language&&voiceAudio.clip==VoiceClip(voiceCurrent),"Language "+language+" plays the selected language's actual pilot recording");
@@ -40,7 +40,7 @@ public partial class SkyGame {
    check(VoicePlaying&&voiceCurrent.pilot==language+3,"Language "+language+" plays a distinct enemy actor without pilot-index errors");
    qaRunning=true;ClearVoices();
   }
-  SetVoiceLanguage(0);float readyUntil=Time.realtimeSinceStartup+25;while(VoiceClipsReady<141&&Time.realtimeSinceStartup<readyUntil)yield return null;
+  SetVoiceLanguage(0);float readyUntil=Time.realtimeSinceStartup+25;while(VoiceClipsReady<148&&Time.realtimeSinceStartup<readyUntil)yield return null;
   for(int stage=0;stage<3;stage++){
    Stage=stage;BeginStage();Launch();ClearBattle();AutoFire=false;spawnClock=999;invuln=999;missionStarted=missionResolved=true;StageTime=116;bossSpawned=true;SpawnBoss();Boss.pos=new Vector3(0,1,8.2f);stageBanner=warningClock=dialogClock=0;
    check(CommanderEvent=="commander_"+stage+"_entry"&&CommanderExpression==0&&commanderPortraits[stage],"Boss "+stage+" enters with an original portrait and personal challenge");

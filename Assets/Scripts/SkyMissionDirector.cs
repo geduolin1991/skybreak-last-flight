@@ -32,6 +32,7 @@ public partial class SkyGame {
    if(Stage==2&&missionResults[1]>0){Energy=Mathf.Min(100,Energy+35);Toast("城市导航站已接通 · 反应堆 +35",3);}
   }
   if(!missionStarted)return;
+  if(Stage==2&&StageTime>9)MissionSay("frame113_signature",86,()=>Boss==null);
   // Reveal each district/contact at a different beat, giving its result time
   // to register before the next target arrives. Unfinished targets persist.
   if(Stage>0)while(missionNodesSpawned<3&&StageTime>=(missionNodesSpawned==0?3:chapterBeats[Stage][missionNodesSpawned])){

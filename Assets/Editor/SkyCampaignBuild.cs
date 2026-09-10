@@ -15,7 +15,7 @@ public static class SkyCampaignBuild {
    if(fresh)AssetDatabase.CreateAsset(mat,path);else EditorUtility.SetDirty(mat);
   }
   foreach(string name in new[]{"HarborSignal112","CivicHospital112","ElevatedRail112","MetroCar112","OrbitalObservatory112","SolarSail112"})SkyBuild.PrepareModel("Assets/Art/Models/"+name+".fbx");
-  PlayerSettings.bundleVersion="1.12.1";AssetDatabase.SaveAssets();SkyVoiceBuildChecks.Check();Debug.Log("SKYBREAK_CAMPAIGN_PREPARED");
+  PlayerSettings.bundleVersion="1.13.0";AssetDatabase.SaveAssets();SkyVoiceBuildChecks.Check();Debug.Log("SKYBREAK_CAMPAIGN_PREPARED");
  }
  public static void Build(){Prepare();SkyBuild.BuildCurrentMac();}
 }

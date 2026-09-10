@@ -9,10 +9,10 @@ public partial class SkyGame {
  class RailTrace {public LineRenderer core,halo;public float age,width;}
  readonly string[] roles={"高速追击型","重装爆破型","远距狙击型"};
  readonly string[,] weaponTitles={{"双联速射炮","蜂群追击弹"},{"破片霰射炮","聚爆榴弹炮"},{"蓄能轨道炮","速射穿甲炮"}};
- string WeaponTitle=>weaponTitles[Ship,WeaponMode];
+ string WeaponTitle=>Overdrive>0?FrameWeapon:weaponTitles[Ship,WeaponMode];
  Color ShipColor=>Ship==0?Art.Cyan:Ship==1?new Color(1,.63f,.23f):new Color(.69f,.63f,1);
  float BaseCadence=>Ship==0?(WeaponMode==0?.105f:.19f):Ship==1?(WeaponMode==0?.34f:.6f):(WeaponMode==0?.68f:.29f);
- float ShotCadence=>BaseCadence/(1+upgradeFire*.12f)*(Overdrive>0?.62f:1)/(Ship==1&&SkillTime>0?(CurrentRoute==2?1.75f:1.3f):1)/RouteCadence;
+ float ShotCadence=>(Overdrive>0?FrameCadence:BaseCadence)/(1+upgradeFire*.12f)/(Ship==1&&SkillTime>0?(CurrentRoute==2?1.75f:1.3f):1)/RouteCadence;
  void SwitchWeaponMode(){WeaponMode=1-WeaponMode;fireClock=Mathf.Min(fireClock,ShotCadence);Sound("Click",.5f);Toast(ShipNames[Ship]+" · "+WeaponTitle,1.4f);}
  void AddShipExhaust(Transform root){float x=Ship==1?1.68f:Ship==2?.64f:.61f;float z=Ship==2?-1.8f:-1.55f;for(int i=-1;i<=1;i+=2)Art.Exhaust(root,new Vector3(i*x,.14f,z),ShipColor,Ship==1?.7f:.5f);}
  void RefreshShowcase(){if(showcase)Destroy(showcase);showcase=Art.Model(new[]{"Kestrel","Manta","Needle"}[Ship],null);showcase.transform.position=new Vector3(13,3,3.8f);showcase.transform.localScale=Vector3.one*(Ship==1?1.85f:Ship==2?2.05f:2.2f);AddShipExhaust(showcase.transform);}
@@ -24,12 +24,13 @@ public partial class SkyGame {
   railGlow=Mathf.MoveTowards(railGlow,0,dt*6);
   if(!firing)return;fireClock-=dt;if(fireClock<=0){Shoot(focused);fireClock=ShotCadence;}
   missileClock-=dt;
-  if(missileClock<=0&&Enemies.Count>0){missileClock=(Ship==1?2.1f:Ship==0?1.7f:2.8f)/(1+hunters*.35f);
+  if(Overdrive<=0&&missileClock<=0&&Enemies.Count>0){missileClock=(Ship==1?2.1f:Ship==0?1.7f:2.8f)/(1+hunters*.35f);
    if(Ship==1||hunters>0||Ship==0)for(int i=-1;i<=1;i+=2){int n=Ship==1?2:1;for(int j=0;j<n;j++)AddBullet(PlayerPos+new Vector3(i*(Ship==1?1.25f:.7f),0,-j*.35f),new Vector3(i*(5+j*3),0,14-j*2),true,Ship==1?3:0,(Ship==1?15:6)*(1+hunters*.6f),.15f,true,kind:Ship==1?4:2);}}
  }
  void Shoot(bool focused){
-  float dmg=DamageBoost*RouteDamage*(Overdrive>0?1.4f:1)*(Ship==1&&SkillTime>0?1.35f:1)*(focused?1+focusLevel*.35f:1);
+  float dmg=DamageBoost*RouteDamage*(Ship==1&&SkillTime>0?1.35f:1)*(focused?1+focusLevel*.35f:1);
   if(critLevel>0&&Random.value<Mathf.Min(.6f,.25f+(critLevel-1)*.1f))dmg*=2;
+  if(Overdrive>0){FireFrame(focused,dmg);RouteFire(dmg);return;}
   if(Ship==0){if(WeaponMode==0){for(int i=-1;i<=1;i+=2){AddBullet(PlayerPos+new Vector3(i*.6f,0,.95f),new Vector3(i*(focused?-.7f:1.6f),0,46),true,0,6*dmg,.1f,kind:1);if(upgradeFire>0)AddBullet(PlayerPos+new Vector3(i*.9f,0,.65f),new Vector3(i*(focused?1:5),0,40),true,0,2.3f*dmg,.085f,kind:1);}}
    else for(int i=-1;i<=1;i++)AddBullet(PlayerPos+new Vector3(i*.58f,0,.7f),new Vector3(i*7,0,32),true,0,5.4f*dmg,.1f,true,kind:2);
   }else if(Ship==1){int n=WeaponMode==0?7:3;for(int i=0;i<n;i++){float a=(i-(n-1)*.5f)*(focused?.055f:WeaponMode==0?.135f:.18f);AddBullet(PlayerPos+new Vector3((i-(n-1)*.5f)*.23f,0,.72f),new Vector3(Mathf.Sin(a),0,Mathf.Cos(a))*(WeaponMode==0?31:24),true,3,(WeaponMode==0?5.7f:18)*dmg,WeaponMode==0?.14f:.2f,kind:WeaponMode==0?3:4);}}
@@ -53,7 +54,7 @@ public partial class SkyGame {
  void DrawShipSelector(){Color col=ShipColor;Panel(1015,535,520,299);SmallTag("SELECT YOUR AIRFRAME",1036,550,218,col);Label("0"+(Ship+1)+" / 03",1424,550,91,26,17,paper,TextAnchor.MiddleRight);
   Label(ShipNames[Ship],1036,584,160,48,34,paper);Label(roles[Ship],1230,594,282,29,18,col,TextAnchor.MiddleRight);Label(ShipCodes[Ship],1038,634,365,25,15,muted);
   Label(weaponTitles[Ship,0]+" / "+weaponTitles[Ship,1],1038,670,471,29,19,col);
-  Label(new[]{"高速连射 · 自动追击  /  机动 ★★★★","宽幅清场 · 导弹溅射  /  装甲 ★★★★★","蓄能贯穿 · 一线歼灭  /  精度 ★★★★★"}[Ship],1038,706,475,28,14,paper);
+  Label("机甲 · "+FrameName+"   /   "+FrameRole,1038,706,475,28,14,paper);
   if(ShipArrow("← 上一架",1036,753,230,59,col))SelectShip(Ship-1);if(ShipArrow("下一架 →",1283,753,230,59,col))SelectShip(Ship+1);
   for(int i=0;i<3;i++){float x=1015+i*177;var r=new Rect(x,481,166,42);bool hover=r.Contains(Event.current.mousePosition);Color c=i==Ship?col:hover?new Color(.3f,.46f,.54f):new Color(.1f,.2f,.27f);Rect(x,481,166,42,c);Label("0"+(i+1)+"  "+ShipNames[i],x,481,166,42,18,i==Ship?ink:paper,TextAnchor.MiddleCenter);bool old=GUI.enabled;GUI.enabled=!qaRunning;if(GUI.Button(r,GUIContent.none,GUIStyle.none))SelectShip(i);GUI.enabled=old;}
  }

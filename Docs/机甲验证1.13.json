@@ -1,0 +1,736 @@
+{
+  "runtime_pass": true,
+  "runtime_checks": 439,
+  "frame_and_counter_checks": [
+    "PASS Frame 0 deploys its distinct authored assemblies",
+    "PASS Frame 0 stays below 65 material renderers",
+    "PASS Frame 0 primary weapon damages a real target",
+    "PASS Skyrazor emits piercing pursuit pulses alongside a blade arc",
+    "PASS Frame 0 retains a distinct alternate weapon mode",
+    "PASS Frame 0 folds back without aircraft stretching",
+    "PASS Frame 0 effects and guard clear on stage reset",
+    "PASS Frame 1 deploys its distinct authored assemblies",
+    "PASS Frame 1 stays below 65 material renderers",
+    "PASS Frame 1 primary weapon damages a real target",
+    "PASS Bastion deploys eight shield charges and siege projectiles",
+    "PASS Frame 1 retains a distinct alternate weapon mode",
+    "PASS Bastion intercepts eight frontal rounds then exhausts its finite guard",
+    "PASS Frame 1 folds back without aircraft stretching",
+    "PASS Frame 1 effects and guard clear on stage reset",
+    "PASS Frame 2 deploys its distinct authored assemblies",
+    "PASS Frame 2 stays below 65 material renderers",
+    "PASS Frame 2 primary weapon damages a real target",
+    "PASS Parallax prisms attack a separate flank target within the effect pool",
+    "PASS Frame 2 retains a distinct alternate weapon mode",
+    "PASS Frame 2 folds back without aircraft stretching",
+    "PASS Frame 2 effects and guard clear on stage reset",
+    "PASS Chapter 0 does not grant a civilian counter without its objective",
+    "PASS Chapter 0 objective opens its authored counter window",
+    "PASS Chapter 0 counter bypasses active shield modules with visible vulnerability",
+    "PASS Chapter 0 counter is a single earned opening",
+    "PASS Chapter 0 shield behaviour returns when its counter window closes",
+    "PASS Chapter 0 signal effects cannot leak into another map",
+    "PASS Chapter 1 does not grant a civilian counter without its objective",
+    "PASS Chapter 1 objective opens its authored counter window",
+    "PASS Chapter 1 counter bypasses active shield modules with visible vulnerability",
+    "PASS Chapter 1 counter is a single earned opening",
+    "PASS Chapter 1 shield behaviour returns when its counter window closes",
+    "PASS Chapter 1 signal effects cannot leak into another map",
+    "PASS Chapter 2 does not grant a civilian counter without its objective",
+    "PASS Chapter 2 objective opens its authored counter window",
+    "PASS Chapter 2 counter bypasses active shield modules with visible vulnerability",
+    "PASS Chapter 2 counter is a single earned opening",
+    "PASS Chapter 2 shield behaviour returns when its counter window closes",
+    "PASS Chapter 2 signal effects cannot leak into another map",
+    "PASS Frame 0 has deployment foley and trilingual tactical dialogue",
+    "PASS Frame 1 has deployment foley and trilingual tactical dialogue",
+    "PASS Frame 2 has deployment foley and trilingual tactical dialogue",
+    "PASS Chapter 1 boss cannot be missed when a frame passes its arrival threshold",
+    "PASS Chapter 2 boss cannot be missed when a frame passes its arrival threshold"
+  ],
+  "identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
+  "natural_campaigns": {
+    "pass": true,
+    "identity": "985920ed823387f0c20ca5b3d26989873091f3e57874587bf34ca11ca37400b5",
+    "steps": [
+      {
+        "step": "runtime",
+        "seconds": 107.7,
+        "pass": true,
+        "checks": 439
+      },
+      {
+        "step": "campaign0",
+        "seconds": 170.3,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "campaign1",
+        "seconds": 176.4,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "campaign2",
+        "seconds": 166.0,
+        "pass": true,
+        "checks": 4
+      },
+      {
+        "step": "portraits",
+        "seconds": 11.4,
+        "pass": true,
+        "checks": 0
+      }
+    ]
+  },
+  "native_performance": {
+    "kills": 180,
+    "frames": 360,
+    "average_ms": 17.536,
+    "p95_ms": 17.578,
+    "p99_ms": 49.051,
+    "max_kill_cpu_ms": 0.303,
+    "spark_peak": 969,
+    "new_shock_objects": 0
+  },
+  "mobile_frames": {
+    "pass": true,
+    "checks": [
+      "Frame 0: distinct model assemblies and name in mobile player",
+      "Frame 0: HUD switches to its own arsenal",
+      "Frame 0: touch button names the deployed frame",
+      "Frame 0: alternate frame weapon works",
+      "Frame 0: rotating pauses its deployment timer",
+      "Frame 0: pause does not consume charge",
+      "Frame 0: landscape resumes with capped effects and pilot portrait",
+      "Frame 0: ability remains inside screen",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: live deployment remains playable (Playing)",
+      "Frame 0: weapon and visual return to aircraft",
+      "Frame 0: no leftover effect or shield in hangar",
+      "Frame 1: distinct model assemblies and name in mobile player",
+      "Frame 1: HUD switches to its own arsenal",
+      "Frame 1: touch button names the deployed frame",
+      "Frame 1: alternate frame weapon works",
+      "Frame 1: rotating pauses its deployment timer",
+      "Frame 1: pause does not consume charge",
+      "Frame 1: landscape resumes with capped effects and pilot portrait",
+      "Frame 1: ability remains inside screen",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: live deployment remains playable (Playing)",
+      "Frame 1: weapon and visual return to aircraft",
+      "Frame 1: no leftover effect or shield in hangar",
+      "Frame 2: distinct model assemblies and name in mobile player",
+      "Frame 2: HUD switches to its own arsenal",
+      "Frame 2: touch button names the deployed frame",
+      "Frame 2: alternate frame weapon works",
+      "Frame 2: rotating pauses its deployment timer",
+      "Frame 2: pause does not consume charge",
+      "Frame 2: landscape resumes with capped effects and pilot portrait",
+      "Frame 2: ability remains inside screen",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: live deployment remains playable (Playing)",
+      "Frame 2: weapon and visual return to aircraft",
+      "Frame 2: no leftover effect or shield in hangar",
+      "No frame rendering or browser errors"
+    ],
+    "samples": [
+      {
+        "ship": 0,
+        "name": "岚刃",
+        "joints": 6,
+        "language": "zh",
+        "strokePeak": 1,
+        "kills": 4
+      },
+      {
+        "ship": 1,
+        "name": "赤垒",
+        "joints": 8,
+        "language": "en",
+        "strokePeak": 2,
+        "kills": 1
+      },
+      {
+        "ship": 2,
+        "name": "霜环",
+        "joints": 11,
+        "language": "ja",
+        "strokePeak": 1,
+        "kills": 1
+      }
+    ],
+    "errors": [],
+    "scope": "Chrome phone emulation; controlled existing reactor upgrades, live firing and touch controls. Not physical-phone performance."
+  },
+  "browser_checks": {
+    "combat-quality": {
+      "pass": true,
+      "results": [
+        {
+          "quality": "balanced",
+          "render": [
+            584,
+            848
+          ],
+          "meanGameFps": 61.46058258056641,
+          "minGameFps": 60.869361877441406,
+          "peakKillMs": 0.20000000298023224,
+          "resizeCounts": [
+            55
+          ],
+          "musicContinuous": true
+        },
+        {
+          "quality": "clear",
+          "render": [
+            780,
+            1132
+          ],
+          "meanGameFps": 61.60260948181153,
+          "minGameFps": 61.25223159790039,
+          "peakKillMs": 0.20000000298023224,
+          "resizeCounts": [
+            56
+          ],
+          "musicContinuous": true
+        },
+        {
+          "quality": "smooth",
+          "render": [
+            390,
+            566
+          ],
+          "meanGameFps": 61.29674514770508,
+          "minGameFps": 60.6402473449707,
+          "peakKillMs": 0.30000001192092896,
+          "resizeCounts": [
+            57
+          ],
+          "musicContinuous": true
+        }
+      ],
+      "errors": [],
+      "samples": 180,
+      "scope": "Desktop GPU with mobile emulation; no physical-phone FPS claim"
+    },
+    "webkit-checks": {
+      "pass": true,
+      "checks": [
+        "WebKit auto-detects iPhone controls",
+        "Portrait is directly playable without an overlay",
+        "Portrait clear quality applies",
+        "English voice plays from portrait settings",
+        "Portrait touch launches combat",
+        "Portrait touch nova fires",
+        "Rotation pauses controls 852",
+        "Can resume in current orientation 852",
+        "HUD does not cover the arena 852",
+        "Actual camera matches orientation 852",
+        "Rotation pauses controls 393",
+        "Can resume in current orientation 393",
+        "HUD does not cover the arena 393",
+        "Actual camera matches orientation 393",
+        "Quality is adjustable while paused",
+        "No WebKit page or rendering errors"
+      ],
+      "errors": []
+    },
+    "android": {
+      "pass": true,
+      "checks": [
+        "Android automatically selects touch controls",
+        "Android portrait recommends landscape without blocking play",
+        "Japanese preview plays on Android browser",
+        "Android portrait retains real pilot and coastal scenery",
+        "Android touch bomb consumes one charge",
+        "Android rotation pauses safely",
+        "Landscape restores scenery and camera",
+        "No Android browser errors"
+      ],
+      "errors": []
+    },
+    "desktop-checks": {
+      "pass": true,
+      "selectedShip": 1,
+      "musicContinues": true,
+      "combat": "Playing",
+      "bombActive": true,
+      "pause": "Paused",
+      "errors": []
+    },
+    "story-flow": {
+      "pass": true,
+      "checks": [
+        "Starting a full run presents the three-part prologue",
+        "390x844 story remains safe through rotation",
+        "390x844 complete prose is preserved without horizontal clipping",
+        "390x844 long story content remains scrollable",
+        "390x844 full-proportion animated pilot slot",
+        "390x844 all story buttons remain visible and tappable",
+        "390x844 dialogue text does not overlap controls",
+        "360x640 story remains safe through rotation",
+        "360x640 complete prose is preserved without horizontal clipping",
+        "360x640 long story content remains scrollable",
+        "360x640 full-proportion animated pilot slot",
+        "360x640 all story buttons remain visible and tappable",
+        "360x640 dialogue text does not overlap controls",
+        "430x932 story remains safe through rotation",
+        "430x932 complete prose is preserved without horizontal clipping",
+        "430x932 long story content remains scrollable",
+        "430x932 full-proportion animated pilot slot",
+        "430x932 all story buttons remain visible and tappable",
+        "430x932 dialogue text does not overlap controls",
+        "768x1024 story remains safe through rotation",
+        "768x1024 complete prose is preserved without horizontal clipping",
+        "768x1024 long story content remains scrollable",
+        "768x1024 full-proportion animated pilot slot",
+        "768x1024 all story buttons remain visible and tappable",
+        "768x1024 dialogue text does not overlap controls",
+        "844x390 story remains safe through rotation",
+        "844x390 complete prose is preserved without horizontal clipping",
+        "844x390 long story content remains scrollable",
+        "844x390 full-proportion animated pilot slot",
+        "844x390 all story buttons remain visible and tappable",
+        "844x390 dialogue text does not overlap controls",
+        "667x320 story remains safe through rotation",
+        "667x320 complete prose is preserved without horizontal clipping",
+        "667x320 long story content remains scrollable",
+        "667x320 full-proportion animated pilot slot",
+        "667x320 all story buttons remain visible and tappable",
+        "667x320 dialogue text does not overlap controls",
+        "Next page changes narrative and speaker together",
+        "Rendered story portrait matches the delivered speaker",
+        "Autoplay can be enabled",
+        "Autoplay can be disabled",
+        "Completing the prologue returns to launch briefing",
+        "Archive contains all campaign sequences with progress-based locks",
+        "Archive replays the prologue independently of a battle",
+        "Archive skip returns to the archive menu",
+        "Prologue plays its actual zh recording",
+        "Prologue plays its actual en recording",
+        "Prologue plays its actual ja recording",
+        "No story browser errors"
+      ],
+      "samples": [
+        {
+          "size": [
+            390,
+            844
+          ],
+          "portrait": {
+            "x": 133.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 256.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 19.5,
+            "y": 248,
+            "w": 351,
+            "h": 470,
+            "right": 370.5,
+            "bottom": 718
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 19.5,
+              "y": 728,
+              "w": 171.5,
+              "h": 48,
+              "right": 191,
+              "bottom": 776
+            },
+            {
+              "x": 199,
+              "y": 728,
+              "w": 171.5,
+              "h": 48,
+              "right": 370.5,
+              "bottom": 776
+            },
+            {
+              "x": 19.5,
+              "y": 784,
+              "w": 351,
+              "h": 48,
+              "right": 370.5,
+              "bottom": 832
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            360,
+            640
+          ],
+          "portrait": {
+            "x": 130,
+            "y": 55,
+            "w": 100,
+            "h": 150,
+            "right": 230,
+            "bottom": 205
+          },
+          "copy": {
+            "x": 18,
+            "y": 207,
+            "w": 324,
+            "h": 307,
+            "right": 342,
+            "bottom": 514
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 18,
+              "y": 524,
+              "w": 158,
+              "h": 48,
+              "right": 176,
+              "bottom": 572
+            },
+            {
+              "x": 184,
+              "y": 524,
+              "w": 158,
+              "h": 48,
+              "right": 342,
+              "bottom": 572
+            },
+            {
+              "x": 18,
+              "y": 580,
+              "w": 324,
+              "h": 48,
+              "right": 342,
+              "bottom": 628
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            430,
+            932
+          ],
+          "portrait": {
+            "x": 153.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 276.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 21.5,
+            "y": 248,
+            "w": 387,
+            "h": 558,
+            "right": 408.5,
+            "bottom": 806
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 21.5,
+              "y": 816,
+              "w": 189.5,
+              "h": 48,
+              "right": 211,
+              "bottom": 864
+            },
+            {
+              "x": 219,
+              "y": 816,
+              "w": 189.5,
+              "h": 48,
+              "right": 408.5,
+              "bottom": 864
+            },
+            {
+              "x": 21.5,
+              "y": 872,
+              "w": 387,
+              "h": 48,
+              "right": 408.5,
+              "bottom": 920
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            768,
+            1024
+          ],
+          "portrait": {
+            "x": 322.3359375,
+            "y": 55,
+            "w": 123.328125,
+            "h": 185,
+            "right": 445.6640625,
+            "bottom": 240
+          },
+          "copy": {
+            "x": 38.390625,
+            "y": 248,
+            "w": 691.1875,
+            "h": 650,
+            "right": 729.578125,
+            "bottom": 898
+          },
+          "scrollable": false,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 38.390625,
+              "y": 908,
+              "w": 341.609375,
+              "h": 48,
+              "right": 380,
+              "bottom": 956
+            },
+            {
+              "x": 388,
+              "y": 908,
+              "w": 341.609375,
+              "h": 48,
+              "right": 729.609375,
+              "bottom": 956
+            },
+            {
+              "x": 38.390625,
+              "y": 964,
+              "w": 691.21875,
+              "h": 48,
+              "right": 729.609375,
+              "bottom": 1012
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            844,
+            390
+          ],
+          "portrait": {
+            "x": 614.71875,
+            "y": 56,
+            "w": 178.65625,
+            "h": 268,
+            "right": 793.375,
+            "bottom": 324
+          },
+          "copy": {
+            "x": 42.1875,
+            "y": 72,
+            "w": 464.1875,
+            "h": 236,
+            "right": 506.375,
+            "bottom": 308
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 42.1875,
+              "y": 330,
+              "w": 212.453125,
+              "h": 48,
+              "right": 254.640625,
+              "bottom": 378
+            },
+            {
+              "x": 262.640625,
+              "y": 330,
+              "w": 212.46875,
+              "h": 48,
+              "right": 475.109375,
+              "bottom": 378
+            },
+            {
+              "x": 483.109375,
+              "y": 330,
+              "w": 318.6875,
+              "h": 48,
+              "right": 801.796875,
+              "bottom": 378
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        },
+        {
+          "size": [
+            667,
+            320
+          ],
+          "portrait": {
+            "x": 490.328125,
+            "y": 52,
+            "w": 136.65625,
+            "h": 205,
+            "right": 626.984375,
+            "bottom": 257
+          },
+          "copy": {
+            "x": 33.34375,
+            "y": 59,
+            "w": 366.84375,
+            "h": 193,
+            "right": 400.1875,
+            "bottom": 252
+          },
+          "scrollable": true,
+          "overflow": "auto",
+          "buttons": [
+            {
+              "x": 33.34375,
+              "y": 268,
+              "w": 166.9375,
+              "h": 44,
+              "right": 200.28125,
+              "bottom": 312
+            },
+            {
+              "x": 208.28125,
+              "y": 268,
+              "w": 166.953125,
+              "h": 44,
+              "right": 375.234375,
+              "bottom": 312
+            },
+            {
+              "x": 383.234375,
+              "y": 268,
+              "w": 250.421875,
+              "h": 44,
+              "right": 633.65625,
+              "bottom": 312
+            }
+          ],
+          "body": "停战后的第七天，轨道防卫网「天环」仍在执行净空协议。居民身份库被封锁，民用航线上的每一个信号都被当作敌人。曾参与天环导航系统的雪璃，带回了重新打开识别链路的方法。",
+          "pageOverflow": false
+        }
+      ],
+      "errors": []
+    },
+    "scenery-all-stages": {
+      "pass": true,
+      "checks": [
+        "Stage 0: all fixtures move with their own sector",
+        "Stage 0: vehicles have no jump between route endpoints",
+        "Stage 0: continuity survives actual sector recycling",
+        "Stage 1: all fixtures move with their own sector",
+        "Stage 1: vehicles have no jump between route endpoints",
+        "Stage 1: continuity survives actual sector recycling",
+        "Powered trains visibly travel, arrive and wait without teleporting",
+        "Stage 2: all fixtures move with their own sector",
+        "Stage 2: vehicles have no jump between route endpoints",
+        "Stage 2: continuity survives actual sector recycling",
+        "No browser errors across the three maps"
+      ],
+      "stages": [
+        {
+          "stage": 0,
+          "samples": 102,
+          "wraps": 15,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 12
+        },
+        {
+          "stage": 1,
+          "samples": 100,
+          "wraps": 34,
+          "trainMotion": 103,
+          "trainStops": 190,
+          "anchors": 23
+        },
+        {
+          "stage": 2,
+          "samples": 102,
+          "wraps": 6,
+          "trainMotion": 0,
+          "trainStops": 0,
+          "anchors": 4
+        }
+      ],
+      "errors": [],
+      "scenario": "Controlled QA chapter transitions and restored city power; live rendering, scrolling and normal combat in each stage"
+    }
+  },
+  "physical_device_tested": false
+}

@@ -12,3 +12,14 @@ Player experience targets: understand why each chapter matters, see objective co
 | Music cuts at state changes | Two pairs of synchronized sources, equal-power 1.3-second crossfade | Retire old pair on completion; narration ducks both | Ship selection, audio reset and boss transition checks |
 
 Avoid extra full-screen flashes, global hit-stop on ordinary kills and unbounded physical debris. Settings retain camera-shake control and three browser quality choices. Phone measurements use emulation unless explicitly labeled as physical device data.
+
+## 1.13 frame identity and civilian counterplay
+
+| Weak moment | Change | Budget / constraint | Validation |
+| --- | --- | --- | --- |
+| Three overdrives share a silhouette and attacks | Three Blender frames, scoped articulated meshes, blade / siege / prism arsenals | 16.7k–26.4k triangles; 30–45 renderers; same hit core | Actual game-camera captures, damage and alternate-mode checks |
+| Transformation hides the model in light | Mechanical unfolding, synchronized recoil, lower bloom and short local ring | 12 reusable stroke lines; no repeated full-screen flash | Deployment/reversion, reset, pause and mobile playback |
+| Saved civilians rarely alter the boss encounter | Conditional 5/6/7-second shield bypass during phase two | Once per boss; prerequisites and expiry enforced | Earned/missing objective cases, damage and cleanup checks |
+| New weapon identity is hard to hear | Six brief mechanical cues, seven tactical events in three languages | Existing voice ducking; SFX peak below -4 dBFS | New-take ASR/signal review plus live audio continuity |
+
+Retain the 75/95/110-second boss arrivals, readable telegraphs, three outcomes, mobile portrait support and anchored scenery fixes.
